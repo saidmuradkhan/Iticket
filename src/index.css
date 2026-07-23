@@ -154,6 +154,11 @@ main {
   font-weight: 600;
 }
 
+.event-list-heading {
+  padding: 20px 24px 0;
+  margin: 0;
+}
+
 /* Ana səhifə filtrləri */
 .event-filters {
   padding: 20px 24px 0;
