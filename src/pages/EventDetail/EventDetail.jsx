@@ -1,21 +1,33 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { getEventOrShowById } from "../../api/api";
+import { useEvents } from "../../hooks/useEvents";
 import { formatEventDate } from "../../utils/dateHelpers";
+import { FavoritesContext } from "../../context/FavoritesContext";
 import Loader from "../../components/Loader/Loader";
 import Modal from "../../components/Modal/Modal";
 import TicketSelector from "../../components/TicketSelector/TicketSelector";
 
+const scrollSimilar = (direction) => {
+  const track = document.getElementById("similar-track");
+  if (track) track.scrollBy({ left: direction * 280, behavior: "smooth" });
+};
+
 const EventDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
+  const { events: allEvents } = useEvents();
+
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     getEventOrShowById(id).then((data) => {
-      setEvent(data); 
+      setEvent(data);
       setLoading(false);
     });
   }, [id]);
@@ -28,43 +40,200 @@ const EventDetail = () => {
     return <div className="page">Tədbir tapılmadı.</div>;
   }
 
+  const isSoldOut = event.status === "soldout";
+  const favorite = isFavorite(event.id);
+
+  const prices = event.tickets.map((ticket) => ticket.price);
+  const minPrice = Math.min(...prices);
+  const maxPrice = Math.max(...prices);
+  const priceLabel = minPrice === maxPrice ? `${minPrice} ₼` : `${minPrice}-${maxPrice} ₼`;
+
+  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    event.address || event.venue
+  )}`;
+
+  const similarEvents = allEvents
+    .filter((e) => String(e.id) !== String(event.id) && e.category === event.category)
+    .slice(0, 8);
+
   const handleBuyClick = () => {
-    if (event.hasSeatMap) 
-      {navigate(`/event/${event.id}/seats`);}
-    else 
-      {setShowModal(true);}
+    if (event.hasSeatMap) {
+      navigate(`/event/${event.id}/seats`);
+    } else {
+      setShowModal(true);
+    }
   };
 
-  const isSoldOut = event.status === "soldout";
+  const handleShare = async () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: event.title, url });
+      } catch {
+        // istifadəçi paylaşımı ləğv etdi
+      }
+    } else if (navigator.clipboard) {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
   return (
     <div className="event-detail">
-      <img className="event-detail-banner" src={event.detailedimage || event.image} alt={event.title}/>
+      <section
+        className="event-hero"
+        style={{ backgroundImage: `url(${event.detailedimage || event.image})` }}
+      >
+        <div className="event-hero-overlay" />
 
-      <div className="event-detail-content">
-        <h1>{event.title}</h1>
-        <p className="event-detail-meta">
-          {formatEventDate(event.date)} · {event.venue}
-          {event.address ? ` · ${event.address}` : ""}
-        </p>
+        <div className="event-hero-body">
+          <div className="event-hero-text">
+            <h1>{event.title}</h1>
+            <p className="event-hero-meta">
+              {formatEventDate(event.date)} · {event.venue}
+            </p>
 
-        <div className="event-detail-tags">
-          {event.ageLimit && <span className="tag">{event.ageLimit}</span>}
-          {event.language && <span className="tag">{event.language}</span>}
-          {isSoldOut && <span className="tag soldout">Biletlər bitib</span>}
-        </div>
-        {event.about && <p className="event-detail-about">{event.about}</p>}
-        <div className="event-detail-tickets">
-          <h2>Biletlər</h2>
-          {event.tickets.map((ticket) => (
-            <div className="ticket-row" key={ticket.id}>
-              <span>{ticket.label}</span>
-              <span>{ticket.price} ₼</span>
+            <div className="event-hero-tags">
+              <span className="hero-tag">
+                <i className="fas fa-ticket-alt" /> {priceLabel}
+              </span>
+              {event.ageLimit && (
+                <span className="hero-tag">
+                  <i className="fas fa-child" /> {event.ageLimit}
+                </span>
+              )}
+              {event.language && (
+                <span className="hero-tag">
+                  <i className="fas fa-globe" /> {event.language}
+                </span>
+              )}
+              {isSoldOut && <span className="hero-tag soldout">Biletlər bitib</span>}
             </div>
-          ))}
+
+            <button
+              type="button"
+              className="buy-btn hero-buy-btn"
+              onClick={handleBuyClick}
+              disabled={isSoldOut}
+            >
+              {isSoldOut ? "Biletlər bitib" : "Bilet al"}
+            </button>
+          </div>
+
+          <div className="event-hero-image-frame">
+            <img src={event.detailedimage || event.image} alt={event.title} />
+            <div className="hero-icon-actions">
+              <button
+                type="button"
+                className="hero-icon-btn"
+                onClick={() => toggleFavorite(event)}
+                aria-label="Sevimlilərə əlavə et"
+              >
+                <i className={favorite ? "fas fa-heart" : "far fa-heart"} />
+              </button>
+              <button
+                type="button"
+                className="hero-icon-btn"
+                onClick={handleShare}
+                aria-label="Paylaş"
+              >
+                <i className="fas fa-share-alt" />
+              </button>
+            </div>
+            {copied && <span className="copied-toast">Link kopyalandı</span>}
+          </div>
         </div>
-        <button type="button" className="buy-btn" onClick={handleBuyClick} disabled={isSoldOut}> {isSoldOut ? "Biletlər bitib" : "Bilet al"}</button>
-      </div>
+      </section>
+
+      <section className="event-lower">
+        <div className="event-lower-main">
+          <h2>Təsvir</h2>
+          <p className={expanded ? "event-about expanded" : "event-about"}>
+            {event.about}
+          </p>
+          {event.about && event.about.length > 80 && (
+            <button
+              type="button"
+              className="expand-btn"
+              onClick={() => setExpanded((prev) => !prev)}
+            >
+              {expanded ? "Daha az" : "Daha çox"}{" "}
+              <i className={expanded ? "fas fa-chevron-up" : "fas fa-chevron-down"} />
+            </button>
+          )}
+
+          <h2>Qaydalar</h2>
+          <p className="event-rules">
+            Bu tədbir QR bilet formasında satılır. QR biletlər tədbir günü aktiv
+            olacaqdır.
+          </p>
+          <p className="event-rules warning">
+            <i className="fas fa-exclamation-circle" /> Tədbir məkanına kənardan
+            alınmış qida və içkilərin gətirilməsi qadağandır.
+          </p>
+
+          <h2>{event.venue}</h2>
+          {event.address && (
+            <p className="venue-line">
+              <i className="fas fa-map-marker-alt" /> {event.address}
+            </p>
+          )}
+          <a
+            className="map-btn"
+            href={mapUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fas fa-map" /> Xəritədə bax
+          </a>
+        </div>
+
+        <div className="event-lower-side">
+          <h2>Qalereya</h2>
+          <img
+            className="gallery-thumb"
+            src={event.image}
+            alt={event.title}
+          />
+        </div>
+      </section>
+
+      {similarEvents.length > 0 && (
+        <section className="similar-events">
+          <div className="similar-events-header">
+            <h2>Oxşar tədbirlər</h2>
+            <div className="carousel-arrows">
+              <button type="button" onClick={() => scrollSimilar(-1)} aria-label="Geri">
+                <i className="fas fa-chevron-left" />
+              </button>
+              <button type="button" onClick={() => scrollSimilar(1)} aria-label="İrəli">
+                <i className="fas fa-chevron-right" />
+              </button>
+            </div>
+          </div>
+
+          <div className="similar-events-track" id="similar-track">
+            {similarEvents.map((ev) => (
+              <Link to={`/event/${ev.id}`} className="similar-card" key={ev.id}>
+                <div className="similar-card-image">
+                  <img src={ev.image} alt={ev.title} />
+                  {ev.ageLimit && <span className="similar-age-tag">{ev.ageLimit}</span>}
+                </div>
+                <p className="similar-date">{formatEventDate(ev.date)}</p>
+                <h4>{ev.title}</h4>
+                <p className="similar-venue">{ev.venue}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!isSoldOut && (
+        <button type="button" className="floating-buy-btn" onClick={handleBuyClick}>
+          Bilet al
+        </button>
+      )}
 
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>

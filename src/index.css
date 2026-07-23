@@ -128,10 +128,104 @@ main {
 }
 
 .footer {
-  padding: 20px 24px;
+  padding: 40px 24px 20px;
   border-top: 1px solid var(--border);
   color: var(--text-secondary);
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-col h4 {
+  color: var(--text);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 14px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* App promo banner */
+.app-promo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
   text-align: center;
+}
+
+.app-promo p {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.app-promo .highlight {
+  color: var(--accent);
+}
+
+.app-promo-sub {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto 20px !important;
+}
+
+.app-promo-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  font-size: 13px;
 }
 
 .profile-layout {
@@ -388,64 +482,319 @@ main {
   }
 }
 
-/* Tədbir detalı */
-.event-detail-banner {
+/* Tədbir detalı - hero */
+.event-hero {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.event-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  backdrop-filter: blur(6px);
+}
+
+.event-hero-body {
+  position: relative;
   width: 100%;
-  max-height: 400px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.event-hero-text {
+  color: #fff;
+  max-width: 480px;
+}
+
+.event-hero-text h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.event-hero-meta {
+  color: #e4e4e7;
+  margin: 0 0 16px;
+}
+
+.event-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 13px;
+}
+
+.hero-tag.soldout {
+  background: #e11d48;
+}
+
+.hero-buy-btn {
+  width: auto;
+  margin: 0;
+  padding: 14px 32px;
+}
+
+.event-hero-image-frame {
+  position: relative;
+  flex-shrink: 0;
+  width: 380px;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.event-hero-image-frame::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  background-image: radial-gradient(
+    circle at 0 11px,
+    transparent 11px,
+    var(--bg) 11px
+  );
+  background-size: 22px 22px;
+  background-repeat: repeat-y;
+  z-index: 2;
+}
+
+.event-hero-image-frame img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.event-detail-content {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 24px;
+.hero-icon-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 3;
 }
 
-.event-detail-content h1 {
+.hero-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+}
+
+.copied-toast {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  z-index: 3;
+}
+
+/* Tədbir detalı - təsvir / məkan */
+.event-lower {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.event-lower-main h2 {
+  font-size: 18px;
+  margin: 24px 0 10px;
+}
+
+.event-lower-main h2:first-child {
+  margin-top: 0;
+}
+
+.event-about {
+  line-height: 1.6;
+  margin: 0;
+  max-height: 3.2em;
+  overflow: hidden;
+}
+
+.event-about.expanded {
+  max-height: none;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.event-rules {
+  color: var(--text-secondary);
+  line-height: 1.6;
   margin: 0 0 8px;
 }
 
-.event-detail-meta {
+.event-rules.warning {
+  color: #e11d48;
+}
+
+.venue-line {
   color: var(--text-secondary);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
 }
 
-.event-detail-tags {
-  display: flex;
+.map-btn {
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
-  margin-bottom: 16px;
-}
-
-.tag {
-  padding: 4px 10px;
+  padding: 8px 16px;
   border-radius: 999px;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  font-size: 12px;
+  color: var(--text);
+  font-size: 13px;
 }
 
-.tag.soldout {
-  background: #e11d48;
-  color: #fff;
-  border-color: #e11d48;
-}
-
-.event-detail-about {
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.event-detail-tickets h2 {
+.event-lower-side h2 {
   font-size: 18px;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
 }
 
-.ticket-row {
+.gallery-thumb {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Oxşar tədbirlər */
+.similar-events {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}
+
+.similar-events-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
+}
+
+.carousel-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-arrows button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.similar-events-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-top: 16px;
+}
+
+.similar-card {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.similar-card-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.similar-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.similar-age-tag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.similar-date {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 8px 0 2px;
+}
+
+.similar-card h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.similar-venue {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.floating-buy-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: #18181b;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 80;
 }
 
 .buy-btn {
