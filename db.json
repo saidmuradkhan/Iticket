@@ -1,0 +1,1063 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Azərbaycanın Jazz Əfsanələri",
+      "date": "2026-05-30T00:00:00.000Z",
+      "venue": "Flora Çay Garden",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 10,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/S7BRmNYSabpjKb1DyZHq0zyFbNZ9Pjhg.png",
+      "featured": true,
+      "ageLimit": "18+",
+      "about": "Azərbaycanın ən məşhur caz musiqiçilərinin iştirakı ilə unudulmaz bir gecə.",
+      "address": "Təbriz Xəlil Rza oğlu küç 23",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/lRh8bkZqxeJC71ZEHx28m8xGD1rC7pHb.png",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "iTicket Events",
+      "totalSeats": 250,
+      "availableSeats": 187,
+      "tickets": [
+        {
+          "id": "1-fan",
+          "label": "Fan Zone",
+          "price": 10,
+          "available": 60
+        },
+        {
+          "id": "1-stan",
+          "label": "Standart",
+          "price": 20,
+          "available": 90
+        },
+        {
+          "id": "1-vip",
+          "label": "VIP",
+          "price": 35,
+          "available": 37
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Telman Budaqovun Retro Konserti",
+      "date": "2026-05-31T00:00:00.000Z",
+      "venue": "Flora Çay Garden",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 8,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/RIagaHVBCuyITPOfCMg1OpW6Ve1qmNd5.png",
+      "ageLimit": "5+",
+      "about": "Bir əfsanənin musiqisi, bir axşamlıq unudulmaz xatirə.",
+      "address": "Təbriz Xəlil Rza oğlu küç 23",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/eyPofntiQK49txcDZ28YYtElkPmpBsf6PopFrVta.jpg",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "iTicket Events",
+      "totalSeats": 220,
+      "availableSeats": 54,
+      "hasSeatMap": true,
+      "tickets": [
+        {
+          "id": "2-fan",
+          "label": "Fan Zone",
+          "price": 8,
+          "available": 30
+        },
+        {
+          "id": "2-stan",
+          "label": "Standart",
+          "price": 15,
+          "available": 15
+        },
+        {
+          "id": "2-vip",
+          "label": "VIP",
+          "price": 25,
+          "available": 9
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Musiqiləri Gecəsi | Şamlar Əhatəsində",
+      "date": "2026-06-01T00:00:00.000Z",
+      "venue": "Kapellhaus",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 8,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/iqW7dHhSK2RomOhdiyaOiDe5b3H2Q9oN.png",
+      "ageLimit": "5+",
+      "about": "Bakının ən böyük uşaq festivalı.",
+      "address": "Mirzəağa Əliyev küçəsi 246",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/Yzh9Tp8wFEt7QoE8h5fP9uQtYQTvjaPzXcFuSBfM.jpg",
+      "language": "Ingilis dilində",
+      "status": "active",
+      "organizer": "Eventland",
+      "totalSeats": 400,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "3-fan",
+          "label": "I Zone",
+          "price": 8,
+          "available": 200
+        },
+        {
+          "id": "3-stan",
+          "label": "Standart",
+          "price": 15,
+          "available": 150
+        },
+        {
+          "id": "3-vip",
+          "label": "VIP",
+          "price": 25,
+          "available": 50
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "“Vaqif Mustafazadə” əsərləri",
+      "date": "2026-06-15T00:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 25,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/oVI65rbZZxhfxD1jNqfypbxirhlEFJ2C.png",
+      "ageLimit": "18+",
+      "about": "Dream Fest — böyük musiqi festivalı.",
+      "address": "Nardaran qəsəbəsi, Bakı, Azərbaycan",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/CwteUuwdkoweaEeApAZRqtNT1k2FC3MeTy5nSZFP.jpg",
+      "language": "Çoxdilli",
+      "status": "active",
+      "organizer": "Dream Fest",
+      "totalSeats": 1000,
+      "availableSeats": 412,
+      "tickets": [
+        {
+          "id": "4-fan",
+          "label": "I Zone",
+          "price": 25,
+          "available": 200
+        },
+        {
+          "id": "4-stan",
+          "label": "Standart",
+          "price": 45,
+          "available": 150
+        },
+        {
+          "id": "4-vip",
+          "label": "VIP",
+          "price": 80,
+          "available": 62
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Mabel Matiz Konserti",
+      "date": "2026-06-20T00:00:00.000Z",
+      "venue": "Bakı Konqres Mərkəzi",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 50,
+      "image": "https://cdn.iticket.az/event/artist/fGRd0lGtpw3Vlu8LWctYNwhcNC1Zzf4Au9tIRk3m.png",
+      "ageLimit": "18+",
+      "about": "Türkiyənin məşhur müğənnisi Mabel Matiz konserti.",
+      "address": "Bakı Konqres Mərkəzi, Neftçilər pr. 1, Bakı",
+      "detailedimage": "https://cdn.iticket.az/event/cover/rPyZMETqm5mBQQeOz93ajLjcUqMCPWxWNYtqhzEI.jpg",
+      "status": "active",
+      "organizer": "iTicket Events",
+      "totalSeats": 800,
+      "availableSeats": 120,
+      "hasSeatMap": true,
+      "tickets": [
+        {
+          "id": "5-fan",
+          "label": "I Zone",
+          "price": 50,
+          "available": 30
+        },
+        {
+          "id": "5-stan",
+          "label": "Standart",
+          "price": 80,
+          "available": 60
+        },
+        {
+          "id": "5-vip",
+          "label": "VIP",
+          "price": 120,
+          "available": 30
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "“Bir həyat-Bir mahnı”",
+      "date": "2026-06-25T00:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 40,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/vfEDotLOi4Aikhk4qWwu5aN3GiAsBYjn.png",
+      "ageLimit": "12+",
+      "about": "Gulben Ergen konserti.",
+      "address": "Bakı Konqres Mərkəzi, Neftçilər pr. 1, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/Neds7cZAcd8N89feiUL5YJJyPT6kp7xYtkrZv4Lf.jpg",
+      "status": "soldout",
+      "organizer": "iTicket Events",
+      "totalSeats": 500,
+      "availableSeats": 0,
+      "tickets": [
+        {
+          "id": "6-fan",
+          "label": "I Zone",
+          "price": 40,
+          "available": 0
+        },
+        {
+          "id": "6-stan",
+          "label": "Standart",
+          "price": 65,
+          "available": 0
+        },
+        {
+          "id": "6-vip",
+          "label": "VIP",
+          "price": 100,
+          "available": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Şam İşığında Balet Axşamı | Qu gölü",
+      "date": "2026-06-28T00:00:00.000Z",
+      "venue": "Heydar Əliyev Sarayı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 25,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/zL9mkq6S1CCEKpyuq54vR7PopntuhpEf.png",
+      "ageLimit": "12+",
+      "about": "Eyyub Yaqubov konserti.",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/CZTLYWpKd1bmf03gv9VpqKTtH9fXkZBDmkG9WsGG.jpg",
+      "language": "Azərbaycan dilində",
+      "address": "Heydar Əliyev Sarayı, Bülbül prospekti 35, Bakı, Azərbaycan",
+      "status": "active",
+      "organizer": "Heydər Əliyev Sarayı",
+      "totalSeats": 900,
+      "availableSeats": 340,
+      "tickets": [
+        {
+          "id": "7-fan",
+          "label": "I Zone",
+          "price": 25,
+          "available": 150
+        },
+        {
+          "id": "7-stan",
+          "label": "Standart",
+          "price": 40,
+          "available": 130
+        },
+        {
+          "id": "7-vip",
+          "label": "VIP",
+          "price": 60,
+          "available": 60
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Disco Party",
+      "date": "2026-06-30T00:00:00.000Z",
+      "venue": "Heydar Əliyev Sarayı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 30,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/RKzbXBzf7bxadlIX7fOdWhvbyaCqSUDe.png",
+      "ageLimit": "5+",
+      "about": "Disney Simfonik Şou.",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/qpQjiKO0rrOI36JaCso62fnhU2uoEqkxXyqNCx8C.jpg",
+      "address": "Heydar Əliyev Sarayı, Bülbül prospekti 35, Bakı, Azərbaycan",
+      "status": "active",
+      "organizer": "iTicket Events",
+      "totalSeats": 700,
+      "availableSeats": 505,
+      "tickets": [
+        {
+          "id": "8-fan",
+          "label": "I Zone",
+          "price": 30,
+          "available": 250
+        },
+        {
+          "id": "8-stan",
+          "label": "Standart",
+          "price": 50,
+          "available": 180
+        },
+        {
+          "id": "8-vip",
+          "label": "VIP",
+          "price": 75,
+          "available": 75
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Səməd Vurğun 120",
+      "date": "2026-06-30T00:00:00.000Z",
+      "venue": "Heydar Əliyev Sarayı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/poster_square/Gtvh2Kd0PgHLemqI4d1fJmiesUC3pOEnEPvZR9Nx.jpg",
+      "ageLimit": "5+",
+      "about": "Səməd Vurğunun 120 illik yubileyi konserti.",
+      "address": "Heydar Əliyev Sarayı, Bülbül prospekti 35, Bakı, Azərbaycan",
+      "status": "active",
+      "organizer": "Mədəniyyət Nazirliyi",
+      "totalSeats": 600,
+      "availableSeats": 233,
+      "tickets": [
+        {
+          "id": "9-fan",
+          "label": "I Zone",
+          "price": 20,
+          "available": 100
+        },
+        {
+          "id": "9-stan",
+          "label": "Standart",
+          "price": 35,
+          "available": 90
+        },
+        {
+          "id": "9-vip",
+          "label": "VIP",
+          "price": 55,
+          "available": 43
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Sezen Aksu Tribute",
+      "date": "2026-06-31T00:00:00.000Z",
+      "venue": "Naxçıvan Dövlət Milli Dram Teatrı",
+      "city": "Naxçıvan",
+      "category": "concert",
+      "price": 15,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/JmyEIzH62ha35jcGK4NUCH9Nm7FZJXbx.png",
+      "ageLimit": "5+",
+      "about": "Naxçıvanın mərkəzində retro gecəsi.",
+      "address": "Naxçıvan şəhəri, Heydər Əliyev Prospekti 26",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/UClSk2XKfzgB8F5Se1awHwDqdmVvm77v.png",
+      "status": "active",
+      "organizer": "Naxçıvan MTM",
+      "totalSeats": 300,
+      "availableSeats": 88,
+      "tickets": [
+        {
+          "id": "10-fan",
+          "label": "I Zone",
+          "price": 15,
+          "available": 40
+        },
+        {
+          "id": "10-stan",
+          "label": "Standart",
+          "price": 25,
+          "available": 35
+        },
+        {
+          "id": "10-vip",
+          "label": "VIP",
+          "price": 40,
+          "available": 13
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Seanema – The Notebook",
+      "date": "2026-07-23T20:00:00.000Z",
+      "endTime": "22:00",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "film",
+      "price": 15,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/rLTWunrPX4R2mT48ry6LFJuzVKHFoPAD.png",
+      "ageLimit": "12+",
+      "about": "Açıq havada, dəniz kənarında romantik film gecəsi.",
+      "address": "Mambo Beach, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/hhcIbvWBBHCqkHH7UFOVrxnAnnLBoJb9.png",
+      "language": "İngilis dilində (Azərbaycan altyazı)",
+      "status": "active",
+      "organizer": "Seanema",
+      "totalSeats": 150,
+      "availableSeats": 62,
+      "hasSeatMap": true,
+      "tickets": [
+        {
+          "id": "11-stan",
+          "label": "AS Standart",
+          "price": 10,
+          "available": 40
+        },
+        {
+          "id": "11-comfort",
+          "label": "AS Comfort",
+          "price": 15,
+          "available": 22
+        }
+      ]
+    }
+  ],
+  "shows": [
+    {
+      "id": 101,
+      "title": "Hamlet",
+      "date": "2026-06-02T00:00:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/YaFqGX5v8Iv2KAXrahVRC7W58KiRgQE8.png",
+      "ageLimit": "16+",
+      "about": "Şekspirin ölməz əsəri Hamlet.",
+      "address": "Pray Teatrı, Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/MVLJz6VgaPVZ09IWKoBGVy5kkEpM3ZzF.png",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 350,
+      "availableSeats": 210,
+      "hasSeatMap": true,
+      "tickets": [
+        {
+          "id": "101-1",
+          "label": "I Zone",
+          "price": 10,
+          "available": 100
+        },
+        {
+          "id": "101-2",
+          "label": "II Zone",
+          "price": 15,
+          "available": 80
+        },
+        {
+          "id": "101-3",
+          "label": "III Zone",
+          "price": 22,
+          "available": 30
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "title": "Paris Notr Dam Kilsəsi: Esmeralda",
+      "date": "2026-06-10T00:00:00.000Z",
+      "venue": "Rus Dram Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 7,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/AscHVmLoKTczEXlCHKObAUcAc7PrqKWB.png",
+      "ageLimit": "16+",
+      "about": "Rus Dram Teatrının peşəkar truppası ilə güclü bir gecə.",
+      "address": "Rus Dram Teatrı, Xaqani küç. 7, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/kXqGP61fahcWJaLKKSxsrFhCziyKi4B4.png",
+      "status": "active",
+      "organizer": "Rus Dram Teatrı",
+      "totalSeats": 300,
+      "availableSeats": 145,
+      "tickets": [
+        {
+          "id": "102-1",
+          "label": "I Zone",
+          "price": 7,
+          "available": 80
+        },
+        {
+          "id": "102-2",
+          "label": "II Zone",
+          "price": 12,
+          "available": 45
+        },
+        {
+          "id": "102-3",
+          "label": "III Zone",
+          "price": 18,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "title": "Önəmsiz bir qadın",
+      "date": "2026-06-18T00:00:00.000Z",
+      "venue": "Gənc Tamaşaçılar Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 6,
+      "image": "https://cdn.iticket.az/event/artist/LbOD8dAhf8EhSlYVzBINzYvqo6W5z81pJfsmuPQg.png",
+      "ageLimit": "12+",
+      "about": "Qoqolun məşhur komediyası Müfəttiş üslubunda.",
+      "address": "Pray Teatrı, Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "status": "active",
+      "organizer": "Gənc Tamaşaçılar Teatrı",
+      "totalSeats": 200,
+      "availableSeats": 96,
+      "tickets": [
+        {
+          "id": "103-1",
+          "label": "I Zone",
+          "price": 6,
+          "available": 50
+        },
+        {
+          "id": "103-2",
+          "label": "II Zone",
+          "price": 10,
+          "available": 30
+        },
+        {
+          "id": "103-3",
+          "label": "III Zone",
+          "price": 15,
+          "available": 16
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "title": "Ən Yaxşı Musiqili Tamaşalar",
+      "date": "2026-06-02T00:00:00.000Z",
+      "venue": "Akademik Milli Dram Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 5,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Y8zDb3p1UkxYdu9FlKPkKClXcpVpJgBa.png",
+      "ageLimit": "16+",
+      "about": "Şekspirin ölməz əsəri Hamlet.",
+      "address": "Akademik Milli Dram Teatrı, İstiqlaliyyət küç. 8, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/z1K4ABhMpIrFunFmauZE8f4x5Llr6qKBSiCIZoj9.jpg",
+      "status": "active",
+      "organizer": "Akademik Milli Dram Teatrı",
+      "totalSeats": 500,
+      "availableSeats": 310,
+      "tickets": [
+        {
+          "id": "104-1",
+          "label": "I Zone",
+          "price": 5,
+          "available": 150
+        },
+        {
+          "id": "104-2",
+          "label": "II Zone",
+          "price": 9,
+          "available": 110
+        },
+        {
+          "id": "104-3",
+          "label": "III Zone",
+          "price": 14,
+          "available": 50
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "title": "Xəz Paltolu Madonna",
+      "date": "2026-06-10T00:00:00.000Z",
+      "venue": "Rus Dram Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 7,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/iNLvfmshretoSZBECaNIQjTWD1PEYHf5.png",
+      "ageLimit": "16+",
+      "about": "Rus Dram Teatrının peşəkar truppası ilə güclü bir gecə.",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/QyyWhiRdSIc1uizCQ4ybhTop8yakO7dA.png",
+      "address": "Rus Dram Teatrı, Xaqani küç. 7, Bakı",
+      "status": "active",
+      "organizer": "Rus Dram Teatrı",
+      "totalSeats": 300,
+      "availableSeats": 60,
+      "tickets": [
+        {
+          "id": "105-1",
+          "label": "I Zone",
+          "price": 7,
+          "available": 30
+        },
+        {
+          "id": "105-2",
+          "label": "II Zone",
+          "price": 12,
+          "available": 20
+        },
+        {
+          "id": "105-3",
+          "label": "III Zone",
+          "price": 18,
+          "available": 10
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "title": "Müfəttiş",
+      "date": "2026-06-18T00:00:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 6,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/5Yv78szoGBpZ2XZ5WJQIG0XA1RLuh17D.png",
+      "ageLimit": "12+",
+      "about": "Qoqolun məşhur komediyası Müfəttiş.",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/N3NthJp26HY5hziH7chWVKqvDfJCEJy2.png",
+      "address": "Gənc Tamaşaçılar Teatrı, Əliağa Vahid küç. 28, Bakı",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 250,
+      "availableSeats": 118,
+      "tickets": [
+        {
+          "id": "106-1",
+          "label": "I Zone",
+          "price": 6,
+          "available": 60
+        },
+        {
+          "id": "106-2",
+          "label": "II Zone",
+          "price": 10,
+          "available": 40
+        },
+        {
+          "id": "106-3",
+          "label": "III Zone",
+          "price": 15,
+          "available": 18
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "title": "Karmen",
+      "date": "2026-06-18T00:00:00.000Z",
+      "venue": "Gənc Tamaşaçılar Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 6,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/rYKiRoRTIHKLBZnjCdieAvy9J84gUTs0.png",
+      "ageLimit": "12+",
+      "about": "Karmen obrazının daxili dünyasına yeni baxış.",
+      "address": "Gənc Tamaşaçılar Teatrı, Əliağa Vahid küç. 28, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/MwijzEtUL5nzIwnMeMYafXDQhmP9bl0l.png",
+      "status": "active",
+      "organizer": "Gənc Tamaşaçılar Teatrı",
+      "totalSeats": 200,
+      "availableSeats": 84,
+      "tickets": [
+        {
+          "id": "107-1",
+          "label": "I Zone",
+          "price": 6,
+          "available": 40
+        },
+        {
+          "id": "107-2",
+          "label": "II Zone",
+          "price": 10,
+          "available": 30
+        },
+        {
+          "id": "107-3",
+          "label": "III Zone",
+          "price": 15,
+          "available": 14
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "title": "1984",
+      "date": "2026-06-18T00:00:00.000Z",
+      "venue": "Gənc Tamaşaçılar Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 6,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/XAdxncT0MZSTj9SfuIchDwdoCYzQr5gO.png",
+      "ageLimit": "12+",
+      "about": "Corc Oruellin distopik 1984-cü il romanı əsasında.",
+      "address": "Gənc Tamaşaçılar Teatrı, Əliağa Vahid küç. 28, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/q9qIG3v09xA1GXsMsVkVWNpHNM8gO8Ma.png",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Gənc Tamaşaçılar Teatrı",
+      "totalSeats": 200,
+      "availableSeats": 45,
+      "tickets": [
+        {
+          "id": "108-1",
+          "label": "I Zone",
+          "price": 6,
+          "available": 20
+        },
+        {
+          "id": "108-2",
+          "label": "II Zone",
+          "price": 10,
+          "available": 15
+        },
+        {
+          "id": "108-3",
+          "label": "III Zone",
+          "price": 15,
+          "available": 10
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "title": "Anna Karenina",
+      "date": "2026-06-22T00:00:00.000Z",
+      "venue": "Azərbaycan Dövlət Musiqili Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 8,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/KH4xaKtAbi1cPtnlNl5HNEZ0yNaNGtRZ.png",
+      "ageLimit": "6+",
+      "about": "Üzeyir Hacıbəyovun sevimli musiqili komediyası.",
+      "address": "Azərbaycan Dövlət Musiqili Teatrı, Üzeyir Hacıbəyov küç. 8, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/ipzV4btSNrTNlmsgVCM4DX3gwF6jBZYV.png",
+      "status": "active",
+      "organizer": "Azərbaycan Dövlət Musiqili Teatrı",
+      "totalSeats": 400,
+      "availableSeats": 275,
+      "tickets": [
+        {
+          "id": "109-1",
+          "label": "I Zone",
+          "price": 8,
+          "available": 140
+        },
+        {
+          "id": "109-2",
+          "label": "II Zone",
+          "price": 14,
+          "available": 90
+        },
+        {
+          "id": "109-3",
+          "label": "III Zone",
+          "price": 20,
+          "available": 45
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "title": "Leyli və Məcnun",
+      "date": "2026-06-25T00:00:00.000Z",
+      "venue": "Opera və Balet Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 12,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/QzM5USGiZ3mIYJLtAeLozvvQ73flDwK2.png",
+      "ageLimit": "6+",
+      "about": "Şərqin ən böyük sevgi dastanı opera səhnəsində.",
+      "address": "Opera və Balet Teatrı, İstiqlaliyyət küç. 95, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/QRDMYmGs3gCnVN2fVzkMnOEIr1CZWv3Y.png",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Opera və Balet Teatrı",
+      "totalSeats": 600,
+      "availableSeats": 190,
+      "hasSeatMap": true,
+      "tickets": [
+        {
+          "id": "110-1",
+          "label": "I Zone",
+          "price": 12,
+          "available": 90
+        },
+        {
+          "id": "110-2",
+          "label": "II Zone",
+          "price": 20,
+          "available": 70
+        },
+        {
+          "id": "110-3",
+          "label": "III Zone",
+          "price": 30,
+          "available": 30
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "title": "Ceyn Eyr",
+      "date": "2026-06-28T00:00:00.000Z",
+      "venue": "Akademik Milli Dram Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 7,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/rLTWunrPX4R2mT48ry6LFJuzVKHFoPAD.png",
+      "ageLimit": "16+",
+      "about": "Qadının müstəqilliyi və daxili gücü haqqında roman uyğunlaşdırması.",
+      "address": "Akademik Milli Dram Teatrı, İstiqlaliyyət küç. 8, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/hhcIbvWBBHCqkHH7UFOVrxnAnnLBoJb9.png",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Akademik Milli Dram Teatrı",
+      "totalSeats": 400,
+      "availableSeats": 260,
+      "tickets": [
+        {
+          "id": "111-1",
+          "label": "I Zone",
+          "price": 7,
+          "available": 130
+        },
+        {
+          "id": "111-2",
+          "label": "II Zone",
+          "price": 12,
+          "available": 90
+        },
+        {
+          "id": "111-3",
+          "label": "III Zone",
+          "price": 18,
+          "available": 40
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "title": "Vaqif",
+      "date": "2026-08-03T00:00:00.000Z",
+      "venue": "Şuşa Dövlət Musiqili Dram Teatrı",
+      "city": "Şuşa",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/NwU3mCxu7l35NsxPgOMnzNIsQNMho7O8.png",
+      "ageLimit": "12+",
+      "about": "XVIII əsr Azərbaycan şairinin həyatını canlandıran tarixi dram.",
+      "address": "Şuşa Dövlət Musiqili Dram Teatrı, İsa bəy Hacınskiy küç. 1, Şuşa",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/lf23BxWiE2h6do4LOhGGPaRIeqOT9STh.png",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Şuşa Dövlət Teatrı",
+      "totalSeats": 350,
+      "availableSeats": 205,
+      "tickets": [
+        {
+          "id": "112-1",
+          "label": "I Zone",
+          "price": 10,
+          "available": 100
+        },
+        {
+          "id": "112-2",
+          "label": "II Zone",
+          "price": 16,
+          "available": 75
+        },
+        {
+          "id": "112-3",
+          "label": "III Zone",
+          "price": 24,
+          "available": 30
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "title": "Adamın Adamı",
+      "date": "2026-08-03T00:00:00.000Z",
+      "venue": "Azərbaycan Dövlət Akademik Musiqili Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Z4vl15fEYIutAJOpz7NBXm9Q0ehlVwdL.png",
+      "ageLimit": "12+",
+      "about": "Xalq yazıçısı Anarın pyesi əsasında.",
+      "address": "Azərbaycan Dövlət Akademik Musiqili Teatrı Zərifə Əliyeva Küçəsi 8, Bakı, Azərbaycan",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/r2RTThH6KurpZIXskeUz5inJSwm3St7pGl7nfkqB.jpg",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Dövlət Akademik Musiqili Teatrı",
+      "totalSeats": 350,
+      "availableSeats": 130,
+      "tickets": [
+        {
+          "id": "113-1",
+          "label": "I Zone",
+          "price": 10,
+          "available": 65
+        },
+        {
+          "id": "113-2",
+          "label": "II Zone",
+          "price": 16,
+          "available": 45
+        },
+        {
+          "id": "113-3",
+          "label": "III Zone",
+          "price": 24,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "title": "Əliqulu Evlənir",
+      "date": "2026-07-10T00:00:00.000Z",
+      "venue": "Azərbaycan Dövlət Akademik Musiqili Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 15,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/qlNrhH2IHEvv38wpj5XjK2Rsj42SmItV.png",
+      "ageLimit": "10+",
+      "about": "Azərbaycan ədəbiyyatının klassik komediyası.",
+      "address": "Azərbaycan Dövlət Akademik Musiqili Teatrı Zərifə Əliyeva Küçəsi 8, Bakı, Azərbaycan",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/WvL8Z1NcfhIe0mqIwKn8DnQoF7XgvCiqQq8I4Rgm.jpg",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Dövlət Akademik Musiqili Teatrı",
+      "totalSeats": 350,
+      "availableSeats": 240,
+      "tickets": [
+        {
+          "id": "116-1",
+          "label": "I Zone",
+          "price": 15,
+          "available": 120
+        },
+        {
+          "id": "116-2",
+          "label": "II Zone",
+          "price": 22,
+          "available": 80
+        },
+        {
+          "id": "116-3",
+          "label": "III Zone",
+          "price": 32,
+          "available": 40
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Said Muradkhan",
+      "email": "saidmuradkhan14@gmail.com",
+      "phone": "+994 50 123 45 67",
+      "avatar": "https://i.pravatar.cc/150?img=12"
+    },
+    {
+      "id": 2,
+      "name": "Aygün Məmmədova",
+      "email": "aygun.m@example.com",
+      "phone": "+994 55 987 65 43",
+      "avatar": "https://i.pravatar.cc/150?img=32"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "type": "order_pending",
+      "title": "#6626632 sifarişin ödənişi gözlənilir",
+      "message": "#6626632 sifarişin ödənişi gözlənilir.",
+      "createdAt": "2026-07-23T11:07:39.000Z",
+      "read": false
+    },
+    {
+      "id": 2,
+      "type": "order_confirmed",
+      "title": "#6621190 sifarişiniz təsdiqləndi",
+      "message": "Biletləriniz e-poçt ünvanınıza göndərildi.",
+      "createdAt": "2026-07-23T08:08:00.000Z",
+      "read": false
+    },
+    {
+      "id": 3,
+      "type": "system",
+      "title": "Xoş gəldiniz!",
+      "message": "iTicket.az-a qeydiyyatdan keçdiyiniz üçün təşəkkür edirik.",
+      "createdAt": "2026-07-21T11:08:00.000Z",
+      "read": true
+    }
+  ],
+  "orders": [
+    {
+      "id": "6626632",
+      "pin": "7783",
+      "userId": 1,
+      "items": [
+        {
+          "eventId": 11,
+          "eventTitle": "Seanema – The Notebook",
+          "eventDate": "23.07.26 20:00 - 22:00",
+          "venue": "Mambo Beach",
+          "ticketLabel": "Comfort · AS Standart",
+          "seatInfo": {
+            "row": 2,
+            "seatNumber": 4,
+            "sectionName": "Comfort",
+            "price": 15
+          },
+          "price": 15,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 15,
+      "status": "pending_payment",
+      "createdAt": "2026-07-23T11:08:00.000Z",
+      "expiresAt": "2026-07-23T11:23:00.000Z"
+    },
+    {
+      "id": "6621190",
+      "pin": "4210",
+      "userId": 1,
+      "items": [
+        {
+          "eventId": 2,
+          "eventTitle": "Telman Budaqovun Retro Konserti",
+          "eventDate": "31.05.26 19:00",
+          "venue": "Flora Çay Garden",
+          "ticketLabel": "VIP (Divan)",
+          "seatInfo": {
+            "row": 2,
+            "seatNumber": 1,
+            "sectionName": "VIP",
+            "price": 25
+          },
+          "price": 25,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 50,
+      "status": "confirmed",
+      "paymentMethod": "online",
+      "createdAt": "2026-07-20T09:12:00.000Z"
+    }
+  ]
+}
