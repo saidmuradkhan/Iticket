@@ -36,6 +36,7 @@ const TicketSelector = ({ event, onDone }) => {
 
   return (
     <div className="ticket-selector">
+      <div className="stage-bar small">SƏHNƏ</div>
       <p className="free-seating-label">Sərbəst yerləşmə</p>
 
       {event.tickets.map((ticket) => (
