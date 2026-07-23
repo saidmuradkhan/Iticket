@@ -1,5 +1,12 @@
-const EventList = ({ type }) => {
-  return <div className="page">Tədbirlər siyahısı ({type}) - tezliklə</div>;
+import { useParams } from "react-router-dom";
+
+const EventList = () => {
+  const { category, query } = useParams();
+  return (
+    <div className="page">
+      Tədbirlər siyahısı ({category || `axtarış: ${query}`}) - tezliklə
+    </div>
+  );
 };
 
 export default EventList;

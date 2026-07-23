@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© 2026 i:ticket.az - Final layihə</p>
+      <p>© 2026  iTicket - Final layihə</p>
     </footer>
   );
 };

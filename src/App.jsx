@@ -20,8 +20,8 @@ const App = () => {
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<EventList type="concert" />} />
-        <Route path="/shows" element={<EventList type="theatre" />} />
+        <Route path="/events/:category" element={<EventList />} />
+        <Route path="/search/:query" element={<EventList />} />
         <Route path="/event/:id" element={<EventDetail />} />
         <Route path="/event/:id/seats" element={<SeatSelection />} />
         <Route path="/cart" element={<Cart />} />

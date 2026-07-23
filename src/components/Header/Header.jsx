@@ -5,6 +5,7 @@ import { NotificationContext } from "../../context/NotificationContext";
 import { AuthContext } from "../../context/AuthContext";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   const { cartItems } = useContext(CartContext);
@@ -20,14 +21,10 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="logo">
-        i:ticket.az
+        İticket.az
       </Link>
 
-      <nav className="main-nav">
-        <Link to="/">{t("allEvents")}</Link>
-        <Link to="/events">{t("concerts")}</Link>
-        <Link to="/shows">{t("shows")}</Link>
-      </nav>
+      <SearchBar />
 
       <div className="header-actions">
         <button
