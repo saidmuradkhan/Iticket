@@ -1,15 +1,14 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import { NotificationContext } from "../../context/NotificationContext";
 import { AuthContext } from "../../context/AuthContext";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import SearchBar from "./SearchBar";
+import NotificationBell from "./NotificationBell";
 
 const Header = () => {
   const { cartItems } = useContext(CartContext);
-  const { unreadCount } = useContext(NotificationContext);
   const { isAuthenticated } = useContext(AuthContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { language, setLanguage, t } = useContext(LanguageContext);
@@ -45,9 +44,7 @@ const Header = () => {
           {language === "az" ? "🇦🇿 AZ" : "🇬🇧 EN"}
         </button>
 
-        <span className="notification-icon">
-          🔔 {unreadCount > 0 && <span className="badge">{unreadCount}</span>}
-        </span>
+        <NotificationBell />
         <Link to="/cart" className="cart-icon">
           🛒 {cartItems.length > 0 && <span className="badge">{cartItems.length}</span>}
         </Link>

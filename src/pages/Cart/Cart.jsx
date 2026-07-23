@@ -6,7 +6,7 @@ import { createOrder } from "../../api/api";
 import { formatEventDate } from "../../utils/dateHelpers";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, updateQuantity, clearCart, totalPrice } =
+  const { cartItems, removeFromCart, updateQuantity, totalPrice } =
     useContext(CartContext);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -33,7 +33,6 @@ const Cart = () => {
 
     // json-server sifarişə öz id-sini verir, ona görə cavabdan oxuyuruq
     const res = await createOrder(order);
-    clearCart();
     navigate(`/order/${res.data.id}`);
   };
 

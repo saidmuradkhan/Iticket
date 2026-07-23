@@ -102,7 +102,7 @@ a {
   font-size: 14px;
 }
 
-.notification-icon,
+.notification-bell,
 .cart-icon {
   position: relative;
 }
@@ -823,4 +823,178 @@ main {
   background: var(--accent);
   color: #18181b;
   font-weight: 600;
+}
+
+/* Giriş / qeydiyyat */
+.auth-page {
+  max-width: 380px;
+  margin: 60px auto;
+  padding: 24px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-form label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
+.auth-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.auth-form .buy-btn {
+  margin-top: 20px;
+}
+
+.auth-error {
+  color: #e11d48;
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.auth-switch a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Hesab məlumatları */
+.account-info {
+  max-width: 400px;
+}
+
+.account-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.account-field {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.account-field span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.account-field p {
+  margin: 2px 0 0;
+}
+
+/* Sifarişlər / Biletlər */
+.orders-list,
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-summary-card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.order-summary-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.status-badge {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+}
+
+.status-badge.confirmed {
+  background: #16a34a;
+  color: #fff;
+}
+
+.status-badge.expired {
+  background: #e11d48;
+  color: #fff;
+}
+
+.status-badge.pending_payment {
+  background: var(--accent);
+  color: #18181b;
+}
+
+/* Bildiriş zəngi */
+.dropdown-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.notification-empty {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item.unread {
+  background: var(--bg-secondary);
+}
+
+.notification-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.notification-message {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
 }

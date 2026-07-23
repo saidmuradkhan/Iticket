@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getOrderById, updateOrderStatus } from "../../api/api";
 import { useCountdown } from "../../hooks/useCountdown";
 import Loader from "../../components/Loader/Loader";
 import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
 import PaymentMethods from "../../components/PaymentMethods/PaymentMethods";
+import { CartContext } from "../../context/CartContext";
 
 const Order = () => {
   const { orderId } = useParams();
@@ -13,6 +14,7 @@ const Order = () => {
   const [loading, setLoading] = useState(true);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [paying, setPaying] = useState(false);
+  const { clearCart } = useContext(CartContext);
 
   useEffect(() => {
     getOrderById(orderId).then((res) => {
@@ -42,6 +44,7 @@ const Order = () => {
     setPaying(true);
     const res = await updateOrderStatus(orderId, "confirmed");
     setOrder(res.data);
+    clearCart();
     setPaying(false);
   };
 
