@@ -8,6 +8,18 @@ export const api = axios.create({
 export const getEvents = () => api.get("/events");
 export const getShows = () => api.get("/shows");
 export const getEventById = (id) => api.get(`/events/${id}`);
+export const getShowById = (id) => api.get(`/shows/${id}`);
+
+// tədbir "events", tamaşa isə "shows" kolleksiyasında ola bilər - əvvəlcə events yoxlanılır
+export const getEventOrShowById = async (id) => {
+  try {
+    const res = await getEventById(id);
+    return res.data;
+  } catch {
+    const res = await getShowById(id);
+    return res.data;
+  }
+};
 
 export const getNotifications = () => api.get("/notifications");
 export const markNotificationRead = (id) =>
