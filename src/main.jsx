@@ -7,19 +7,25 @@ import { AuthProvider } from './context/AuthContext.jsx'
 import { CartProvider } from './context/CartContext.jsx'
 import { FavoritesProvider } from './context/FavoritesContext.jsx'
 import { NotificationProvider } from './context/NotificationContext.jsx'
+import { ThemeProvider } from './context/ThemeContext.jsx'
+import { LanguageProvider } from './context/LanguageContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <NotificationProvider>
-          <CartProvider>
-            <FavoritesProvider>
-              <App />
-            </FavoritesProvider>
-          </CartProvider>
-        </NotificationProvider>
-      </AuthProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <AuthProvider>
+            <NotificationProvider>
+              <CartProvider>
+                <FavoritesProvider>
+                  <App />
+                </FavoritesProvider>
+              </CartProvider>
+            </NotificationProvider>
+          </AuthProvider>
+        </LanguageProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,
 )
