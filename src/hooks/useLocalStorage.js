@@ -7,7 +7,7 @@ export const useLocalStorage = (key, initialValue) => {
     if (saved === null) return initialValue;
     try {
       return JSON.parse(saved);
-    } catch (e) {
+    } catch {
       return saved;
     }
   });
