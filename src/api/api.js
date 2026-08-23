@@ -32,3 +32,6 @@ export const updateOrderStatus = (id, status) =>
   api.patch(`/orders/${id}`, { status });
 
 export const login = (email) => api.get(`/users?email=${email}`);
+
+export const getWalletTransactions = (userId) =>
+  api.get(`/walletTransactions?userId=${userId}&_sort=-createdAt`);

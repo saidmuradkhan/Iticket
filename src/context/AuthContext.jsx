@@ -32,13 +32,17 @@ export const AuthProvider = ({ children }) => {
     return true;
   };
 
+  const updateUser = (fields) => {
+    setUser((prev) => ({ ...prev, ...fields }));
+  };
+
   const logout = () => {
     setUser(null);
   };
 
   return (
     <AuthContext.Provider
-      value={{ user, login, register, logout, error, isAuthenticated: !!user }}
+      value={{ user, login, register, updateUser, logout, error, isAuthenticated: !!user }}
     >
       {children}
     </AuthContext.Provider>

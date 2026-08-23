@@ -38,3 +38,37 @@ export const refundPayment = async (orderId, amount) => {
     throw new Error(extractError(err), { cause: err });
   }
 };
+
+/** Cüzdanın balansını ödəniş serverindən oxuyur. */
+export const getWalletBalance = async (userId) => {
+  try {
+    const res = await paymentApi.get(`/api/wallet/${userId}`);
+    return res.data;
+  } catch (err) {
+    throw new Error(extractError(err), { cause: err });
+  }
+};
+
+/** Balans artırma üçün Payriff-də ödəniş açır və paymentUrl qaytarır. */
+export const startWalletTopUp = async (userId, amount, language = "AZ") => {
+  try {
+    const res = await paymentApi.post("/api/wallet/topup/create", {
+      userId,
+      amount,
+      language,
+    });
+    return res.data;
+  } catch (err) {
+    throw new Error(extractError(err), { cause: err });
+  }
+};
+
+/** Balans artırmanın nəticəsini serverdə yoxlayır. */
+export const verifyWalletTopUp = async (ref) => {
+  try {
+    const res = await paymentApi.get(`/api/wallet/topup/verify/${ref}`);
+    return res.data;
+  } catch (err) {
+    throw new Error(extractError(err), { cause: err });
+  }
+};

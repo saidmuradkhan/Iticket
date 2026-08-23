@@ -1,19 +1,35 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { getOrders } from "../api/api";
 import Loader from "../components/Loader/Loader";
-import { formatEventDate } from "../utils/dateHelpers";
+import { formatDateTime, formatMoney } from "./profileHelpers";
 
+// iticket.az sifariş statusları
 const STATUS_LABELS = {
+  confirmed: "Tamamlanıb",
   pending_payment: "Ödəniş gözlənilir",
-  confirmed: "Təsdiqləndi",
-  expired: "Ləğv olundu",
+  reserved: "Bronlanıb",
+  expired: "Vaxtı bitib",
+  cancelled: "Ləğv edilib",
+  refunded: "Vəsait geri qaytarılıb",
 };
+
+const TABS = [
+  { key: "all", label: "Hamısı" },
+  { key: "confirmed", label: "Tamamlanıb" },
+  { key: "pending_payment", label: "Ödəniş gözlənilir" },
+  { key: "reserved", label: "Bronlanıb" },
+  { key: "expired", label: "Vaxtı bitib" },
+  { key: "cancelled", label: "Ləğv edilib" },
+  { key: "refunded", label: "Vəsait geri qaytarılıb" },
+];
 
 const Orders = () => {
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [tab, setTab] = useState("all");
 
   useEffect(() => {
     getOrders(user.id).then((res) => {
@@ -22,39 +38,59 @@ const Orders = () => {
     });
   }, [user.id]);
 
-  if (loading) {
-    return <Loader count={3} />;
-  }
-
-  if (orders.length === 0) {
-    return <p>Hələ heç bir sifarişiniz yoxdur.</p>;
-  }
+  const visible = useMemo(
+    () => (tab === "all" ? orders : orders.filter((o) => o.status === tab)),
+    [orders, tab]
+  );
 
   return (
-    <div className="orders-list">
-      <h1>Sifarişlər</h1>
-      {orders.map((order) => (
-        <div className="order-summary-card" key={order.id}>
-          <div className="order-summary-header">
-            <span>#{order.id}</span>
-            <span className={`status-badge ${order.status}`}>
-              {STATUS_LABELS[order.status] || order.status}
-            </span>
-          </div>
-          {order.items.map((item, i) => {
-            const dateLabel = isNaN(new Date(item.eventDate))
-              ? item.eventDate
-              : formatEventDate(item.eventDate);
-            return (
-              <p className="event-card-meta" key={i}>
-                {item.eventTitle} · {dateLabel} · {item.ticketLabel} ×{" "}
-                {item.quantity}
-              </p>
-            );
-          })}
-          <p className="event-card-price">{order.totalPrice} ₼</p>
+    <div className="profile-page">
+      <div className="profile-page-head">
+        <h1>Sifarişlər</h1>
+      </div>
+
+      <div className="profile-tabs profile-tabs-scroll">
+        {TABS.map((item) => (
+          <button
+            type="button"
+            key={item.key}
+            className={tab === item.key ? "active" : undefined}
+            onClick={() => setTab(item.key)}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      {loading ? (
+        <Loader count={4} />
+      ) : visible.length === 0 ? (
+        <p className="profile-empty">Bu bölmədə sifariş tapılmadı.</p>
+      ) : (
+        <div className="orders-list">
+          {visible.map((order) => (
+            <Link
+              className="order-summary-card"
+              key={order.id}
+              to={`/order/${order.id}`}
+            >
+              <div className="order-summary-header">
+                <span>#{order.id}</span>
+                <span className={`status-badge ${order.status}`}>
+                  {STATUS_LABELS[order.status] || order.status}
+                </span>
+              </div>
+              <p className="event-card-meta">{formatDateTime(order.createdAt)}</p>
+              {order.items.map((item, i) => (
+                <p className="event-card-meta" key={i}>
+                  {item.eventTitle} · {item.ticketLabel} × {item.quantity}
+                </p>
+              ))}
+              <p className="event-card-price">{formatMoney(order.totalPrice)}</p>
+            </Link>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   );
 };

@@ -1,18 +1,17 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import { AuthContext } from "../../context/AuthContext";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import SearchBar from "./SearchBar";
 import NotificationBell from "./NotificationBell";
-import { SunIcon, MoonIcon, FlagAzIcon, FlagEnIcon, CartIcon, UserIcon, } from "./HeaderIcons";
+import ProfileMenu from "./ProfileMenu";
+import { SunIcon, MoonIcon, FlagAzIcon, FlagEnIcon, CartIcon, } from "./HeaderIcons";
 
 const Header = () => {
   const { cartItems } = useContext(CartContext);
-  const { isAuthenticated } = useContext(AuthContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const { language, setLanguage, t } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   const toggleLanguage = () => {
     setLanguage(language === "az" ? "en" : "az");
@@ -64,12 +63,7 @@ const Header = () => {
           )}
         </Link>
 
-        <Link to={isAuthenticated ? "/profile/account" : "/login"} className="header-btn header-link" >
-          <span className="header-btn-icon-slot">
-            <UserIcon />
-          </span>
-          {isAuthenticated ? t("profile") : t("login")}
-        </Link>
+        <ProfileMenu />
       </div>
     </header>
   );

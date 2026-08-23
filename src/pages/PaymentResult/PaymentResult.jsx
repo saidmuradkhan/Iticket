@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { verifyPayment } from "../../api/payriff";
+import { verifyPayment, verifyWalletTopUp } from "../../api/payriff";
 import { CartContext } from "../../context/CartContext";
 import Loader from "../../components/Loader/Loader";
 
@@ -16,27 +16,40 @@ const MESSAGES = {
   pending_payment: { title: "Ödəniş təsdiqlənmədi", text: "Ödəniş hələ tamamlanmayıb." },
 };
 
-const initialState = (orderId) =>
-  orderId
-    ? { phase: "loading" }
-    : { phase: "error", message: "Sifariş nömrəsi tapılmadı" };
+// cüzdan balansının artırılması üçün mətnlər
+const TOPUP_MESSAGES = {
+  confirmed: { title: "Balans artırıldı ✓", text: "Məbləğ cüzdanınıza əlavə olundu." },
+  declined: { title: "Ödəniş rədd edildi", text: "Balans artırılmadı, kart ödənişi qəbul olunmadı." },
+  canceled: { title: "Ödəniş ləğv edildi", text: "Balans artırılmadı." },
+  expired: { title: "Ödəniş vaxtı bitdi", text: "Balans artırılmadı, yenidən cəhd edin." },
+  refunded: { title: "Ödəniş geri qaytarıldı", text: "Məbləğ kartınıza qaytarılıb." },
+  pending_payment: { title: "Ödəniş təsdiqlənmədi", text: "Ödəniş hələ tamamlanmayıb." },
+};
 
 const PaymentResult = () => {
   const [searchParams] = useSearchParams();
   const orderId = searchParams.get("orderId");
+  const topupRef = searchParams.get("topupRef");
+  const isTopUp = !!topupRef;
   const { clearCart } = useContext(CartContext);
 
-  const [state, setState] = useState(() => initialState(orderId));
+  const [state, setState] = useState(() =>
+    orderId || topupRef
+      ? { phase: "loading" }
+      : { phase: "error", message: "Ödəniş məlumatı tapılmadı" }
+  );
 
   useEffect(() => {
-    if (!orderId) return;
+    if (!orderId && !topupRef) return;
 
     let cancelled = false;
     let timer;
 
     const check = async (attempt) => {
       try {
-        const data = await verifyPayment(orderId);
+        const data = topupRef
+          ? await verifyWalletTopUp(topupRef)
+          : await verifyPayment(orderId);
         if (cancelled) return;
 
         if (data.status === "pending_payment" && attempt < MAX_ATTEMPTS) {
@@ -44,9 +57,9 @@ const PaymentResult = () => {
           return;
         }
 
-        if (data.status === "confirmed") clearCart();
+        if (data.status === "confirmed" && !topupRef) clearCart();
 
-        setState({ phase: "done", status: data.status });
+        setState({ phase: "done", status: data.status, amount: data.amount, balance: data.balance });
       } catch (err) {
         if (cancelled) return;
         setState({ phase: "error", message: err.message });
@@ -59,7 +72,7 @@ const PaymentResult = () => {
       cancelled = true;
       clearTimeout(timer);
     };
-  }, [orderId, clearCart]);
+  }, [orderId, topupRef, clearCart]);
 
   if (state.phase === "loading") {
     return (
@@ -76,16 +89,42 @@ const PaymentResult = () => {
         <h1>Xəta baş verdi</h1>
         <p className="event-detail-meta">{state.message}</p>
         <div className="payment-result-actions">
-          <Link className="buy-btn" to="/">
-            Ana səhifəyə qayıt
+          <Link className="buy-btn" to={isTopUp ? "/profile/wallet" : "/"}>
+            {isTopUp ? "Cüzdana qayıt" : "Ana səhifəyə qayıt"}
           </Link>
         </div>
       </div>
     );
   }
 
-  const message = MESSAGES[state.status] || MESSAGES.pending_payment;
+  const messages = isTopUp ? TOPUP_MESSAGES : MESSAGES;
+  const message = messages[state.status] || messages.pending_payment;
   const isSuccess = state.status === "confirmed";
+
+  if (isTopUp) {
+    return (
+      <div className={isSuccess ? "payment-result success" : "payment-result failed"}>
+        <h1>{message.title}</h1>
+        <p className="event-detail-meta">{message.text}</p>
+        {isSuccess && state.balance !== undefined && (
+          <p className="event-detail-meta">
+            Yeni balans: {Number(state.balance).toFixed(2)} ₼
+          </p>
+        )}
+
+        <div className="payment-result-actions">
+          <Link className="buy-btn" to="/profile/wallet">
+            Cüzdana keç
+          </Link>
+          {!isSuccess && (
+            <Link className="payment-result-link" to="/">
+              Ana səhifə
+            </Link>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={isSuccess ? "payment-result success" : "payment-result failed"}>

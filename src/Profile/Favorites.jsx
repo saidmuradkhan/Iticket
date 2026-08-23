@@ -5,18 +5,23 @@ import EventCard from "../components/EventCard/EventCard";
 const Favorites = () => {
   const { favorites } = useContext(FavoritesContext);
 
-  if (favorites.length === 0) {
-    return <p>Sevimlilərinizə hələ tədbir əlavə etməmisiniz.</p>;
-  }
-
   return (
-    <div>
-      <h1>Sevimlilər</h1>
-      <div className="event-grid">
-        {favorites.map((event) => (
-          <EventCard key={event.id} event={event} />
-        ))}
+    <div className="profile-page">
+      <div className="profile-page-head">
+        <h1>Sevimlilər</h1>
       </div>
+
+      {favorites.length === 0 ? (
+        <p className="profile-empty">
+          Sevimlilərinizə hələ tədbir əlavə etməmisiniz.
+        </p>
+      ) : (
+        <div className="event-grid">
+          {favorites.map((event) => (
+            <EventCard key={event.id} event={event} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
