@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEvents } from "../../hooks/useEvents";
+import { DEFAULT_FILTERS, filterEvents } from "../../utils/eventFilterHelpers";
 import EventCard from "../../components/EventCard/EventCard";
 import EventFilters from "../../components/EventFilters/EventFilters";
 import Loader from "../../components/Loader/Loader";
@@ -16,23 +17,23 @@ const CATEGORY_LABELS = {
 const EventList = () => {
   const { category, query } = useParams();
   const { events, loading } = useEvents();
-  const [selectedCity, setSelectedCity] = useState("all");
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [filters, setFilters] = useState(() => ({
+    ...DEFAULT_FILTERS,
+    category: category || "all",
+  }));
 
   if (loading) {
     return <Loader count={8} />;
   }
 
   const cities = [...new Set(events.map((event) => event.city))];
+  const venues = [...new Set(events.map((event) => event.venue))];
 
-  const filteredEvents = events.filter((event) => {
-    const categoryMatch = !category || event.category === category;
-    const queryMatch =
-      !query || event.title.toLowerCase().includes(query.toLowerCase());
-    const cityMatch = selectedCity === "all" || event.city === selectedCity;
-    const dateMatch = !selectedDate || event.date.slice(0, 10) === selectedDate;
-    return categoryMatch && queryMatch && cityMatch && dateMatch;
-  });
+  const searchedEvents = query
+    ? events.filter((event) => event.title.toLowerCase().includes(query.toLowerCase()))
+    : events;
+
+  const filteredEvents = filterEvents(searchedEvents, filters);
 
   const heading = category
     ? CATEGORY_LABELS[category] || category
@@ -44,10 +45,9 @@ const EventList = () => {
 
       <EventFilters
         cities={cities}
-        selectedCity={selectedCity}
-        onCityChange={setSelectedCity}
-        selectedDate={selectedDate}
-        onDateChange={setSelectedDate}
+        venues={venues}
+        filters={filters}
+        onFiltersChange={setFilters}
       />
 
       <div className="event-grid">

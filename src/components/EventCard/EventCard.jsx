@@ -18,26 +18,18 @@ const EventCard = ({ event }) => {
     <div className="event-card">
       <Link to={`/event/${event.id}`} className="event-card-image">
         <img src={event.image} alt={event.title} />
-        <button
-          type="button"
-          className={favorite ? "favorite-btn active" : "favorite-btn"}
-          onClick={handleFavoriteClick}
-          aria-label="Sevimlilərə əlavə et"
-        >
-          <i
-            className={favorite ? "fas fa-heart" : "far fa-heart"}
-            aria-hidden="true"
-          />
+        {event.ageLimit && <span className="card-age-badge">{event.ageLimit}</span>}
+        <span className="card-price-badge">{event.price} ₼</span>
+        <button type="button" className={favorite ? "favorite-btn active" : "favorite-btn"} onClick={handleFavoriteClick} aria-label="Sevimlilərə əlavə et" >
+          <i className={favorite ? "fas fa-heart" : "far fa-heart"} aria-hidden="true" />
         </button>
       </Link>
       <div className="event-card-body">
+        <p className="event-card-date">{formattedDate}</p>
         <Link to={`/event/${event.id}`}>
           <h3>{event.title}</h3>
         </Link>
-        <p className="event-card-meta">
-          {formattedDate} · {event.venue}
-        </p>
-        <p className="event-card-price">{event.price} ₼-dən</p>
+        <p className="event-card-meta">{event.venue}</p>
       </div>
     </div>
   );

@@ -421,6 +421,383 @@
           "available": 22
         }
       ]
+    },
+    {
+      "id": "12",
+      "title": "Emin Agalarov – Live in Baku",
+      "date": "2026-08-15T20:00:00.000Z",
+      "venue": "Sea Breeze Resort",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 40,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/A7bNmK2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Emin Ağalarovun Xəzər sahilində möhtəşəm yay konserti programı.",
+      "address": "Nardaran qəsəbəsi, Sea Breeze",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/bRh9bkZqxeJC71ZEHx28m8xGD1rC7pHb.png",
+      "language": "Rus və Azərbaycan dillərində",
+      "status": "active",
+      "organizer": "Sea Breeze Events",
+      "totalSeats": 2000,
+      "availableSeats": 1420,
+      "tickets": [
+        {
+          "id": "12-fan",
+          "label": "Fan Zone",
+          "price": 40,
+          "available": 500
+        },
+        {
+          "id": "12-stan",
+          "label": "Standart",
+          "price": 70,
+          "available": 720
+        },
+        {
+          "id": "12-vip",
+          "label": "VIP",
+          "price": 250,
+          "available": 200
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Caspian Fashion Week 2026",
+      "date": "2026-09-05T18:00:00.000Z",
+      "venue": "Heydər Əliyev Mərkəzi",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 30,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Fsh7bK2WqO9nE4mXyZrT1vBcPxKl8sNz.png",
+      "ageLimit": "12+",
+      "about": "Xəzərin ən böyük moda həftəsi, yerli və xarici dizaynerlərin dəb nümayişi.",
+      "address": "Heydər Əliyev prospekti 1",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/mKj9TpO8wFEt7QoE8h5fP9uQtYQTvjaPz.jpg",
+      "language": "Çoxdilli",
+      "status": "active",
+      "organizer": "Caspian Fashion Group",
+      "totalSeats": 500,
+      "availableSeats": 120,
+      "tickets": [
+        {
+          "id": "13-stan",
+          "label": "Standart",
+          "price": 30,
+          "available": 90
+        },
+        {
+          "id": "13-vip",
+          "label": "VIP",
+          "price": 100,
+          "available": 30
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Jony – Böyük Solo Konsert",
+      "date": "2026-09-20T21:00:00.000Z",
+      "venue": "Bakı Kristal Zalı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 35,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Jn9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "14+",
+      "about": "Məşhur ifaçı Jony-nin Bakıda unudulmaz irimiqyaslı solo konserti.",
+      "address": "Dövlət Bayrağı Meydanı, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/jHhIbvWBBHCqkHH7UFOVrxnAnnLBoJb9.png",
+      "language": "Rus dilində",
+      "status": "active",
+      "organizer": "iTicket Events",
+      "totalSeats": 5000,
+      "availableSeats": 1250,
+      "hasSeatMap": true,
+      "tickets": [
+        {
+          "id": "14-fan",
+          "label": "Fan Zone",
+          "price": 35,
+          "available": 450
+        },
+        {
+          "id": "14-stan",
+          "label": "Standart",
+          "price": 60,
+          "available": 600
+        },
+        {
+          "id": "14-vip",
+          "label": "VIP Box",
+          "price": 200,
+          "available": 200
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Coldplay Tribute Symphony",
+      "date": "2026-10-02T19:30:00.000Z",
+      "venue": "Azərbaycan Dövlət Filarmoniyası",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Cp9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "6+",
+      "about": "Coldplay qrupunun ən sevilən hitləri simfonik orkestrin ifasında və şam işığında.",
+      "address": "İstiqlaliyyət küçəsi 10",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/clPofntiQK49txcDZ28YYtElkPmpBsf6.jpg",
+      "language": "İnstrümental",
+      "status": "active",
+      "organizer": "Red Events",
+      "totalSeats": 450,
+      "availableSeats": 89,
+      "tickets": [
+        {
+          "id": "15-stan",
+          "label": "Standart",
+          "price": 20,
+          "available": 65
+        },
+        {
+          "id": "15-vip",
+          "label": "VIP",
+          "price": 50,
+          "available": 24
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Uşaqlar üçün Elm Festivalı",
+      "date": "2026-10-10T11:00:00.000Z",
+      "venue": "Bakı İdman Sarayı",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 12,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Sc9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "3+",
+      "about": "İnteraktiv elmi şoular, kimyəvi eksperimentlər və uşaqlar üçün master-klasslar.",
+      "address": "Neftçilər prospekti 26",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/scFuSBfMYzh9Tp8wFEt7QoE8h5fP9uQt.jpg",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Future Kids",
+      "totalSeats": 600,
+      "availableSeats": 340,
+      "tickets": [
+        {
+          "id": "16-child",
+          "label": "Uşaq Bileti",
+          "price": 12,
+          "available": 200
+        },
+        {
+          "id": "16-adult",
+          "label": "Valideyn Bileti",
+          "price": 15,
+          "available": 140
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Interstellar – Live in Cinema",
+      "date": "2026-10-15T20:00:00.000Z",
+      "venue": "Nizami Kino Mərkəzi",
+      "city": "Bakı",
+      "category": "film",
+      "price": 15,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/In9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "12+",
+      "about": "Hans Zimmerin möhtəşəm saundtrekləri ilə film gecəsi.",
+      "address": "Bülbül prospekti 20",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/inLBlvWBBHCqkHH7UFOVrxnAnnLBoJb9.png",
+      "language": "İngilis dilində (Azərbaycan altyazı)",
+      "status": "active",
+      "organizer": "CinemaPlus",
+      "totalSeats": 320,
+      "availableSeats": 110,
+      "tickets": [
+        {
+          "id": "17-stan",
+          "label": "Standart",
+          "price": 15,
+          "available": 90
+        },
+        {
+          "id": "17-vip",
+          "label": "VIP",
+          "price": 30,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Zülfiyyə Xanbabayeva – Yubiley Konserti",
+      "date": "2026-11-01T19:00:00.000Z",
+      "venue": "Heydar Əliyev Sarayı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 30,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Zl9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "6+",
+      "about": "Azərbaycanın pop ulduzunun canlı ifalarla dolu yubiley gecəsi.",
+      "address": "Bülbül prospekti 35",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/zlQjiKO0rrOI36JaCso62fnhU2uoEqkxX.jpg",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "iTicket Events",
+      "totalSeats": 1800,
+      "availableSeats": 450,
+      "tickets": [
+        {
+          "id": "18-stan",
+          "label": "Standart",
+          "price": 30,
+          "available": 300
+        },
+        {
+          "id": "18-vip",
+          "label": "VIP",
+          "price": 120,
+          "available": 150
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Gəncə Musiqi Festivalı",
+      "date": "2026-11-10T15:00:00.000Z",
+      "venue": "Gəncə Dövlət Filarmoniyası",
+      "city": "Gəncə",
+      "category": "festival",
+      "price": 15,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Gn9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "6+",
+      "about": "Klassik və milli musiqimizin inciləri Gəncə səhnəsində.",
+      "address": "Gəncə şəhəri, Atatürk prospekti",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/GClSk2XKfzgB8F5Se1awHwDqdmVvm77v.png",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Gəncə Regional Mədəniyyət İdarəsi",
+      "totalSeats": 800,
+      "availableSeats": 230,
+      "tickets": [
+        {
+          "id": "19-stan",
+          "label": "Standart",
+          "price": 15,
+          "available": 180
+        },
+        {
+          "id": "19-vip",
+          "label": "VIP",
+          "price": 40,
+          "available": 50
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Stand Up Baku – Yeni Mövsüm",
+      "date": "2026-11-15T20:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 15,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/St9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "16+",
+      "about": "Bakının ən yaxşı komiklərindən bol gülüşlü stand-up şou.",
+      "address": "Nardaran qəsəbəsi, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/stteUuwdkoweaEeApAZRqtNT1k2FC3Me.jpg",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Stand Up Baku",
+      "totalSeats": 300,
+      "availableSeats": 45,
+      "tickets": [
+        {
+          "id": "20-stan",
+          "label": "Standart",
+          "price": 15,
+          "available": 35
+        },
+        {
+          "id": "20-vip",
+          "label": "VIP",
+          "price": 30,
+          "available": 10
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "title": "Retro Bakı Gecələri",
+      "date": "2026-11-20T19:00:00.000Z",
+      "venue": "Flora Çay Garden",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 12,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Rt9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "12+",
+      "about": "70-80-ci illərin unudulmaz Azərbaycan estrada mahnıları canlı ifada.",
+      "address": "Təbriz Xəlil Rza oğlu küç 23",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover/rtPofntiQK49txcDZ28YYtElkPmpBsf6.jpg",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Flora Events",
+      "totalSeats": 200,
+      "availableSeats": 67,
+      "tickets": [
+        {
+          "id": "21-stan",
+          "label": "Standart",
+          "price": 12,
+          "available": 50
+        },
+        {
+          "id": "21-vip",
+          "label": "VIP",
+          "price": 25,
+          "available": 17
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "İlham Nəzərov – Opera Classics",
+      "date": "2026-11-25T19:00:00.000Z",
+      "venue": "Opera və Balet Teatrı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Op9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "6+",
+      "about": "Dünya şöhrətli kontratenor İlham Nəzərovun iştirakı ilə klassik opera ariyaları.",
+      "address": "İstiqlaliyyət küçəsi 95",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/opDMYmGs3gCnVN2fVzkMnOEIr1CZWv3Y.png",
+      "language": "İtalyan və Azərbaycan dillərində",
+      "status": "active",
+      "organizer": "Opera və Balet Teatrı",
+      "totalSeats": 600,
+      "availableSeats": 310,
+      "tickets": [
+        {
+          "id": "22-stan",
+          "label": "Standart",
+          "price": 20,
+          "available": 250
+        },
+        {
+          "id": "22-vip",
+          "label": "VIP",
+          "price": 60,
+          "available": 60
+        }
+      ]
     }
   ],
   "shows": [
@@ -962,6 +1339,78 @@
           "available": 40
         }
       ]
+    },
+    {
+      "id": "117",
+      "title": "Şelkunçik Baleti",
+      "date": "2026-12-25T19:00:00.000Z",
+      "venue": "Opera və Balet Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 15,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Sh9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "6+",
+      "about": "P.İ. Çaykovskinin dünyaca məşhur Yeni İl nağılı olan Şelkunçik balet tamaşası.",
+      "address": "İstiqlaliyyət küçəsi 95",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/shDMYmGs3gCnVN2fVzkMnOEIr1CZWv3Y.png",
+      "language": "İnstrümental",
+      "status": "active",
+      "organizer": "Opera və Balet Teatrı",
+      "totalSeats": 550,
+      "availableSeats": 180,
+      "tickets": [
+        {
+          "id": "117-1",
+          "label": "I Zone",
+          "price": 15,
+          "available": 80
+        },
+        {
+          "id": "117-2",
+          "label": "II Zone",
+          "price": 25,
+          "available": 60
+        },
+        {
+          "id": "117-3",
+          "label": "III Zone",
+          "price": 40,
+          "available": 40
+        }
+      ]
+    },
+    {
+      "id": "118",
+      "title": "Məlikməmmədin Nağılı",
+      "date": "2026-12-28T12:00:00.000Z",
+      "venue": "Gənc Tamaşaçılar Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 5,
+      "image": "https://cdn.iticket.az/cdn-cgi/image/width=700,height=700,quality=75,format=webp/event/square_card/Ml9bKm2sXzPqW9dE3hYt1mNbZqPj7kLh.png",
+      "ageLimit": "3+",
+      "about": "Uşaqlar üçün Azərbaycan xalq nağılı əsasında hazırlanmış rəngarəng tamaşa.",
+      "address": "Əliağa Vahid küç. 28, Bakı",
+      "detailedimage": "https://cdn.iticket.az/cdn-cgi/image/width=2560,height=960,quality=92,format=webp/event/cover_v6/mlYKiRoRTIHKLBZnjCdieAvy9J84gUTs0.png",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Gənc Tamaşaçılar Teatrı",
+      "totalSeats": 300,
+      "availableSeats": 150,
+      "tickets": [
+        {
+          "id": "118-1",
+          "label": "Standart",
+          "price": 5,
+          "available": 120
+        },
+        {
+          "id": "118-2",
+          "label": "VIP",
+          "price": 12,
+          "available": 30
+        }
+      ]
     }
   ],
   "users": [
@@ -978,6 +1427,20 @@
       "email": "aygun.m@example.com",
       "phone": "+994 55 987 65 43",
       "avatar": "https://i.pravatar.cc/150?img=32"
+    },
+    {
+      "id": "3",
+      "name": "Elnur Qasımov",
+      "email": "elnur.q@example.com",
+      "phone": "+994 70 543 21 09",
+      "avatar": "https://i.pravatar.cc/150?img=11"
+    },
+    {
+      "id": "4",
+      "name": "Lalə Əliyeva",
+      "email": "lala.a@example.com",
+      "phone": "+994 77 321 45 87",
+      "avatar": "https://i.pravatar.cc/150?img=47"
     }
   ],
   "notifications": [
@@ -1003,6 +1466,30 @@
       "title": "Xoş gəldiniz!",
       "message": "iTicket.az-a qeydiyyatdan keçdiyiniz üçün təşəkkür edirik.",
       "createdAt": "2026-07-21T11:08:00.000Z",
+      "read": true
+    },
+    {
+      "id": "4",
+      "type": "order_confirmed",
+      "title": "#6635510 sifarişiniz təsdiqləndi",
+      "message": "Biletləriniz uğurla balansınıza əlavə olundu.",
+      "createdAt": "2026-07-23T14:20:00.000Z",
+      "read": false
+    },
+    {
+      "id": "5",
+      "type": "campaign",
+      "title": "Yay Festivalı Endirimləri!",
+      "message": "Seçilmiş konsertlərə 20% endirim kodunuz: SUMMER26",
+      "createdAt": "2026-07-22T10:00:00.000Z",
+      "read": false
+    },
+    {
+      "id": "6",
+      "type": "system",
+      "title": "Profil yenilənməsi",
+      "message": "Təhlükəsizlik məqsədilə şifrənizi yeniləməyiniz tövsiyə olunur.",
+      "createdAt": "2026-07-20T16:45:00.000Z",
       "read": true
     }
   ],
@@ -1179,77 +1666,187 @@
       "id": "H6fOm61EwWg"
     },
     {
-      "pin": "6984",
+      "id": "6635510",
+      "pin": "1294",
+      "userId": 3,
+      "items": [
+        {
+          "eventId": 12,
+          "eventTitle": "Emin Agalarov – Live in Baku",
+          "eventDate": "15.08.26 20:00",
+          "venue": "Sea Breeze Resort",
+          "ticketLabel": "Fan Zone",
+          "seatInfo": null,
+          "price": 40,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 80,
+      "status": "confirmed",
+      "paymentMethod": "online",
+      "createdAt": "2026-07-23T14:15:00.000Z"
+    },
+    {
+      "id": "6640021",
+      "pin": "3045",
+      "userId": 4,
+      "items": [
+        {
+          "eventId": 14,
+          "eventTitle": "Jony – Böyük Solo Konsert",
+          "eventDate": "20.09.26 21:00",
+          "venue": "Bakı Kristal Zalı",
+          "ticketLabel": "VIP Box",
+          "seatInfo": {
+            "row": 5,
+            "seatNumber": 12,
+            "sectionName": "VIP Box",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 200,
+      "status": "confirmed",
+      "paymentMethod": "online",
+      "createdAt": "2026-07-23T15:30:00.000Z"
+    },
+    {
+      "pin": "4851",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "15",
+          "eventTitle": "Coldplay Tribute Symphony",
+          "eventDate": "2026-10-02T19:30:00.000Z",
+          "venue": "Azərbaycan Dövlət Filarmoniyası",
+          "ticketLabel": "Standart",
+          "seatInfo": null,
+          "price": 20,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 40,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T16:00:00.000Z",
+      "expiresAt": "2026-07-23T16:15:00.000Z",
+      "id": "AbK70mUxL-z"
+    },
+    {
+      "pin": "7749",
+      "userId": 3,
+      "items": [
+        {
+          "eventId": "117",
+          "eventTitle": "Şelkunçik Baleti",
+          "eventDate": "2026-12-25T19:00:00.000Z",
+          "venue": "Opera və Balet Teatrı",
+          "ticketLabel": "III Zone",
+          "seatInfo": {
+            "row": 12,
+            "seatNumber": 5,
+            "sectionName": "III Zone",
+            "price": 40
+          },
+          "price": 40,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 40,
+      "status": "pending_payment",
+      "createdAt": "2026-07-23T16:40:00.000Z",
+      "expiresAt": "2026-07-23T16:55:00.000Z",
+      "id": "XyZ10oOpM-n"
+    },
+    {
+      "pin": "1192",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "16",
+          "eventTitle": "Uşaqlar üçün Elm Festivalı",
+          "eventDate": "2026-10-10T11:00:00.000Z",
+          "venue": "Bakı İdman Sarayı",
+          "ticketLabel": "Uşaq Bileti",
+          "seatInfo": null,
+          "price": 12,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 12,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T17:00:00.000Z",
+      "expiresAt": "2026-07-23T17:15:00.000Z",
+      "id": "KjU88oPqSls"
+    },
+    {
+      "pin": "2245",
+      "userId": 4,
+      "items": [
+        {
+          "eventId": "20",
+          "eventTitle": "Stand Up Baku – Yeni Mövsüm",
+          "eventDate": "2026-11-15T20:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "VIP",
+          "seatInfo": null,
+          "price": 30,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 60,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T17:10:00.000Z",
+      "expiresAt": "2026-07-23T17:25:00.000Z",
+      "id": "SuP20wQsMnB"
+    },
+    {
+      "pin": "2377",
       "userId": 1784809571537,
       "items": [
         {
-          "eventId": "113",
-          "eventTitle": "Adamın Adamı",
-          "eventDate": "2026-08-03T00:00:00.000Z",
-          "venue": "Azərbaycan Dövlət Akademik Musiqili Teatrı",
-          "ticketLabel": "I Zone",
+          "eventId": "20",
+          "eventTitle": "Stand Up Baku – Yeni Mövsüm",
+          "eventDate": "2026-11-15T20:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "Standart",
           "seatInfo": null,
+          "price": 15,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 30,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T13:27:08.524Z",
+      "expiresAt": "2026-07-23T13:42:08.524Z",
+      "id": "hq2DiMVDTk0"
+    },
+    {
+      "pin": "6656",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "101",
+          "eventTitle": "Hamlet",
+          "eventDate": "2026-06-02T00:00:00.000Z",
+          "venue": "Pray Teatrı",
+          "ticketLabel": "I Zone (Sıra 8, Yer 9)",
+          "seatInfo": {
+            "row": 8,
+            "seatNumber": 9,
+            "sectionName": "I Zone",
+            "price": 10
+          },
           "price": 10,
           "quantity": 1
         }
       ],
       "totalPrice": 10,
       "status": "confirmed",
-      "createdAt": "2026-07-23T13:18:19.397Z",
-      "expiresAt": "2026-07-23T13:33:19.397Z",
-      "id": "XqhKdmyzbzM"
-    },
-    {
-      "pin": "4519",
-      "userId": 1784809571537,
-      "items": [
-        {
-          "eventId": "101",
-          "eventTitle": "Hamlet",
-          "eventDate": "2026-06-02T00:00:00.000Z",
-          "venue": "Pray Teatrı",
-          "ticketLabel": "II Zone (Sıra 7, Yer 7)",
-          "seatInfo": {
-            "row": 7,
-            "seatNumber": 7,
-            "sectionName": "II Zone",
-            "price": 15
-          },
-          "price": 15,
-          "quantity": 1
-        }
-      ],
-      "totalPrice": 15,
-      "status": "confirmed",
-      "createdAt": "2026-07-23T13:21:49.197Z",
-      "expiresAt": "2026-07-23T13:36:49.197Z",
-      "id": "TUSqsWHW37Q"
-    },
-    {
-      "pin": "5535",
-      "userId": 1784809571537,
-      "items": [
-        {
-          "eventId": "101",
-          "eventTitle": "Hamlet",
-          "eventDate": "2026-06-02T00:00:00.000Z",
-          "venue": "Pray Teatrı",
-          "ticketLabel": "II Zone (Sıra 8, Yer 7)",
-          "seatInfo": {
-            "row": 8,
-            "seatNumber": 7,
-            "sectionName": "II Zone",
-            "price": 15
-          },
-          "price": 15,
-          "quantity": 1
-        }
-      ],
-      "totalPrice": 15,
-      "status": "confirmed",
-      "createdAt": "2026-07-23T13:22:11.818Z",
-      "expiresAt": "2026-07-23T13:37:11.818Z",
-      "id": "c5S487exwXo"
+      "createdAt": "2026-08-18T13:09:52.095Z",
+      "expiresAt": "2026-08-18T13:24:52.095Z",
+      "id": "bMv1Eni__eE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

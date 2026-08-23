@@ -9,11 +9,11 @@ const Footer = () => {
             hüdudlarından kənarda keçirilən ən yaxşı tədbirlərdə sizinləyik!
           </p>
           <div className="footer-social">
-            <i className="fab fa-facebook" />
-            <i className="fab fa-instagram" />
-            <i className="fab fa-tiktok" />
-            <i className="fas fa-share-alt" />
-            <i className="fab fa-linkedin" />
+            <a href="#" className="footer-social-link"><i className="fab fa-facebook-f" /></a>
+            <a href="#" className="footer-social-link"><i className="fab fa-instagram" /></a>
+            <a href="#" className="footer-social-link"><i className="fab fa-tiktok" /></a>
+            <a href="#" className="footer-social-link"><i className="fab fa-twitter" /></a>
+            <a href="#" className="footer-social-link"><i className="fab fa-linkedin-in" /></a>
           </div>
         </div>
 
@@ -43,6 +43,12 @@ const Footer = () => {
           <p>Əlaqə</p>
           <p>Biletin qaytarılması və dəyişdirilməsi</p>
         </div>
+      </div>
+
+      <div className="footer-payment" style={{maxWidth: 1200, margin: '24px auto 0'}}>
+        <div className="footer-payment-icon"><i className="fab fa-cc-visa" /></div>
+        <div className="footer-payment-icon"><i className="fab fa-cc-mastercard" /></div>
+        <div className="footer-payment-icon"><i className="fab fa-cc-amex" /></div>
       </div>
 
       <div className="footer-bottom">

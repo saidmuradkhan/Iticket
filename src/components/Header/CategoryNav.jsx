@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
 
 const categories = [
-  { key: "all", label: "Bütün tədbirlər", path: "/" },
-  { key: "concert", label: "Konsert", path: "/events/concert" },
-  { key: "theatre", label: "Tamaşa", path: "/events/theatre" },
-  { key: "kids", label: "Uşaqlar", path: "/events/kids" },
-  { key: "festival", label: "Festival", path: "/events/festival" },
-  { key: "film", label: "Film", path: "/events/film" },
+  { key: "all", label: "Bütün tədbirlər", path: "/", icon: "fas fa-th-large" },
+  { key: "concert", label: "Konsert", path: "/events/concert", icon: "fas fa-music" },
+  { key: "theatre", label: "Tamaşa", path: "/events/theatre", icon: "fas fa-theater-masks" },
+  { key: "kids", label: "Uşaqlar", path: "/events/kids", icon: "fas fa-child" },
+  { key: "festival", label: "Festival", path: "/events/festival", icon: "fas fa-campground" },
+  { key: "film", label: "Film", path: "/events/film", icon: "fas fa-film" },
 ];
 
 const CategoryNav = () => {
@@ -19,7 +19,7 @@ const CategoryNav = () => {
           end={cat.path === "/"}
           className={({ isActive }) => isActive ? "category-pill active" : "category-pill"}
         >
-          {cat.label}
+          <i className={cat.icon + " cat-icon"} /> {cat.label}
         </NavLink>
       ))}
     </nav>

@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="logo">
-        İticket.az
+        iTicket<span className="logo-accent">.AZ</span>
       </Link>
 
       <SearchBar />
@@ -32,26 +32,31 @@ const Header = () => {
           onClick={toggleTheme}
           aria-label="Tema"
         >
-          {theme === "light" ? "🌞" : "🌙"}
+          <i className={theme === "light" ? "fas fa-sun" : "fas fa-moon"} />
         </button>
 
         <button
           type="button"
-          className="icon-btn"
+          className="icon-btn lang-btn"
           onClick={toggleLanguage}
           aria-label="Dil"
         >
-          {language === "az" ? "🇦🇿 AZ" : "🇬🇧 EN"}
+          <i className="fas fa-globe" /> {language === "az" ? "AZ" : "EN"}
         </button>
 
         <NotificationBell />
-        <Link to="/cart" className="cart-icon">
-          🛒 {cartItems.length > 0 && <span className="badge">{cartItems.length}</span>}
+        <Link to="/cart" className="icon-btn cart-icon" aria-label="Səbət">
+          <i className="fas fa-shopping-cart" />
+          {cartItems.length > 0 && <span className="badge">{cartItems.length}</span>}
         </Link>
         {isAuthenticated ? (
-          <Link to="/profile/account">{t("profile")}</Link>
+          <Link to="/profile/account" className="header-link">
+            <i className="fas fa-user" /> {t("profile")}
+          </Link>
         ) : (
-          <Link to="/login">{t("login")}</Link>
+          <Link to="/login" className="header-link">
+            {t("login")}
+          </Link>
         )}
       </div>
     </header>
