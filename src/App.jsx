@@ -8,6 +8,7 @@ import EventDetail from './pages/EventDetail/EventDetail'
 import SeatSelection from './pages/SeatSelection/SeatSelection'
 import Cart from './pages/Cart/Cart'
 import Order from './pages/Order/Order'
+import PaymentResult from './pages/PaymentResult/PaymentResult'
 import Login from './pages/Auth/Login'
 import Register from './pages/Auth/Register'
 import Tickets from './Profile/Tickets'
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/event/:id/seats" element={<SeatSelection />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order/:orderId" element={<Order />} />
+        <Route path="/payment/result" element={<PaymentResult />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route element={<ProtectedRoute />}>

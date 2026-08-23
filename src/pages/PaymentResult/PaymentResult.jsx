@@ -1,0 +1,120 @@
+import { useState, useEffect, useContext } from "react";
+import { useSearchParams, Link } from "react-router-dom";
+import { verifyPayment } from "../../api/payriff";
+import { CartContext } from "../../context/CartContext";
+import Loader from "../../components/Loader/Loader";
+
+const MAX_ATTEMPTS = 4;
+const RETRY_DELAY = 1500;
+
+const MESSAGES = {
+  confirmed: { title: "Ödəniş tamamlandı ✓", text: "Biletləriniz hesabınıza əlavə olundu." },
+  declined: { title: "Ödəniş rədd edildi", text: "Kart ödənişi bank tərəfindən qəbul olunmadı." },
+  canceled: { title: "Ödəniş ləğv edildi", text: "Ödəniş prosesi yarımçıq qaldı." },
+  expired: { title: "Ödəniş vaxtı bitdi", text: "Sifariş ləğv olundu, yenidən cəhd edin." },
+  refunded: { title: "Ödəniş geri qaytarıldı", text: "Məbləğ kartınıza qaytarılıb." },
+  pending_payment: { title: "Ödəniş təsdiqlənmədi", text: "Ödəniş hələ tamamlanmayıb." },
+};
+
+const initialState = (orderId) =>
+  orderId
+    ? { phase: "loading" }
+    : { phase: "error", message: "Sifariş nömrəsi tapılmadı" };
+
+const PaymentResult = () => {
+  const [searchParams] = useSearchParams();
+  const orderId = searchParams.get("orderId");
+  const { clearCart } = useContext(CartContext);
+
+  const [state, setState] = useState(() => initialState(orderId));
+
+  useEffect(() => {
+    if (!orderId) return;
+
+    let cancelled = false;
+    let timer;
+
+    const check = async (attempt) => {
+      try {
+        const data = await verifyPayment(orderId);
+        if (cancelled) return;
+
+        if (data.status === "pending_payment" && attempt < MAX_ATTEMPTS) {
+          timer = setTimeout(() => check(attempt + 1), RETRY_DELAY);
+          return;
+        }
+
+        if (data.status === "confirmed") clearCart();
+
+        setState({ phase: "done", status: data.status });
+      } catch (err) {
+        if (cancelled) return;
+        setState({ phase: "error", message: err.message });
+      }
+    };
+
+    check(1);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [orderId, clearCart]);
+
+  if (state.phase === "loading") {
+    return (
+      <div className="payment-result">
+        <h1>Ödəniş yoxlanılır...</h1>
+        <Loader count={1} />
+      </div>
+    );
+  }
+
+  if (state.phase === "error") {
+    return (
+      <div className="payment-result failed">
+        <h1>Xəta baş verdi</h1>
+        <p className="event-detail-meta">{state.message}</p>
+        <div className="payment-result-actions">
+          <Link className="buy-btn" to="/">
+            Ana səhifəyə qayıt
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const message = MESSAGES[state.status] || MESSAGES.pending_payment;
+  const isSuccess = state.status === "confirmed";
+
+  return (
+    <div className={isSuccess ? "payment-result success" : "payment-result failed"}>
+      <h1>{message.title}</h1>
+      <p className="event-detail-meta">{message.text}</p>
+
+      <div className="payment-result-actions">
+        {isSuccess ? (
+          <>
+            <Link className="buy-btn" to={`/order/${orderId}`}>
+              Sifarişə bax
+            </Link>
+            <Link className="payment-result-link" to="/profile/tickets">
+              Biletlərim
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link className="buy-btn" to={`/order/${orderId}`}>
+              Yenidən cəhd et
+            </Link>
+            <Link className="payment-result-link" to="/">
+              Ana səhifə
+            </Link>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default PaymentResult;

@@ -1867,8 +1867,58 @@ main {
   color: #18181b;
   font-weight: 600;
 }
+.payment-result {
+  max-width: 560px;
+  margin: 60px auto;
+  padding: 32px 24px;
+  text-align: center;
+}
 
-/* ───────── AUTH ───────── */
+.payment-result h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.payment-result.failed h1 {
+  color: var(--danger);
+}
+
+.payment-result-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.payment-result-actions .buy-btn {
+  width: auto;
+  margin: 0;
+  padding: 12px 32px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.payment-result-link {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.payment-result-link:hover {
+  color: var(--text);
+}
+
+.payment-error {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(225, 29, 72, 0.08);
+  color: var(--danger);
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
 .auth-page {
   max-width: 400px;
   margin: 60px auto;
@@ -1941,7 +1991,6 @@ main {
   text-decoration: underline;
 }
 
-/* ───────── PROFILE ───────── */
 .profile-layout {
   display: flex;
   gap: 24px;
@@ -1985,7 +2034,6 @@ main {
   margin-right: auto;
 }
 
-/* Account */
 .account-info {
   max-width: 400px;
 }
@@ -2014,7 +2062,6 @@ main {
   font-weight: 500;
 }
 
-/* Orders / Tickets */
 .orders-list,
 .tickets-list {
   display: flex;
@@ -2063,7 +2110,6 @@ main {
   color: #18181b;
 }
 
-/* ───────── APP PROMO ───────── */
 .app-promo {
   max-width: 1200px;
   margin: 0 auto;
@@ -2115,7 +2161,6 @@ main {
   background: var(--border);
 }
 
-/* ───────── FOOTER ───────── */
 .footer {
   padding: 48px 24px 24px;
   border-top: 1px solid var(--border);
@@ -2241,7 +2286,6 @@ main {
   color: var(--text);
 }
 
-/* ───────── NOTIFICATIONS ───────── */
 .dropdown-backdrop {
   position: fixed;
   inset: 0;
@@ -2303,14 +2347,11 @@ main {
   line-height: 1.4;
 }
 
-/* ───────── HOME PAGE ───────── */
 .home-page {
   padding-bottom: 20px;
 }
 
-/* ───────── RESPONSIVE ───────── */
 
-/* Tablet */
 @media (max-width: 1024px) {
   .hero-section {
     padding: 16px;
@@ -2354,7 +2395,6 @@ main {
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .header {
     padding: 8px 16px;
@@ -2554,7 +2594,6 @@ main {
   }
 }
 
-/* Small phones */
 @media (max-width: 380px) {
   .event-grid {
     grid-template-columns: 1fr;

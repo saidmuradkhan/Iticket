@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getOrderById, updateOrderStatus } from "../../api/api";
+import { startPayment } from "../../api/payriff";
 import { useCountdown } from "../../hooks/useCountdown";
 import Loader from "../../components/Loader/Loader";
 import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
@@ -14,6 +15,7 @@ const Order = () => {
   const [loading, setLoading] = useState(true);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [paying, setPaying] = useState(false);
+  const [payError, setPayError] = useState(null);
   const { clearCart } = useContext(CartContext);
 
   useEffect(() => {
@@ -38,10 +40,24 @@ const Order = () => {
   if (!order) {
     return <div className="page">Sifariş tapılmadı.</div>;
   }
+  const isCardPayment = ["online", "googlepay", "applepay"].includes(paymentMethod);
 
   const handlePay = async () => {
     if (!paymentMethod) return;
     setPaying(true);
+    setPayError(null);
+
+    if (isCardPayment) {
+      try {
+        const { paymentUrl } = await startPayment(orderId);
+        window.location.assign(paymentUrl);
+      } catch (err) {
+        setPayError(err.message);
+        setPaying(false);
+      }
+      return;
+    }
+
     const res = await updateOrderStatus(orderId, "confirmed");
     setOrder(res.data);
     clearCart();
@@ -67,6 +83,11 @@ const Order = () => {
         <p className="event-detail-meta">
           Sifariş nömrəsi: #{order.id} · PIN: {order.pin}
         </p>
+        {order.payment?.transactionId && (
+          <p className="event-detail-meta">
+            Ödəniş kodu: {order.payment.transactionId}
+          </p>
+        )}
         <div className="order-items">{renderItems()}</div>
         <p className="order-total">Cəmi: {order.totalPrice} ₼</p>
       </div>
@@ -92,8 +113,17 @@ const Order = () => {
       <div className="order-items">{renderItems()}</div>
       <p className="order-total">Cəmi: {order.totalPrice} ₼</p>
 
+      {order.status === "declined" && (
+        <p className="payment-error">Əvvəlki ödəniş rədd edildi. Yenidən cəhd edə bilərsiniz.</p>
+      )}
+      {order.status === "canceled" && (
+        <p className="payment-error">Əvvəlki ödəniş ləğv edildi. Yenidən cəhd edə bilərsiniz.</p>
+      )}
+
       <h2>Ödəniş üsulu</h2>
       <PaymentMethods selected={paymentMethod} onSelect={setPaymentMethod} />
+
+      {payError && <p className="payment-error">{payError}</p>}
 
       <button
         type="button"
@@ -101,7 +131,11 @@ const Order = () => {
         disabled={!paymentMethod || paying}
         onClick={handlePay}
       >
-        {paying ? "Ödənilir..." : "Ödə"}
+        {paying
+          ? isCardPayment
+            ? "Ödəniş səhifəsinə yönləndirilir..."
+            : "Ödənilir..."
+          : "Ödə"}
       </button>
     </div>
   );

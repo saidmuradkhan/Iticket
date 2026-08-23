@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useCallback, useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -7,34 +7,42 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useLocalStorage("cartItems", []);
 
-  const addToCart = (item) => {
-    setCartItems((prev) => [...prev, item]);
-  };
-
-  const removeFromCart = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
-  };
-
-  const updateQuantity = (id, delta) => {
-    setCartItems((prev) =>
-      prev.map((item) => item.id === id ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item )
-    );
-  };
-
-  const clearCart = () => {
-    setCartItems([]);
-  };
-
-  const totalPrice = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
+  const addToCart = useCallback(
+    (item) => {
+      setCartItems((prev) => [...prev, item]);
+    },
+    [setCartItems]
   );
 
-  return (
-    <CartContext.Provider
-      value={{cartItems, addToCart, removeFromCart, updateQuantity, clearCart, totalPrice,}}
-    >
-      {children}
-    </CartContext.Provider>
+  const removeFromCart = useCallback(
+    (id) => {
+      setCartItems((prev) => prev.filter((item) => item.id !== id));
+    },
+    [setCartItems]
   );
+
+  const updateQuantity = useCallback(
+    (id, delta) => {
+      setCartItems((prev) =>
+        prev.map((item) => item.id === id ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item )
+      );
+    },
+    [setCartItems]
+  );
+
+  const clearCart = useCallback(() => {
+    setCartItems((prev) => (prev.length === 0 ? prev : []));
+  }, [setCartItems]);
+
+  const totalPrice = useMemo(
+    () => cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0),
+    [cartItems]
+  );
+
+  const value = useMemo(
+    () => ({cartItems, addToCart, removeFromCart, updateQuantity, clearCart, totalPrice,}),
+    [cartItems, addToCart, removeFromCart, updateQuantity, clearCart, totalPrice]
+  );
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
