@@ -6,6 +6,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import SearchBar from "./SearchBar";
 import NotificationBell from "./NotificationBell";
+import { SunIcon, MoonIcon, FlagAzIcon, FlagEnIcon, CartIcon, UserIcon, } from "./HeaderIcons";
 
 const Header = () => {
   const { cartItems } = useContext(CartContext);
@@ -28,36 +29,47 @@ const Header = () => {
       <div className="header-actions">
         <button
           type="button"
-          className="icon-btn"
+          className="header-btn header-btn-icon"
           onClick={toggleTheme}
-          aria-label="Tema"
+          aria-label="Tema dəyiş"
         >
-          <i className={theme === "light" ? "fas fa-sun" : "fas fa-moon"} />
+          <span className="header-btn-icon-slot">
+            {theme === "light" ? <SunIcon /> : <MoonIcon />}
+          </span>
         </button>
 
         <button
           type="button"
-          className="icon-btn lang-btn"
+          className="header-btn header-btn-icon"
           onClick={toggleLanguage}
-          aria-label="Dil"
+          aria-label={`Dil: ${language.toUpperCase()}`}
         >
-          <i className="fas fa-globe" /> {language === "az" ? "AZ" : "EN"}
+          <span className="header-btn-icon-slot header-flag">
+            {language === "az" ? <FlagAzIcon /> : <FlagEnIcon />}
+          </span>
         </button>
 
         <NotificationBell />
-        <Link to="/cart" className="icon-btn cart-icon" aria-label="Səbət">
-          <i className="fas fa-shopping-cart" />
-          {cartItems.length > 0 && <span className="badge">{cartItems.length}</span>}
+
+        <Link
+          to="/cart"
+          className="header-btn header-btn-icon cart-icon"
+          aria-label="Səbət"
+        >
+          <span className="header-btn-icon-slot">
+            <CartIcon />
+          </span>
+          {cartItems.length > 0 && (
+            <span className="badge">{cartItems.length}</span>
+          )}
         </Link>
-        {isAuthenticated ? (
-          <Link to="/profile/account" className="header-link">
-            <i className="fas fa-user" /> {t("profile")}
-          </Link>
-        ) : (
-          <Link to="/login" className="header-link">
-            {t("login")}
-          </Link>
-        )}
+
+        <Link to={isAuthenticated ? "/profile/account" : "/login"} className="header-btn header-link" >
+          <span className="header-btn-icon-slot">
+            <UserIcon />
+          </span>
+          {isAuthenticated ? t("profile") : t("login")}
+        </Link>
       </div>
     </header>
   );

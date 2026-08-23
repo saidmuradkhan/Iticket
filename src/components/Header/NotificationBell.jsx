@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { NotificationContext } from "../../context/NotificationContext";
+import { BellIcon } from "./HeaderIcons";
 
 const NotificationBell = () => {
   const { notifications, unreadCount, markAsRead } =
@@ -10,11 +11,14 @@ const NotificationBell = () => {
     <div className="notification-bell">
       <button
         type="button"
-        className="icon-btn"
+        className="header-btn header-btn-icon"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label="Bildirişlər"
       >
-        🔔 {unreadCount > 0 && <span className="badge">{unreadCount}</span>}
+        <span className="header-btn-icon-slot">
+          <BellIcon />
+        </span>
+        {unreadCount > 0 && <span className="badge">{unreadCount}</span>}
       </button>
 
       {isOpen && (
