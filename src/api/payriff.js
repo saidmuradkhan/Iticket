@@ -72,3 +72,12 @@ export const verifyWalletTopUp = async (ref) => {
     throw new Error(extractError(err), { cause: err });
   }
 };
+
+export const payWithWallet = async (orderId) => {
+  try {
+    const res = await paymentApi.post("/api/wallet/pay", { orderId });
+    return res.data;
+  } catch (err) {
+    throw new Error(extractError(err), { cause: err });
+  }
+};

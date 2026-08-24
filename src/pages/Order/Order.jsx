@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getOrderById, updateOrderStatus } from "../../api/api";
-import { startPayment } from "../../api/payriff";
+import { startPayment, payWithWallet, getWalletBalance } from "../../api/payriff";
 import { useCountdown } from "../../hooks/useCountdown";
 import Loader from "../../components/Loader/Loader";
 import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
@@ -16,12 +16,16 @@ const Order = () => {
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [paying, setPaying] = useState(false);
   const [payError, setPayError] = useState(null);
+  const [walletBalance, setWalletBalance] = useState(null);
   const { clearCart } = useContext(CartContext);
 
   useEffect(() => {
     getOrderById(orderId).then((res) => {
       setOrder(res.data);
       setLoading(false);
+      getWalletBalance(res.data.userId)
+        .then((wallet) => setWalletBalance(wallet.balance))
+        .catch(() => setWalletBalance(null));
     });
   }, [orderId]);
 
@@ -41,6 +45,8 @@ const Order = () => {
     return <div className="page">Sifariş tapılmadı.</div>;
   }
   const isCardPayment = ["online", "googlepay", "applepay"].includes(paymentMethod);
+  const isWalletPayment = paymentMethod === "wallet";
+  const walletShort = walletBalance !== null && walletBalance < order.totalPrice;
 
   const handlePay = async () => {
     if (!paymentMethod) return;
@@ -55,6 +61,20 @@ const Order = () => {
         setPayError(err.message);
         setPaying(false);
       }
+      return;
+    }
+
+    if (isWalletPayment) {
+      try {
+        const { balance } = await payWithWallet(orderId);
+        const res = await getOrderById(orderId);
+        setOrder(res.data);
+        setWalletBalance(balance);
+        clearCart();
+      } catch (err) {
+        setPayError(err.message);
+      }
+      setPaying(false);
       return;
     }
 
@@ -83,6 +103,9 @@ const Order = () => {
         <p className="event-detail-meta">
           Sifariş nömrəsi: #{order.id} · PIN: {order.pin}
         </p>
+        {order.paymentMethod === "wallet" && (
+          <p className="event-detail-meta">Ödəniş üsulu: Cüzdan</p>
+        )}
         {order.payment?.transactionId && (
           <p className="event-detail-meta">
             Ödəniş kodu: {order.payment.transactionId}
@@ -121,7 +144,12 @@ const Order = () => {
       )}
 
       <h2>Ödəniş üsulu</h2>
-      <PaymentMethods selected={paymentMethod} onSelect={setPaymentMethod} />
+      <PaymentMethods
+        selected={paymentMethod}
+        onSelect={setPaymentMethod}
+        walletBalance={walletBalance}
+        walletDisabled={walletShort}
+      />
 
       {payError && <p className="payment-error">{payError}</p>}
 

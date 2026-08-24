@@ -93,20 +93,44 @@ img {
 .logo {
   display: flex;
   align-items: center;
-  gap: 2px;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
   transition: opacity 0.2s;
 }
 
-.logo:hover {
-  opacity: 0.8;
+.logo-svg {
+  height: 32px;
+  width: auto;
 }
 
-.logo-accent {
-  color: var(--accent);
+.logo-ticket {
+  transform-origin: center;
+  transition: filter 0.3s ease;
+}
+
+.logo-dot-yellow {
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover States */
+.logo:hover .logo-ticket {
+  filter: drop-shadow(0 0 12px rgba(255, 220, 0, 0.85));
+}
+
+.logo:hover .logo-dot-yellow {
+  animation: dotJump 0.5s forwards cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Keyframes for arc animation */
+@keyframes dotJump {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-54px, -30px) scale(1.3);
+  }
+  100% {
+    transform: translate(-108.38px, -17.22px) scale(1);
+  }
 }
 
 .search-bar {
@@ -1867,6 +1891,23 @@ main {
   color: #18181b;
   font-weight: 600;
 }
+
+.payment-method:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.payment-method:disabled:hover {
+  border-color: var(--border);
+}
+
+.payment-method-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.7;
+}
 .payment-result {
   max-width: 560px;
   margin: 60px auto;
@@ -2512,6 +2553,13 @@ main {
   color: var(--danger);
   font-size: 13px;
   font-weight: 500;
+}
+
+.profile-form-hint {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .profile-form-success {

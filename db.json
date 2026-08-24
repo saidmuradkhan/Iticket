@@ -1889,21 +1889,32 @@
   ],
   "topups": [
     {
-      "ref": "tu-b7257286-8b45-4a33-85ac-04b5d4b47906",
+      "ref": "tu-5a1228c6-d38f-4045-ad36-4aa61181fe55",
       "userId": 1,
-      "amount": 50,
-      "status": "pending_payment",
-      "createdAt": "2026-08-23T16:47:01.110Z",
+      "amount": 5,
+      "status": "confirmed",
+      "createdAt": "2026-08-23T17:30:47.545Z",
       "payment": {
         "provider": "payriff",
-        "payriffOrderId": "e17076b6-6c35-4bc8-828c-116ab9f8cf78",
-        "transactionId": 8952501,
-        "paymentUrl": "https://pay.payriff.com/r/e17076b6-6c35-4bc8-828c-116ab9f8cf78?type=direct",
-        "startedAt": "2026-08-23T16:47:01.110Z"
+        "payriffOrderId": "65f1ed90-ccc5-4b1e-b62e-2dfe5ace9dbd",
+        "transactionId": 8952923,
+        "paymentUrl": "https://pay.payriff.com/r/65f1ed90-ccc5-4b1e-b62e-2dfe5ace9dbd?type=direct",
+        "startedAt": "2026-08-23T17:30:47.545Z",
+        "paymentStatus": "APPROVED",
+        "verifiedAt": "2026-08-23T17:32:10.328Z"
       },
-      "id": "LD0wZXpghqk"
+      "id": "5Zhjz-XeaAs"
     }
   ],
-  "walletTransactions": [],
+  "walletTransactions": [
+    {
+      "userId": 1,
+      "ref": "tu-5a1228c6-d38f-4045-ad36-4aa61181fe55",
+      "type": "topup",
+      "amount": 5,
+      "createdAt": "2026-08-23T17:32:10.309Z",
+      "id": "pCK7cv5rY4A"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

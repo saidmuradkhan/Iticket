@@ -1,6 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useCallback, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { getOrders } from "../api/api";
+import { refundPayment } from "../api/payriff";
 import Loader from "../components/Loader/Loader";
 import Modal from "../components/Modal/Modal";
 import { formatDateTime, formatMoney } from "./profileHelpers";
@@ -19,35 +20,62 @@ const RefundRequests = () => {
   const [requests, setRequests] = useState([]);
   const [formOpen, setFormOpen] = useState(false);
   const [draft, setDraft] = useState({ orderId: "", reason: REASONS[0] });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const load = useCallback(
+    () =>
+      getOrders(user.id)
+        .then((res) => {
+          setOrders(res.data.filter((order) => order.status === "confirmed"));
+        })
+        .finally(() => setLoading(false)),
+    [user.id]
+  );
 
   useEffect(() => {
-    getOrders(user.id).then((res) => {
-      setOrders(res.data.filter((order) => order.status === "confirmed"));
-      setLoading(false);
-    });
-  }, [user.id]);
+    load();
+  }, [load]);
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     const order = orders.find((o) => String(o.id) === draft.orderId);
     if (!order) return;
 
-    setRequests((prev) => [
-      {
-        id: `RF-${order.id}`,
-        orderId: order.id,
-        amount: order.totalPrice,
-        reason: draft.reason,
-        createdAt: new Date().toISOString(),
-        status: "Baxılır",
-      },
-      ...prev,
-    ]);
+    setSubmitting(true);
+    setError("");
+    const toWallet = order.paymentMethod === "wallet";
+    try {
+      const result = await refundPayment(order.id);
+      setRequests((prev) => [
+        {
+          id: `${order.id}-${prev.length + 1}`,
+          orderId: order.id,
+          amount: result.amount ?? order.totalPrice,
+          reason: draft.reason,
+          createdAt: new Date().toISOString(),
+          status: toWallet
+            ? "Vəsait cüzdana qaytarıldı"
+            : "Vəsait kartınıza qaytarıldı",
+          done: true,
+        },
+        ...prev,
+      ]);
+      await load();
+    } catch (err) {
+      setError(err.message);
+      setSubmitting(false);
+      return;
+    }
+
+    setSubmitting(false);
     setFormOpen(false);
     setDraft({ orderId: "", reason: REASONS[0] });
   };
 
   if (loading) return <Loader count={3} />;
+
+  const selectedOrder = orders.find((o) => String(o.id) === draft.orderId);
 
   return (
     <div className="profile-page">
@@ -56,7 +84,10 @@ const RefundRequests = () => {
         <button
           type="button"
           className="primary-btn"
-          onClick={() => setFormOpen(true)}
+          onClick={() => {
+            setError("");
+            setFormOpen(true);
+          }}
           disabled={orders.length === 0}
         >
           Yeni sorğu
@@ -75,7 +106,9 @@ const RefundRequests = () => {
             <div className="order-summary-card" key={request.id}>
               <div className="order-summary-header">
                 <span>#{request.orderId}</span>
-                <span className="status-badge">{request.status}</span>
+                <span className={request.done ? "status-badge refunded" : "status-badge"}>
+                  {request.status}
+                </span>
               </div>
               <p className="event-card-meta">{request.reason}</p>
               <p className="event-card-meta">
@@ -104,6 +137,7 @@ const RefundRequests = () => {
                 {orders.map((order) => (
                   <option key={order.id} value={order.id}>
                     #{order.id} · {formatMoney(order.totalPrice)}
+                    {order.paymentMethod === "wallet" ? " · Cüzdan" : ""}
                   </option>
                 ))}
               </select>
@@ -123,8 +157,19 @@ const RefundRequests = () => {
                 ))}
               </select>
             </label>
-            <button type="submit" className="primary-btn">
-              Sorğu göndər
+
+            {selectedOrder && (
+              <p className="profile-form-hint">
+                {selectedOrder.paymentMethod === "wallet"
+                  ? `${formatMoney(selectedOrder.totalPrice)} dərhal cüzdanınıza qaytarılacaq. Biletlər ləğv olunur.`
+                  : `${formatMoney(selectedOrder.totalPrice)} ödəniş etdiyiniz karta qaytarılacaq (bank 1-5 iş günü ərzində köçürür). Biletlər ləğv olunur.`}
+              </p>
+            )}
+
+            {error && <p className="profile-form-error">{error}</p>}
+
+            <button type="submit" className="primary-btn" disabled={submitting}>
+              {submitting ? "Qaytarılır..." : "Qaytarmanı təsdiqlə"}
             </button>
           </form>
         </Modal>

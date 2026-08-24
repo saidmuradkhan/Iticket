@@ -77,7 +77,10 @@ const Wallet = () => {
             <div className="wallet-transaction" key={item.id}>
               <div>
                 <strong>{TYPE_LABELS[item.type] || item.type}</strong>
-                <p className="event-card-meta">{formatDateTime(item.createdAt)}</p>
+                <p className="event-card-meta">
+                  {formatDateTime(item.createdAt)}
+                  {item.orderId && ` · #${item.orderId}`}
+                </p>
               </div>
               <span
                 className={
