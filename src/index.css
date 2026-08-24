@@ -3178,14 +3178,79 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 24px;
-  text-align: center;
 }
 
-.app-promo p {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 10px;
+.app-promo-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 40px 48px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+/* sağ tərəfə doğru sarı işıq */
+.app-promo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(90% 130% at 90% 20%, rgba(255, 221, 0, 0.3) 0%, rgba(255, 221, 0, 0.06) 42%, transparent 68%);
+  pointer-events: none;
+}
+
+/* hərəkətli sarı dekorativ nöqtələr */
+.app-promo-dots {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.promo-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.7;
+  animation: promo-dot-float 6s ease-in-out infinite;
+}
+
+.promo-dot:nth-child(1) { top: 30%; left: 46%; width: 5px; height: 5px; animation-duration: 7s; animation-delay: 0s; }
+.promo-dot:nth-child(2) { top: 68%; left: 52%; width: 7px; height: 7px; animation-duration: 5.5s; animation-delay: -1.5s; }
+.promo-dot:nth-child(3) { top: 80%; left: 62%; width: 4px; height: 4px; animation-duration: 8s; animation-delay: -3s; }
+.promo-dot:nth-child(4) { top: 22%; left: 70%; width: 5px; height: 5px; animation-duration: 6.5s; animation-delay: -2s; }
+.promo-dot:nth-child(5) { top: 55%; left: 8%; width: 4px; height: 4px; animation-duration: 7.5s; animation-delay: -4s; }
+
+@keyframes promo-dot-float {
+  0%   { transform: translate(0, 0); opacity: 0.25; }
+  25%  { opacity: 0.85; }
+  50%  { transform: translate(6px, -14px); opacity: 0.55; }
+  75%  { opacity: 0.85; }
+  100% { transform: translate(0, 0); opacity: 0.25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-dot { animation: none; }
+}
+
+.app-promo-text {
+  position: relative;
+  z-index: 1;
+}
+
+.app-promo-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 12px;
   letter-spacing: -0.02em;
+  color: var(--text);
 }
 
 .app-promo .highlight {
@@ -3193,36 +3258,62 @@ main {
 }
 
 .app-promo-sub {
-  font-size: 14px !important;
-  font-weight: 400 !important;
+  font-size: 14px;
+  font-weight: 400;
   color: var(--text-secondary);
-  max-width: 520px;
-  margin: 0 auto 24px !important;
+  max-width: 460px;
+  margin: 0;
   line-height: 1.6;
 }
 
 .app-promo-badges {
+  position: relative;
+  z-index: 1;
   display: flex;
-  justify-content: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .store-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
+  gap: 10px;
+  padding: 10px 18px;
   border-radius: 12px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  font-size: 14px;
-  font-weight: 500;
-  transition: border-color 0.15s, background 0.15s;
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .store-badge:hover {
-  border-color: var(--border-hover);
-  background: var(--border);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.55);
+}
+
+.store-badge i {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.store-badge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+
+.store-badge-text small {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.store-badge-text strong {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .footer {
@@ -3632,18 +3723,24 @@ main {
     gap: 8px;
   }
 
-  .app-promo p {
-    font-size: 18px;
+  .app-promo-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 28px 24px;
+  }
+
+  .app-promo-title {
+    font-size: 20px;
   }
 
   .app-promo-badges {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
   }
 
   .store-badge {
-    width: 100%;
-    max-width: 220px;
+    flex: 1;
+    min-width: 140px;
     justify-content: center;
   }
 
