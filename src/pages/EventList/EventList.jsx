@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEvents } from "../../hooks/useEvents";
 import { DEFAULT_FILTERS, filterEvents } from "../../utils/eventFilterHelpers";
 import EventCard from "../../components/EventCard/EventCard";
@@ -13,14 +13,31 @@ const CATEGORY_LABELS = {
   festival: "Festival",
   film: "Film",
 };
+let reloadedOnSearch = window.location.pathname.startsWith("/search/");
+const consumeReloadedOnSearch = () => {
+  const value = reloadedOnSearch;
+  reloadedOnSearch = false;
+  return value;
+};
 
 const EventList = () => {
   const { category, query } = useParams();
   const { events, loading } = useEvents();
+  const navigate = useNavigate();
   const [filters, setFilters] = useState(() => ({
     ...DEFAULT_FILTERS,
     category: category || "all",
   }));
+
+  useEffect(() => {
+    if (query && consumeReloadedOnSearch()) {
+      navigate("/", { replace: true });
+    }
+  }, [query, navigate]);
+
+  useEffect(() => {
+    if (query) window.scrollTo({ top: 0, behavior: "instant" });
+  }, [query, loading]);
 
   useEffect(() => {
     setFilters((prev) => ({ ...prev, category: category || "all" }));
