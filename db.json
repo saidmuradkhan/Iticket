@@ -2599,7 +2599,7 @@
       "title": "#6635510 sifarişiniz təsdiqləndi",
       "message": "Biletləriniz uğurla balansınıza əlavə olundu.",
       "createdAt": "2026-07-23T14:20:00.000Z",
-      "read": false
+      "read": true
     },
     {
       "id": "5",
@@ -2607,7 +2607,7 @@
       "title": "Yay Festivalı Endirimləri!",
       "message": "Seçilmiş konsertlərə 20% endirim kodunuz: SUMMER26",
       "createdAt": "2026-07-22T10:00:00.000Z",
-      "read": false
+      "read": true
     },
     {
       "id": "6",
