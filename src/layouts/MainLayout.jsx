@@ -31,20 +31,40 @@ const MainLayout = () => {
             </p>
           </div>
           <div className="app-promo-badges">
-            <span className="store-badge">
-              <i className="fab fa-google-play" />
-              <span className="store-badge-text">
-                <small>GET IT ON</small>
-                <strong>Google Play</strong>
-              </span>
-            </span>
-            <span className="store-badge">
-              <i className="fab fa-apple" />
-              <span className="store-badge-text">
-                <small>Download on the</small>
-                <strong>App Store</strong>
-              </span>
-            </span>
+            <a
+              className="store-link"
+              href="https://play.google.com/store/apps/details?id=az.iticket.iticket"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Play"
+            >
+              <img
+                className="store-img"
+                src="/google-play.png"
+                alt="Get it on Google Play"
+                loading="lazy"
+                decoding="async"
+                width="270"
+                height="80"
+              />
+            </a>
+            <a
+              className="store-link"
+              href="https://apps.apple.com/az/app/iticket-az/id1456260325"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="App Store"
+            >
+              <img
+                className="store-img"
+                src="/app-store.png"
+                alt="Download on the App Store"
+                loading="lazy"
+                decoding="async"
+                width="168"
+                height="57"
+              />
+            </a>
           </div>
         </div>
       </section>
