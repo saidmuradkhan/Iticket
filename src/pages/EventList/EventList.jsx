@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEvents } from "../../hooks/useEvents";
 import { DEFAULT_FILTERS, filterEvents } from "../../utils/eventFilterHelpers";
@@ -21,6 +21,10 @@ const EventList = () => {
     ...DEFAULT_FILTERS,
     category: category || "all",
   }));
+
+  useEffect(() => {
+    setFilters((prev) => ({ ...prev, category: category || "all" }));
+  }, [category]);
 
   if (loading) {
     return <Loader count={8} />;
