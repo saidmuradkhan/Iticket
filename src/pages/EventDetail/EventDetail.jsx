@@ -5,8 +5,6 @@ import { useEvents } from "../../hooks/useEvents";
 import { formatEventDate } from "../../utils/dateHelpers";
 import { FavoritesContext } from "../../context/FavoritesContext";
 import Loader from "../../components/Loader/Loader";
-import Modal from "../../components/Modal/Modal";
-import TicketSelector from "../../components/TicketSelector/TicketSelector";
 
 const scrollSimilar = (direction) => {
   const track = document.getElementById("similar-track");
@@ -21,7 +19,6 @@ const EventDetail = () => {
 
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showModal, setShowModal] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -56,12 +53,9 @@ const EventDetail = () => {
     .filter((e) => String(e.id) !== String(event.id) && e.category === event.category)
     .slice(0, 8);
 
+  // bütün tədbirlərdə yer seçimi səhnə xəritəsi vasitəsilə aparılır
   const handleBuyClick = () => {
-    if (event.hasSeatMap) {
-      navigate(`/event/${event.id}/seats`);
-    } else {
-      setShowModal(true);
-    }
+    navigate(`/event/${event.id}/seats`);
   };
 
   const handleShare = async () => {
@@ -233,12 +227,6 @@ const EventDetail = () => {
         <button type="button" className="floating-buy-btn" onClick={handleBuyClick}>
           Bilet al
         </button>
-      )}
-
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
-          <TicketSelector event={event} onDone={() => setShowModal(false)} />
-        </Modal>
       )}
     </div>
   );

@@ -1,9 +1,15 @@
-const Seat = ({ seat, color, selected, onClick }) => {
-  const className =
-    "seat" + (seat.sold ? " sold" : "") + (selected ? " selected" : "");
+const Seat = ({ seat, color, sold, selected, onClick }) => {
+  const className = "seat" + (sold ? " sold" : "") + (selected ? " selected" : "");
 
   return (
-    <button type="button" className={className} style={!seat.sold ? { "--seat-color": color } : undefined} disabled={seat.sold} onClick={onClick} title={`Sıra ${seat.row}, Yer ${seat.seatNumber}`} >
+    <button
+      type="button"
+      className={className}
+      style={!sold ? { "--seat-color": color } : undefined}
+      disabled={sold}
+      onClick={onClick}
+      title={`Sıra ${seat.row}, Yer ${seat.seatNumber}`}
+    >
       {seat.seatNumber}
     </button>
   );

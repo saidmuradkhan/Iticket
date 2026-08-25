@@ -1,10 +1,11 @@
 import { useState, useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   const { login, error } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
@@ -14,7 +15,8 @@ const Login = () => {
     const success = await login(email);
     setSubmitting(false);
     if (success) {
-      navigate("/profile/account");
+      // giriş öncəsi yönləndirilən səhifə varsa oraya qaytar (məs. yer seçimi)
+      navigate(location.state?.from || "/profile/account");
     }
   };
 

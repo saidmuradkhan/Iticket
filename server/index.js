@@ -62,6 +62,76 @@ const dbPost = async (path, body) => {
   return res.json();
 };
 
+const dbDelete = async (path) => {
+  const res = await fetch(`${DB_URL}${path}`, { method: "DELETE" });
+  if (!res.ok && res.status !== 404) throw new Error(`json-server ${res.status}: ${path}`);
+  return true;
+};
+
+/* ───────── oturacaq (seat) köməkçiləri ───────── */
+
+// hold neçə dəqiqə tutulur — sifariş vaxtı ilə (15 dəq) uyğun saxlanılır
+const SEAT_HOLD_MINUTES = 15;
+
+// hold hələ də etibarlıdırmı: satılmış həmişə, tutulmuş isə vaxtı bitməyibsə
+const isHoldActive = (hold) => {
+  if (hold.status === "sold") return true;
+  if (hold.status !== "held") return false;
+  return Boolean(hold.expiresAt) && new Date(hold.expiresAt).getTime() > Date.now();
+};
+
+const holdExpiry = () =>
+  new Date(Date.now() + SEAT_HOLD_MINUTES * 60 * 1000).toISOString();
+
+// vaxtı keçmiş "held" qeydlərini silir (best-effort), qalan siyahını qaytarır
+const purgeExpiredHolds = async (holds) => {
+  const stale = holds.filter((h) => h.status === "held" && !isHoldActive(h));
+  for (const h of stale) await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
+  return holds.filter((h) => !stale.includes(h));
+};
+
+// sifariş ödənildikdə həmin yerləri qəti "sold" edir (idempotent)
+const finalizeSeats = async (order) => {
+  const seatItems = (order.items || []).filter((i) => i.seatInfo?.seatKey);
+  if (seatItems.length === 0) return;
+  const all = await dbGet("/seatHolds");
+  for (const item of seatItems) {
+    const key = item.seatInfo.seatKey;
+    const existing = all.filter((h) => h.seatKey === key);
+    if (existing.some((h) => h.status === "sold")) continue; // artıq satılıb
+    for (const h of existing.filter((h) => h.status === "held")) {
+      await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
+    }
+    await dbPost("/seatHolds", {
+      eventId: String(item.eventId ?? item.seatInfo.eventId ?? ""),
+      seatKey: key,
+      userId: order.userId ?? null,
+      status: "sold",
+      orderId: order.id,
+      expiresAt: null,
+      createdAt: new Date().toISOString(),
+    });
+  }
+};
+
+// sifariş ləğv/vaxtı bitdikdə istifadəçinin tutduğu yerləri buraxır
+const releaseSeats = async (order) => {
+  const keys = (order.items || [])
+    .map((i) => i.seatInfo?.seatKey)
+    .filter(Boolean);
+  if (keys.length === 0) return;
+  const all = await dbGet("/seatHolds");
+  for (const h of all) {
+    if (
+      h.status === "held" &&
+      keys.includes(h.seatKey) &&
+      String(h.userId) === String(order.userId)
+    ) {
+      await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
+    }
+  }
+};
+
 /* ───────── status uyğunlaşdırma ───────── */
 
 // Payriff paymentStatus -> bizim daxili status
@@ -119,6 +189,13 @@ const syncOrderStatus = async (order) => {
 
   await dbPatch(`/orders/${order.id}`, patch);
 
+  // yerləri sifarişin nəticəsinə uyğun qəti et / burax
+  if (status === "confirmed") {
+    await finalizeSeats(order).catch((e) => console.error("[seats] finalize:", e.message));
+  } else if (["expired", "canceled", "declined"].includes(status)) {
+    await releaseSeats(order).catch((e) => console.error("[seats] release:", e.message));
+  }
+
   return { status, paymentStatus: info.paymentStatus };
 };
 
@@ -146,6 +223,7 @@ app.post("/api/payment/create", async (req, res, next) => {
     }
     if (order.expiresAt && new Date(order.expiresAt) < new Date()) {
       await dbPatch(`/orders/${orderId}`, { status: "expired" });
+      await releaseSeats(order).catch((e) => console.error("[seats] release:", e.message));
       return res.status(409).json({ error: "Ödəniş vaxtı bitdi" });
     }
     if (!(order.totalPrice > 0)) {
@@ -450,6 +528,7 @@ app.post("/api/wallet/pay", async (req, res, next) => {
             paymentMethod: "wallet",
           });
         }
+        await finalizeSeats(order).catch((e) => console.error("[seats] finalize:", e.message));
         return { status: "confirmed", balance: await getBalance(order.userId) };
       }
 
@@ -458,6 +537,7 @@ app.post("/api/wallet/pay", async (req, res, next) => {
       }
       if (order.expiresAt && new Date(order.expiresAt) < new Date()) {
         await dbPatch(`/orders/${orderId}`, { status: "expired" });
+        await releaseSeats(order).catch((e) => console.error("[seats] release:", e.message));
         throw new HttpError(409, "Ödəniş vaxtı bitdi");
       }
 
@@ -484,6 +564,8 @@ app.post("/api/wallet/pay", async (req, res, next) => {
         status: "confirmed",
         paymentMethod: "wallet",
       });
+
+      await finalizeSeats(order).catch((e) => console.error("[seats] finalize:", e.message));
 
       return { status: "confirmed", balance: round(balance - total) };
     });
@@ -555,6 +637,111 @@ const refundToWallet = (order, requested) =>
       balance: await getBalance(order.userId),
     };
   });
+
+/* ───────── oturacaq seçimi (seat holds) ───────── */
+
+/**
+ * Tədbir üçün tutulmuş yerləri qaytarır (satılmış + aktiv hold-lar).
+ * ?userId= verilərsə, hansı yerlərin həmin istifadəçiyə aid olduğunu (mine) bildirir.
+ */
+app.get("/api/seats/:eventId", async (req, res, next) => {
+  try {
+    const eventId = String(req.params.eventId);
+    const userId = req.query.userId != null ? String(req.query.userId) : null;
+
+    const all = await dbGet("/seatHolds");
+    const live = await purgeExpiredHolds(all);
+    const forEvent = live.filter((h) => String(h.eventId) === eventId && isHoldActive(h));
+
+    const taken = forEvent.map((h) => ({
+      seatKey: h.seatKey,
+      status: h.status, // "held" | "sold"
+      mine: userId != null && String(h.userId) === userId,
+      expiresAt: h.expiresAt,
+    }));
+
+    res.json({ eventId, taken });
+  } catch (err) {
+    next(err);
+  }
+});
+
+/**
+ * Bir yeri tutur. Atomikdir — eyni yer üçün paralel sorğular növbəyə düzülür,
+ * ona görə iki istifadəçi eyni yeri eyni anda tuta bilməz.
+ */
+app.post("/api/seats/hold", async (req, res, next) => {
+  try {
+    const { eventId, seatKey, userId } = req.body;
+    if (!eventId || !seatKey || userId == null) {
+      return res.status(400).json({ error: "eventId, seatKey və userId tələb olunur" });
+    }
+
+    const result = await withWalletLock(`seat-${eventId}-${seatKey}`, async () => {
+      const all = await dbGet(`/seatHolds?seatKey=${encodeURIComponent(seatKey)}`);
+      const active = all.filter(isHoldActive);
+
+      const other = active.find((h) => String(h.userId) !== String(userId));
+      if (other) {
+        throw new HttpError(409, "Bu yer artıq tutulub");
+      }
+
+      const mine = active.find((h) => String(h.userId) === String(userId));
+      if (mine) {
+        // öz hold-umuzu yeniləyirik (vaxtını uzadırıq)
+        if (mine.status === "held") {
+          const expiresAt = holdExpiry();
+          await dbPatch(`/seatHolds/${mine.id}`, { expiresAt });
+          return { seatKey, status: "held", expiresAt };
+        }
+        return { seatKey, status: "sold", expiresAt: null };
+      }
+
+      // köhnə (vaxtı keçmiş) öz qeydlərimizi təmizləyirik
+      for (const h of all.filter((h) => String(h.userId) === String(userId) && !isHoldActive(h))) {
+        await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
+      }
+
+      const expiresAt = holdExpiry();
+      const created = await dbPost("/seatHolds", {
+        eventId: String(eventId),
+        seatKey,
+        userId,
+        status: "held",
+        expiresAt,
+        createdAt: new Date().toISOString(),
+      });
+
+      return { seatKey, status: "held", expiresAt, id: created.id };
+    });
+
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+});
+
+/** İstifadəçinin tutduğu yeri buraxır (satılmış yerə toxunmur). */
+app.post("/api/seats/release", async (req, res, next) => {
+  try {
+    const { eventId, seatKey, userId } = req.body;
+    if (!seatKey || userId == null) {
+      return res.status(400).json({ error: "seatKey və userId tələb olunur" });
+    }
+
+    await withWalletLock(`seat-${eventId}-${seatKey}`, async () => {
+      const all = await dbGet(`/seatHolds?seatKey=${encodeURIComponent(seatKey)}`);
+      const mine = all.filter(
+        (h) => String(h.userId) === String(userId) && h.status === "held"
+      );
+      for (const h of mine) await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
+    });
+
+    res.json({ ok: true });
+  } catch (err) {
+    next(err);
+  }
+});
 
 app.use((err, req, res, next) => {
   console.error(`[payment] ${err.name}: ${err.message}`);

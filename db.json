@@ -3010,6 +3010,120 @@
         "verifiedAt": "2026-08-23T16:20:31.617Z"
       },
       "paymentMethod": "online"
+    },
+    {
+      "pin": "9206",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "2",
+          "eventTitle": "Jazz Axşamı - Şamların Əhatəsində Açıq Hava Konserti",
+          "eventDate": "2026-08-26T15:15:00.000Z",
+          "venue": "Kapellhaus Yay Bağı",
+          "ticketLabel": "Ekonom (Sıra 6, Yer 7)",
+          "seatInfo": {
+            "eventId": "2",
+            "seatKey": "2-1-r6-s7",
+            "row": 6,
+            "seatNumber": 7,
+            "sectionName": "Ekonom",
+            "price": 20
+          },
+          "price": 20,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 20,
+      "status": "confirmed",
+      "createdAt": "2026-08-25T08:58:06.612Z",
+      "expiresAt": "2026-08-25T09:13:06.612Z",
+      "id": "YjE7rt9M7Z8",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "78e00bbd-28e4-4999-a947-94d9ee7acf08",
+        "transactionId": 8979548,
+        "paymentUrl": "https://pay.payriff.com/r/78e00bbd-28e4-4999-a947-94d9ee7acf08?type=direct",
+        "startedAt": "2026-08-25T08:58:12.999Z",
+        "paymentStatus": "APPROVED",
+        "amount": 20,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-25T09:01:44.378Z"
+      },
+      "paymentMethod": "online"
+    },
+    {
+      "pin": "8593",
+      "userId": 1787648551572,
+      "items": [
+        {
+          "eventId": "6",
+          "eventTitle": "İradə İbrahimova",
+          "eventDate": "2026-08-28T17:00:00.000Z",
+          "venue": "Sea Breeze Marina Yacht Club",
+          "ticketLabel": "VIP (Sıra 6, Yer 4)",
+          "seatInfo": {
+            "eventId": "6",
+            "seatKey": "6-3-r6-s4",
+            "row": 6,
+            "seatNumber": 4,
+            "sectionName": "VIP",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "eventId": "6",
+          "eventTitle": "İradə İbrahimova",
+          "eventDate": "2026-08-28T17:00:00.000Z",
+          "venue": "Sea Breeze Marina Yacht Club",
+          "ticketLabel": "VIP (Sıra 8, Yer 7)",
+          "seatInfo": {
+            "eventId": "6",
+            "seatKey": "6-3-r8-s7",
+            "row": 8,
+            "seatNumber": 7,
+            "sectionName": "VIP",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "eventId": "6",
+          "eventTitle": "İradə İbrahimova",
+          "eventDate": "2026-08-28T17:00:00.000Z",
+          "venue": "Sea Breeze Marina Yacht Club",
+          "ticketLabel": "VIP (Sıra 6, Yer 8)",
+          "seatInfo": {
+            "eventId": "6",
+            "seatKey": "6-3-r6-s8",
+            "row": 6,
+            "seatNumber": 8,
+            "sectionName": "VIP",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 600,
+      "status": "confirmed",
+      "createdAt": "2026-08-25T09:26:50.570Z",
+      "expiresAt": "2026-08-25T09:41:50.570Z",
+      "id": "am6z1lfuyvE",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "c627b89a-80ed-4843-af6e-6217f2134508",
+        "transactionId": 8980108,
+        "paymentUrl": "https://pay.payriff.com/r/c627b89a-80ed-4843-af6e-6217f2134508?type=direct",
+        "startedAt": "2026-08-25T09:26:58.239Z",
+        "paymentStatus": "APPROVED",
+        "amount": 600,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-25T10:46:15.619Z"
+      },
+      "paymentMethod": "online"
     }
   ],
   "topups": [
@@ -3039,6 +3153,48 @@
       "amount": 5,
       "createdAt": "2026-08-23T17:32:10.309Z",
       "id": "pCK7cv5rY4A"
+    }
+  ],
+  "seatHolds": [
+    {
+      "eventId": "2",
+      "seatKey": "2-1-r6-s7",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "YjE7rt9M7Z8",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T09:01:44.409Z",
+      "id": "fO41yFx_FqM"
+    },
+    {
+      "eventId": "6",
+      "seatKey": "6-3-r6-s4",
+      "userId": 1787648551572,
+      "status": "sold",
+      "orderId": "am6z1lfuyvE",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T10:46:15.655Z",
+      "id": "byntOkmWQtw"
+    },
+    {
+      "eventId": "6",
+      "seatKey": "6-3-r8-s7",
+      "userId": 1787648551572,
+      "status": "sold",
+      "orderId": "am6z1lfuyvE",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T10:46:15.680Z",
+      "id": "V1QJiwEmMWI"
+    },
+    {
+      "eventId": "6",
+      "seatKey": "6-3-r6-s8",
+      "userId": 1787648551572,
+      "status": "sold",
+      "orderId": "am6z1lfuyvE",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T10:46:15.703Z",
+      "id": "H9UKmK6s6-g"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
