@@ -21,6 +21,7 @@ const EventDetail = () => {
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [heroErrorId, setHeroErrorId] = useState(null);
 
   useEffect(() => {
     getEventOrShowById(id).then((data) => {
@@ -39,6 +40,11 @@ const EventDetail = () => {
 
   const isSoldOut = event.status === "soldout";
   const favorite = isFavorite(event.id);
+
+  const heroImgError = String(heroErrorId) === String(event.id);
+  const heroImage = heroImgError
+    ? event.image
+    : event.detailedimage || event.image;
 
   const prices = event.tickets.map((ticket) => ticket.price);
   const minPrice = Math.min(...prices);
@@ -79,7 +85,7 @@ const EventDetail = () => {
     <div className="event-detail">
       <section
         className="event-hero"
-        style={{ backgroundImage: `url(${event.detailedimage || event.image})` }}
+        style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="event-hero-overlay" />
 
@@ -118,7 +124,11 @@ const EventDetail = () => {
           </div>
 
           <div className="event-hero-image-frame">
-            <img src={event.detailedimage || event.image} alt={event.title} />
+            <img
+              src={heroImage}
+              alt={event.title}
+              onError={() => setHeroErrorId(event.id)}
+            />
             <div className="hero-icon-actions">
               <button
                 type="button"
