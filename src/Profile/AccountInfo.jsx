@@ -1,8 +1,18 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import Modal from "../components/Modal/Modal";
 import { CopyIcon, PencilIcon, TrashIcon } from "./ProfileIcons";
 import { FlagAzIcon } from "../components/Header/HeaderIcons";
+
+const CloseIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path
+      d="M18 6 6 18M6 6l12 12"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+  </svg>
+);
 
 const COUNTRIES = [
   "Azərbaycan",
@@ -28,6 +38,20 @@ const AccountInfo = () => {
   const [copied, setCopied] = useState("");
   const [saved, setSaved] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
+
+  // Təsdiq pəncərəsi açıq olanda Escape ilə bağla + səhifə scroll-unu kilidlə
+  useEffect(() => {
+    if (!confirmDelete) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setConfirmDelete(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [confirmDelete]);
 
   const setField = (key) => (e) => {
     setForm((prev) => ({ ...prev, [key]: e.target.value }));
@@ -206,25 +230,49 @@ const AccountInfo = () => {
       </button>
 
       {confirmDelete && (
-        <Modal onClose={() => setConfirmDelete(false)}>
-          <h2>Hesabı sil</h2>
-          <p>
-            Hesabınız silinəcək və bütün bilet məlumatlarınıza giriş
-            dayandırılacaq. Bu əməliyyat geri qaytarılmır.
-          </p>
-          <div className="account-form-actions">
-            <button type="button" className="remove-btn" onClick={logout}>
-              Bəli, sil
-            </button>
-            <button
-              type="button"
-              className="primary-btn"
-              onClick={() => setConfirmDelete(false)}
-            >
-              Ləğv et
-            </button>
+        <div
+          className="auth-modal-backdrop"
+          onClick={() => setConfirmDelete(false)}
+        >
+          <div
+            className="auth-modal confirm-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Hesabı sil"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="auth-modal-head">
+              <h2>Hesabı sil</h2>
+              <button
+                type="button"
+                className="auth-modal-close"
+                onClick={() => setConfirmDelete(false)}
+                aria-label="Bağla"
+              >
+                <CloseIcon />
+              </button>
+            </div>
+
+            <div className="auth-modal-body">
+              <p className="confirm-text">
+                Hesabınız silinəcək və bütün bilet məlumatlarınıza giriş
+                dayandırılacaq. Bu əməliyyat geri qaytarılmır.
+              </p>
+              <div className="confirm-actions">
+                <button type="button" className="confirm-danger" onClick={logout}>
+                  Bəli, sil
+                </button>
+                <button
+                  type="button"
+                  className="confirm-cancel"
+                  onClick={() => setConfirmDelete(false)}
+                >
+                  Ləğv et
+                </button>
+              </div>
+            </div>
           </div>
-        </Modal>
+        </div>
       )}
     </div>
   );

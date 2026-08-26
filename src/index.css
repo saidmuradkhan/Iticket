@@ -2845,6 +2845,50 @@ main {
   color: var(--accent-hover);
 }
 
+/* Təsdiq pəncərəsi (Hesabı sil) — auth-modal stilini paylaşır */
+.confirm-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.confirm-actions button {
+  height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.confirm-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.confirm-danger:hover {
+  background: #be123c;
+}
+
+.confirm-cancel {
+  background: var(--accent);
+  color: #000;
+}
+
+.confirm-cancel:hover {
+  background: var(--accent-hover);
+}
+
 .profile-layout {
   display: flex;
   align-items: flex-start;
