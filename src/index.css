@@ -2550,37 +2550,88 @@ main {
   margin: 0 0 16px;
 }
 
-.auth-page {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 32px;
+.auth-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1100;
+  animation: fadeIn 0.2s ease;
+}
+
+.auth-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 20px;
+  padding: 24px 26px 26px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  animation: modalSlideIn 0.25s ease;
 }
 
-.auth-page h1 {
-  font-size: 24px;
+.auth-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.auth-modal-head h2 {
+  font-size: 20px;
   font-weight: 700;
-  margin: 0 0 24px;
-  text-align: center;
+  margin: 0;
 }
 
-.auth-form {
+.auth-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.auth-modal-close:hover {
+  background: var(--bg-secondary);
+  color: var(--text);
+}
+
+.auth-modal-form {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 16px;
 }
 
-.auth-form label {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-top: 12px;
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
-.auth-form input {
-  padding: 11px 14px;
+.auth-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 12px 14px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--bg-secondary);
@@ -2591,35 +2642,182 @@ main {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.auth-form input:focus {
+.auth-field input::placeholder {
+  color: var(--text-muted);
+}
+
+.auth-field input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-.auth-form .buy-btn {
-  margin-top: 20px;
+/* Mobil nömrə (ölkə kodu + input) */
+.auth-phone {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
 }
 
-.auth-error {
+.auth-phone-code {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.auth-phone input {
+  flex: 1;
+}
+
+/* Şifrə sahəsi + göz düyməsi */
+.auth-password {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-password input {
+  width: 100%;
+  padding-right: 44px;
+}
+
+.auth-eye {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.auth-eye:hover {
+  color: var(--text);
+}
+
+/* Yadda saxla / Şifrəni unutmusunuz */
+.auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.auth-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.auth-remember input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.auth-forgot {
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.auth-forgot:hover {
+  color: var(--accent-hover);
+}
+
+.auth-modal-error {
   color: var(--danger);
   font-size: 13px;
-  margin: 6px 0 0;
+  margin: 0;
 }
 
-.auth-switch {
+.auth-submit {
+  margin-top: 4px;
+}
+
+/* və ya ayırıcı */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 20px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Sosial düymələr */
+.auth-social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.auth-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.auth-social-btn:hover {
+  border-color: var(--border-hover);
+  background: var(--bg);
+}
+
+.auth-modal-switch {
   text-align: center;
-  margin-top: 20px;
+  margin: 22px 0 0;
   color: var(--text-secondary);
   font-size: 14px;
 }
 
-.auth-switch a {
-  color: var(--accent);
-  font-weight: 600;
+.auth-modal-switch button {
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
 }
 
-.auth-switch a:hover {
-  text-decoration: underline;
+.auth-modal-switch button:hover {
+  color: var(--accent-hover);
 }
 
 .profile-layout {
@@ -4321,10 +4519,9 @@ main {
     padding: 16px;
   }
 
-  .auth-page {
-    margin: 24px 16px;
-    padding: 24px;
-    border-radius: 16px;
+  .auth-modal {
+    padding: 20px;
+    border-radius: 18px;
   }
 
   .footer-columns {

@@ -7,7 +7,7 @@ import { ProfileNavIcon } from "../../Profile/ProfileIcons";
 import { UserIcon } from "./HeaderIcons";
 
 const ProfileMenu = () => {
-  const { isAuthenticated, logout } = useContext(AuthContext);
+  const { isAuthenticated, logout, openAuth } = useContext(AuthContext);
   const { t } = useContext(LanguageContext);
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
@@ -33,12 +33,16 @@ const ProfileMenu = () => {
 
   if (!isAuthenticated) {
     return (
-      <Link to="/login" className="header-btn header-link">
+      <button
+        type="button"
+        className="header-btn header-link"
+        onClick={() => openAuth("login")}
+      >
         <span className="header-btn-icon-slot">
           <UserIcon />
         </span>
         {t("login")}
-      </Link>
+      </button>
     );
   }
 

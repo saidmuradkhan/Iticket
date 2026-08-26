@@ -1,4 +1,6 @@
+import { useContext, useEffect } from 'react'
 import { Routes, Route, Navigate, useParams } from 'react-router-dom'
+import { AuthContext } from './context/AuthContext'
 import ScrollToTop from './components/ScrollToTop'
 import MainLayout from './layouts/MainLayout'
 import ProfileLayout from './layouts/ProfileLayout'
@@ -9,8 +11,6 @@ import EventDetail from './pages/EventDetail/EventDetail'
 import Cart from './pages/Cart/Cart'
 import Order from './pages/Order/Order'
 import PaymentResult from './pages/PaymentResult/PaymentResult'
-import Login from './pages/Auth/Login'
-import Register from './pages/Auth/Register'
 import Tickets from './Profile/Tickets'
 import Transfers from './Profile/Transfers'
 import Orders from './Profile/Orders'
@@ -23,10 +23,17 @@ import NotificationSettings from './Profile/NotificationSettings'
 import RefundRequests from './Profile/RefundRequests'
 import Faq from './Profile/Faq'
 
-// Köhnə /order/:id linklərini yeni /profile/orders/:id ünvanına yönləndiririk
 const OrderRedirect = () => {
   const { orderId } = useParams()
   return <Navigate to={`/profile/orders/${orderId}`} replace />
+}
+
+const AuthRedirect = ({ mode }) => {
+  const { openAuth } = useContext(AuthContext)
+  useEffect(() => {
+    openAuth(mode)
+  }, [openAuth, mode])
+  return <Navigate to="/" replace />
 }
 
 const App = () => {
@@ -42,8 +49,8 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/order/:orderId" element={<OrderRedirect />} />
         <Route path="/payment/result" element={<PaymentResult />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<AuthRedirect mode="login" />} />
+        <Route path="/register" element={<AuthRedirect mode="register" />} />
         <Route element={<ProtectedRoute />}>
           <Route element={<ProfileLayout />}>
             <Route path="/profile" element={<Navigate to="/profile/tickets" replace />} />

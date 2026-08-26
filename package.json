@@ -12,6 +12,7 @@
     "payment": "node --env-file=.env server/index.js"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.13.5",
     "axios": "^1.18.1",
     "cors": "^2.8.6",
     "express": "^5.2.1",

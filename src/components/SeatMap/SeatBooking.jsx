@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext, useCallback, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getSeatStatus, holdSeat, releaseSeat } from "../../api/seats";
 import { CartContext } from "../../context/CartContext";
 import { AuthContext } from "../../context/AuthContext";
@@ -15,7 +15,7 @@ const parseSeatKey = (key) => {
 const SeatBooking = ({ event }) => {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
-  const { user } = useContext(AuthContext);
+  const { user, openAuth } = useContext(AuthContext);
 
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [takenSeats, setTakenSeats] = useState(new Set());
@@ -91,9 +91,13 @@ const SeatBooking = ({ event }) => {
       <div className="seat-auth-gate">
         <i className="fas fa-user-lock" />
         <p>Yer seçmək üçün hesabınıza daxil olun.</p>
-        <Link to="/login" className="buy-btn" state={{ from: `/event/${event.id}` }}>
+        <button
+          type="button"
+          className="buy-btn"
+          onClick={() => openAuth("login", `/event/${event.id}`)}
+        >
           Daxil ol
-        </Link>
+        </button>
       </div>
     );
   }

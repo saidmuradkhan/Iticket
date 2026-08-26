@@ -2,12 +2,14 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import CategoryNav from "../components/Header/CategoryNav";
 import Footer from "../components/Footer/Footer";
+import AuthModal from "../components/Auth/AuthModal";
 
 const MainLayout = () => {
   return (
     <>
       <Header />
       <CategoryNav />
+      <AuthModal />
       <main>
         <Outlet />
       </main>
