@@ -1,8 +1,8 @@
 const METHODS = [
-  { key: "online", label: "Onlayn ödəniş" },
-  { key: "wallet", label: "Cüzdan" },
-  { key: "googlepay", label: "Google Pay" },
-  { key: "applepay", label: "Apple Pay" },
+  { key: "online", label: "Onlayn", icon: "fas fa-credit-card" },
+  { key: "googlepay", label: "Google Pay", icon: "fab fa-google-pay" },
+  { key: "applepay", label: "Apple Pay", icon: "fab fa-apple-pay" },
+  { key: "wallet", label: "Cüzdan", icon: "fas fa-wallet" },
 ];
 
 const PaymentMethods = ({ selected, onSelect, walletBalance, walletDisabled }) => {
@@ -11,22 +11,29 @@ const PaymentMethods = ({ selected, onSelect, walletBalance, walletDisabled }) =
       {METHODS.map((method) => {
         const isWallet = method.key === "wallet";
         const disabled = isWallet && walletDisabled;
+        const active = selected === method.key;
 
         return (
           <button
             key={method.key}
             type="button"
-            className={ selected === method.key ? "payment-method active" : "payment-method" }
+            className={active ? "payment-method active" : "payment-method"}
             disabled={disabled}
             onClick={() => onSelect(method.key)}
           >
-            {method.label}
-            {isWallet && walletBalance !== null && walletBalance !== undefined && (
-              <span className="payment-method-note">
-                {Number(walletBalance).toFixed(2)} ₼
-                {disabled && " · kifayət etmir"}
+            <span className="payment-method-left">
+              <i className={`payment-method-icon ${method.icon}`} />
+              <span className="payment-method-label">
+                {method.label}
+                {isWallet && walletBalance !== null && walletBalance !== undefined && (
+                  <span className="payment-method-note">
+                    {Number(walletBalance).toFixed(2)} ₼
+                    {disabled && " · kifayət etmir"}
+                  </span>
+                )}
               </span>
-            )}
+            </span>
+            <span className={active ? "payment-radio checked" : "payment-radio"} />
           </button>
         );
       })}

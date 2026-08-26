@@ -71,7 +71,7 @@ const Orders = () => {
             <Link
               className="order-summary-card"
               key={order.id}
-              to={`/order/${order.id}`}
+              to={`/profile/orders/${order.id}`}
             >
               <div className="order-summary-header">
                 <span>#{order.id}</span>

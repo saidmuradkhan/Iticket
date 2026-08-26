@@ -1,7 +1,11 @@
 import { createContext, useState, useEffect } from "react";
 import { getNotifications, markNotificationRead } from "../api/api";
 
-export const NotificationContext = createContext();
+export const NotificationContext = createContext({
+  notifications: [],
+  unreadCount: 0,
+  markAsRead: () => {},
+});
 
 export const NotificationProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]);

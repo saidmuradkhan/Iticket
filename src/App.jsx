@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useParams } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import MainLayout from './layouts/MainLayout'
 import ProfileLayout from './layouts/ProfileLayout'
@@ -23,6 +23,12 @@ import NotificationSettings from './Profile/NotificationSettings'
 import RefundRequests from './Profile/RefundRequests'
 import Faq from './Profile/Faq'
 
+// Köhnə /order/:id linklərini yeni /profile/orders/:id ünvanına yönləndiririk
+const OrderRedirect = () => {
+  const { orderId } = useParams()
+  return <Navigate to={`/profile/orders/${orderId}`} replace />
+}
+
 const App = () => {
   return (
     <>
@@ -34,7 +40,7 @@ const App = () => {
         <Route path="/search/:query" element={<EventList />} />
         <Route path="/event/:id" element={<EventDetail />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/order/:orderId" element={<Order />} />
+        <Route path="/order/:orderId" element={<OrderRedirect />} />
         <Route path="/payment/result" element={<PaymentResult />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -44,6 +50,7 @@ const App = () => {
             <Route path="/profile/tickets" element={<Tickets />} />
             <Route path="/profile/transfers" element={<Transfers />} />
             <Route path="/profile/orders" element={<Orders />} />
+            <Route path="/profile/orders/:orderId" element={<Order />} />
             <Route path="/profile/account" element={<AccountInfo />} />
             <Route path="/profile/favorites" element={<Favorites />} />
             <Route path="/profile/wallet" element={<Wallet />} />

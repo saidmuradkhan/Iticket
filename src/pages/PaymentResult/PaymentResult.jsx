@@ -133,7 +133,7 @@ const PaymentResult = () => {
       <div className="payment-result-actions">
         {isSuccess ? (
           <>
-            <Link className="buy-btn" to={`/order/${orderId}`}>
+            <Link className="buy-btn" to={`/profile/orders/${orderId}`}>
               Sifarişə bax
             </Link>
             <Link className="payment-result-link" to="/profile/tickets">
@@ -142,7 +142,7 @@ const PaymentResult = () => {
           </>
         ) : (
           <>
-            <Link className="buy-btn" to={`/order/${orderId}`}>
+            <Link className="buy-btn" to={`/profile/orders/${orderId}`}>
               Yenidən cəhd et
             </Link>
             <Link className="payment-result-link" to="/">

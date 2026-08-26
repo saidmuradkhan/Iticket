@@ -3188,10 +3188,124 @@
         }
       ],
       "totalPrice": 25,
-      "status": "pending_payment",
+      "status": "expired",
       "createdAt": "2026-08-26T07:13:17.766Z",
       "expiresAt": "2026-08-26T07:28:17.767Z",
       "id": "e10VXhYQreI"
+    },
+    {
+      "pin": "8839",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "3",
+          "eventTitle": "Bəstəkar və Xalq Mahnıları",
+          "eventDate": "2026-08-26T16:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "Standart (Sıra 1, Yer 8)",
+          "seatInfo": {
+            "eventId": "3",
+            "seatKey": "3-2-r1-s8",
+            "row": 1,
+            "seatNumber": 8,
+            "sectionName": "Standart",
+            "price": 25
+          },
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "eventId": "9",
+          "eventTitle": "ILISOUND",
+          "eventDate": "2026-08-29T10:00:00.000Z",
+          "venue": "Uludağ Turizm və İstirahət Mərkəzi",
+          "ticketLabel": "Standart (Sıra 3, Yer 10)",
+          "seatInfo": {
+            "eventId": "9",
+            "seatKey": "9-1-r3-s10",
+            "row": 3,
+            "seatNumber": 10,
+            "sectionName": "Standart",
+            "price": 30
+          },
+          "price": 30,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 55,
+      "status": "pending_payment",
+      "createdAt": "2026-08-26T08:15:35.848Z",
+      "expiresAt": "2026-08-26T08:30:35.848Z",
+      "id": "cFyTfAe6aUA"
+    },
+    {
+      "pin": "6455",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "3",
+          "eventTitle": "Bəstəkar və Xalq Mahnıları",
+          "eventDate": "2026-08-26T16:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "VIP (Sıra 1, Yer 10)",
+          "seatInfo": {
+            "eventId": "3",
+            "seatKey": "3-3-r1-s10",
+            "row": 1,
+            "seatNumber": 10,
+            "sectionName": "VIP",
+            "price": 35
+          },
+          "price": 35,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 35,
+      "status": "confirmed",
+      "createdAt": "2026-08-26T08:31:50.522Z",
+      "expiresAt": "2026-08-26T08:46:50.522Z",
+      "id": "LzRrPCnvrjM",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "0e33857f-a7fb-45ca-a3ef-d8cac51300d6",
+        "transactionId": 8996253,
+        "paymentUrl": "https://pay.payriff.com/r/0e33857f-a7fb-45ca-a3ef-d8cac51300d6?type=direct",
+        "startedAt": "2026-08-26T08:31:59.013Z",
+        "paymentStatus": "APPROVED",
+        "amount": 35,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-26T08:33:57.637Z"
+      },
+      "paymentMethod": "online"
+    },
+    {
+      "pin": "1484",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "4",
+          "eventTitle": "Şamlar Əhatəsində Retro Axşamı",
+          "eventDate": "2026-08-27T15:15:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "Ekonom (Sıra 9, Yer 7)",
+          "seatInfo": {
+            "eventId": "4",
+            "seatKey": "4-1-r9-s7",
+            "row": 9,
+            "seatNumber": 7,
+            "sectionName": "Ekonom",
+            "price": 20
+          },
+          "price": 20,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 20,
+      "status": "confirmed",
+      "createdAt": "2026-08-26T08:37:01.404Z",
+      "expiresAt": "2026-08-26T08:52:01.404Z",
+      "id": "kjhZjpnFTzk",
+      "paymentMethod": "wallet"
     }
   ],
   "topups": [
@@ -3211,6 +3325,23 @@
         "verifiedAt": "2026-08-23T17:32:10.328Z"
       },
       "id": "5Zhjz-XeaAs"
+    },
+    {
+      "ref": "tu-ade6b5f8-49a4-4397-833b-b6a3f706a18f",
+      "userId": 1,
+      "amount": 100,
+      "status": "confirmed",
+      "createdAt": "2026-08-26T08:36:10.728Z",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "d8273e3b-b05e-478a-b971-5d5468b23b19",
+        "transactionId": 8996353,
+        "paymentUrl": "https://pay.payriff.com/r/d8273e3b-b05e-478a-b971-5d5468b23b19?type=direct",
+        "startedAt": "2026-08-26T08:36:10.728Z",
+        "paymentStatus": "APPROVED",
+        "verifiedAt": "2026-08-26T08:36:38.367Z"
+      },
+      "id": "OBvl2XDBR2k"
     }
   ],
   "walletTransactions": [
@@ -3221,6 +3352,32 @@
       "amount": 5,
       "createdAt": "2026-08-23T17:32:10.309Z",
       "id": "pCK7cv5rY4A"
+    },
+    {
+      "userId": 1,
+      "ref": "tu-ade6b5f8-49a4-4397-833b-b6a3f706a18f",
+      "type": "topup",
+      "amount": 100,
+      "createdAt": "2026-08-26T08:36:38.353Z",
+      "id": "D0Eyb3x2T0w"
+    },
+    {
+      "userId": 1,
+      "ref": "order-kjhZjpnFTzk",
+      "orderId": "kjhZjpnFTzk",
+      "type": "purchase",
+      "amount": -20,
+      "createdAt": "2026-08-26T08:37:06.002Z",
+      "id": "ilK5Al7sSVw"
+    },
+    {
+      "userId": 1,
+      "ref": "order-iPJsksNe6Mg",
+      "orderId": null,
+      "type": "purchase",
+      "amount": -25,
+      "createdAt": "2026-08-26T08:46:50.983Z",
+      "id": "1Js2tFNwPXs"
     }
   ],
   "seatHolds": [
@@ -3265,13 +3422,52 @@
       "id": "H9UKmK6s6-g"
     },
     {
-      "eventId": "9",
-      "seatKey": "9-1-r2-s8",
+      "eventId": "3",
+      "seatKey": "3-3-r1-s10",
       "userId": "1",
       "status": "held",
-      "expiresAt": "2026-08-26T08:15:32.951Z",
-      "createdAt": "2026-08-26T08:00:32.951Z",
-      "id": "Or9i828Nqi8"
+      "expiresAt": "2026-08-26T08:46:26.312Z",
+      "createdAt": "2026-08-26T08:31:26.312Z",
+      "id": "OaHOqn-e_1A"
+    },
+    {
+      "eventId": "3",
+      "seatKey": "3-3-r1-s10",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "LzRrPCnvrjM",
+      "expiresAt": null,
+      "createdAt": "2026-08-26T08:33:57.684Z",
+      "id": "7E0nh31RwRY"
+    },
+    {
+      "eventId": "1",
+      "seatKey": "x",
+      "userId": 1,
+      "status": "sold",
+      "orderId": null,
+      "expiresAt": null,
+      "createdAt": "2026-08-26T08:35:28.555Z",
+      "id": "sdvbSoEb3vA"
+    },
+    {
+      "eventId": "4",
+      "seatKey": "4-1-r9-s7",
+      "userId": "1",
+      "status": "held",
+      "expiresAt": "2026-08-26T08:51:54.384Z",
+      "createdAt": "2026-08-26T08:36:54.384Z",
+      "id": "IpvmzEM7pjs"
+    },
+    {
+      "eventId": "4",
+      "seatKey": "4-1-r9-s7",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "kjhZjpnFTzk",
+      "expiresAt": null,
+      "createdAt": "2026-08-26T08:37:06.168Z",
+      "id": "Fni-MMXgR4s"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
