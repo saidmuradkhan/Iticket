@@ -3,20 +3,17 @@ import SeatSection from "./SeatSection";
 const COLORS = ["#3b82f6", "#22c55e", "#a855f7", "#f59e0b", "#14b8a6"];
 const SEATS_PER_ROW = 10;
 
-const hashKey = (str) => {
-  let h = 0;
-  for (let i = 0; i < str.length; i++) {
-    h = (h * 31 + str.charCodeAt(i)) >>> 0;
-  }
-  return h;
-};
+// Test rejimi: heç bir yer əvvəlcədən satılmış sayılmır — hamısı seçilə bilər.
+// Real satış simulyasiyasını geri qaytarmaq üçün key əsaslı hash-dən istifadə et.
+const isPreSold = () => false;
 
-const isPreSold = (key) => hashKey(key) % 100 < 28;
+const DEFAULT_AVAILABLE = 30;
 
 const generateSeats = (ticket) => {
+  const available = Number(ticket.available) > 0 ? Number(ticket.available) : DEFAULT_AVAILABLE;
   const capacity = Math.max(
     SEATS_PER_ROW,
-    Math.ceil(ticket.available / SEATS_PER_ROW) * SEATS_PER_ROW
+    Math.ceil(available / SEATS_PER_ROW) * SEATS_PER_ROW
   );
 
   const seats = [];
