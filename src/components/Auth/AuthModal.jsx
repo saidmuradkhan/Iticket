@@ -192,17 +192,6 @@ const AuthModal = () => {
     setSocialError("Google girişi konfiqurasiya edilməyib (VITE_GOOGLE_CLIENT_ID).");
   };
 
-  // Apple: demo rejim (real Sign in with Apple pullu developer hesabı tələb edir)
-  const handleApple = () => {
-    setSocialError("");
-    socialLogin({
-      name: "Apple İstifadəçisi",
-      email: "apple.user@icloud.com",
-      provider: "apple",
-    });
-    finishAuth();
-  };
-
   if (!authModal) return null;
 
   return (
@@ -226,6 +215,7 @@ const AuthModal = () => {
           </button>
         </div>
 
+        <div className="auth-modal-body">
         <form className="auth-modal-form" onSubmit={handleSubmit}>
           {isRegister && (
             <>
@@ -360,7 +350,8 @@ const AuthModal = () => {
             type="button"
             className="auth-social-btn"
             aria-label="Apple ilə davam et"
-            onClick={handleApple}
+            disabled
+            title="Apple ilə giriş hələ mümkün deyil"
           >
             <AppleIcon />
           </button>
@@ -375,6 +366,7 @@ const AuthModal = () => {
             {isRegister ? "Daxil ol" : "Qeydiyyat"}
           </button>
         </p>
+        </div>
       </div>
     </div>
   );

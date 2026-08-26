@@ -2566,13 +2566,12 @@ main {
 .auth-modal {
   position: relative;
   width: 100%;
-  max-width: 420px;
-  max-height: 90vh;
-  overflow-y: auto;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 24px 26px 26px;
+  max-width: 400px;
+  margin: 0;
+  background: var(--bg-secondary);
+  border: 0.8px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   animation: modalSlideIn 0.25s ease;
 }
@@ -2581,15 +2580,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 16px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  gap: 16px;
+  padding: 12px 24px;
+  border-bottom: 0.8px solid var(--border-hover);
 }
 
 .auth-modal-head h2 {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
   margin: 0;
+  color: var(--text);
 }
 
 .auth-modal-close {
@@ -2611,29 +2612,35 @@ main {
   color: var(--text);
 }
 
+.auth-modal-body {
+  padding: 24px;
+}
+
 .auth-modal-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .auth-field {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
 }
 
 .auth-field label {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text);
 }
 
+/* Pill formalı input-lar (iTicket ilə eyni) */
 .auth-field input {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 9999px;
+  border: 0.8px solid var(--border-hover);
   background: var(--bg-secondary);
   color: var(--text);
   font-size: 14px;
@@ -2643,7 +2650,7 @@ main {
 }
 
 .auth-field input::placeholder {
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .auth-field input:focus {
@@ -2662,12 +2669,13 @@ main {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 0 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 9999px;
+  border: 0.8px solid var(--border-hover);
   background: var(--bg-secondary);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text);
   white-space: nowrap;
 }
@@ -2685,19 +2693,19 @@ main {
 
 .auth-password input {
   width: 100%;
-  padding-right: 44px;
+  padding-right: 48px;
 }
 
 .auth-eye {
   position: absolute;
-  right: 8px;
+  right: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: none;
-  border-radius: 8px;
+  border-radius: 50%;
   background: transparent;
   color: var(--text-secondary);
   cursor: pointer;
@@ -2714,6 +2722,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  margin-top: 2px;
 }
 
 .auth-remember {
@@ -2737,7 +2746,7 @@ main {
   background: transparent;
   color: var(--text);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   padding: 0;
 }
@@ -2752,8 +2761,16 @@ main {
   margin: 0;
 }
 
+/* Əsas düymə (iTicket btn-primary: 48px, 16px/500, pill, kölgəsiz) */
 .auth-submit {
+  height: 48px;
   margin-top: 4px;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  box-shadow: none;
 }
 
 /* və ya ayırıcı */
@@ -2762,19 +2779,19 @@ main {
   align-items: center;
   gap: 14px;
   margin: 20px 0;
-  color: var(--text-muted);
-  font-size: 14px;
+  color: var(--text-secondary);
+  font-size: 16px;
 }
 
 .auth-divider::before,
 .auth-divider::after {
   content: "";
   flex: 1;
-  height: 1px;
-  background: var(--border);
+  height: 0.8px;
+  background: var(--border-hover);
 }
 
-/* Sosial düymələr */
+/* Sosial düymələr (iTicket btn-secondary: pill, 44px, #27272a) */
 .auth-social {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2785,18 +2802,26 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--bg-secondary);
+  height: 44px;
+  border-radius: 9999px;
+  border: none;
+  background: var(--border);
   color: var(--text);
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
+  transition: background 0.15s, opacity 0.15s;
 }
 
 .auth-social-btn:hover {
-  border-color: var(--border-hover);
-  background: var(--bg);
+  background: var(--border-hover);
+}
+
+.auth-social-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.auth-social-btn:disabled:hover {
+  background: var(--border);
 }
 
 .auth-modal-switch {
@@ -2810,7 +2835,7 @@ main {
   border: none;
   background: transparent;
   color: var(--text);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   padding: 0;
