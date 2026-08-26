@@ -1,63 +1,49 @@
-import { useState } from "react";
-
-const AMOUNTS = [20, 50, 100, 200];
-
 const GiftCard = () => {
-  const [amount, setAmount] = useState(50);
-  const [code, setCode] = useState("");
-  const [message, setMessage] = useState("");
-
-  const activate = (e) => {
-    e.preventDefault();
-    setMessage(
-      code.trim().length < 6
-        ? "Kod ən azı 6 simvoldan ibarət olmalıdır."
-        : "Bu kod tapılmadı. Zəhmət olmasa yenidən yoxlayın."
-    );
-  };
-
   return (
     <div className="profile-page">
       <div className="profile-page-head">
         <h1>iGift hədiyyə kartı</h1>
       </div>
+      <p className="profile-subheading">
+        Zəhmət olmasa, iGift hədiyyə kartının məlumatlarını daxil edin
+      </p>
 
-      <div className="gift-card-banner">
-        <span>iGift</span>
-        <strong>{amount} ₼</strong>
-        <p>iTicket.az-da istənilən tədbir üçün etibarlıdır</p>
-      </div>
+      <div className="gift-card-form">
+        <div className="gift-card">
+          <svg className="gift-card-ribbon" viewBox="0 0 120 120" aria-hidden="true">
+            <rect x="52" y="48" width="16" height="24" rx="4" fill="#ffffff" />
+            <path d="M55 60 C 18 38, 16 72, 55 66 Z" fill="#ffffff" />
+            <path d="M65 60 C 102 38, 104 72, 65 66 Z" fill="#ffffff" />
+            <path d="M56 70 L 42 100 L 59 90 Z" fill="#ffffff" />
+            <path d="M64 70 L 78 100 L 61 90 Z" fill="#ffffff" />
+            <circle cx="60" cy="60" r="5" fill="#facc15" />
+          </svg>
 
-      <h2 className="profile-subheading">Məbləğ seç</h2>
-      <div className="gift-amounts">
-        {AMOUNTS.map((value) => (
-          <button
-            type="button"
-            key={value}
-            className={amount === value ? "active" : undefined}
-            onClick={() => setAmount(value)}
-          >
-            {value} ₼
-          </button>
-        ))}
-      </div>
+          <div className="gift-card-brand">
+            <span>
+              igift<em>.az</em>
+            </span>
+            <small>Hədiyyə kartı</small>
+          </div>
 
-      <h2 className="profile-subheading">Hədiyyə kartını aktivləşdir</h2>
-      <form className="gift-form" onSubmit={activate}>
-        <input
-          type="text"
-          value={code}
-          onChange={(e) => {
-            setCode(e.target.value);
-            setMessage("");
-          }}
-          placeholder="Hədiyyə kartının kodu"
-        />
-        <button type="submit" className="primary-btn">
-          Aktivləşdir
+          <div className="gift-card-fields">
+            <span className="gift-card-number">1234 5678 9000 0000</span>
+            <div className="gift-card-exp">
+              <span>08</span>
+              <span className="gift-card-exp-sep">/</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <p className="gift-card-note">
+          Hədiyyə kartının balansı iTicket cüzdanınıza köçürüləcək.
+        </p>
+
+        <button type="button" className="primary-btn gift-card-submit">
+          Balansı köçür
         </button>
-      </form>
-      {message && <p className="profile-form-error">{message}</p>}
+      </div>
     </div>
   );
 };

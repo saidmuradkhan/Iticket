@@ -3247,88 +3247,103 @@ main {
   margin-bottom: 10px;
 }
 
-.gift-card-banner {
+/* iGift hədiyyə kartı */
+.gift-card-form {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 28px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  gap: 16px;
+  max-width: 400px;
+}
+
+.gift-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 400 / 250;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px -10px rgba(0, 0, 0, 0.4);
+  background:
+    radial-gradient(120% 120% at 88% 50%, var(--accent) 0 26%, transparent 42%),
+    linear-gradient(115deg, #ffffff 0%, #ffffff 58%, var(--accent-hover) 58%, var(--accent) 100%);
+}
+
+.gift-card-ribbon {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  width: 46%;
+  height: auto;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.gift-card-brand {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
   color: #18181b;
 }
 
-.gift-card-banner span {
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.gift-card-banner strong {
-  font-size: 34px;
+.gift-card-brand span {
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
 
-.gift-card-banner p {
+.gift-card-brand em {
+  font-style: normal;
+  color: var(--accent-hover);
+}
+
+.gift-card-brand small {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: italic;
+  color: #52525b;
+}
+
+.gift-card-fields {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 62%;
+}
+
+.gift-card-number {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: rgba(24, 24, 27, 0.55);
+}
+
+.gift-card-exp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(24, 24, 27, 0.55);
+}
+
+.gift-card-exp-sep {
+  color: #a1a1aa;
+  font-size: 16px;
+}
+
+.gift-card-note {
   margin: 0;
   font-size: 13px;
-  font-weight: 600;
-  opacity: 0.75;
+  color: var(--text-secondary);
 }
 
-.gift-amounts {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.gift-amounts button {
-  padding: 10px 20px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--bg);
-  color: var(--text);
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
-}
-
-.gift-amounts button:hover {
-  border-color: var(--border-hover);
-}
-
-.gift-amounts button.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #18181b;
-}
-
-.gift-form {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  max-width: 460px;
-}
-
-.gift-form input {
-  flex: 1;
-  min-width: 200px;
-  padding: 12px 16px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--bg);
-  color: var(--text);
-  font-family: inherit;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-
-.gift-form input:focus {
-  border-color: var(--accent);
+.gift-card-submit {
+  width: 100%;
 }
 
 .drawer-backdrop {
