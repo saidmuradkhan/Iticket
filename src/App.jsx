@@ -1,11 +1,11 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import MainLayout from './layouts/MainLayout'
 import ProfileLayout from './layouts/ProfileLayout'
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './pages/Home/Home'
 import EventList from './pages/EventList/EventList'
 import EventDetail from './pages/EventDetail/EventDetail'
-import SeatSelection from './pages/SeatSelection/SeatSelection'
 import Cart from './pages/Cart/Cart'
 import Order from './pages/Order/Order'
 import PaymentResult from './pages/PaymentResult/PaymentResult'
@@ -25,13 +25,14 @@ import Faq from './Profile/Faq'
 
 const App = () => {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/events/:category" element={<EventList />} />
         <Route path="/search/:query" element={<EventList />} />
         <Route path="/event/:id" element={<EventDetail />} />
-        <Route path="/event/:id/seats" element={<SeatSelection />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order/:orderId" element={<Order />} />
         <Route path="/payment/result" element={<PaymentResult />} />
@@ -55,6 +56,7 @@ const App = () => {
         </Route>
       </Route>
     </Routes>
+    </>
   )
 }
 

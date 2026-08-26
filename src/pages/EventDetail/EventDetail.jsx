@@ -1,10 +1,11 @@
 import { useState, useEffect, useContext } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getEventOrShowById } from "../../api/api";
 import { useEvents } from "../../hooks/useEvents";
 import { formatEventDate } from "../../utils/dateHelpers";
 import { FavoritesContext } from "../../context/FavoritesContext";
 import Loader from "../../components/Loader/Loader";
+import SeatBooking from "../../components/SeatMap/SeatBooking";
 
 const scrollSimilar = (direction) => {
   const track = document.getElementById("similar-track");
@@ -13,7 +14,6 @@ const scrollSimilar = (direction) => {
 
 const EventDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
   const { events: allEvents } = useEvents();
 
@@ -54,7 +54,10 @@ const EventDetail = () => {
     .slice(0, 8);
 
   const handleBuyClick = () => {
-    navigate(`/event/${event.id}/seats`);
+    const section = document.getElementById("seat-booking-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const handleShare = async () => {
@@ -63,7 +66,7 @@ const EventDetail = () => {
       try {
         await navigator.share({ title: event.title, url });
       } catch {
-        
+        // istifadəçi paylaşımı ləğv etdi — heç nə etmirik
       }
     } else if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);
@@ -138,6 +141,13 @@ const EventDetail = () => {
           </div>
         </div>
       </section>
+
+      {!isSoldOut && (
+        <section className="event-seat-section" id="seat-booking-section">
+          <h2>Yer seçimi</h2>
+          <SeatBooking event={event} />
+        </section>
+      )}
 
       <section className="event-lower">
         <div className="event-lower-main">

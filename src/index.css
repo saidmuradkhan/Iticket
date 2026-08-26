@@ -1684,6 +1684,33 @@ main {
   padding-bottom: 90px;
 }
 
+.event-seat-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px 24px;
+}
+
+.event-seat-section > h2 {
+  margin-bottom: 16px;
+}
+
+.event-seat-section .seat-map {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  background: var(--card-bg);
+}
+
+@media (max-width: 600px) {
+  .event-seat-section {
+    padding: 8px 16px 16px;
+  }
+
+  .event-seat-section .seat-map {
+    padding: 16px;
+  }
+}
+
 .seat-legend {
   display: flex;
   flex-wrap: wrap;

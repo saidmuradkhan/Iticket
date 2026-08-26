@@ -1,12 +1,10 @@
 import { useState, useEffect, useContext, useCallback, useRef } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { getEventOrShowById } from "../../api/api";
+import { Link, useNavigate } from "react-router-dom";
 import { getSeatStatus, holdSeat, releaseSeat } from "../../api/seats";
 import { CartContext } from "../../context/CartContext";
 import { AuthContext } from "../../context/AuthContext";
 import { useCountdown } from "../../hooks/useCountdown";
-import Loader from "../../components/Loader/Loader";
-import SeatMap from "../../components/SeatMap/SeatMap";
+import SeatMap from "./SeatMap";
 
 const parseSeatKey = (key) => {
   const match = key.match(/^(.*)-r(\d+)-s(\d+)$/);
@@ -14,21 +12,21 @@ const parseSeatKey = (key) => {
   return { ticketId: match[1], row: Number(match[2]), seatNumber: Number(match[3]) };
 };
 
-const SeatSelection = () => {
-  const { id } = useParams();
+const SeatBooking = ({ event }) => {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const { user } = useContext(AuthContext);
 
-  const [event, setEvent] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [takenSeats, setTakenSeats] = useState(new Set());
   const [holdDeadline, setHoldDeadline] = useState(null);
   const [error, setError] = useState(null);
   const [busy, setBusy] = useState(false);
 
-  const eventRef = useRef(null);
+  const eventRef = useRef(event);
+  useEffect(() => {
+    eventRef.current = event;
+  }, [event]);
 
   const buildSelected = useCallback((seatKey) => {
     const parsed = parseSeatKey(seatKey);
@@ -46,9 +44,9 @@ const SeatSelection = () => {
   }, []);
 
   const refresh = useCallback(async () => {
-    if (!user) return;
+    if (!user || !event) return;
     try {
-      const data = await getSeatStatus(id, user.id);
+      const data = await getSeatStatus(event.id, user.id);
       const others = new Set();
       const mine = [];
       let earliest = null;
@@ -61,7 +59,6 @@ const SeatSelection = () => {
             earliest = t.expiresAt;
           }
         } else {
-          
           others.add(t.seatKey);
         }
       }
@@ -70,18 +67,9 @@ const SeatSelection = () => {
       setSelectedSeats(mine);
       setHoldDeadline(mine.length > 0 ? earliest : null);
     } catch {
-      
       setTakenSeats(new Set());
     }
-  }, [id, user, buildSelected]);
-
-  useEffect(() => {
-    getEventOrShowById(id).then((data) => {
-      eventRef.current = data;
-      setEvent(data);
-      setLoading(false);
-    });
-  }, [id]);
+  }, [event, user, buildSelected]);
 
   useEffect(() => {
     if (!event || !user) return;
@@ -98,34 +86,23 @@ const SeatSelection = () => {
 
   const { minutes, seconds } = useCountdown(holdDeadline);
 
-  if (loading) {
-    return <Loader count={1} />;
-  }
-
-  if (!event) {
-    return <div className="page">Tədbir tapılmadı.</div>;
-  }
-
   if (!user) {
     return (
-      <div className="seat-selection">
-        <h1>{event.title}</h1>
-        <div className="seat-auth-gate">
-          <i className="fas fa-user-lock" />
-          <p>Yer seçmək üçün hesabınıza daxil olun.</p>
-          <Link to="/login" className="buy-btn" state={{ from: `/event/${id}/seats` }}>
-            Daxil ol
-          </Link>
-        </div>
+      <div className="seat-auth-gate">
+        <i className="fas fa-user-lock" />
+        <p>Yer seçmək üçün hesabınıza daxil olun.</p>
+        <Link to="/login" className="buy-btn" state={{ from: `/event/${event.id}` }}>
+          Daxil ol
+        </Link>
       </div>
     );
   }
 
   const totalPrice = selectedSeats.reduce((sum, s) => sum + s.price, 0);
 
-  const handleSeatClick = async (seat, ticket) => {
+  const handleSeatClick = async (seat) => {
     if (busy) return;
-    if (seat.presold || takenSeats.has(seat.key)) return; 
+    if (seat.presold || takenSeats.has(seat.key)) return;
     setError(null);
 
     const alreadySelected = selectedSeats.some((s) => s.key === seat.key);
@@ -138,14 +115,11 @@ const SeatSelection = () => {
       }
       await refresh();
     } catch (err) {
-      
       setError(err.message || "Yer tutula bilmədi");
       await refresh();
     } finally {
       setBusy(false);
     }
-    
-    void ticket;
   };
 
   const handleAddToCart = () => {
@@ -173,10 +147,7 @@ const SeatSelection = () => {
   };
 
   return (
-    <div className="seat-selection">
-      <h1>{event.title}</h1>
-      <p className="event-detail-meta">{event.venue}</p>
-
+    <div className="seat-booking">
       {error && <p className="payment-error">{error}</p>}
 
       <SeatMap
@@ -205,4 +176,4 @@ const SeatSelection = () => {
   );
 };
 
-export default SeatSelection;
+export default SeatBooking;
