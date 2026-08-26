@@ -73,8 +73,7 @@ img {
 }
 
 .header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 50;
   display: flex;
   align-items: center;
@@ -84,7 +83,6 @@ img {
   background: var(--header-bg);
   backdrop-filter: blur(14px) saturate(1.6);
   -webkit-backdrop-filter: blur(14px) saturate(1.6);
-  border-bottom: 1px solid var(--border);
   transition: background 0.3s ease;
 }
 
@@ -269,14 +267,15 @@ img {
 }
 
 .category-nav {
-  position: sticky;
-  top: 59px;
+  position: relative;
   z-index: 40;
   display: flex;
   gap: 8px;
   padding: 10px 24px;
   overflow-x: auto;
-  background: var(--bg);
+  background: var(--header-bg);
+  backdrop-filter: blur(14px) saturate(1.6);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
   border-bottom: 1px solid var(--border);
   scrollbar-width: none;
 }

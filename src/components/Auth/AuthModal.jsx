@@ -71,8 +71,6 @@ const CloseIcon = () => (
   </svg>
 );
 
-// Google düyməsi ayrıca komponentdir: useGoogleLogin yalnız GoogleOAuthProvider
-// mövcud olduqda (Client ID varsa) çağırılır.
 const GoogleButton = ({ onProfile, onError }) => {
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
@@ -133,7 +131,6 @@ const AuthModal = () => {
   const [remember, setRemember] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  // Modal bağlananda formu təmizlə
   useEffect(() => {
     if (!authModal) {
       setName("");
@@ -146,7 +143,6 @@ const AuthModal = () => {
     }
   }, [authModal]);
 
-  // Escape ilə bağlanma + body scroll kilidi
   useEffect(() => {
     if (!authModal) return;
     const onKey = (e) => {
@@ -160,7 +156,6 @@ const AuthModal = () => {
     };
   }, [authModal, closeAuth]);
 
-  // Uğurlu girişdən sonra modalı bağla və yönləndir
   const finishAuth = () => {
     const target = authRedirect || "/profile/account";
     closeAuth();
@@ -180,14 +175,12 @@ const AuthModal = () => {
     if (success) finishAuth();
   };
 
-  // Google profili gələndə lokal user yarat və yönləndir
   const handleGoogleProfile = (profile) => {
     setSocialError("");
     socialLogin(profile);
     finishAuth();
   };
 
-  // Client ID yoxdursa göstərilən fallback düymə
   const handleGoogleUnconfigured = () => {
     setSocialError("Google girişi konfiqurasiya edilməyib (VITE_GOOGLE_CLIENT_ID).");
   };
