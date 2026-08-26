@@ -3529,24 +3529,6 @@
       "eventId": "4",
       "seatKey": "4-1-r1-s1",
       "userId": "1",
-      "status": "held",
-      "expiresAt": "2026-08-26T12:18:17.314Z",
-      "createdAt": "2026-08-26T12:03:17.314Z",
-      "id": "w3vVjdimG2g"
-    },
-    {
-      "eventId": "4",
-      "seatKey": "4-3-r5-s1",
-      "userId": "1",
-      "status": "held",
-      "expiresAt": "2026-08-26T12:18:25.590Z",
-      "createdAt": "2026-08-26T12:03:25.590Z",
-      "id": "zq21ukTTPS4"
-    },
-    {
-      "eventId": "4",
-      "seatKey": "4-1-r1-s1",
-      "userId": "1",
       "status": "sold",
       "orderId": "-6wfxcim674",
       "expiresAt": null,
@@ -3572,15 +3554,6 @@
       "expiresAt": null,
       "createdAt": "2026-08-26T12:04:22.005Z",
       "id": "IYYYAnBYot0"
-    },
-    {
-      "eventId": "38",
-      "seatKey": "38-1-r2-s9",
-      "userId": 1787745907632,
-      "status": "held",
-      "expiresAt": "2026-08-26T12:26:06.581Z",
-      "createdAt": "2026-08-26T12:11:06.581Z",
-      "id": "hN-1l7SV_JE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

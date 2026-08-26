@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGoogleLogin } from "@react-oauth/google";
 import { AuthContext } from "../../context/AuthContext";
@@ -130,6 +130,27 @@ const AuthModal = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [remember, setRemember] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  // Sahələri yoxla və xəta obyektini qaytar (rejimə görə)
+  const validate = useCallback(() => {
+    const errs = {};
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (isRegister) {
+      if (!name.trim()) errs.name = "Ad tələb olunur";
+      if (!surname.trim()) errs.surname = "Soyad tələb olunur";
+      const digits = phone.replace(/\D/g, "");
+      if (digits.length !== 9) errs.phone = "Nömrə düzgün deyil";
+    }
+    if (!email.trim()) errs.email = "E-poçt tələb olunur";
+    else if (!emailRe.test(email.trim())) errs.email = "E-poçt düzgün deyil";
+    const minLen = isRegister ? 8 : 6;
+    if (!password) errs.password = "Şifrə tələb olunur";
+    else if (password.length < minLen)
+      errs.password = `Şifrə ən azı ${minLen} simvol olmalıdır`;
+    return errs;
+  }, [isRegister, name, surname, phone, email, password]);
 
   useEffect(() => {
     if (!authModal) {
@@ -140,8 +161,20 @@ const AuthModal = () => {
       setPassword("");
       setShowPassword(false);
       setSocialError("");
+      setErrors({});
+      setSubmitted(false);
     }
   }, [authModal]);
+
+  useEffect(() => {
+    if (submitted) setErrors(validate());
+  }, [submitted, validate]);
+
+  const switchMode = () => {
+    setErrors({});
+    setSubmitted(false);
+    openAuth(isRegister ? "login" : "register", authRedirect);
+  };
 
   useEffect(() => {
     if (!authModal) return;
@@ -164,6 +197,11 @@ const AuthModal = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const errs = validate();
+    setErrors(errs);
+    setSubmitted(true);
+    if (Object.keys(errs).length > 0) return;
+
     setSubmitting(true);
     let success = false;
     if (isRegister) {
@@ -209,10 +247,10 @@ const AuthModal = () => {
         </div>
 
         <div className="auth-modal-body">
-        <form className="auth-modal-form" onSubmit={handleSubmit}>
+        <form className="auth-modal-form" onSubmit={handleSubmit} noValidate>
           {isRegister && (
             <>
-              <div className="auth-field">
+              <div className={`auth-field${errors.name ? " has-error" : ""}`}>
                 <label htmlFor="auth-name">Ad</label>
                 <input
                   id="auth-name"
@@ -220,11 +258,14 @@ const AuthModal = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Adınızı daxil edin"
-                  required
+                  aria-invalid={!!errors.name}
                 />
+                {errors.name && (
+                  <p className="auth-field-error">{errors.name}</p>
+                )}
               </div>
 
-              <div className="auth-field">
+              <div className={`auth-field${errors.surname ? " has-error" : ""}`}>
                 <label htmlFor="auth-surname">Soyad</label>
                 <input
                   id="auth-surname"
@@ -232,11 +273,14 @@ const AuthModal = () => {
                   value={surname}
                   onChange={(e) => setSurname(e.target.value)}
                   placeholder="Soyadınızı daxil edin"
-                  required
+                  aria-invalid={!!errors.surname}
                 />
+                {errors.surname && (
+                  <p className="auth-field-error">{errors.surname}</p>
+                )}
               </div>
 
-              <div className="auth-field">
+              <div className={`auth-field${errors.phone ? " has-error" : ""}`}>
                 <label htmlFor="auth-phone">Mobil nömrə</label>
                 <div className="auth-phone">
                   <span className="auth-phone-code">
@@ -249,14 +293,17 @@ const AuthModal = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="50 123 45 67"
-                    required
+                    aria-invalid={!!errors.phone}
                   />
                 </div>
+                {errors.phone && (
+                  <p className="auth-field-error">{errors.phone}</p>
+                )}
               </div>
             </>
           )}
 
-          <div className="auth-field">
+          <div className={`auth-field${errors.email ? " has-error" : ""}`}>
             <label htmlFor="auth-email">E-poçt</label>
             <input
               id="auth-email"
@@ -264,11 +311,12 @@ const AuthModal = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="name@example.com"
-              required
+              aria-invalid={!!errors.email}
             />
+            {errors.email && <p className="auth-field-error">{errors.email}</p>}
           </div>
 
-          <div className="auth-field">
+          <div className={`auth-field${errors.password ? " has-error" : ""}`}>
             <label htmlFor="auth-password">Şifrə</label>
             <div className="auth-password">
               <input
@@ -277,7 +325,7 @@ const AuthModal = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                required
+                aria-invalid={!!errors.password}
               />
               <button
                 type="button"
@@ -288,6 +336,9 @@ const AuthModal = () => {
                 <EyeIcon off={!showPassword} />
               </button>
             </div>
+            {errors.password && (
+              <p className="auth-field-error">{errors.password}</p>
+            )}
           </div>
 
           {!isRegister && (
@@ -352,10 +403,7 @@ const AuthModal = () => {
 
         <p className="auth-modal-switch">
           {isRegister ? "Hesabınız var? " : "Hesabınız yoxdur? "}
-          <button
-            type="button"
-            onClick={() => openAuth(isRegister ? "login" : "register", authRedirect)}
-          >
+          <button type="button" onClick={switchMode}>
             {isRegister ? "Daxil ol" : "Qeydiyyat"}
           </button>
         </p>
