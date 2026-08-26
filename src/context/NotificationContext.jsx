@@ -1,7 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { getNotifications, markNotificationRead } from "../api/api";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const NotificationContext = createContext();
 
 export const NotificationProvider = ({ children }) => {

@@ -2,7 +2,6 @@ import { createContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { login as loginRequest } from "../api/api";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {

@@ -1,4 +1,3 @@
-/* Inline SVG icon set mirroring the iticket.az header actions */
 
 export const SunIcon = () => (
   <svg

@@ -15,7 +15,7 @@ const Login = () => {
     const success = await login(email);
     setSubmitting(false);
     if (success) {
-      // giriş öncəsi yönləndirilən səhifə varsa oraya qaytar (məs. yer seçimi)
+      
       navigate(location.state?.from || "/profile/account");
     }
   };

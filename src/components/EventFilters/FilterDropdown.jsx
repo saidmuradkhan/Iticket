@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// ortaq açılan-filtr qutusu qabığı - trigger düyməsi + backdrop + panel
 const FilterDropdown = ({ label, active, children, panelClassName }) => {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);

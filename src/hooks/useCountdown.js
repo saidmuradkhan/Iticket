@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 
-// expiresAt (ISO tarix) üçün qalan vaxtı saniyəbəsaniyə hesablayır.
-// secondsLeft hər render-də expiresAt-dan birbaşa hesablanır ki, ilk render-də
-// (əvvəlki state hələ 0 olarkən) yalançı "vaxt bitdi" görünməsin - effekt yalnız saniyədə bir dəfə yenidən render etdirir.
 export const useCountdown = (expiresAt) => {
   const [, forceTick] = useState(0);
 

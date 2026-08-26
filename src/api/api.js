@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// npx json-server --watch db.json --port 3001
 export const api = axios.create({
   baseURL: "http://localhost:3001",
 });
@@ -10,7 +9,6 @@ export const getShows = () => api.get("/shows");
 export const getEventById = (id) => api.get(`/events/${id}`);
 export const getShowById = (id) => api.get(`/shows/${id}`);
 
-// tədbir "events", tamaşa isə "shows" kolleksiyasında ola bilər - əvvəlcə events yoxlanılır
 export const getEventOrShowById = async (id) => {
   try {
     const res = await getEventById(id);

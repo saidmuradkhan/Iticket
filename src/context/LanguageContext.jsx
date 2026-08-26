@@ -2,7 +2,6 @@ import { createContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { translations } from "../i18n/translations";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {

@@ -1,4 +1,4 @@
-// sifariş elementlərində tarix ya ISO, ya da "23.07.26 20:00 - 22:00" formatındadır
+
 export const parseOrderDate = (value) => {
   if (!value) return null;
 

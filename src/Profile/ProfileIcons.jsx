@@ -1,4 +1,3 @@
-/* Inline SVG icon set mirroring the iticket.az profile navigation */
 
 const base = {
   "aria-hidden": "true",

@@ -53,7 +53,6 @@ const EventDetail = () => {
     .filter((e) => String(e.id) !== String(event.id) && e.category === event.category)
     .slice(0, 8);
 
-  // bütün tədbirlərdə yer seçimi səhnə xəritəsi vasitəsilə aparılır
   const handleBuyClick = () => {
     navigate(`/event/${event.id}/seats`);
   };
@@ -64,7 +63,7 @@ const EventDetail = () => {
       try {
         await navigator.share({ title: event.title, url });
       } catch {
-        // istifadəçi paylaşımı ləğv etdi
+        
       }
     } else if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);

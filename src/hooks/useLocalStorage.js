@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// localStorage-a bağlı sadə state - key dəyişəndə deyil, value dəyişəndə yazır
 export const useLocalStorage = (key, initialValue) => {
   const [value, setValue] = useState(() => {
     if (typeof window === "undefined") return initialValue;

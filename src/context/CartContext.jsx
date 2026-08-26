@@ -1,7 +1,6 @@
 import { createContext, useCallback, useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {

@@ -12,7 +12,6 @@ import SearchableListPanel from "./SearchableListPanel";
 
 const DAY_NAMES = ["b.", "b.e.", "ç.a.", "ç.", "c.a.", "c.", "ş."];
 
-// bugündən başlayaraq N gün üçün təqvim datası hazırlayır
 const generateDays = (count) => {
   const days = [];
   const today = new Date();
@@ -44,7 +43,6 @@ const groupByMonth = (days) => {
   return groups;
 };
 
-// modul yüklənəndə bir dəfə hesablanır, hər render-də təkrar hesablamağa ehtiyac yoxdur
 const monthGroups = groupByMonth(generateDays(60));
 
 const PricePanel = ({ priceMin, priceMax, onApply, close }) => {

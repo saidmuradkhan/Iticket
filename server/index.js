@@ -1,5 +1,4 @@
-// Ödəniş backend-i. Payriff secret key yalnız burada saxlanılır.
-// İşə salmaq: npm run payment
+
 import { randomUUID } from "node:crypto";
 import express from "express";
 import cors from "cors";
@@ -19,10 +18,8 @@ const APP_URL = process.env.APP_URL || "http://localhost:5173";
 const app = express();
 app.use(cors());
 app.use(express.json());
-// Payriff callback-i form formatında da göndərə bilər
-app.use(express.urlencoded({ extended: false }));
 
-/* ───────── json-server köməkçiləri ───────── */
+app.use(express.urlencoded({ extended: false }));
 
 class NotFoundError extends Error {}
 
@@ -68,12 +65,8 @@ const dbDelete = async (path) => {
   return true;
 };
 
-/* ───────── oturacaq (seat) köməkçiləri ───────── */
-
-// hold neçə dəqiqə tutulur — sifariş vaxtı ilə (15 dəq) uyğun saxlanılır
 const SEAT_HOLD_MINUTES = 15;
 
-// hold hələ də etibarlıdırmı: satılmış həmişə, tutulmuş isə vaxtı bitməyibsə
 const isHoldActive = (hold) => {
   if (hold.status === "sold") return true;
   if (hold.status !== "held") return false;
@@ -83,14 +76,12 @@ const isHoldActive = (hold) => {
 const holdExpiry = () =>
   new Date(Date.now() + SEAT_HOLD_MINUTES * 60 * 1000).toISOString();
 
-// vaxtı keçmiş "held" qeydlərini silir (best-effort), qalan siyahını qaytarır
 const purgeExpiredHolds = async (holds) => {
   const stale = holds.filter((h) => h.status === "held" && !isHoldActive(h));
   for (const h of stale) await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
   return holds.filter((h) => !stale.includes(h));
 };
 
-// sifariş ödənildikdə həmin yerləri qəti "sold" edir (idempotent)
 const finalizeSeats = async (order) => {
   const seatItems = (order.items || []).filter((i) => i.seatInfo?.seatKey);
   if (seatItems.length === 0) return;
@@ -98,7 +89,7 @@ const finalizeSeats = async (order) => {
   for (const item of seatItems) {
     const key = item.seatInfo.seatKey;
     const existing = all.filter((h) => h.seatKey === key);
-    if (existing.some((h) => h.status === "sold")) continue; // artıq satılıb
+    if (existing.some((h) => h.status === "sold")) continue; 
     for (const h of existing.filter((h) => h.status === "held")) {
       await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
     }
@@ -114,7 +105,6 @@ const finalizeSeats = async (order) => {
   }
 };
 
-// sifariş ləğv/vaxtı bitdikdə istifadəçinin tutduğu yerləri buraxır
 const releaseSeats = async (order) => {
   const keys = (order.items || [])
     .map((i) => i.seatInfo?.seatKey)
@@ -132,9 +122,6 @@ const releaseSeats = async (order) => {
   }
 };
 
-/* ───────── status uyğunlaşdırma ───────── */
-
-// Payriff paymentStatus -> bizim daxili status
 const mapPaymentStatus = (paymentStatus) => {
   switch (paymentStatus) {
     case STATUS_APPROVED:
@@ -155,17 +142,12 @@ const mapPaymentStatus = (paymentStatus) => {
   }
 };
 
-/**
- * Payriff-dən sifarişin vəziyyətini oxuyur və db.json-u yeniləyir.
- * Idempotentdir — həm redirect, həm də callback bunu çağıra bilər.
- */
 const syncOrderStatus = async (order) => {
   const payriffOrderId = order.payment?.payriffOrderId;
   if (!payriffOrderId) {
     return { status: order.status, paymentStatus: null };
   }
 
-  // artıq tamamlanmış sifarişi təkrar sorğulamağa ehtiyac yoxdur
   if (order.status === "confirmed" || order.status === "refunded") {
     return { status: order.status, paymentStatus: order.payment?.paymentStatus ?? null };
   }
@@ -184,12 +166,10 @@ const syncOrderStatus = async (order) => {
     },
   };
 
-  // ödəniş uğurludursa sifarişdə ödəniş üsulunu da qeyd edirik
   if (status === "confirmed") patch.paymentMethod = "online";
 
   await dbPatch(`/orders/${order.id}`, patch);
 
-  // yerləri sifarişin nəticəsinə uyğun qəti et / burax
   if (status === "confirmed") {
     await finalizeSeats(order).catch((e) => console.error("[seats] finalize:", e.message));
   } else if (["expired", "canceled", "declined"].includes(status)) {
@@ -199,16 +179,10 @@ const syncOrderStatus = async (order) => {
   return { status, paymentStatus: info.paymentStatus };
 };
 
-/* ───────── endpoint-lər ───────── */
-
 app.get("/api/payment/health", (req, res) => {
   res.json({ ok: true, credentials: hasCredentials() });
 });
 
-/**
- * Ödənişə başlayır: Payriff-də order açır, paymentUrl qaytarır.
- * Frontend istifadəçini həmin ünvana yönləndirir.
- */
 app.post("/api/payment/create", async (req, res, next) => {
   try {
     const { orderId, language = "AZ" } = req.body;
@@ -239,7 +213,7 @@ app.post("/api/payment/create", async (req, res, next) => {
       amount: order.totalPrice,
       description,
       language,
-      // Payriff ödənişdən sonra istifadəçini bu ünvana qaytarır
+      
       callbackUrl: `${APP_URL}/payment/result?orderId=${encodeURIComponent(orderId)}`,
     });
 
@@ -259,10 +233,6 @@ app.post("/api/payment/create", async (req, res, next) => {
   }
 });
 
-/**
- * Ödənişin nəticəsini Payriff-dən yoxlayır (redirect-dən sonra frontend çağırır).
- * Brauzerdən gələn məlumata güvənmirik — həmişə Payriff-dən soruşuruq.
- */
 app.get("/api/payment/verify/:orderId", async (req, res, next) => {
   try {
     const order = await dbGet(`/orders/${req.params.orderId}`);
@@ -273,11 +243,6 @@ app.get("/api/payment/verify/:orderId", async (req, res, next) => {
   }
 });
 
-/**
- * Payriff-in server-to-server bildirişi.
- * Gövdəyə güvənmirik — sadəcə siqnal kimi qəbul edib statusu API-dən yoxlayırıq.
- * Qeyd: localhost-da Payriff bura çata bilmir, real domendə işləyir.
- */
 app.post("/api/payment/callback", async (req, res) => {
   const orderId = req.query.orderId || req.body?.orderId;
   try {
@@ -344,8 +309,6 @@ app.post("/api/payment/refund", async (req, res, next) => {
     next(err);
   }
 });
-
-/* ───────── cüzdan (balans artırma) ───────── */
 
 const MIN_TOPUP = 1;
 const MAX_TOPUP = 5000;
@@ -638,12 +601,6 @@ const refundToWallet = (order, requested) =>
     };
   });
 
-/* ───────── oturacaq seçimi (seat holds) ───────── */
-
-/**
- * Tədbir üçün tutulmuş yerləri qaytarır (satılmış + aktiv hold-lar).
- * ?userId= verilərsə, hansı yerlərin həmin istifadəçiyə aid olduğunu (mine) bildirir.
- */
 app.get("/api/seats/:eventId", async (req, res, next) => {
   try {
     const eventId = String(req.params.eventId);
@@ -655,7 +612,7 @@ app.get("/api/seats/:eventId", async (req, res, next) => {
 
     const taken = forEvent.map((h) => ({
       seatKey: h.seatKey,
-      status: h.status, // "held" | "sold"
+      status: h.status, 
       mine: userId != null && String(h.userId) === userId,
       expiresAt: h.expiresAt,
     }));
@@ -666,10 +623,6 @@ app.get("/api/seats/:eventId", async (req, res, next) => {
   }
 });
 
-/**
- * Bir yeri tutur. Atomikdir — eyni yer üçün paralel sorğular növbəyə düzülür,
- * ona görə iki istifadəçi eyni yeri eyni anda tuta bilməz.
- */
 app.post("/api/seats/hold", async (req, res, next) => {
   try {
     const { eventId, seatKey, userId } = req.body;
@@ -688,7 +641,7 @@ app.post("/api/seats/hold", async (req, res, next) => {
 
       const mine = active.find((h) => String(h.userId) === String(userId));
       if (mine) {
-        // öz hold-umuzu yeniləyirik (vaxtını uzadırıq)
+        
         if (mine.status === "held") {
           const expiresAt = holdExpiry();
           await dbPatch(`/seatHolds/${mine.id}`, { expiresAt });
@@ -697,7 +650,6 @@ app.post("/api/seats/hold", async (req, res, next) => {
         return { seatKey, status: "sold", expiresAt: null };
       }
 
-      // köhnə (vaxtı keçmiş) öz qeydlərimizi təmizləyirik
       for (const h of all.filter((h) => String(h.userId) === String(userId) && !isHoldActive(h))) {
         await dbDelete(`/seatHolds/${h.id}`).catch(() => {});
       }
@@ -721,7 +673,6 @@ app.post("/api/seats/hold", async (req, res, next) => {
   }
 });
 
-/** İstifadəçinin tutduğu yeri buraxır (satılmış yerə toxunmur). */
 app.post("/api/seats/release", async (req, res, next) => {
   try {
     const { eventId, seatKey, userId } = req.body;

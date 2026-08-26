@@ -1,4 +1,4 @@
-// iticket.az profil menyusunun sırası - sidebar və header dropdown eyni mənbədən oxuyur
+
 export const PROFILE_NAV = [
   { path: "/profile/tickets", icon: "ticket", label: "Biletlər" },
   { path: "/profile/transfers", icon: "transfer", label: "Transferlər" },
@@ -12,7 +12,6 @@ export const PROFILE_NAV = [
   { path: "/profile/refunds", icon: "refund", label: "Qaytarma sorğuları" },
 ];
 
-// menyunun ayırıcıdan sonrakı hissəsi
 export const PROFILE_NAV_FOOTER = [
   { path: "/profile/faq", icon: "faq", label: "Ən çox verilən suallar" },
 ];

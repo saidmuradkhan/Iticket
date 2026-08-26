@@ -13,7 +13,6 @@ const ProfileMenu = () => {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef(null);
 
-  // kənara klik və Escape menyunu bağlayır
   useEffect(() => {
     if (!open) return;
 

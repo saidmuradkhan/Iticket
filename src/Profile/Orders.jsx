@@ -5,7 +5,6 @@ import { getOrders } from "../api/api";
 import Loader from "../components/Loader/Loader";
 import { formatDateTime, formatMoney } from "./profileHelpers";
 
-// iticket.az sifariş statusları
 const STATUS_LABELS = {
   confirmed: "Tamamlanıb",
   pending_payment: "Ödəniş gözlənilir",

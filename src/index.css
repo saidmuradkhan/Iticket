@@ -1,4 +1,4 @@
-/* ───────── Design Tokens ───────── */
+
 :root[data-theme="light"] {
   --bg: #ffffff;
   --bg-secondary: #f4f4f5;
@@ -37,7 +37,6 @@
   --header-bg: rgba(9, 9, 11, 0.82);
 }
 
-/* ───────── Reset & Base ───────── */
 *,
 *::before,
 *::after {
@@ -73,7 +72,6 @@ img {
   max-width: 100%;
 }
 
-/* ───────── HEADER ───────── */
 .header {
   position: sticky;
   top: 0;
@@ -111,7 +109,6 @@ img {
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Hover States */
 .logo:hover .logo-ticket {
   filter: drop-shadow(0 0 12px rgba(255, 220, 0, 0.85));
 }
@@ -120,7 +117,6 @@ img {
   animation: dotJump 0.5s forwards cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Keyframes for arc animation */
 @keyframes dotJump {
   0% {
     transform: translate(0, 0) scale(1);
@@ -194,7 +190,6 @@ img {
   gap: 4px;
 }
 
-/* Tertiary header button (iticket.az style: no border, no fill) */
 .header-btn {
   position: relative;
   display: inline-flex;
@@ -273,7 +268,6 @@ img {
   pointer-events: none;
 }
 
-/* ───────── CATEGORY NAV ───────── */
 .category-nav {
   position: sticky;
   top: 59px;
@@ -326,7 +320,6 @@ img {
   font-size: 14px;
 }
 
-/* ───────── MAIN ───────── */
 main {
   min-height: 70vh;
 }
@@ -337,7 +330,6 @@ main {
   text-align: center;
 }
 
-/* ───────── HERO SECTION ───────── */
 .hero-section {
   display: flex;
   gap: 20px;
@@ -421,7 +413,6 @@ main {
   margin-top: 10px;
 }
 
-/* Hero navigation arrows */
 .hero-nav-arrow {
   position: absolute;
   top: 50%;
@@ -468,7 +459,6 @@ main {
   transform: translateY(-50%) translateX(0);
 }
 
-/* Hero dots */
 .hero-dots {
   display: flex;
   justify-content: center;
@@ -492,7 +482,6 @@ main {
   width: 28px;
 }
 
-/* Gift card */
 .gift-card {
   flex: 1;
   min-width: 220px;
@@ -542,7 +531,6 @@ main {
   font-weight: 500;
 }
 
-/* ───────── EVENT FILTERS ───────── */
 .event-filters {
   padding: 20px 24px 0;
   max-width: 1280px;
@@ -631,7 +619,6 @@ main {
   border-color: rgba(255, 221, 0, 0.35);
 }
 
-/* Filter bar */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -759,7 +746,6 @@ main {
   font-weight: 600;
 }
 
-/* Price panel */
 .price-panel {
   display: flex;
   flex-direction: column;
@@ -817,7 +803,6 @@ main {
   background: var(--accent-hover);
 }
 
-/* Filter chips */
 .filter-chips {
   display: flex;
   flex-wrap: wrap;
@@ -857,7 +842,6 @@ main {
   justify-content: center;
 }
 
-/* ───────── EVENT GRID & CARDS ───────── */
 .event-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -909,7 +893,6 @@ main {
   transform: scale(1.06);
 }
 
-/* Price badge on card */
 .card-price-badge {
   position: absolute;
   bottom: 10px;
@@ -925,7 +908,6 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* Age badge on card */
 .card-age-badge {
   position: absolute;
   top: 10px;
@@ -1012,7 +994,6 @@ main {
   margin: 0;
 }
 
-/* ───────── LOADING SKELETON ───────── */
 .loader-wrapper {
   position: relative;
 }
@@ -1093,7 +1074,6 @@ main {
   }
 }
 
-/* ───────── EVENT DETAIL — HERO ───────── */
 .event-hero {
   position: relative;
   min-height: 460px;
@@ -1266,7 +1246,6 @@ main {
   }
 }
 
-/* ───────── EVENT DETAIL — LOWER ───────── */
 .event-lower {
   max-width: 1200px;
   margin: 0 auto;
@@ -1359,7 +1338,6 @@ main {
   object-fit: cover;
 }
 
-/* ───────── SIMILAR EVENTS ───────── */
 .similar-events {
   max-width: 1200px;
   margin: 0 auto;
@@ -1470,7 +1448,6 @@ main {
   color: var(--text-secondary);
 }
 
-/* Buy buttons */
 .buy-btn {
   width: 100%;
   margin-top: 24px;
@@ -1521,7 +1498,6 @@ main {
   box-shadow: 0 12px 36px -8px rgba(255, 221, 0, 0.55);
 }
 
-/* ───────── MODAL ───────── */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1592,7 +1568,6 @@ main {
   background: var(--border);
 }
 
-/* ───────── TICKET SELECTOR ───────── */
 .free-seating-label {
   font-weight: 600;
   margin: 0 0 16px;
@@ -1684,7 +1659,6 @@ main {
   box-shadow: none;
 }
 
-/* ───────── SEAT SELECTION ───────── */
 .stage-bar {
   max-width: 500px;
   margin: 0 auto 24px;
@@ -1815,7 +1789,6 @@ main {
   padding: 10px 28px;
 }
 
-/* ───────── CART ───────── */
 .cart-page {
   max-width: 700px;
   margin: 0 auto;
@@ -1894,7 +1867,6 @@ main {
   padding: 12px 32px;
 }
 
-/* ───────── ORDER / PAYMENT ───────── */
 .order-page {
   max-width: 700px;
   margin: 0 auto;
@@ -2224,7 +2196,6 @@ main {
   min-width: 0;
 }
 
-/* ───────── Header profil dropdown ───────── */
 .profile-menu-wrapper {
   position: relative;
 }
@@ -2309,7 +2280,6 @@ main {
   margin-right: auto;
 }
 
-/* ───────── Profil səhifə şablonu ───────── */
 .profile-page {
   display: flex;
   flex-direction: column;
@@ -2449,7 +2419,6 @@ main {
   cursor: not-allowed;
 }
 
-/* ───────── Hesab melumatlari ───────── */
 .account-form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -2603,7 +2572,6 @@ main {
   opacity: 0.75;
 }
 
-/* ───────── Formalar, acilan panellar, kecidler ───────── */
 .profile-form {
   display: flex;
   flex-direction: column;
@@ -2764,7 +2732,6 @@ main {
   background: #18181b;
 }
 
-/* ───────── Cuzdan ve iGift ───────── */
 .wallet-card {
   display: flex;
   flex-direction: column;
@@ -2874,7 +2841,6 @@ main {
   border-color: var(--accent);
 }
 
-/* ───────── Odenis paneli (drawer) ───────── */
 .drawer-backdrop {
   position: fixed;
   inset: 0;
@@ -3092,7 +3058,6 @@ main {
   margin-top: 14px;
 }
 
-/* ───────── Balans emeliyyatlari ───────── */
 .wallet-transactions {
   display: flex;
   flex-direction: column;
@@ -3142,7 +3107,6 @@ main {
   gap: 8px;
 }
 
-/* ───────── Bilet kartlari ───────── */
 .ticket-card {
   display: flex;
   align-items: flex-start;
@@ -3258,7 +3222,6 @@ main {
   box-shadow: var(--card-shadow);
 }
 
-/* sağ tərəfə doğru sarı işıq */
 .app-promo-card::before {
   content: "";
   position: absolute;
@@ -3267,7 +3230,6 @@ main {
   pointer-events: none;
 }
 
-/* hərəkətli sarı dekorativ nöqtələr */
 .app-promo-dots {
   position: absolute;
   inset: 0;
@@ -3615,7 +3577,6 @@ main {
 .home-page {
   padding-bottom: 20px;
 }
-
 
 @media (max-width: 1024px) {
   .hero-section {

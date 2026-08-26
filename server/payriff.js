@@ -1,10 +1,7 @@
-// Payriff v3 API klienti — YALNIZ serverdə işləyir.
-// Secret key heç vaxt frontend-ə düşməməlidir, ona görə bütün sorğular buradan gedir.
 
 const BASE_URL = process.env.PAYRIFF_BASE_URL || "https://api.payriff.com/api/v3/";
 const SECRET_KEY = process.env.PAYRIFF_SECRET_KEY;
 
-// Payriff cavab kodları
 export const SUCCESS_CODE = "00000";
 export const STATUS_APPROVED = "APPROVED";
 
@@ -19,15 +16,14 @@ export class PayriffError extends Error {
 export const hasCredentials = () => Boolean(SECRET_KEY);
 
 const TIMEOUT_MS = 20000;
-// GET sorğuları təhlükəsiz təkrarlanır; POST-u təkrarlamırıq ki,
-// eyni ödəniş iki dəfə yaranmasın
+
 const GET_RETRIES = 2;
 
 const send = (uri, method, body) =>
   fetch(BASE_URL + uri, {
     method,
     headers: {
-      // Payriff sadəcə secret key gözləyir, "Bearer" prefiksi YOXDUR
+      
       Authorization: SECRET_KEY,
       "Content-Type": "application/json",
     },
@@ -77,10 +73,6 @@ const request = async (uri, { method = "GET", body } = {}) => {
   return data.payload ?? {};
 };
 
-/**
- * Yeni ödəniş sifarişi yaradır.
- * Cavab: { orderId, paymentUrl, transactionId }
- */
 export const createOrder = ({
   amount,
   callbackUrl,
@@ -93,7 +85,7 @@ export const createOrder = ({
   request("orders", {
     method: "POST",
     body: {
-      // məbləğ manat formatındadır (qəpiyə çevirmək lazım deyil)
+      
       amount: Number(Number(amount).toFixed(2)),
       currency,
       language,
@@ -104,18 +96,9 @@ export const createOrder = ({
     },
   });
 
-/**
- * Sifarişin cari vəziyyətini Payriff-dən oxuyur.
- * Cavab: { orderId, amount, currencyType, paymentStatus, transactions, ... }
- */
 export const getOrderInformation = (payriffOrderId) =>
   request(`orders/${encodeURIComponent(payriffOrderId)}`);
 
-/**
- * Ödənişi geri qaytarır (bankın verdiyi məhdud müddət ərzində mümkündür).
- * Diqqət: sahə adı "amount"-dur. Bəzi paketlərdə "refundAmount" yazılıb, amma
- * v3 onu görmür və "Request refund amount is null" xətası qaytarır (yoxlanıldı).
- */
 export const refund = ({ payriffOrderId, amount }) =>
   request("refund", {
     method: "POST",

@@ -3,7 +3,6 @@ import SeatSection from "./SeatSection";
 const COLORS = ["#3b82f6", "#22c55e", "#a855f7", "#f59e0b", "#14b8a6"];
 const SEATS_PER_ROW = 10;
 
-// seatKey əsasında sabit (deterministik) hash — hər render və hər istifadəçidə eynidir
 const hashKey = (str) => {
   let h = 0;
   for (let i = 0; i < str.length; i++) {
@@ -12,10 +11,8 @@ const hashKey = (str) => {
   return h;
 };
 
-// yerlərin ~28%-i "əvvəlcədən satılmış" görünür (kosmetik, hamı üçün eyni)
 const isPreSold = (key) => hashKey(key) % 100 < 28;
 
-// tier.available əsasında SABİT oturacaq şəbəkəsi yaradır (təsadüfi deyil)
 const generateSeats = (ticket) => {
   const capacity = Math.max(
     SEATS_PER_ROW,

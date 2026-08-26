@@ -31,7 +31,6 @@ const Cart = () => {
       expiresAt: new Date(Date.now() + 15 * 60 * 1000).toISOString(),
     };
 
-    // json-server sifarişə öz id-sini verir, ona görə cavabdan oxuyuruq
     const res = await createOrder(order);
     navigate(`/order/${res.data.id}`);
   };

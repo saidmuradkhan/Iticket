@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// axtarışlı siyahı paneli - həm şəhər, həm məkan dropdown-u üçün istifadə olunur
 const SearchableListPanel = ({ items, selected, onSelect, close, placeholder, allLabel }) => {
   const [search, setSearch] = useState("");
   const filtered = items.filter((item) =>

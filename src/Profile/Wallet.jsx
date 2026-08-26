@@ -21,7 +21,6 @@ const Wallet = () => {
   const [error, setError] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  // balans ödəniş serverindən gəlir - artırma yalnız orada baş verir
   const load = useCallback(
     () =>
       Promise.all([getWalletBalance(user.id), getWalletTransactions(user.id)])

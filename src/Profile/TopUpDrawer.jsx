@@ -41,7 +41,7 @@ const TopUpDrawer = ({ userId, onClose }) => {
     setError("");
     try {
       const { paymentUrl } = await startWalletTopUp(userId, value);
-      // Payriff-in ödəniş səhifəsinə keçirik, oradan /payment/result-a qayıdır
+      
       window.location.assign(paymentUrl);
     } catch (err) {
       setError(err.message);

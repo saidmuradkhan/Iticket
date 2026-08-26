@@ -16,7 +16,6 @@ const MESSAGES = {
   pending_payment: { title: "Ödəniş təsdiqlənmədi", text: "Ödəniş hələ tamamlanmayıb." },
 };
 
-// cüzdan balansının artırılması üçün mətnlər
 const TOPUP_MESSAGES = {
   confirmed: { title: "Balans artırıldı ✓", text: "Məbləğ cüzdanınıza əlavə olundu." },
   declined: { title: "Ödəniş rədd edildi", text: "Balans artırılmadı, kart ödənişi qəbul olunmadı." },

@@ -1,15 +1,12 @@
 import axios from "axios";
 
-// Ödəniş backend-i (server/index.js) — npm run payment
 export const paymentApi = axios.create({
   baseURL: import.meta.env.VITE_PAYMENT_API || "http://localhost:3002",
 });
 
-// backend-dən gələn xəta mətnini çıxarır
 const extractError = (err) =>
   err.response?.data?.error || "Ödəniş serverinə qoşulmaq mümkün olmadı";
 
-/** Payriff-də ödəniş açır və paymentUrl qaytarır. */
 export const startPayment = async (orderId, language = "AZ") => {
   try {
     const res = await paymentApi.post("/api/payment/create", { orderId, language });
@@ -19,7 +16,6 @@ export const startPayment = async (orderId, language = "AZ") => {
   }
 };
 
-/** Ödənişin nəticəsini serverdə yoxlayır. */
 export const verifyPayment = async (orderId) => {
   try {
     const res = await paymentApi.get(`/api/payment/verify/${orderId}`);
@@ -29,7 +25,6 @@ export const verifyPayment = async (orderId) => {
   }
 };
 
-/** Ödənişi geri qaytarır. */
 export const refundPayment = async (orderId, amount) => {
   try {
     const res = await paymentApi.post("/api/payment/refund", { orderId, amount });
@@ -39,7 +34,6 @@ export const refundPayment = async (orderId, amount) => {
   }
 };
 
-/** Cüzdanın balansını ödəniş serverindən oxuyur. */
 export const getWalletBalance = async (userId) => {
   try {
     const res = await paymentApi.get(`/api/wallet/${userId}`);
@@ -49,7 +43,6 @@ export const getWalletBalance = async (userId) => {
   }
 };
 
-/** Balans artırma üçün Payriff-də ödəniş açır və paymentUrl qaytarır. */
 export const startWalletTopUp = async (userId, amount, language = "AZ") => {
   try {
     const res = await paymentApi.post("/api/wallet/topup/create", {
@@ -63,7 +56,6 @@ export const startWalletTopUp = async (userId, amount, language = "AZ") => {
   }
 };
 
-/** Balans artırmanın nəticəsini serverdə yoxlayır. */
 export const verifyWalletTopUp = async (ref) => {
   try {
     const res = await paymentApi.get(`/api/wallet/topup/verify/${ref}`);

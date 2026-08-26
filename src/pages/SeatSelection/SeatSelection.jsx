@@ -8,7 +8,6 @@ import { useCountdown } from "../../hooks/useCountdown";
 import Loader from "../../components/Loader/Loader";
 import SeatMap from "../../components/SeatMap/SeatMap";
 
-// seatKey formatı: `${ticketId}-r${row}-s${seat}` — məs. "201-1-r3-s5"
 const parseSeatKey = (key) => {
   const match = key.match(/^(.*)-r(\d+)-s(\d+)$/);
   if (!match) return null;
@@ -31,7 +30,6 @@ const SeatSelection = () => {
 
   const eventRef = useRef(null);
 
-  // seatKey-dən tam seçim obyektini bərpa edir (səhifə yeniləndikdə lazımdır)
   const buildSelected = useCallback((seatKey) => {
     const parsed = parseSeatKey(seatKey);
     const ev = eventRef.current;
@@ -47,7 +45,6 @@ const SeatSelection = () => {
     };
   }, []);
 
-  // backend-dən yerlərin vəziyyətini oxuyur: tutulmuşları və öz hold-larımızı ayırır
   const refresh = useCallback(async () => {
     if (!user) return;
     try {
@@ -64,7 +61,7 @@ const SeatSelection = () => {
             earliest = t.expiresAt;
           }
         } else {
-          // başqasının tutduğu, satılmış, və ya öz artıq alınmış yerlərim
+          
           others.add(t.seatKey);
         }
       }
@@ -73,7 +70,7 @@ const SeatSelection = () => {
       setSelectedSeats(mine);
       setHoldDeadline(mine.length > 0 ? earliest : null);
     } catch {
-      // yer serveri əlçatan deyilsə, xəritə işləməyə davam etsin (kilid olmadan)
+      
       setTakenSeats(new Set());
     }
   }, [id, user, buildSelected]);
@@ -109,7 +106,6 @@ const SeatSelection = () => {
     return <div className="page">Tədbir tapılmadı.</div>;
   }
 
-  // giriş etməmiş istifadəçi yer seçə bilməz (yerin kimə aid olduğunu bilmək üçün lazımdır)
   if (!user) {
     return (
       <div className="seat-selection">
@@ -129,7 +125,7 @@ const SeatSelection = () => {
 
   const handleSeatClick = async (seat, ticket) => {
     if (busy) return;
-    if (seat.presold || takenSeats.has(seat.key)) return; // tutulub — toxunma
+    if (seat.presold || takenSeats.has(seat.key)) return; 
     setError(null);
 
     const alreadySelected = selectedSeats.some((s) => s.key === seat.key);
@@ -142,13 +138,13 @@ const SeatSelection = () => {
       }
       await refresh();
     } catch (err) {
-      // 409 = başqası tərəfindən artıq tutulub
+      
       setError(err.message || "Yer tutula bilmədi");
       await refresh();
     } finally {
       setBusy(false);
     }
-    // ticket parametri legend/qiymət üçün SeatMap-də istifadə olunur
+    
     void ticket;
   };
 
