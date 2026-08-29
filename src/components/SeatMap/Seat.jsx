@@ -1,4 +1,7 @@
+import { useLanguage } from "../../hooks/useLanguage";
+
 const Seat = ({ seat, color, sold, selected, onClick }) => {
+  const { t } = useLanguage();
   const className = "seat" + (sold ? " sold" : "") + (selected ? " selected" : "");
 
   return (
@@ -8,7 +11,7 @@ const Seat = ({ seat, color, sold, selected, onClick }) => {
       style={!sold ? { "--seat-color": color } : undefined}
       disabled={sold}
       onClick={onClick}
-      title={`Sıra ${seat.row}, Yer ${seat.seatNumber}`}
+      title={t("seatMap.seatTitle", { row: seat.row, seat: seat.seatNumber })}
     >
       {seat.seatNumber}
     </button>

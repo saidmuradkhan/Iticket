@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { formatEventDate } from "../../utils/dateHelpers";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const AUTO_ROTATE_MS = 5000;
 
 const HeroSection = ({ events }) => {
+  const { t } = useLanguage();
   const slides = events.slice(0, 5);
   const [current, setCurrent] = useState(0);
 
@@ -41,7 +43,7 @@ const HeroSection = ({ events }) => {
             <p>
               {formatEventDate(slide.date)} · {slide.venue}
             </p>
-            <span className="hero-price-badge">{slide.price} ₼-dən</span>
+            <span className="hero-price-badge">{t("hero.priceFrom", { price: slide.price })}</span>
           </div>
         </Link>
 
@@ -56,7 +58,7 @@ const HeroSection = ({ events }) => {
               type="button"
               className={index === current ? "hero-dot active" : "hero-dot"}
               onClick={() => setCurrent(index)}
-              aria-label={`Slayd ${index + 1}`}
+              aria-label={t("hero.slideLabel", { number: index + 1 })}
             />
           ))}
         </div>
@@ -64,7 +66,7 @@ const HeroSection = ({ events }) => {
 
       <div className="gift-card">
         <p className="gift-card-title">
-          Sevdiklərinizi <span>"İGİFT"</span> ilə sevindirin!
+          {t("hero.giftCardTitlePrefix")} <span>"İGİFT"</span> {t("hero.giftCardTitleSuffix")}
         </p>
         <div className="gift-card-mock">
           <span className="gift-card-brand">igift.az</span>

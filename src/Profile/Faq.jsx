@@ -1,40 +1,24 @@
 import { useState } from "react";
 import { ChevronIcon } from "./ProfileIcons";
+import { useLanguage } from "../hooks/useLanguage";
 
 const QUESTIONS = [
-  {
-    q: "Bileti necə ala bilərəm?",
-    a: "Tədbir səhifəsində sektor və yer seçib səbətə əlavə edin, sonra ödənişi kart vasitəsilə tamamlayın. Bilet ödənişdən sonra email-inizə göndərilir.",
-  },
-  {
-    q: "Bileti geri qaytara bilərəmmi?",
-    a: "Qaytarma tədbir təşkilatçısının şərtlərindən asılıdır. Tamamlanmış sifarişiniz üçün «Qaytarma sorğuları» bölməsindən müraciət edə bilərsiniz.",
-  },
-  {
-    q: "Bileti başqasına necə göndərim?",
-    a: "«Transferlər» bölməsindən bileti qeydiyyatdan keçmiş digər istifadəçiyə göndərə bilərsiniz. Qarşı tərəf transferi təsdiqləməlidir.",
-  },
-  {
-    q: "Ödəniş getdi, bilet gəlmədi. Nə etməliyəm?",
-    a: "«Sifarişlər» bölməsində sifarişin statusunu yoxlayın. Status «Ödəniş gözlənilir» olaraq qalırsa, bir neçə dəqiqə gözləyin və ya dəstəyə yazın.",
-  },
-  {
-    q: "iGift hədiyyə kartını necə istifadə edim?",
-    a: "«iGift hədiyyə kartı» bölməsində kartın kodunu daxil edib aktivləşdirin. Məbləğ cüzdanınıza əlavə olunur.",
-  },
-  {
-    q: "Bilet PIN kodu nə üçündür?",
-    a: "PIN kod sifarişinizi kassada və ya girişdə təsdiqləmək üçündür. Onu yalnız etibar etdiyiniz şəxslərlə paylaşın.",
-  },
+  { q: "faq.q1", a: "faq.a1" },
+  { q: "faq.q2", a: "faq.a2" },
+  { q: "faq.q3", a: "faq.a3" },
+  { q: "faq.q4", a: "faq.a4" },
+  { q: "faq.q5", a: "faq.a5" },
+  { q: "faq.q6", a: "faq.a6" },
 ];
 
 const Faq = () => {
+  const { t } = useLanguage();
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Ən çox verilən suallar</h1>
+        <h1>{t("faq.title")}</h1>
       </div>
 
       <div className="faq-list">
@@ -46,13 +30,13 @@ const Faq = () => {
               onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
               aria-expanded={openIndex === i}
             >
-              {item.q}
+              {t(item.q)}
               <span className={openIndex === i ? "rotated" : undefined}>
                 <ChevronIcon />
               </span>
             </button>
             {openIndex === i && (
-              <p className="profile-accordion-body">{item.a}</p>
+              <p className="profile-accordion-body">{t(item.a)}</p>
             )}
           </div>
         ))}

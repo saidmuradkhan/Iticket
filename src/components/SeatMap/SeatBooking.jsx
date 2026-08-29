@@ -4,6 +4,7 @@ import { getSeatStatus, holdSeat, releaseSeat } from "../../api/seats";
 import { CartContext } from "../../context/CartContext";
 import { AuthContext } from "../../context/AuthContext";
 import { useCountdown } from "../../hooks/useCountdown";
+import { useLanguage } from "../../hooks/useLanguage";
 import SeatMap from "./SeatMap";
 
 const parseSeatKey = (key) => {
@@ -13,6 +14,7 @@ const parseSeatKey = (key) => {
 };
 
 const SeatBooking = ({ event }) => {
+  const { t } = useLanguage();
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const { user, openAuth } = useContext(AuthContext);
@@ -90,13 +92,13 @@ const SeatBooking = ({ event }) => {
     return (
       <div className="seat-auth-gate">
         <i className="fas fa-user-lock" />
-        <p>Yer seçmək üçün hesabınıza daxil olun.</p>
+        <p>{t("seatMap.authGate")}</p>
         <button
           type="button"
           className="buy-btn"
           onClick={() => openAuth("login", `/event/${event.id}`)}
         >
-          Daxil ol
+          {t("seatMap.login")}
         </button>
       </div>
     );
@@ -119,7 +121,7 @@ const SeatBooking = ({ event }) => {
       }
       await refresh();
     } catch (err) {
-      setError(err.message || "Yer tutula bilmədi");
+      setError(err.message || t("seatMap.holdFailed"));
       await refresh();
     } finally {
       setBusy(false);
@@ -134,7 +136,11 @@ const SeatBooking = ({ event }) => {
         eventTitle: event.title,
         eventDate: event.date,
         venue: event.venue,
-        ticketLabel: `${seat.sectionName} (Sıra ${seat.row}, Yer ${seat.seatNumber})`,
+        ticketLabel: t("seatMap.seatLabel", {
+          section: seat.sectionName,
+          row: seat.row,
+          seat: seat.seatNumber,
+        }),
         seatInfo: {
           eventId: event.id,
           seatKey: seat.key,
@@ -164,15 +170,15 @@ const SeatBooking = ({ event }) => {
       {selectedSeats.length > 0 && (
         <div className="seat-selection-footer">
           <span>
-            {selectedSeats.length} yer seçildi · {totalPrice} ₼
+            {t("seatMap.seatsSelected", { count: selectedSeats.length })} · {totalPrice} ₼
             {holdDeadline && (
               <span className="seat-hold-timer">
-                {" "}· {minutes}:{String(seconds).padStart(2, "0")} ərzində saxlanılır
+                {" "}· {t("seatMap.heldFor", { time: `${minutes}:${String(seconds).padStart(2, "0")}` })}
               </span>
             )}
           </span>
           <button type="button" className="buy-btn" onClick={handleAddToCart} disabled={busy}>
-            Səbətə əlavə et
+            {t("seatMap.addToCart")}
           </button>
         </div>
       )}

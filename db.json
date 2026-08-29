@@ -3034,7 +3034,7 @@
         }
       ],
       "totalPrice": 20,
-      "status": "confirmed",
+      "status": "refunded",
       "createdAt": "2026-08-25T08:58:06.612Z",
       "expiresAt": "2026-08-25T09:13:06.612Z",
       "id": "YjE7rt9M7Z8",
@@ -3044,10 +3044,11 @@
         "transactionId": 8979548,
         "paymentUrl": "https://pay.payriff.com/r/78e00bbd-28e4-4999-a947-94d9ee7acf08?type=direct",
         "startedAt": "2026-08-25T08:58:12.999Z",
-        "paymentStatus": "APPROVED",
+        "paymentStatus": "REFUNDED",
         "amount": 20,
         "currency": "AZN",
-        "verifiedAt": "2026-08-25T09:01:44.378Z"
+        "verifiedAt": "2026-08-25T09:01:44.378Z",
+        "refundedAt": "2026-08-26T14:19:33.698Z"
       },
       "paymentMethod": "online"
     },
@@ -3301,11 +3302,12 @@
         }
       ],
       "totalPrice": 20,
-      "status": "confirmed",
+      "status": "refunded",
       "createdAt": "2026-08-26T08:37:01.404Z",
       "expiresAt": "2026-08-26T08:52:01.404Z",
       "id": "kjhZjpnFTzk",
-      "paymentMethod": "wallet"
+      "paymentMethod": "wallet",
+      "refundedAt": "2026-08-26T14:37:38.972Z"
     },
     {
       "pin": "9532",
@@ -3452,6 +3454,15 @@
       "amount": -25,
       "createdAt": "2026-08-26T08:46:50.983Z",
       "id": "1Js2tFNwPXs"
+    },
+    {
+      "userId": 1,
+      "ref": "refund-order-kjhZjpnFTzk-1",
+      "orderId": "kjhZjpnFTzk",
+      "type": "refund",
+      "amount": 20,
+      "createdAt": "2026-08-26T14:37:38.953Z",
+      "id": "P2wsGp5PDCA"
     }
   ],
   "seatHolds": [

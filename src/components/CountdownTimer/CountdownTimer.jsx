@@ -1,12 +1,16 @@
+import { useLanguage } from "../../hooks/useLanguage";
+
 const CountdownTimer = ({ minutes, seconds, isExpired }) => {
+  const { t } = useLanguage();
   if (isExpired) {
-    return <p className="countdown expired">Vaxt bitdi</p>;
+    return <p className="countdown expired">{t("countdown.expired")}</p>;
   }
 
   return (
     <p className="countdown">
-      Ödəniş üçün qalan vaxt: {String(minutes).padStart(2, "0")}:
-      {String(seconds).padStart(2, "0")}
+      {t("countdown.remaining", {
+        time: `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`,
+      })}
     </p>
   );
 };

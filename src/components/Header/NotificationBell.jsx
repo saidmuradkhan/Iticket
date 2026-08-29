@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
 import { NotificationContext } from "../../context/NotificationContext";
+import { useLanguage } from "../../hooks/useLanguage";
 import { BellIcon } from "./HeaderIcons";
 
 const NotificationBell = () => {
   const { notifications, unreadCount, markAsRead } =
     useContext(NotificationContext);
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -13,7 +15,7 @@ const NotificationBell = () => {
         type="button"
         className="header-btn header-btn-icon"
         onClick={() => setIsOpen((prev) => !prev)}
-        aria-label="Bildirişlər"
+        aria-label={t("header.notifications")}
       >
         <span className="header-btn-icon-slot">
           <BellIcon />
@@ -29,7 +31,7 @@ const NotificationBell = () => {
           />
           <div className="notification-dropdown">
             {notifications.length === 0 ? (
-              <p className="notification-empty">Bildiriş yoxdur</p>
+              <p className="notification-empty">{t("header.noNotifications")}</p>
             ) : (
               notifications.map((n) => (
                 <div

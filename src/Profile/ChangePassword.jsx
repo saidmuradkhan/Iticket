@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useLanguage } from "../hooks/useLanguage";
 
 const EMPTY = { current: "", next: "", repeat: "" };
 
 const ChangePassword = () => {
+  const { t } = useLanguage();
   const [form, setForm] = useState(EMPTY);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
@@ -17,11 +19,11 @@ const ChangePassword = () => {
     e.preventDefault();
 
     if (form.next.length < 8) {
-      setError("Yeni şifrə ən azı 8 simvoldan ibarət olmalıdır.");
+      setError(t("changePassword.minLengthError"));
       return;
     }
     if (form.next !== form.repeat) {
-      setError("Şifrələr uyğun gəlmir.");
+      setError(t("changePassword.mismatchError"));
       return;
     }
 
@@ -32,12 +34,12 @@ const ChangePassword = () => {
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Şifrəni dəyiş</h1>
+        <h1>{t("changePassword.title")}</h1>
       </div>
 
       <form className="profile-form" onSubmit={submit}>
         <label>
-          Mövcud şifrə
+          {t("changePassword.current")}
           <input
             type="password"
             value={form.current}
@@ -46,7 +48,7 @@ const ChangePassword = () => {
           />
         </label>
         <label>
-          Yeni şifrə
+          {t("changePassword.new")}
           <input
             type="password"
             value={form.next}
@@ -55,7 +57,7 @@ const ChangePassword = () => {
           />
         </label>
         <label>
-          Yeni şifrəni təkrarla
+          {t("changePassword.repeat")}
           <input
             type="password"
             value={form.repeat}
@@ -65,10 +67,12 @@ const ChangePassword = () => {
         </label>
 
         {error && <p className="profile-form-error">{error}</p>}
-        {done && <p className="profile-form-success">Şifrə yeniləndi.</p>}
+        {done && (
+          <p className="profile-form-success">{t("changePassword.success")}</p>
+        )}
 
         <button type="submit" className="primary-btn">
-          Yadda saxla
+          {t("changePassword.save")}
         </button>
       </form>
     </div>

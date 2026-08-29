@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "../../hooks/useLanguage";
 import { useEvents } from "../../hooks/useEvents";
 import { DEFAULT_FILTERS, filterEvents } from "../../utils/eventFilterHelpers";
 import EventCard from "../../components/EventCard/EventCard";
@@ -7,6 +8,7 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 import Loader from "../../components/Loader/Loader";
 
 const Home = () => {
+  const { t } = useLanguage();
   const { events, loading } = useEvents();
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
@@ -33,7 +35,7 @@ const Home = () => {
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => <EventCard key={event.id} event={event} />)
         ) : (
-          <p className="empty-state">Bu filtrə uyğun tədbir tapılmadı.</p>
+          <p className="empty-state">{t("home.noEventsFound")}</p>
         )}
       </div>
     </div>

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { ThemeContext } from "../../context/ThemeContext";
-import { LanguageContext } from "../../context/LanguageContext";
+import { useLanguage } from "../../hooks/useLanguage";
 import SearchBar from "./SearchBar";
 import NotificationBell from "./NotificationBell";
 import ProfileMenu from "./ProfileMenu";
@@ -12,7 +12,7 @@ import { SunIcon, MoonIcon, FlagAzIcon, FlagEnIcon, CartIcon, } from "./HeaderIc
 const Header = () => {
   const { cartItems } = useContext(CartContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { t, language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
     setLanguage(language === "az" ? "en" : "az");
@@ -29,7 +29,7 @@ const Header = () => {
           type="button"
           className="header-btn header-btn-icon"
           onClick={toggleTheme}
-          aria-label="Tema dəyiş"
+          aria-label={t("header.themeToggle")}
         >
           <span className="header-btn-icon-slot">
             {theme === "light" ? <SunIcon /> : <MoonIcon />}
@@ -40,7 +40,7 @@ const Header = () => {
           type="button"
           className="header-btn header-btn-icon"
           onClick={toggleLanguage}
-          aria-label={`Dil: ${language.toUpperCase()}`}
+          aria-label={t("header.language", { lang: language.toUpperCase() })}
         >
           <span className="header-btn-icon-slot header-flag">
             {language === "az" ? <FlagAzIcon /> : <FlagEnIcon />}
@@ -52,7 +52,7 @@ const Header = () => {
         <Link
           to="/cart"
           className="header-btn header-btn-icon cart-icon"
-          aria-label="Səbət"
+          aria-label={t("header.cart")}
         >
           <span className="header-btn-icon-slot">
             <CartIcon />

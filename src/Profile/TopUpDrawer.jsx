@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { startWalletTopUp } from "../api/payriff";
+import { useLanguage } from "../hooks/useLanguage";
 import { formatMoney } from "./profileHelpers";
 
 const PRESETS = [5, 10, 20, 50, 100];
@@ -15,6 +16,7 @@ const PayriffMark = () => (
 );
 
 const TopUpDrawer = ({ userId, onClose }) => {
+  const { t } = useLanguage();
   const [amount, setAmount] = useState("5");
   const [error, setError] = useState("");
   const [paying, setPaying] = useState(false);
@@ -33,7 +35,7 @@ const TopUpDrawer = ({ userId, onClose }) => {
   const submit = async (e) => {
     e.preventDefault();
     if (!isValid) {
-      setError(`Məbləğ ${MIN_AMOUNT}–${MAX_AMOUNT} ₼ aralığında olmalıdır`);
+      setError(t("topup.rangeError", { min: MIN_AMOUNT, max: MAX_AMOUNT }));
       return;
     }
 
@@ -54,19 +56,19 @@ const TopUpDrawer = ({ userId, onClose }) => {
       <aside
         className="drawer"
         role="dialog"
-        aria-label="Ödəniş prosesi"
+        aria-label={t("topup.title")}
         onClick={(e) => e.stopPropagation()}
       >
         <header className="drawer-head">
-          <h2>Ödəniş prosesi</h2>
-          <button type="button" onClick={onClose} aria-label="Bağla">
+          <h2>{t("topup.title")}</h2>
+          <button type="button" onClick={onClose} aria-label={t("topup.close")}>
             ✕
           </button>
         </header>
 
         <form className="drawer-body" onSubmit={submit}>
           <div className="drawer-section">
-            <h3>Məbləğ</h3>
+            <h3>{t("topup.amount")}</h3>
             <div className="topup-presets">
               {PRESETS.map((preset) => (
                 <button
@@ -84,7 +86,7 @@ const TopUpDrawer = ({ userId, onClose }) => {
             </div>
 
             <label className="topup-amount">
-              Məbləği daxil edin
+              {t("topup.enterAmount")}
               <input
                 type="number"
                 inputMode="decimal"
@@ -101,7 +103,7 @@ const TopUpDrawer = ({ userId, onClose }) => {
           </div>
 
           <div className="drawer-section">
-            <h3>Ödəmə üsulu:</h3>
+            <h3>{t("topup.paymentMethod")}</h3>
             <label className="topup-method active">
               <input type="radio" name="topup-method" defaultChecked readOnly />
               <span className="topup-method-dot" aria-hidden="true" />
@@ -114,15 +116,12 @@ const TopUpDrawer = ({ userId, onClose }) => {
 
           <footer className="drawer-foot">
             <div className="topup-total">
-              <span>Toplam məbləğ:</span>
+              <span>{t("topup.total")}</span>
               <strong>{isValid ? formatMoney(value) : "—"}</strong>
             </div>
-            <p className="topup-note">
-              * Cüzdana əlavə edilən məbləğ yalnız alışlar üçün istifadə oluna
-              bilər və geri qaytarılmır.
-            </p>
+            <p className="topup-note">{t("topup.note")}</p>
             <button type="submit" className="buy-btn" disabled={!isValid || paying}>
-              {paying ? "Ödəniş səhifəsinə yönləndirilir..." : "Ödənişə keç"}
+              {paying ? t("topup.redirecting") : t("topup.proceed")}
             </button>
           </footer>
         </form>

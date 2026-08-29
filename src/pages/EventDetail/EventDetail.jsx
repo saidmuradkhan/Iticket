@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useLanguage } from "../../hooks/useLanguage";
 import { getEventOrShowById } from "../../api/api";
 import { useEvents } from "../../hooks/useEvents";
 import { formatEventDate } from "../../utils/dateHelpers";
@@ -13,6 +14,7 @@ const scrollSimilar = (direction) => {
 };
 
 const EventDetail = () => {
+  const { t } = useLanguage();
   const { id } = useParams();
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
   const { events: allEvents } = useEvents();
@@ -35,7 +37,7 @@ const EventDetail = () => {
   }
 
   if (!event) {
-    return <div className="page">Tədbir tapılmadı.</div>;
+    return <div className="page">{t("eventDetail.eventNotFound")}</div>;
   }
 
   const isSoldOut = event.status === "soldout";
@@ -110,7 +112,7 @@ const EventDetail = () => {
                   <i className="fas fa-globe" /> {event.language}
                 </span>
               )}
-              {isSoldOut && <span className="hero-tag soldout">Biletlər bitib</span>}
+              {isSoldOut && <span className="hero-tag soldout">{t("eventDetail.soldOut")}</span>}
             </div>
 
             <button
@@ -119,7 +121,7 @@ const EventDetail = () => {
               onClick={handleBuyClick}
               disabled={isSoldOut}
             >
-              {isSoldOut ? "Biletlər bitib" : "Bilet al"}
+              {isSoldOut ? t("eventDetail.soldOut") : t("eventDetail.buyTicket")}
             </button>
           </div>
 
@@ -134,7 +136,7 @@ const EventDetail = () => {
                 type="button"
                 className="hero-icon-btn"
                 onClick={() => toggleFavorite(event)}
-                aria-label="Sevimlilərə əlavə et"
+                aria-label={t("eventDetail.addToFavorites")}
               >
                 <i className={favorite ? "fas fa-heart" : "far fa-heart"} />
               </button>
@@ -142,26 +144,26 @@ const EventDetail = () => {
                 type="button"
                 className="hero-icon-btn"
                 onClick={handleShare}
-                aria-label="Paylaş"
+                aria-label={t("eventDetail.share")}
               >
                 <i className="fas fa-share-alt" />
               </button>
             </div>
-            {copied && <span className="copied-toast">Link kopyalandı</span>}
+            {copied && <span className="copied-toast">{t("eventDetail.linkCopied")}</span>}
           </div>
         </div>
       </section>
 
       {!isSoldOut && (
         <section className="event-seat-section" id="seat-booking-section">
-          <h2>Yer seçimi</h2>
+          <h2>{t("eventDetail.seatSelection")}</h2>
           <SeatBooking event={event} />
         </section>
       )}
 
       <section className="event-lower">
         <div className="event-lower-main">
-          <h2>Təsvir</h2>
+          <h2>{t("eventDetail.description")}</h2>
           <p className={expanded ? "event-about expanded" : "event-about"}>
             {event.about}
           </p>
@@ -171,19 +173,15 @@ const EventDetail = () => {
               className="expand-btn"
               onClick={() => setExpanded((prev) => !prev)}
             >
-              {expanded ? "Daha az" : "Daha çox"}{" "}
+              {expanded ? t("eventDetail.showLess") : t("eventDetail.showMore")}{" "}
               <i className={expanded ? "fas fa-chevron-up" : "fas fa-chevron-down"} />
             </button>
           )}
 
-          <h2>Qaydalar</h2>
-          <p className="event-rules">
-            Bu tədbir QR bilet formasında satılır. QR biletlər tədbir günü aktiv
-            olacaqdır.
-          </p>
+          <h2>{t("eventDetail.rules")}</h2>
+          <p className="event-rules">{t("eventDetail.qrRule")}</p>
           <p className="event-rules warning">
-            <i className="fas fa-exclamation-circle" /> Tədbir məkanına kənardan
-            alınmış qida və içkilərin gətirilməsi qadağandır.
+            <i className="fas fa-exclamation-circle" /> {t("eventDetail.foodWarning")}
           </p>
 
           <h2>{event.venue}</h2>
@@ -198,12 +196,12 @@ const EventDetail = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fas fa-map" /> Xəritədə bax
+            <i className="fas fa-map" /> {t("eventDetail.viewOnMap")}
           </a>
         </div>
 
         <div className="event-lower-side">
-          <h2>Qalereya</h2>
+          <h2>{t("eventDetail.gallery")}</h2>
           <img
             className="gallery-thumb"
             src={event.image}
@@ -215,12 +213,12 @@ const EventDetail = () => {
       {similarEvents.length > 0 && (
         <section className="similar-events">
           <div className="similar-events-header">
-            <h2>Oxşar tədbirlər</h2>
+            <h2>{t("eventDetail.similarEvents")}</h2>
             <div className="carousel-arrows">
-              <button type="button" onClick={() => scrollSimilar(-1)} aria-label="Geri">
+              <button type="button" onClick={() => scrollSimilar(-1)} aria-label={t("eventDetail.previous")}>
                 <i className="fas fa-chevron-left" />
               </button>
-              <button type="button" onClick={() => scrollSimilar(1)} aria-label="İrəli">
+              <button type="button" onClick={() => scrollSimilar(1)} aria-label={t("eventDetail.next")}>
                 <i className="fas fa-chevron-right" />
               </button>
             </div>
@@ -244,7 +242,7 @@ const EventDetail = () => {
 
       {!isSoldOut && (
         <button type="button" className="floating-buy-btn" onClick={handleBuyClick}>
-          Bilet al
+          {t("eventDetail.buyTicket")}
         </button>
       )}
     </div>

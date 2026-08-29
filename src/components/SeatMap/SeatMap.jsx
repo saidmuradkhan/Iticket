@@ -1,4 +1,5 @@
 import SeatSection from "./SeatSection";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const COLORS = ["#3b82f6", "#22c55e", "#a855f7", "#f59e0b", "#14b8a6"];
 const SEATS_PER_ROW = 10;
@@ -27,11 +28,12 @@ const generateSeats = (ticket) => {
 };
 
 const SeatMap = ({ tickets, selectedSeats, takenSeats, onSeatClick }) => {
+  const { t } = useLanguage();
   const taken = takenSeats || new Set();
 
   return (
     <div className="seat-map">
-      <div className="stage-bar">SƏHNƏ</div>
+      <div className="stage-bar">{t("seatMap.stage")}</div>
 
       <div className="seat-legend">
         {tickets.map((ticket, index) => (
@@ -40,10 +42,10 @@ const SeatMap = ({ tickets, selectedSeats, takenSeats, onSeatClick }) => {
           </div>
         ))}
         <div className="legend-item">
-          <span className="legend-dot sold" /> Satılıb / tutulub
+          <span className="legend-dot sold" /> {t("seatMap.sold")}
         </div>
         <div className="legend-item">
-          <span className="legend-dot selected" /> Seçilmiş
+          <span className="legend-dot selected" /> {t("seatMap.selected")}
         </div>
       </div>
 

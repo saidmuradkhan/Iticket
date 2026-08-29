@@ -3,8 +3,11 @@ import Header from "../components/Header/Header";
 import CategoryNav from "../components/Header/CategoryNav";
 import Footer from "../components/Footer/Footer";
 import AuthModal from "../components/Auth/AuthModal";
+import { useLanguage } from "../hooks/useLanguage";
 
 const MainLayout = () => {
+  const { t } = useLanguage();
+
   return (
     <>
       <Header />
@@ -25,12 +28,9 @@ const MainLayout = () => {
           </div>
           <div className="app-promo-text">
             <p className="app-promo-title">
-              Növbəti <span className="highlight">vizual səyahətinizi</span> tapın.
+              {t("layout.promoTitlePrefix")} <span className="highlight">{t("layout.promoTitleHighlight")}</span> {t("layout.promoTitleSuffix")}
             </p>
-            <p className="app-promo-sub">
-              iTicket.AZ tətbiqi bütün növ tədbirlərə (teatr, idman, konsertlər,
-              sərgilər və s.) biletləri əldə etməyi asan və sürətli edir.
-            </p>
+            <p className="app-promo-sub">{t("layout.promoSubtitle")}</p>
           </div>
           <div className="app-promo-badges">
             <a
@@ -43,7 +43,7 @@ const MainLayout = () => {
               <img
                 className="store-img"
                 src="/google-play.png"
-                alt="Get it on Google Play"
+                alt={t("layout.googlePlayAlt")}
                 loading="lazy"
                 decoding="async"
                 width="270"
@@ -60,7 +60,7 @@ const MainLayout = () => {
               <img
                 className="store-img"
                 src="/app-store.png"
-                alt="Download on the App Store"
+                alt={t("layout.appStoreAlt")}
                 loading="lazy"
                 decoding="async"
                 width="168"

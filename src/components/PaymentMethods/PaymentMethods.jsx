@@ -1,11 +1,14 @@
+import { useLanguage } from "../../hooks/useLanguage";
+
 const METHODS = [
-  { key: "online", label: "Onlayn", icon: "fas fa-credit-card" },
-  { key: "googlepay", label: "Google Pay", icon: "fab fa-google-pay" },
-  { key: "applepay", label: "Apple Pay", icon: "fab fa-apple-pay" },
-  { key: "wallet", label: "Cüzdan", icon: "fas fa-wallet" },
+  { key: "online", labelKey: "paymentMethods.online", icon: "fas fa-credit-card" },
+  { key: "googlepay", labelKey: "paymentMethods.googlePay", icon: "fab fa-google-pay" },
+  { key: "applepay", labelKey: "paymentMethods.applePay", icon: "fab fa-apple-pay" },
+  { key: "wallet", labelKey: "paymentMethods.wallet", icon: "fas fa-wallet" },
 ];
 
 const PaymentMethods = ({ selected, onSelect, walletBalance, walletDisabled }) => {
+  const { t } = useLanguage();
   return (
     <div className="payment-methods">
       {METHODS.map((method) => {
@@ -24,11 +27,11 @@ const PaymentMethods = ({ selected, onSelect, walletBalance, walletDisabled }) =
             <span className="payment-method-left">
               <i className={`payment-method-icon ${method.icon}`} />
               <span className="payment-method-label">
-                {method.label}
+                {t(method.labelKey)}
                 {isWallet && walletBalance !== null && walletBalance !== undefined && (
                   <span className="payment-method-note">
                     {Number(walletBalance).toFixed(2)} ₼
-                    {disabled && " · kifayət etmir"}
+                    {disabled && ` · ${t("paymentMethods.insufficient")}`}
                   </span>
                 )}
               </span>

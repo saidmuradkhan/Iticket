@@ -1,14 +1,14 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { LanguageContext } from "../../context/LanguageContext";
+import { useLanguage } from "../../hooks/useLanguage";
 import { PROFILE_NAV, PROFILE_NAV_FOOTER } from "../../Profile/profileNav";
 import { ProfileNavIcon } from "../../Profile/ProfileIcons";
 import { UserIcon } from "./HeaderIcons";
 
 const ProfileMenu = () => {
   const { isAuthenticated, logout, openAuth } = useContext(AuthContext);
-  const { t } = useContext(LanguageContext);
+  const { t } = useLanguage();
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef(null);
@@ -41,7 +41,7 @@ const ProfileMenu = () => {
         <span className="header-btn-icon-slot">
           <UserIcon />
         </span>
-        {t("login")}
+        {t("header.login")}
       </button>
     );
   }
@@ -55,7 +55,7 @@ const ProfileMenu = () => {
       onClick={() => setOpen(false)}
     >
       <ProfileNavIcon name={item.icon} />
-      {item.label}
+      {t(item.label)}
     </Link>
   );
 
@@ -71,7 +71,7 @@ const ProfileMenu = () => {
         <span className="header-btn-icon-slot">
           <UserIcon />
         </span>
-        {t("profile")}
+        {t("header.profile")}
       </button>
 
       {open && (
@@ -91,7 +91,7 @@ const ProfileMenu = () => {
             }}
           >
             <ProfileNavIcon name="logout" />
-            Çıxış
+            {t("header.logout")}
           </button>
         </div>
       )}

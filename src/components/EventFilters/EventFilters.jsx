@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MONTH_NAMES } from "../../utils/dateHelpers";
+import { getMonthNames, getDayNames } from "../../utils/dateHelpers";
 import {
   CATEGORY_OPTIONS,
   PRICE_PRESETS,
@@ -9,8 +9,7 @@ import {
 } from "../../utils/eventFilterHelpers";
 import FilterDropdown from "./FilterDropdown";
 import SearchableListPanel from "./SearchableListPanel";
-
-const DAY_NAMES = ["b.", "b.e.", "ç.a.", "ç.", "c.a.", "c.", "ş."];
+import { useLanguage } from "../../hooks/useLanguage";
 
 const generateDays = (count) => {
   const days = [];
@@ -20,9 +19,9 @@ const generateDays = (count) => {
     const dayOfWeek = d.getDay();
     days.push({
       dateStr: `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`,
-      dayName: DAY_NAMES[dayOfWeek],
+      dayOfWeek,
       dayNum: d.getDate(),
-      month: MONTH_NAMES[d.getMonth()],
+      monthIndex: d.getMonth(),
       monthKey: `${d.getFullYear()}-${d.getMonth()}`,
       isWeekend: dayOfWeek === 0 || dayOfWeek === 6,
     });
@@ -37,7 +36,7 @@ const groupByMonth = (days) => {
     if (lastGroup && lastGroup.monthKey === day.monthKey) {
       lastGroup.days.push(day);
     } else {
-      groups.push({ monthKey: day.monthKey, month: day.month, days: [day] });
+      groups.push({ monthKey: day.monthKey, monthIndex: day.monthIndex, days: [day] });
     }
   });
   return groups;
@@ -46,6 +45,7 @@ const groupByMonth = (days) => {
 const monthGroups = groupByMonth(generateDays(60));
 
 const PricePanel = ({ priceMin, priceMax, onApply, close }) => {
+  const { t } = useLanguage();
   const [customMin, setCustomMin] = useState(priceMin ?? "");
   const [customMax, setCustomMax] = useState(priceMax ?? "");
 
@@ -72,7 +72,7 @@ const PricePanel = ({ priceMin, priceMax, onApply, close }) => {
           close();
         }}
       >
-        Bütün qiymətlər
+        {t("filters.allPrices")}
       </button>
       {PRICE_PRESETS.map((preset) => (
         <button
@@ -84,30 +84,33 @@ const PricePanel = ({ priceMin, priceMax, onApply, close }) => {
           {preset.label}
         </button>
       ))}
-      <p className="price-panel-label">Qiymət aralığı yazın</p>
+      <p className="price-panel-label">{t("filters.enterPriceRange")}</p>
       <div className="price-range-inputs">
         <input
           type="number"
-          placeholder="Min"
+          placeholder={t("filters.min")}
           value={customMin}
           onChange={(e) => setCustomMin(e.target.value)}
         />
         <span>—</span>
         <input
           type="number"
-          placeholder="Max"
+          placeholder={t("filters.max")}
           value={customMax}
           onChange={(e) => setCustomMax(e.target.value)}
         />
       </div>
       <button type="button" className="apply-btn" onClick={applyCustom}>
-        Təsdiqlə
+        {t("filters.apply")}
       </button>
     </div>
   );
 };
 
 const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
+  const { t, language } = useLanguage();
+  const monthNames = getMonthNames(language);
+  const dayNames = getDayNames(language);
   const updateFilter = (patch) => onFiltersChange({ ...filters, ...patch });
 
   const handleDayClick = (dateStr) => {
@@ -147,7 +150,7 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
     },
     filters.category !== "all" && {
       key: "category",
-      label: CATEGORY_OPTIONS.find((c) => c.key === filters.category)?.label,
+      label: t(CATEGORY_OPTIONS.find((c) => c.key === filters.category)?.label),
       onRemove: () => updateFilter({ category: "all" }),
     },
     (filters.priceMin !== null || filters.priceMax !== null) && {
@@ -173,7 +176,7 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
         {monthGroups.map((group) => (
           <section className="cal-month-group" key={group.monthKey}>
             <div className="cal-month">
-              <span>{group.month}</span>
+              <span>{monthNames[group.monthIndex]}</span>
             </div>
             <div className="cal-days">
               {group.days.map((day) => (
@@ -186,7 +189,7 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
                   data-date={day.dateStr}
                   onClick={() => handleDayClick(day.dateStr)}
                 >
-                  <span className="name">{day.dayName}</span>
+                  <span className="name">{dayNames[day.dayOfWeek]}</span>
                   <span className="num">{day.dayNum}</span>
                 </button>
               ))}
@@ -196,7 +199,7 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
       </div>
 
       <div className="filter-bar">
-        <FilterDropdown label={activeSort?.label || "Sırala"} active={filters.sort !== "popularity"}>
+        <FilterDropdown label={activeSort ? t(activeSort.label) : t("filters.sort")} active={filters.sort !== "popularity"}>
           {(close) => (
             <div className="searchable-list-items">
               {SORT_OPTIONS.map((opt) => (
@@ -209,14 +212,14 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
                     close();
                   }}
                 >
-                  {opt.label}
+                  {t(opt.label)}
                 </button>
               ))}
             </div>
           )}
         </FilterDropdown>
 
-        <FilterDropdown label="Tədbir növü" active={filters.category !== "all"}>
+        <FilterDropdown label={t("filters.eventType")} active={filters.category !== "all"}>
           {(close) => (
             <div className="searchable-list-items">
               {CATEGORY_OPTIONS.map((opt) => (
@@ -229,7 +232,7 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
                     close();
                   }}
                 >
-                  {opt.label}
+                  {t(opt.label)}
                 </button>
               ))}
             </div>
@@ -237,7 +240,7 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
         </FilterDropdown>
 
         <FilterDropdown
-          label="Qiymət"
+          label={t("filters.price")}
           active={filters.priceMin !== null || filters.priceMax !== null}
         >
           {(close) => (
@@ -250,28 +253,28 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
           )}
         </FilterDropdown>
 
-        <FilterDropdown label="Məkan" active={filters.venue !== "all"}>
+        <FilterDropdown label={t("filters.venue")} active={filters.venue !== "all"}>
           {(close) => (
             <SearchableListPanel
               items={venues}
               selected={filters.venue}
               onSelect={(venue) => updateFilter({ venue })}
               close={close}
-              placeholder="Məkan axtar"
-              allLabel="Bütün məkanlar"
+              placeholder={t("filters.searchVenue")}
+              allLabel={t("filters.allVenues")}
             />
           )}
         </FilterDropdown>
 
-        <FilterDropdown label="Şəhər" active={filters.city !== "all"}>
+        <FilterDropdown label={t("filters.city")} active={filters.city !== "all"}>
           {(close) => (
             <SearchableListPanel
               items={cities}
               selected={filters.city}
               onSelect={(city) => updateFilter({ city })}
               close={close}
-              placeholder="Şəhər axtar"
-              allLabel="Bütün şəhərlər"
+              placeholder={t("filters.searchCity")}
+              allLabel={t("filters.allCities")}
             />
           )}
         </FilterDropdown>
@@ -283,7 +286,7 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
             type="button"
             className="chip clear-chip"
             onClick={() => onFiltersChange(DEFAULT_FILTERS)}
-            aria-label="Filtrləri təmizlə"
+            aria-label={t("filters.clearFilters")}
           >
             <i className="fas fa-times" />
           </button>

@@ -1,16 +1,17 @@
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useLanguage } from "../hooks/useLanguage";
 
 const CHANNELS = [
-  { key: "email", label: "Email" },
-  { key: "sms", label: "SMS" },
-  { key: "push", label: "Push bildiriş" },
+  { key: "email", label: "notifSettings.channelEmail" },
+  { key: "sms", label: "notifSettings.channelSms" },
+  { key: "push", label: "notifSettings.channelPush" },
 ];
 
 const TOPICS = [
-  { key: "orders", label: "Sifariş və ödəniş bildirişləri" },
-  { key: "reminders", label: "Tədbir xatırlatmaları" },
-  { key: "newEvents", label: "Yeni tədbirlər" },
-  { key: "discounts", label: "Endirim və kampaniyalar" },
+  { key: "orders", label: "notifSettings.topicOrders" },
+  { key: "reminders", label: "notifSettings.topicReminders" },
+  { key: "newEvents", label: "notifSettings.topicNewEvents" },
+  { key: "discounts", label: "notifSettings.topicDiscounts" },
 ];
 
 const DEFAULTS = {
@@ -24,6 +25,7 @@ const DEFAULTS = {
 };
 
 const NotificationSettings = () => {
+  const { t } = useLanguage();
   const [settings, setSettings] = useLocalStorage(
     "notificationSettings",
     DEFAULTS
@@ -35,7 +37,7 @@ const NotificationSettings = () => {
 
   const renderRow = (item) => (
     <label className="switch-row" key={item.key}>
-      <span>{item.label}</span>
+      <span>{t(item.label)}</span>
       <input
         type="checkbox"
         checked={!!settings[item.key]}
@@ -48,13 +50,13 @@ const NotificationSettings = () => {
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Bildiriş ayarları</h1>
+        <h1>{t("notifSettings.title")}</h1>
       </div>
 
-      <h2 className="profile-subheading">Bildiriş kanalları</h2>
+      <h2 className="profile-subheading">{t("notifSettings.channelsHeading")}</h2>
       <div className="switch-list">{CHANNELS.map(renderRow)}</div>
 
-      <h2 className="profile-subheading">Mövzular</h2>
+      <h2 className="profile-subheading">{t("notifSettings.topicsHeading")}</h2>
       <div className="switch-list">{TOPICS.map(renderRow)}</div>
     </div>
   );

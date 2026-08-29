@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { CopyIcon, PencilIcon, TrashIcon } from "./ProfileIcons";
 import { FlagAzIcon } from "../components/Header/HeaderIcons";
+import { useLanguage } from "../hooks/useLanguage";
 
 const CloseIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -15,16 +16,22 @@ const CloseIcon = () => (
 );
 
 const COUNTRIES = [
-  "Azərbaycan",
-  "Türkiyə",
-  "Gürcüstan",
-  "Rusiya",
-  "Birləşmiş Krallıq",
-  "Almaniya",
-  "BƏƏ",
+  { value: "Azərbaycan", labelKey: "account.countryAzerbaijan" },
+  { value: "Türkiyə", labelKey: "account.countryTurkey" },
+  { value: "Gürcüstan", labelKey: "account.countryGeorgia" },
+  { value: "Rusiya", labelKey: "account.countryRussia" },
+  { value: "Birləşmiş Krallıq", labelKey: "account.countryUk" },
+  { value: "Almaniya", labelKey: "account.countryGermany" },
+  { value: "BƏƏ", labelKey: "account.countryUae" },
+];
+
+const GENDERS = [
+  { value: "Kişi", labelKey: "account.genderMale" },
+  { value: "Qadın", labelKey: "account.genderFemale" },
 ];
 
 const AccountInfo = () => {
+  const { t } = useLanguage();
   const { user, updateUser, logout } = useContext(AuthContext);
 
   const [firstName, lastName = ""] = (user.name || "").split(" ");
@@ -76,7 +83,7 @@ const AccountInfo = () => {
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Hesab məlumatları</h1>
+        <h1>{t("account.title")}</h1>
       </div>
 
       <form className="account-form" onSubmit={save}>
@@ -88,18 +95,20 @@ const AccountInfo = () => {
               type="button"
               className="account-form-icon"
               onClick={() => copy("id", String(user.id))}
-              aria-label="ID-ni kopyala"
+              aria-label={t("account.copyId")}
             >
               <CopyIcon />
             </button>
           </div>
-          {copied === "id" && <small className="account-form-hint">Kopyalandı</small>}
+          {copied === "id" && (
+            <small className="account-form-hint">{t("account.copied")}</small>
+          )}
         </div>
 
         <div className="account-form-field">
           <span className="account-form-label">
-            Email
-            <a className="account-form-edit" href="mailto:info@iticket.az" aria-label="Email dəyiş">
+            {t("account.email")}
+            <a className="account-form-edit" href="mailto:info@iticket.az" aria-label={t("account.editEmail")}>
               <PencilIcon />
             </a>
           </span>
@@ -109,18 +118,18 @@ const AccountInfo = () => {
               type="button"
               className="account-form-icon"
               onClick={() => copy("email", user.email)}
-              aria-label="Email-i kopyala"
+              aria-label={t("account.copyEmail")}
             >
               <CopyIcon />
             </button>
           </div>
           {copied === "email" && (
-            <small className="account-form-hint">Kopyalandı</small>
+            <small className="account-form-hint">{t("account.copied")}</small>
           )}
         </div>
 
         <div className="account-form-field">
-          <span className="account-form-label">Mobil nömrə</span>
+          <span className="account-form-label">{t("account.phone")}</span>
           <div className="account-form-control readonly">
             <span className="account-form-flag">
               <FlagAzIcon />
@@ -131,7 +140,7 @@ const AccountInfo = () => {
 
         <div className="account-form-field">
           <label className="account-form-label" htmlFor="account-first-name">
-            Ad
+            {t("account.firstName")}
           </label>
           <div className="account-form-control">
             <input
@@ -139,14 +148,14 @@ const AccountInfo = () => {
               type="text"
               value={form.firstName}
               onChange={setField("firstName")}
-              placeholder="Ad"
+              placeholder={t("account.firstName")}
             />
           </div>
         </div>
 
         <div className="account-form-field">
           <label className="account-form-label" htmlFor="account-last-name">
-            Soyad
+            {t("account.lastName")}
           </label>
           <div className="account-form-control">
             <input
@@ -154,14 +163,14 @@ const AccountInfo = () => {
               type="text"
               value={form.lastName}
               onChange={setField("lastName")}
-              placeholder="Soyad"
+              placeholder={t("account.lastName")}
             />
           </div>
         </div>
 
         <div className="account-form-field">
           <label className="account-form-label" htmlFor="account-birth-date">
-            Doğum tarixi
+            {t("account.birthDate")}
           </label>
           <div className="account-form-control">
             <input
@@ -175,7 +184,7 @@ const AccountInfo = () => {
 
         <div className="account-form-field">
           <label className="account-form-label" htmlFor="account-country">
-            Ölkə
+            {t("account.country")}
           </label>
           <div className="account-form-control">
             <select
@@ -183,10 +192,10 @@ const AccountInfo = () => {
               value={form.country}
               onChange={setField("country")}
             >
-              <option value="">Ölkə seç</option>
+              <option value="">{t("account.countryPlaceholder")}</option>
               {COUNTRIES.map((country) => (
-                <option key={country} value={country}>
-                  {country}
+                <option key={country.value} value={country.value}>
+                  {t(country.labelKey)}
                 </option>
               ))}
             </select>
@@ -194,19 +203,19 @@ const AccountInfo = () => {
         </div>
 
         <div className="account-form-field">
-          <span className="account-form-label">Cins</span>
+          <span className="account-form-label">{t("account.gender")}</span>
           <div className="account-gender">
-            {["Kişi", "Qadın"].map((option) => (
+            {GENDERS.map((option) => (
               <button
                 type="button"
-                key={option}
-                className={form.gender === option ? "active" : undefined}
+                key={option.value}
+                className={form.gender === option.value ? "active" : undefined}
                 onClick={() => {
-                  setForm((prev) => ({ ...prev, gender: option }));
+                  setForm((prev) => ({ ...prev, gender: option.value }));
                   setSaved(false);
                 }}
               >
-                {option}
+                {t(option.labelKey)}
               </button>
             ))}
           </div>
@@ -214,9 +223,11 @@ const AccountInfo = () => {
 
         <div className="account-form-actions">
           <button type="submit" className="primary-btn">
-            Yadda saxla
+            {t("account.save")}
           </button>
-          {saved && <span className="account-form-saved">Məlumatlar yeniləndi</span>}
+          {saved && (
+            <span className="account-form-saved">{t("account.saved")}</span>
+          )}
         </div>
       </form>
 
@@ -226,7 +237,7 @@ const AccountInfo = () => {
         onClick={() => setConfirmDelete(true)}
       >
         <TrashIcon />
-        Hesabı sil
+        {t("account.deleteAccount")}
       </button>
 
       {confirmDelete && (
@@ -238,36 +249,33 @@ const AccountInfo = () => {
             className="auth-modal confirm-modal"
             role="dialog"
             aria-modal="true"
-            aria-label="Hesabı sil"
+            aria-label={t("account.deleteAccount")}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="auth-modal-head">
-              <h2>Hesabı sil</h2>
+              <h2>{t("account.deleteAccount")}</h2>
               <button
                 type="button"
                 className="auth-modal-close"
                 onClick={() => setConfirmDelete(false)}
-                aria-label="Bağla"
+                aria-label={t("account.close")}
               >
                 <CloseIcon />
               </button>
             </div>
 
             <div className="auth-modal-body">
-              <p className="confirm-text">
-                Hesabınız silinəcək və bütün bilet məlumatlarınıza giriş
-                dayandırılacaq. Bu əməliyyat geri qaytarılmır.
-              </p>
+              <p className="confirm-text">{t("account.deleteWarning")}</p>
               <div className="confirm-actions">
                 <button type="button" className="confirm-danger" onClick={logout}>
-                  Bəli, sil
+                  {t("account.deleteConfirm")}
                 </button>
                 <button
                   type="button"
                   className="confirm-cancel"
                   onClick={() => setConfirmDelete(false)}
                 >
-                  Ləğv et
+                  {t("account.cancel")}
                 </button>
               </div>
             </div>

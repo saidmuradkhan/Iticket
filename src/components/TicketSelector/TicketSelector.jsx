@@ -1,7 +1,9 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const TicketSelector = ({ event, onDone }) => {
+  const { t } = useLanguage();
   const { addToCart } = useContext(CartContext);
   const [quantities, setQuantities] = useState({});
 
@@ -36,8 +38,8 @@ const TicketSelector = ({ event, onDone }) => {
 
   return (
     <div className="ticket-selector">
-      <div className="stage-bar small">SƏHNƏ</div>
-      <p className="free-seating-label">Sərbəst yerləşmə</p>
+      <div className="stage-bar small">{t("ticketSelector.stage")}</div>
+      <p className="free-seating-label">{t("ticketSelector.freeSeating")}</p>
 
       {event.tickets.map((ticket) => (
         <div className="ticket-selector-row" key={ticket.id}>
@@ -58,7 +60,7 @@ const TicketSelector = ({ event, onDone }) => {
       ))}
 
       <button type="button" className="add-to-cart-btn" disabled={totalCount === 0} onClick={handleAddToCart}>
-        Səbətə əlavə et
+        {t("ticketSelector.addToCart")}
       </button>
     </div>
   );

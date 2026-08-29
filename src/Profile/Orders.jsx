@@ -3,28 +3,30 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { getOrders } from "../api/api";
 import Loader from "../components/Loader/Loader";
+import { useLanguage } from "../hooks/useLanguage";
 import { formatDateTime, formatMoney } from "./profileHelpers";
 
-const STATUS_LABELS = {
-  confirmed: "Tamamlanıb",
-  pending_payment: "Ödəniş gözlənilir",
-  reserved: "Bronlanıb",
-  expired: "Vaxtı bitib",
-  cancelled: "Ləğv edilib",
-  refunded: "Vəsait geri qaytarılıb",
+const STATUS_LABEL_KEYS = {
+  confirmed: "orders.statusConfirmed",
+  pending_payment: "orders.statusPendingPayment",
+  reserved: "orders.statusReserved",
+  expired: "orders.statusExpired",
+  cancelled: "orders.statusCancelled",
+  refunded: "orders.statusRefunded",
 };
 
 const TABS = [
-  { key: "all", label: "Hamısı" },
-  { key: "confirmed", label: "Tamamlanıb" },
-  { key: "pending_payment", label: "Ödəniş gözlənilir" },
-  { key: "reserved", label: "Bronlanıb" },
-  { key: "expired", label: "Vaxtı bitib" },
-  { key: "cancelled", label: "Ləğv edilib" },
-  { key: "refunded", label: "Vəsait geri qaytarılıb" },
+  { key: "all", labelKey: "orders.tabAll" },
+  { key: "confirmed", labelKey: "orders.statusConfirmed" },
+  { key: "pending_payment", labelKey: "orders.statusPendingPayment" },
+  { key: "reserved", labelKey: "orders.statusReserved" },
+  { key: "expired", labelKey: "orders.statusExpired" },
+  { key: "cancelled", labelKey: "orders.statusCancelled" },
+  { key: "refunded", labelKey: "orders.statusRefunded" },
 ];
 
 const Orders = () => {
+  const { t } = useLanguage();
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -45,7 +47,7 @@ const Orders = () => {
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Sifarişlər</h1>
+        <h1>{t("orders.title")}</h1>
       </div>
 
       <div className="profile-tabs profile-tabs-scroll">
@@ -56,7 +58,7 @@ const Orders = () => {
             className={tab === item.key ? "active" : undefined}
             onClick={() => setTab(item.key)}
           >
-            {item.label}
+            {t(item.labelKey)}
           </button>
         ))}
       </div>
@@ -64,7 +66,7 @@ const Orders = () => {
       {loading ? (
         <Loader count={4} />
       ) : visible.length === 0 ? (
-        <p className="profile-empty">Bu bölmədə sifariş tapılmadı.</p>
+        <p className="profile-empty">{t("orders.empty")}</p>
       ) : (
         <div className="orders-list">
           {visible.map((order) => (
@@ -76,7 +78,9 @@ const Orders = () => {
               <div className="order-summary-header">
                 <span>#{order.id}</span>
                 <span className={`status-badge ${order.status}`}>
-                  {STATUS_LABELS[order.status] || order.status}
+                  {STATUS_LABEL_KEYS[order.status]
+                    ? t(STATUS_LABEL_KEYS[order.status])
+                    : order.status}
                 </span>
               </div>
               <p className="event-card-meta">{formatDateTime(order.createdAt)}</p>

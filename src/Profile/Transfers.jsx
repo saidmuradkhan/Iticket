@@ -1,26 +1,26 @@
 import { useState } from "react";
 import { ChevronIcon } from "./ProfileIcons";
+import { useLanguage } from "../hooks/useLanguage";
 
 const TABS = [
-  { key: "incoming", label: "Gələnlər" },
-  { key: "outgoing", label: "Göndərilənlər" },
+  { key: "incoming", label: "transfers.tabIncoming" },
+  { key: "outgoing", label: "transfers.tabOutgoing" },
 ];
 
 const EMPTY_TEXT = {
-  incoming:
-    "Hazırda təsdiqinizə ehtiyac duyan transfer yoxdur. Sizə göndərilən yeni transferlər olduqda bildiriş alacaqsınız.",
-  outgoing:
-    "Hazırda göndərdiyiniz aktiv transfer yoxdur. Bilet göndərdikdən sonra transferin statusunu burada izləyə bilərsiniz.",
+  incoming: "transfers.emptyIncoming",
+  outgoing: "transfers.emptyOutgoing",
 };
 
 const Transfers = () => {
+  const { t } = useLanguage();
   const [tab, setTab] = useState("incoming");
   const [historyOpen, setHistoryOpen] = useState(false);
 
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Transferlər</h1>
+        <h1>{t("transfers.title")}</h1>
       </div>
 
       <div className="profile-tabs">
@@ -31,12 +31,12 @@ const Transfers = () => {
             className={tab === item.key ? "active" : undefined}
             onClick={() => setTab(item.key)}
           >
-            {item.label}
+            {t(item.label)}
           </button>
         ))}
       </div>
 
-      <p className="profile-empty profile-empty-narrow">{EMPTY_TEXT[tab]}</p>
+      <p className="profile-empty profile-empty-narrow">{t(EMPTY_TEXT[tab])}</p>
 
       <div className="profile-accordion">
         <button
@@ -45,14 +45,14 @@ const Transfers = () => {
           onClick={() => setHistoryOpen((prev) => !prev)}
           aria-expanded={historyOpen}
         >
-          Keçmiş transferlər
+          {t("transfers.historyToggle")}
           <span className={historyOpen ? "rotated" : undefined}>
             <ChevronIcon />
           </span>
         </button>
         {historyOpen && (
           <p className="profile-accordion-body">
-            Keçmiş transfer tarixçəniz boşdur.
+            {t("transfers.historyEmpty")}
           </p>
         )}
       </div>

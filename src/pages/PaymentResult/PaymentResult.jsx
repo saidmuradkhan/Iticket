@@ -2,27 +2,28 @@ import { useState, useEffect, useContext } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { verifyPayment, verifyWalletTopUp } from "../../api/payriff";
 import { CartContext } from "../../context/CartContext";
+import { useLanguage } from "../../hooks/useLanguage";
 import Loader from "../../components/Loader/Loader";
 
 const MAX_ATTEMPTS = 4;
 const RETRY_DELAY = 1500;
 
 const MESSAGES = {
-  confirmed: { title: "Ödəniş tamamlandı ✓", text: "Biletləriniz hesabınıza əlavə olundu." },
-  declined: { title: "Ödəniş rədd edildi", text: "Kart ödənişi bank tərəfindən qəbul olunmadı." },
-  canceled: { title: "Ödəniş ləğv edildi", text: "Ödəniş prosesi yarımçıq qaldı." },
-  expired: { title: "Ödəniş vaxtı bitdi", text: "Sifariş ləğv olundu, yenidən cəhd edin." },
-  refunded: { title: "Ödəniş geri qaytarıldı", text: "Məbləğ kartınıza qaytarılıb." },
-  pending_payment: { title: "Ödəniş təsdiqlənmədi", text: "Ödəniş hələ tamamlanmayıb." },
+  confirmed: { title: "paymentResult.orderConfirmedTitle", text: "paymentResult.orderConfirmedText" },
+  declined: { title: "paymentResult.orderDeclinedTitle", text: "paymentResult.orderDeclinedText" },
+  canceled: { title: "paymentResult.orderCanceledTitle", text: "paymentResult.orderCanceledText" },
+  expired: { title: "paymentResult.orderExpiredTitle", text: "paymentResult.orderExpiredText" },
+  refunded: { title: "paymentResult.refundedTitle", text: "paymentResult.refundedText" },
+  pending_payment: { title: "paymentResult.pendingTitle", text: "paymentResult.pendingText" },
 };
 
 const TOPUP_MESSAGES = {
-  confirmed: { title: "Balans artırıldı ✓", text: "Məbləğ cüzdanınıza əlavə olundu." },
-  declined: { title: "Ödəniş rədd edildi", text: "Balans artırılmadı, kart ödənişi qəbul olunmadı." },
-  canceled: { title: "Ödəniş ləğv edildi", text: "Balans artırılmadı." },
-  expired: { title: "Ödəniş vaxtı bitdi", text: "Balans artırılmadı, yenidən cəhd edin." },
-  refunded: { title: "Ödəniş geri qaytarıldı", text: "Məbləğ kartınıza qaytarılıb." },
-  pending_payment: { title: "Ödəniş təsdiqlənmədi", text: "Ödəniş hələ tamamlanmayıb." },
+  confirmed: { title: "paymentResult.topupConfirmedTitle", text: "paymentResult.topupConfirmedText" },
+  declined: { title: "paymentResult.topupDeclinedTitle", text: "paymentResult.topupDeclinedText" },
+  canceled: { title: "paymentResult.topupCanceledTitle", text: "paymentResult.topupCanceledText" },
+  expired: { title: "paymentResult.topupExpiredTitle", text: "paymentResult.topupExpiredText" },
+  refunded: { title: "paymentResult.refundedTitle", text: "paymentResult.refundedText" },
+  pending_payment: { title: "paymentResult.pendingTitle", text: "paymentResult.pendingText" },
 };
 
 const PaymentResult = () => {
@@ -31,11 +32,12 @@ const PaymentResult = () => {
   const topupRef = searchParams.get("topupRef");
   const isTopUp = !!topupRef;
   const { clearCart } = useContext(CartContext);
+  const { t } = useLanguage();
 
   const [state, setState] = useState(() =>
     orderId || topupRef
       ? { phase: "loading" }
-      : { phase: "error", message: "Ödəniş məlumatı tapılmadı" }
+      : { phase: "error", message: t("paymentResult.noPaymentInfo") }
   );
 
   useEffect(() => {
@@ -76,7 +78,7 @@ const PaymentResult = () => {
   if (state.phase === "loading") {
     return (
       <div className="payment-result">
-        <h1>Ödəniş yoxlanılır...</h1>
+        <h1>{t("paymentResult.verifying")}</h1>
         <Loader count={1} />
       </div>
     );
@@ -85,11 +87,11 @@ const PaymentResult = () => {
   if (state.phase === "error") {
     return (
       <div className="payment-result failed">
-        <h1>Xəta baş verdi</h1>
+        <h1>{t("paymentResult.errorTitle")}</h1>
         <p className="event-detail-meta">{state.message}</p>
         <div className="payment-result-actions">
           <Link className="buy-btn" to={isTopUp ? "/profile/wallet" : "/"}>
-            {isTopUp ? "Cüzdana qayıt" : "Ana səhifəyə qayıt"}
+            {isTopUp ? t("paymentResult.backToWallet") : t("paymentResult.backToHome")}
           </Link>
         </div>
       </div>
@@ -103,21 +105,21 @@ const PaymentResult = () => {
   if (isTopUp) {
     return (
       <div className={isSuccess ? "payment-result success" : "payment-result failed"}>
-        <h1>{message.title}</h1>
-        <p className="event-detail-meta">{message.text}</p>
+        <h1>{t(message.title)}</h1>
+        <p className="event-detail-meta">{t(message.text)}</p>
         {isSuccess && state.balance !== undefined && (
           <p className="event-detail-meta">
-            Yeni balans: {Number(state.balance).toFixed(2)} ₼
+            {t("paymentResult.newBalance", { amount: Number(state.balance).toFixed(2) })}
           </p>
         )}
 
         <div className="payment-result-actions">
           <Link className="buy-btn" to="/profile/wallet">
-            Cüzdana keç
+            {t("paymentResult.goToWallet")}
           </Link>
           {!isSuccess && (
             <Link className="payment-result-link" to="/">
-              Ana səhifə
+              {t("paymentResult.home")}
             </Link>
           )}
         </div>
@@ -127,26 +129,26 @@ const PaymentResult = () => {
 
   return (
     <div className={isSuccess ? "payment-result success" : "payment-result failed"}>
-      <h1>{message.title}</h1>
-      <p className="event-detail-meta">{message.text}</p>
+      <h1>{t(message.title)}</h1>
+      <p className="event-detail-meta">{t(message.text)}</p>
 
       <div className="payment-result-actions">
         {isSuccess ? (
           <>
             <Link className="buy-btn" to={`/profile/orders/${orderId}`}>
-              Sifarişə bax
+              {t("paymentResult.viewOrder")}
             </Link>
             <Link className="payment-result-link" to="/profile/tickets">
-              Biletlərim
+              {t("paymentResult.myTickets")}
             </Link>
           </>
         ) : (
           <>
             <Link className="buy-btn" to={`/profile/orders/${orderId}`}>
-              Yenidən cəhd et
+              {t("paymentResult.tryAgain")}
             </Link>
             <Link className="payment-result-link" to="/">
-              Ana səhifə
+              {t("paymentResult.home")}
             </Link>
           </>
         )}

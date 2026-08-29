@@ -2,6 +2,7 @@ import { useCallback, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGoogleLogin } from "@react-oauth/google";
 import { AuthContext } from "../../context/AuthContext";
+import { useLanguage } from "../../hooks/useLanguage";
 import { FlagAzIcon } from "../Header/HeaderIcons";
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || "";
@@ -72,6 +73,7 @@ const CloseIcon = () => (
 );
 
 const GoogleButton = ({ onProfile, onError }) => {
+  const { t } = useLanguage();
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -88,17 +90,17 @@ const GoogleButton = ({ onProfile, onError }) => {
           provider: "google",
         });
       } catch {
-        onError("Google məlumatları alınmadı. Yenidən cəhd edin.");
+        onError(t("auth.googleFetchError"));
       }
     },
-    onError: () => onError("Google girişi ləğv edildi."),
+    onError: () => onError(t("auth.googleCancelled")),
   });
 
   return (
     <button
       type="button"
       className="auth-social-btn"
-      aria-label="Google ilə davam et"
+      aria-label={t("auth.continueWithGoogle")}
       onClick={() => googleLogin()}
     >
       <GoogleIcon />
@@ -117,6 +119,7 @@ const AuthModal = () => {
     socialLogin,
     error,
   } = useContext(AuthContext);
+  const { t } = useLanguage();
   const navigate = useNavigate();
 
   const isRegister = authModal === "register";
@@ -138,19 +141,19 @@ const AuthModal = () => {
     const errs = {};
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (isRegister) {
-      if (!name.trim()) errs.name = "Ad tələb olunur";
-      if (!surname.trim()) errs.surname = "Soyad tələb olunur";
+      if (!name.trim()) errs.name = t("auth.errorNameRequired");
+      if (!surname.trim()) errs.surname = t("auth.errorSurnameRequired");
       const digits = phone.replace(/\D/g, "");
-      if (digits.length !== 9) errs.phone = "Nömrə düzgün deyil";
+      if (digits.length !== 9) errs.phone = t("auth.errorPhoneInvalid");
     }
-    if (!email.trim()) errs.email = "E-poçt tələb olunur";
-    else if (!emailRe.test(email.trim())) errs.email = "E-poçt düzgün deyil";
+    if (!email.trim()) errs.email = t("auth.errorEmailRequired");
+    else if (!emailRe.test(email.trim())) errs.email = t("auth.errorEmailInvalid");
     const minLen = isRegister ? 8 : 6;
-    if (!password) errs.password = "Şifrə tələb olunur";
+    if (!password) errs.password = t("auth.errorPasswordRequired");
     else if (password.length < minLen)
-      errs.password = `Şifrə ən azı ${minLen} simvol olmalıdır`;
+      errs.password = t("auth.errorPasswordMinLength", { min: minLen });
     return errs;
-  }, [isRegister, name, surname, phone, email, password]);
+  }, [isRegister, name, surname, phone, email, password, t]);
 
   useEffect(() => {
     if (!authModal) {
@@ -220,7 +223,7 @@ const AuthModal = () => {
   };
 
   const handleGoogleUnconfigured = () => {
-    setSocialError("Google girişi konfiqurasiya edilməyib (VITE_GOOGLE_CLIENT_ID).");
+    setSocialError(t("auth.googleNotConfigured"));
   };
 
   if (!authModal) return null;
@@ -231,16 +234,16 @@ const AuthModal = () => {
         className="auth-modal"
         role="dialog"
         aria-modal="true"
-        aria-label={isRegister ? "Qeydiyyat" : "Daxil ol"}
+        aria-label={isRegister ? t("auth.registerTitle") : t("auth.loginTitle")}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="auth-modal-head">
-          <h2>{isRegister ? "Qeydiyyat" : "Daxil ol"}</h2>
+          <h2>{isRegister ? t("auth.registerTitle") : t("auth.loginTitle")}</h2>
           <button
             type="button"
             className="auth-modal-close"
             onClick={closeAuth}
-            aria-label="Bağla"
+            aria-label={t("auth.close")}
           >
             <CloseIcon />
           </button>
@@ -251,13 +254,13 @@ const AuthModal = () => {
           {isRegister && (
             <>
               <div className={`auth-field${errors.name ? " has-error" : ""}`}>
-                <label htmlFor="auth-name">Ad</label>
+                <label htmlFor="auth-name">{t("auth.nameLabel")}</label>
                 <input
                   id="auth-name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Adınızı daxil edin"
+                  placeholder={t("auth.namePlaceholder")}
                   aria-invalid={!!errors.name}
                 />
                 {errors.name && (
@@ -266,13 +269,13 @@ const AuthModal = () => {
               </div>
 
               <div className={`auth-field${errors.surname ? " has-error" : ""}`}>
-                <label htmlFor="auth-surname">Soyad</label>
+                <label htmlFor="auth-surname">{t("auth.surnameLabel")}</label>
                 <input
                   id="auth-surname"
                   type="text"
                   value={surname}
                   onChange={(e) => setSurname(e.target.value)}
-                  placeholder="Soyadınızı daxil edin"
+                  placeholder={t("auth.surnamePlaceholder")}
                   aria-invalid={!!errors.surname}
                 />
                 {errors.surname && (
@@ -281,7 +284,7 @@ const AuthModal = () => {
               </div>
 
               <div className={`auth-field${errors.phone ? " has-error" : ""}`}>
-                <label htmlFor="auth-phone">Mobil nömrə</label>
+                <label htmlFor="auth-phone">{t("auth.phoneLabel")}</label>
                 <div className="auth-phone">
                   <span className="auth-phone-code">
                     <FlagAzIcon />
@@ -304,7 +307,7 @@ const AuthModal = () => {
           )}
 
           <div className={`auth-field${errors.email ? " has-error" : ""}`}>
-            <label htmlFor="auth-email">E-poçt</label>
+            <label htmlFor="auth-email">{t("auth.emailLabel")}</label>
             <input
               id="auth-email"
               type="email"
@@ -317,7 +320,7 @@ const AuthModal = () => {
           </div>
 
           <div className={`auth-field${errors.password ? " has-error" : ""}`}>
-            <label htmlFor="auth-password">Şifrə</label>
+            <label htmlFor="auth-password">{t("auth.passwordLabel")}</label>
             <div className="auth-password">
               <input
                 id="auth-password"
@@ -331,7 +334,7 @@ const AuthModal = () => {
                 type="button"
                 className="auth-eye"
                 onClick={() => setShowPassword((v) => !v)}
-                aria-label={showPassword ? "Şifrəni gizlət" : "Şifrəni göstər"}
+                aria-label={showPassword ? t("auth.hidePassword") : t("auth.showPassword")}
               >
                 <EyeIcon off={!showPassword} />
               </button>
@@ -349,10 +352,10 @@ const AuthModal = () => {
                   checked={remember}
                   onChange={(e) => setRemember(e.target.checked)}
                 />
-                <span>Yadda saxla</span>
+                <span>{t("auth.rememberMe")}</span>
               </label>
               <button type="button" className="auth-forgot">
-                Şifrəni unutmusunuz?
+                {t("auth.forgotPassword")}
               </button>
             </div>
           )}
@@ -361,15 +364,15 @@ const AuthModal = () => {
 
           <button type="submit" className="buy-btn auth-submit" disabled={submitting}>
             {submitting
-              ? "Yoxlanılır..."
+              ? t("auth.submitting")
               : isRegister
-                ? "Qeydiyyat"
-                : "Daxil ol"}
+                ? t("auth.registerTitle")
+                : t("auth.loginTitle")}
           </button>
         </form>
 
         <div className="auth-divider">
-          <span>və ya</span>
+          <span>{t("auth.or")}</span>
         </div>
 
         {socialError && <p className="auth-modal-error">{socialError}</p>}
@@ -384,7 +387,7 @@ const AuthModal = () => {
             <button
               type="button"
               className="auth-social-btn"
-              aria-label="Google ilə davam et"
+              aria-label={t("auth.continueWithGoogle")}
               onClick={handleGoogleUnconfigured}
             >
               <GoogleIcon />
@@ -393,18 +396,18 @@ const AuthModal = () => {
           <button
             type="button"
             className="auth-social-btn"
-            aria-label="Apple ilə davam et"
+            aria-label={t("auth.continueWithApple")}
             disabled
-            title="Apple ilə giriş hələ mümkün deyil"
+            title={t("auth.appleUnavailable")}
           >
             <AppleIcon />
           </button>
         </div>
 
         <p className="auth-modal-switch">
-          {isRegister ? "Hesabınız var? " : "Hesabınız yoxdur? "}
+          {isRegister ? t("auth.haveAccount") : t("auth.noAccount")}
           <button type="button" onClick={switchMode}>
-            {isRegister ? "Daxil ol" : "Qeydiyyat"}
+            {isRegister ? t("auth.loginTitle") : t("auth.registerTitle")}
           </button>
         </p>
         </div>

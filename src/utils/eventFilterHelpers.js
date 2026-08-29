@@ -1,12 +1,12 @@
 import { formatEventDate } from "./dateHelpers";
 
 export const CATEGORY_OPTIONS = [
-  { key: "all", label: "Bütün tədbirlər" },
-  { key: "concert", label: "Konsert" },
-  { key: "theatre", label: "Tamaşa" },
-  { key: "kids", label: "Uşaqlar" },
-  { key: "festival", label: "Festival" },
-  { key: "film", label: "Film" },
+  { key: "all", label: "nav.all" },
+  { key: "concert", label: "nav.concert" },
+  { key: "theatre", label: "nav.theatre" },
+  { key: "kids", label: "nav.kids" },
+  { key: "festival", label: "nav.festival" },
+  { key: "film", label: "nav.film" },
 ];
 
 export const PRICE_PRESETS = [
@@ -16,12 +16,12 @@ export const PRICE_PRESETS = [
 ];
 
 export const SORT_OPTIONS = [
-  { key: "popularity", label: "Populyarlıq" },
-  { key: "date-asc", label: "Tarix (yaxından uzağa)" },
-  { key: "date-desc", label: "Tarix (uzaqdan yaxına)" },
-  { key: "price-asc", label: "Qiymət (ucuzdan bahaya)" },
-  { key: "price-desc", label: "Qiymət (bahadan ucuza)" },
-  { key: "newest", label: "Yeni" },
+  { key: "popularity", label: "filters.sortPopularity" },
+  { key: "date-asc", label: "filters.sortDateAsc" },
+  { key: "date-desc", label: "filters.sortDateDesc" },
+  { key: "price-asc", label: "filters.sortPriceAsc" },
+  { key: "price-desc", label: "filters.sortPriceDesc" },
+  { key: "newest", label: "filters.sortNewest" },
 ];
 
 export const DEFAULT_FILTERS = {

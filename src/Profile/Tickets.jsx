@@ -4,14 +4,16 @@ import { getOrders } from "../api/api";
 import Loader from "../components/Loader/Loader";
 import { formatEventDate } from "../utils/dateHelpers";
 import { SearchIcon } from "./ProfileIcons";
+import { useLanguage } from "../hooks/useLanguage";
 import { parseOrderDate } from "./profileHelpers";
 
 const TABS = [
-  { key: "upcoming", label: "Gələcək tədbirlər" },
-  { key: "past", label: "Keçmiş tədbirlər" },
+  { key: "upcoming", labelKey: "tickets.tabUpcoming" },
+  { key: "past", labelKey: "tickets.tabPast" },
 ];
 
 const Tickets = () => {
+  const { t } = useLanguage();
   const { user } = useContext(AuthContext);
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -51,14 +53,14 @@ const Tickets = () => {
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Biletlər</h1>
+        <h1>{t("tickets.title")}</h1>
         <label className="profile-search">
           <SearchIcon />
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Tədbir axtarın"
+            placeholder={t("tickets.searchPlaceholder")}
           />
         </label>
       </div>
@@ -71,7 +73,7 @@ const Tickets = () => {
             className={tab === item.key ? "active" : undefined}
             onClick={() => setTab(item.key)}
           >
-            {item.label}
+            {t(item.labelKey)}
           </button>
         ))}
       </div>
@@ -81,8 +83,8 @@ const Tickets = () => {
       ) : visible.length === 0 ? (
         <p className="profile-empty">
           {tab === "upcoming"
-            ? "Hazırda gələcək tədbirlər üçün biletiniz yoxdur."
-            : "Keçmiş tədbirlər üçün biletiniz yoxdur."}
+            ? t("tickets.emptyUpcoming")
+            : t("tickets.emptyPast")}
         </p>
       ) : (
         <div className="tickets-list">

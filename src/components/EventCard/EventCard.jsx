@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FavoritesContext } from "../../context/FavoritesContext";
 import { formatEventDate } from "../../utils/dateHelpers";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const EventCard = ({ event }) => {
+  const { t } = useLanguage();
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
   const favorite = isFavorite(event.id);
 
@@ -20,7 +22,7 @@ const EventCard = ({ event }) => {
         <img src={event.image} alt={event.title} />
         {event.ageLimit && <span className="card-age-badge">{event.ageLimit}</span>}
         <span className="card-price-badge">{event.price} ₼</span>
-        <button type="button" className={favorite ? "favorite-btn active" : "favorite-btn"} onClick={handleFavoriteClick} aria-label="Sevimlilərə əlavə et" >
+        <button type="button" className={favorite ? "favorite-btn active" : "favorite-btn"} onClick={handleFavoriteClick} aria-label={t("eventCard.addToFavorites")} >
           <i className={favorite ? "fas fa-heart" : "far fa-heart"} aria-hidden="true" />
         </button>
       </Link>

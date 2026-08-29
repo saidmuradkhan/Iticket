@@ -1,11 +1,15 @@
+import { useLanguage } from "../hooks/useLanguage";
+
 const GiftCard = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>iGift hədiyyə kartı</h1>
+        <h1>{t("giftCard.title")}</h1>
       </div>
       <p className="profile-subheading">
-        Zəhmət olmasa, iGift hədiyyə kartının məlumatlarını daxil edin
+        {t("giftCard.subheading")}
       </p>
 
       <div className="gift-card-form">
@@ -23,7 +27,7 @@ const GiftCard = () => {
             <span>
               igift<em>.az</em>
             </span>
-            <small>Hədiyyə kartı</small>
+            <small>{t("giftCard.cardLabel")}</small>
           </div>
 
           <div className="gift-card-fields">
@@ -37,11 +41,11 @@ const GiftCard = () => {
         </div>
 
         <p className="gift-card-note">
-          Hədiyyə kartının balansı iTicket cüzdanınıza köçürüləcək.
+          {t("giftCard.note")}
         </p>
 
         <button type="button" className="primary-btn gift-card-submit">
-          Balansı köçür
+          {t("giftCard.submit")}
         </button>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import { AuthContext } from "../../context/AuthContext";
 import { createOrder } from "../../api/api";
 import { useCountdown } from "../../hooks/useCountdown";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const pad = (n) => String(n).padStart(2, "0");
 
@@ -17,6 +18,7 @@ const Cart = () => {
     useContext(CartContext);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const [agreed, setAgreed] = useState(false);
   const [promoOpen, setPromoOpen] = useState(false);
@@ -38,7 +40,7 @@ const Cart = () => {
 
   const applyPromo = () => {
     if (!promoCode.trim()) return;
-    setPromoMsg("Belə promokod tapılmadı");
+    setPromoMsg(t("cart.promoNotFound"));
   };
 
   const handleCreateOrder = async () => {
@@ -73,7 +75,7 @@ const Cart = () => {
   };
 
   if (cartItems.length === 0) {
-    return <div className="page">Səbətiniz boşdur.</div>;
+    return <div className="page">{t("cart.empty")}</div>;
   }
 
   const ticketCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -81,12 +83,12 @@ const Cart = () => {
   return (
     <div className="checkout-page">
       <div className="checkout-topbar">
-        <button type="button" className="checkout-back" onClick={() => navigate(-1)} aria-label="Geri">
+        <button type="button" className="checkout-back" onClick={() => navigate(-1)} aria-label={t("cart.back")}>
           <i className="fas fa-chevron-left" />
         </button>
         <span className={isExpired ? "hold-timer expired" : "hold-timer"}>
           <i className="fas fa-clock" />{" "}
-          {isExpired ? "Vaxt bitdi" : `Qalan vaxt: ${pad(minutes)}:${pad(seconds)}`}
+          {isExpired ? t("cart.timeUp") : t("cart.timeLeft", { time: `${pad(minutes)}:${pad(seconds)}` })}
         </span>
       </div>
 
@@ -94,14 +96,14 @@ const Cart = () => {
         <div className="checkout-main">
           <div className="checkout-user panel">
             <div>
-              <h3>{user?.name || "Qonaq istifadəçi"}</h3>
+              <h3>{user?.name || t("cart.guestUser")}</h3>
               <p className="checkout-user-contact">
                 {user?.phone && <span>{user.phone}</span>}
                 {user?.phone && user?.email && <span className="dot">·</span>}
                 {user?.email && <span>{user.email}</span>}
               </p>
             </div>
-            <button type="button" className="icon-btn" aria-label="Redaktə et">
+            <button type="button" className="icon-btn" aria-label={t("cart.edit")}>
               <i className="fas fa-pen" />
             </button>
           </div>
@@ -109,10 +111,10 @@ const Cart = () => {
           <div className="checkout-tickets panel">
             <div className="panel-head">
               <h2>
-                Biletlər <span className="count-badge">{ticketCount}</span>
+                {t("cart.tickets")} <span className="count-badge">{ticketCount}</span>
               </h2>
               <button type="button" className="link-muted" onClick={clearCart}>
-                Səbəti təmizlə
+                {t("cart.clearCart")}
               </button>
             </div>
 
@@ -140,7 +142,7 @@ const Cart = () => {
                       </div>
                     )}
                     <span className="checkout-ticket-price">{item.price * item.quantity} ₼</span>
-                    <button type="button" className="icon-btn remove" onClick={() => removeFromCart(item.id)} aria-label="Sil">
+                    <button type="button" className="icon-btn remove" onClick={() => removeFromCart(item.id)} aria-label={t("cart.remove")}>
                       <i className="fas fa-times" />
                     </button>
                   </div>
@@ -154,7 +156,7 @@ const Cart = () => {
           <div className="summary-block">
             <button type="button" className="promo-toggle" onClick={() => setPromoOpen((v) => !v)}>
               <span>
-                <i className="fas fa-tag" /> Promokodun var?
+                <i className="fas fa-tag" /> {t("cart.hasPromo")}
               </span>
               <i className={promoOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"} />
             </button>
@@ -163,7 +165,7 @@ const Cart = () => {
                 <div className="promo-input-row">
                   <input
                     type="text"
-                    placeholder="Promokod"
+                    placeholder={t("cart.promoPlaceholder")}
                     value={promoCode}
                     onChange={(e) => {
                       setPromoCode(e.target.value);
@@ -171,7 +173,7 @@ const Cart = () => {
                     }}
                   />
                   <button type="button" onClick={applyPromo}>
-                    Tətbiq et
+                    {t("cart.apply")}
                   </button>
                 </div>
                 {promoMsg && <p className="promo-msg">{promoMsg}</p>}
@@ -182,31 +184,31 @@ const Cart = () => {
           <div className="summary-divider" />
 
           <div className="summary-block">
-            <h4 className="summary-label">Çatdırılma üsulu</h4>
+            <h4 className="summary-label">{t("cart.deliveryMethod")}</h4>
             <p className="summary-delivery">
-              <i className="fas fa-ticket-alt" /> Elektron bilet və ya vauçer
+              <i className="fas fa-ticket-alt" /> {t("cart.eTicketOrVoucher")}
             </p>
           </div>
 
           <div className="summary-divider" />
 
           <div className="summary-block">
-            <h4 className="summary-label">Sifariş yekunu</h4>
+            <h4 className="summary-label">{t("cart.orderSummary")}</h4>
             <div className="summary-row">
-              <span>Biletlər ({ticketCount})</span>
+              <span>{t("cart.ticketsCount", { count: ticketCount })}</span>
               <span>{totalPrice} ₼</span>
             </div>
           </div>
 
           <div className="summary-total">
-            <span>Toplam qiymət</span>
+            <span>{t("cart.totalPrice")}</span>
             <span>{totalPrice} ₼</span>
           </div>
 
           <label className="terms-check">
             <input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} />
             <span>
-              <strong>iTicket</strong>-in şərtlər və qaydaları ilə tanış oldum və razıyam.
+              <strong>iTicket</strong>{t("cart.termsAgree")}
             </span>
           </label>
 
@@ -216,7 +218,7 @@ const Cart = () => {
             disabled={!agreed || creating}
             onClick={handleCreateOrder}
           >
-            {creating ? "Yaradılır..." : "Sifariş yarat"}
+            {creating ? t("cart.creating") : t("cart.createOrder")}
           </button>
         </aside>
       </div>

@@ -4,16 +4,18 @@ import { getOrders } from "../api/api";
 import { refundPayment } from "../api/payriff";
 import Loader from "../components/Loader/Loader";
 import Modal from "../components/Modal/Modal";
+import { useLanguage } from "../hooks/useLanguage";
 import { formatDateTime, formatMoney } from "./profileHelpers";
 
 const REASONS = [
-  "Tədbirə gedə bilmirəm",
-  "Səhv bilet almışam",
-  "Tədbir təxirə salındı",
-  "Digər",
+  "refunds.reasonCantAttend",
+  "refunds.reasonWrongTicket",
+  "refunds.reasonPostponed",
+  "refunds.reasonOther",
 ];
 
 const RefundRequests = () => {
+  const { t } = useLanguage();
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -55,8 +57,8 @@ const RefundRequests = () => {
           reason: draft.reason,
           createdAt: new Date().toISOString(),
           status: toWallet
-            ? "Vəsait cüzdana qaytarıldı"
-            : "Vəsait kartınıza qaytarıldı",
+            ? t("refunds.statusToWallet")
+            : t("refunds.statusToCard"),
           done: true,
         },
         ...prev,
@@ -80,7 +82,7 @@ const RefundRequests = () => {
   return (
     <div className="profile-page">
       <div className="profile-page-head">
-        <h1>Qaytarma sorğuları</h1>
+        <h1>{t("refunds.title")}</h1>
         <button
           type="button"
           className="primary-btn"
@@ -90,15 +92,15 @@ const RefundRequests = () => {
           }}
           disabled={orders.length === 0}
         >
-          Yeni sorğu
+          {t("refunds.newRequest")}
         </button>
       </div>
 
       {requests.length === 0 ? (
         <p className="profile-empty profile-empty-narrow">
           {orders.length === 0
-            ? "Qaytarma sorğusu göndərmək üçün tamamlanmış sifarişiniz yoxdur."
-            : "Hələ qaytarma sorğunuz yoxdur. Tamamlanmış sifarişiniz üçün sorğu göndərə bilərsiniz."}
+            ? t("refunds.emptyNoOrders")
+            : t("refunds.emptyNoRequests")}
         </p>
       ) : (
         <div className="orders-list">
@@ -122,10 +124,10 @@ const RefundRequests = () => {
 
       {formOpen && (
         <Modal onClose={() => setFormOpen(false)}>
-          <h2>Yeni qaytarma sorğusu</h2>
+          <h2>{t("refunds.modalTitle")}</h2>
           <form className="profile-form" onSubmit={submit}>
             <label>
-              Sifariş
+              {t("refunds.orderLabel")}
               <select
                 value={draft.orderId}
                 onChange={(e) =>
@@ -133,17 +135,19 @@ const RefundRequests = () => {
                 }
                 required
               >
-                <option value="">Sifariş seç</option>
+                <option value="">{t("refunds.orderPlaceholder")}</option>
                 {orders.map((order) => (
                   <option key={order.id} value={order.id}>
                     #{order.id} · {formatMoney(order.totalPrice)}
-                    {order.paymentMethod === "wallet" ? " · Cüzdan" : ""}
+                    {order.paymentMethod === "wallet"
+                      ? ` · ${t("refunds.walletTag")}`
+                      : ""}
                   </option>
                 ))}
               </select>
             </label>
             <label>
-              Səbəb
+              {t("refunds.reasonLabel")}
               <select
                 value={draft.reason}
                 onChange={(e) =>
@@ -152,7 +156,7 @@ const RefundRequests = () => {
               >
                 {REASONS.map((reason) => (
                   <option key={reason} value={reason}>
-                    {reason}
+                    {t(reason)}
                   </option>
                 ))}
               </select>
@@ -161,15 +165,19 @@ const RefundRequests = () => {
             {selectedOrder && (
               <p className="profile-form-hint">
                 {selectedOrder.paymentMethod === "wallet"
-                  ? `${formatMoney(selectedOrder.totalPrice)} dərhal cüzdanınıza qaytarılacaq. Biletlər ləğv olunur.`
-                  : `${formatMoney(selectedOrder.totalPrice)} ödəniş etdiyiniz karta qaytarılacaq (bank 1-5 iş günü ərzində köçürür). Biletlər ləğv olunur.`}
+                  ? t("refunds.hintWallet", {
+                      amount: formatMoney(selectedOrder.totalPrice),
+                    })
+                  : t("refunds.hintCard", {
+                      amount: formatMoney(selectedOrder.totalPrice),
+                    })}
               </p>
             )}
 
             {error && <p className="profile-form-error">{error}</p>}
 
             <button type="submit" className="primary-btn" disabled={submitting}>
-              {submitting ? "Qaytarılır..." : "Qaytarmanı təsdiqlə"}
+              {submitting ? t("refunds.submitting") : t("refunds.submit")}
             </button>
           </form>
         </Modal>

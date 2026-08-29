@@ -1,17 +1,17 @@
 import Logo from "../Logo/Logo";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="footer-columns">
         <div className="footer-col footer-brand">
           <Logo className="footer-logo" />
-          <p>
-            Onlayn və mərkəzləşdirilmiş bilet xidmətiniz. Bakıda və onun
-            hüdudlarından kənarda keçirilən ən yaxşı tədbirlərdə sizinləyik!
-          </p>
+          <p>{t("footer.brandDescription")}</p>
 
-          <h4 className="footer-follow-heading">Bizi izləyin</h4>
+          <h4 className="footer-follow-heading">{t("footer.followUs")}</h4>
           <div className="footer-social">
             <a href="#" className="footer-social-link" aria-label="Facebook"><i className="fab fa-facebook-f" /></a>
             <a href="#" className="footer-social-link" aria-label="Instagram"><i className="fab fa-instagram" /></a>
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-col">
-          <h4>Dəstək xidməti</h4>
+          <h4>{t("footer.supportService")}</h4>
           <p className="footer-contact">
             <i className="fas fa-phone" /> +994 12 424 24 24
           </p>
@@ -32,32 +32,32 @@ const Footer = () => {
         </div>
 
         <div className="footer-col">
-          <h4>Şirkət</h4>
-          <p><a href="#">Haqqımızda</a></p>
-          <p><a href="#">Sənətçilər</a></p>
-          <p><a href="#">Məkanlar</a></p>
-          <p><a href="#">Bilet Satış Məntəqələri</a></p>
-          <p><a href="#">Bilet növləri</a></p>
+          <h4>{t("footer.company")}</h4>
+          <p><a href="#">{t("footer.aboutUs")}</a></p>
+          <p><a href="#">{t("footer.artists")}</a></p>
+          <p><a href="#">{t("footer.venues")}</a></p>
+          <p><a href="#">{t("footer.ticketSalesPoints")}</a></p>
+          <p><a href="#">{t("footer.ticketTypes")}</a></p>
         </div>
 
         <div className="footer-col">
-          <h4>Məlumat</h4>
-          <p><a href="#">Ən çox verilən suallar</a></p>
-          <p><a href="#">Dəstək</a></p>
-          <p><a href="#">Əlaqə</a></p>
-          <p><a href="#">Biletin qaytarılması və dəyişdirilməsi</a></p>
+          <h4>{t("footer.information")}</h4>
+          <p><a href="#">{t("footer.faq")}</a></p>
+          <p><a href="#">{t("footer.support")}</a></p>
+          <p><a href="#">{t("footer.contact")}</a></p>
+          <p><a href="#">{t("footer.ticketReturnExchange")}</a></p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© 2016–2026 iTicket.GLOBAL. Bütün hüquqlar qorunur.</span>
+        <span>{t("footer.copyright")}</span>
         <div className="footer-bottom-links">
-          <span>Şərtlər və Qaydalar</span>
-          <span>Məxfilik</span>
+          <span>{t("footer.termsAndConditions")}</span>
+          <span>{t("footer.privacy")}</span>
         </div>
         <button type="button" className="footer-lang">
           <i className="fas fa-location-dot" />
-          <span>Azərbaycan</span>
+          <span>{t("footer.azerbaijan")}</span>
           <i className="fas fa-chevron-down" />
         </button>
       </div>
