@@ -1,5 +1,6 @@
 import { createContext, useCallback, useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { isEventPast } from "../utils/dateHelpers";
 
 export const CartContext = createContext();
 
@@ -8,6 +9,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = useCallback(
     (item) => {
+      if (item?.eventDate && isEventPast(item.eventDate)) return;
       setCartItems((prev) => [...prev, item]);
     },
     [setCartItems]

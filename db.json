@@ -1,0 +1,3571 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Muğam — Azərbaycan musiqisi",
+      "date": "2026-08-25T16:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/Z74buNY4kfgkGHPzTPKwPYmgRdNjkWyU.png?v=1787063937",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Muğam — Azərbaycan musiqisi Azərbaycan qədim tarixə və zəngin mədəniyyətə malik bir ölkədir. Bu torpağın əsrlərdən gələn ruhu, duyğusu və fəlsəfəsi musiqisində yaşayır. Kökü dərin keçmişə söykənən muğam — Azərbaycan şifahi ənənəli musiqisinin ən möhtəşəm və ən ali janrıdır. Onun hər sədası tarixdən gələn bir hekayə, hər improvizasiyası isə qəlbin ən incə hisslərinin ifadəsidir. UNESCO tərəfindən Qeyri-Maddi Mədəni İrs Siyahısına daxil edilən Azərbaycan muğamı bu gün də öz ecazkar gücü ilə insanları valeh edir. Muğam, xalq mahnıları, xalq musiqisi və onların əsasında bəstələnmiş əsərlər — bütün bu zəngin irs sizlərə təqdim olunmaq üçün öz zamanını səbirsizliklə gözləyir. Bu, sadəcə musiqi dey",
+      "address": "Böyük Qala küçəsi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/3z8vlLUJILlccwG4C16TV7BtN1YKTWSt0IWCBjyt.jpg?v=1787063941",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Show Gallery",
+      "totalSeats": 63,
+      "availableSeats": 45,
+      "tickets": [
+        {
+          "id": "1-1",
+          "label": "Ekonom",
+          "price": 15,
+          "available": 20
+        },
+        {
+          "id": "1-2",
+          "label": "Standart",
+          "price": 20,
+          "available": 15
+        },
+        {
+          "id": "1-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 10
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "2",
+      "title": "Jazz Axşamı - Şamların Əhatəsində Açıq Hava Konserti",
+      "date": "2026-08-26T15:15:00.000Z",
+      "venue": "Kapellhaus Yay Bağı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/q0dy4vnalgCmuK5wRbBhk0PeSbdtkeIU.png?v=1786519528",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Bella Group Açıq havada, yüzlərlə şamın yaratdığı xüsusi atmosferdə canlı jazz musiqisinin sehrini yaşamağa dəvət edirik. ✨ Zərif melodiyalar, isti işıqlar və yay axşamının sakitliyi — musiqidən zövq almaq üçün mükəmməl bir gecə. 🎶 Canlı Jazz Musiqisi Sevdiklərinizlə birlikdə unudulmaz bir axşam keçirin. 🕯️🎷",
+      "address": "28 May küç. 35, Bakı, Azərbaycan,  AZ1010",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/q0dy4vnalgCmuK5wRbBhk0PeSbdtkeIU.png?v=1786519528",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Kapellhaus Yay Bağı",
+      "totalSeats": 255,
+      "availableSeats": 182,
+      "tickets": [
+        {
+          "id": "2-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 82
+        },
+        {
+          "id": "2-2",
+          "label": "Standart",
+          "price": 35,
+          "available": 64
+        },
+        {
+          "id": "2-3",
+          "label": "VIP",
+          "price": 50,
+          "available": 36
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "3",
+      "title": "Bəstəkar və Xalq Mahnıları",
+      "date": "2026-08-26T16:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/RWBsSQf6nGbDWQo49heNGlMB8YFATkM3.png?v=1785505361",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "🎼 Bəstəkar və Xalq Mahnıları Azərbaycan musiqisinin əbədi dəyərə çevrilmiş incilərini canlı ifada dinləməyə dəvət edirik. Bu musiqi axşamında sevilən Azərbaycan bəstəkarlarının ölməz əsərləri və qəlblərə yol tapan xalq mahnıları özünəməxsus interpretasiyada təqdim olunacaq. Hər bir ifa milli musiqimizin zərifliyini, duyğusunu və zəngin irsini yaşadacaq. İfaçılar: 🎤 Mədinə Səlimova – xanəndə 🎹 Natiq Yusibov – piano Canlı musiqinin sehri, milli ruhun gözəlliyi və unudulmaz melodiyalarla dolu bu xüsusi axşamı qaçırmayın. ✨ Musiqinin qəlbləri birləşdirdiyi bu gecədə siz də bizimlə olun! Qeyd: Bura konsert zalıdır və burada barda içkilər əldə etmək mümkündür.",
+      "address": "Böyük Qala küçəsi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/1tIYjqVgAa4njoOHP2nUFjjjn4haMenrZ0czzfAi.jpg?v=1785745924",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Show Gallery",
+      "totalSeats": 45,
+      "availableSeats": 32,
+      "tickets": [
+        {
+          "id": "3-1",
+          "label": "Ekonom",
+          "price": 15,
+          "available": 12
+        },
+        {
+          "id": "3-2",
+          "label": "Standart",
+          "price": 25,
+          "available": 10
+        },
+        {
+          "id": "3-3",
+          "label": "VIP",
+          "price": 35,
+          "available": 10
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "4",
+      "title": "Şamlar Əhatəsində Retro Axşamı",
+      "date": "2026-08-27T15:15:00.000Z",
+      "venue": "Kapellhaus",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/KVqtwCKMHRzRzcY1HLuAyvLlbQaK3Bwi.png?v=1785831665",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Candle Band Zamanın sınağından çıxmış, hər kəsin sevə-sevə dinlədiyi əfsanəvi mahnılar bir axşamda bir araya gəlir! 13 avqust tarixində sizi Kapellhaus Garden-də açıq havada keçiriləcək Retro Konsertə dəvət edirik. Romantik atmosfer, canlı musiqi ifası və nostalji dolu melodiyalarla keçmişin ən gözəl mahnılarını yenidən hiss edəcəksiniz. Azərbaycan və dünya musiqisinin seçilmiş retro hitləri bu xüsusi gecəyə özünəməxsus ab-hava qatacaq. Dostlarınız və ailənizlə birlikdə yay axşamını musiqi və nostalji dolu unudulmaz anlarla keçirin.",
+      "address": "28 May küç. 35, Bakı, Azərbaycan,  AZ1010",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/KVqtwCKMHRzRzcY1HLuAyvLlbQaK3Bwi.png?v=1785831665",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Kapellhaus",
+      "totalSeats": 323,
+      "availableSeats": 231,
+      "tickets": [
+        {
+          "id": "4-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 104
+        },
+        {
+          "id": "4-2",
+          "label": "Standart",
+          "price": 35,
+          "available": 81
+        },
+        {
+          "id": "4-3",
+          "label": "VIP",
+          "price": 50,
+          "available": 46
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "5",
+      "title": "Vaqif Mustafazadənin əsərləri",
+      "date": "2026-08-28T16:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/oVI65rbZZxhfxD1jNqfypbxirhlEFJ2C.png?v=1777361799",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Vaqif Mustafazadənin əsərləri Caz-muğam üslubunun banisi Vaqif Mustafazadəyə həsr olunmuş xüsusi konsert proqramını təqdim edirik. Bu gecədə Azərbaycan caz-muğam sənətinin parlaq nümayəndələri — Nicat Aslanov, Ruslan Hüseynov və Həsən Bilalov böyük ustadın ölməz əsərlərini özünəməxsus ifada səsləndirəcəklər. Bura konsert zalıdır və burada barda içkilər əldə etmək mümkündür.",
+      "address": "Böyük Qala küçəsi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/p2B6NSXmcBFfM16DXCqhAtp9c2aBf3rQi5IS6fTi.jpg?v=1784631352",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Show Gallery",
+      "totalSeats": 52,
+      "availableSeats": 37,
+      "tickets": [
+        {
+          "id": "5-1",
+          "label": "Ekonom",
+          "price": 15,
+          "available": 15
+        },
+        {
+          "id": "5-2",
+          "label": "Standart",
+          "price": 25,
+          "available": 12
+        },
+        {
+          "id": "5-3",
+          "label": "VIP",
+          "price": 35,
+          "available": 10
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "6",
+      "title": "İradə İbrahimova",
+      "date": "2026-08-28T17:00:00.000Z",
+      "venue": "Sea Breeze Marina Yacht Club",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 35,
+      "image": "https://cdn.iticket.az/event/square_card/An5paSGoO3FNQGVogaJxUgT9qP9SvmyN.png?v=1786345604",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Azərbaycan estradasının ən zərif və sevilən səslərindən biri — İradə İbrahimova uzun fasilədən sonra möhtəşəm konsert proqramı ilə yenidən səhnəyə qayıdır! İllərdir dillərdən düşməyən sevilən hitlər, duyğulara toxunan bənzərsiz ifa və unudulmaz səhnə enerjisi ilə İradə İbrahimova sizi musiqi və nostalji ilə dolu xüsusi bir axşama dəvət edir. Bu gecə onun ən sevdiyiniz mahnılarını canlı dinləyəcək, illərin xatirələrinə qayıdacaq və yeni duyğular yaşayacaqsınız. Sevdiyiniz mahnıları canlı ifada dinləmək, İradə İbrahimovanın səhnə sehrini yenidən hiss etmək üçün bu möhtəşəm gecəni qaçırmayın! VIP masalara menyu daxildir",
+      "address": "Nardaran qəsəbəsi, Sea Breeze",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/An5paSGoO3FNQGVogaJxUgT9qP9SvmyN.png?v=1786345604",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Sea Breeze Marina Yacht Club",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "6-1",
+          "label": "Ekonom",
+          "price": 35,
+          "available": 180
+        },
+        {
+          "id": "6-2",
+          "label": "Standart",
+          "price": 118,
+          "available": 140
+        },
+        {
+          "id": "6-3",
+          "label": "VIP",
+          "price": 200,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "7",
+      "title": "IN'terpretation x Det Gode Selskab",
+      "date": "2026-08-28T19:00:00.000Z",
+      "venue": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/CEXFDc6bZ8WNOS1m1JQzz7oDPZgAGAIs.png?v=1785507073",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "28 avqust tarixində Maize Beach Det Gode Selskab-ın ürəyində duran iki simanı qarşılayır. Tod Louie və Thomas Refvik artıq 15 illik yubileyini qeyd edən Oslo leyblı və kollektivinin ilk günlərdən sükanı arxasında olan adlardır. Ən başından bəri rezident kimi onlar Det Gode Selskab-ın inkişafının, icmasının, tədbirlərinin və səs xarakterinin bütün mərhələlərində yer alıblar. İllər ərzində Tod Louie House, Techno və bunların ötəsində rahatlıqla keçid edən enerjili, janrlararası setləri ilə Oslonun ən hörmətli selektorlarından birinə çevrilib. Thomas Refvik isə dərin və özünəməxsus seçimləri ilə kollektivin səslənməsinin böyük bir hissəsini formalaşdıran çoxillik vinil kolleksiyaçısı və kurator",
+      "address": "\"Sea Breeze Resort\"",
+      "detailedimage": "https://cdn.iticket.az/event/cover/HS0dImyErAxFCLCowHwuyQfw2TmaayC4NU2fTmxv.jpg?v=1786950227",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "7-1",
+          "label": "Standart",
+          "price": 20
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "BAKU HOOKAH PICNIC 2026",
+      "date": "2026-08-29T08:00:00.000Z",
+      "venue": "Elektra Events Hall",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 35,
+      "image": "https://cdn.iticket.az/event/square_card/yaviF20rjn4Kst0PRiyfCxgOTV7cc0yn.png?v=1782306327",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "BAKU HOOKAH PICNIC — Azərbaycanın ən böyük qəlyan mədəniyyəti festivalıdır və hər il qəlyan sevərləri, keyfiyyətli istirahəti və xoş atmosferi qiymətləndirən insanları bir araya gətirir. Burada insanları keyfiyyətli qəlyanlar, yeni dadlar və böyük yay festivalının unudulmaz ab-havasına olan ortaq maraq birləşdirir. Festival boyunca qonaqları zəngin əyləncə proqramı gözləyir: DJ çıxışları, müsabiqələr, hədiyyəli oyunlar, aparıcı xarici brendlərin yeni dadlarının dequstasiyası və ən gözəl anları yadda saxlamaq üçün xüsusi fotozonalar. BAKU HOOKAH PICNIC istirahət etmək, yeni təəssüratlar qazanmaq, dostlarla görüşmək və festival atmosferindən zövq almaq üçün ideal məkandır. Bu, aparıcı xarici q",
+      "address": "Dövlət Bayraq Meydanı",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/yaviF20rjn4Kst0PRiyfCxgOTV7cc0yn.png?v=1782306327",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Elektra Events Hall",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "8-1",
+          "label": "Ekonom",
+          "price": 35,
+          "available": 180
+        },
+        {
+          "id": "8-2",
+          "label": "Standart",
+          "price": 63,
+          "available": 140
+        },
+        {
+          "id": "8-3",
+          "label": "VIP",
+          "price": 90,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "9",
+      "title": "ILISOUND",
+      "date": "2026-08-29T10:00:00.000Z",
+      "venue": "Uludağ Turizm və İstirahət Mərkəzi",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 30,
+      "image": "https://cdn.iticket.az/event/square_card/DUkf06eCr9ys9LeEIRuualU0ysoXNH4s.png?v=1786694317",
+      "featured": false,
+      "ageLimit": "15+",
+      "about": "ILISOUND - MUSİQİ VƏ MOTO FESTİVALI EXPO ƏRAZİSİ 14:00 — EXPO ƏRAZİSİNİN AÇILIŞI Festivalın ilk saatlarından etibarən Expo ərazisi ziyarətçilərin ixtiyarında olacaq. Saat 14:00-dan 20:00-dək festival iştirakçılarını musiqi, əyləncə, ləziz təamlar və müxtəlif aktivliklərlə zəngin proqram gözləyir. MOTOSİKLET SƏRGİSİ Moto həvəskarları üçün ayrılmış xüsusi sərgi zonasında müxtəlif motosikletlər nümayiş etdiriləcək. İştirakçılar motosikletləri yaxından görə, onlarla foto çəkdirə və moto dünyasının unikal atmosferini hiss edə biləcəklər. FOOD EXPO Expo ərazisində üç fərqli restoranın xüsusi stendi fəaliyyət göstərəcək. Ziyarətçilər müxtəlif təamlar arasından seçim edərək festival atmosferindən ay",
+      "address": "Qax rayonu İlisu kəndi",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/DUkf06eCr9ys9LeEIRuualU0ysoXNH4s.png?v=1786694317",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Uludağ Turizm və İstirahət Mərkəzi",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "9-1",
+          "label": "Standart",
+          "price": 30
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "10",
+      "title": "LAST SUMMER VIBES",
+      "date": "2026-08-29T15:00:00.000Z",
+      "venue": "Yaxta Klub",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 25,
+      "image": "https://cdn.iticket.az/event/square_card/UtIjZ5uqzb2Z2snjSgJTKFlwjvxVFX5k.png?v=1787055254",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "🌊🔥 LAST SUMMER VIBES 🌊 Dənizin ortasında, Bakı işıqlarının fonunda və DJ ritmlərinin müşayiəti ilə yayın ən möhtəşəm finalına hazır ol! 🎧✨ 📅 29 avqust🕢 19:30 — 00:00📍 Yacht Club 🎧 DJ PARTY Gecə boyu yüksələn ritmlər, dəniz üzərində möhtəşəm atmosfer, rəngarəng işıqlar və yay gecəsinə özəl enerji! 🌊🎶 Dostlarını topla, musiqinin ritminə qoşul və yayın son gecəsini rəqs, əyləncə və unudulmaz anlarla tamamla. 🥂💃🏻",
+      "address": "Bakı Bulvarı, Neftçilər pr. 26",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/UtIjZ5uqzb2Z2snjSgJTKFlwjvxVFX5k.png?v=1787055254",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Yaxta Klub",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "10-1",
+          "label": "Ekonom",
+          "price": 25,
+          "available": 180
+        },
+        {
+          "id": "10-2",
+          "label": "Standart",
+          "price": 48,
+          "available": 140
+        },
+        {
+          "id": "10-3",
+          "label": "VIP",
+          "price": 70,
+          "available": 80
+        }
+      ],
+      "rules": "✅ Face Control və Dress Code tətbiq olunur. Qeyd: Müəssisə daxili qaydalarına uyğun hesab etmədiyi şəxsləri məkana buraxmamaq hüququnu özündə saxlayır. Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "11",
+      "title": "Açıq Havada Şam İşığı konserti - Hans Zimmer, Ludovico Einaudi & Joe Hisaishi. Film musiqiləri. Candlelight Baku",
+      "date": "2026-08-29T15:00:00.000Z",
+      "venue": "Azərbaycan Dövlət Akademik Filarmoniyasının yay zalı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/UkoCfi1AplFGmPbgUoGxtRKS4lkFj4SH.png?v=1782285328",
+      "featured": false,
+      "ageLimit": "6+",
+      "about": "“Candlelight Baku” – Azərbaycanın ilk şam işığı konsertləri layihəsidir. 2.500 şamın əhatəsində, açıq havada — Hans Zimmer, Ludovico Einaudi, Joe Hisaishi. Londondan Parisə, Nyu-Yorkdan İstanbula — dünyanın dörd bir yanında tarixi tikililərdə milyonlarla insanı heyran edən şam işığı konsertləri artıq Bakıdadır.🌎 8 avqust dünya kino və müasir klassik musiqisinin ən görkəmli bəstəkarları Hans Zimmer, Ludovico Einaudi və Joe Hisaishi - yə həsr olunmuş xüsusi açıq hava şam işığı konserti Azərbaycan Dövlət Akademik Filarmoniyasının yay zalında baş tutacaq. Bu unudulmaz musiqi təcrübəsinin bir parçası olun və yerinizi öncədən alın. Şam işığında musiqinin sehrini canlı yaşamaq fürsətini qaçırmayın",
+      "address": "AZ1001, Bakı şəhəri, İstiqlaliyyət küçəsi 10, Azərbaycan",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/UkoCfi1AplFGmPbgUoGxtRKS4lkFj4SH.png?v=1782285328",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Dövlət Akademik Filarmoniyasının yay zalı",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "11-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 180
+        },
+        {
+          "id": "11-2",
+          "label": "Standart",
+          "price": 33,
+          "available": 140
+        },
+        {
+          "id": "11-3",
+          "label": "VIP",
+          "price": 45,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "12",
+      "title": "Roof party",
+      "date": "2026-08-29T16:00:00.000Z",
+      "venue": "Golden Coast Otel",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 25,
+      "image": "https://cdn.iticket.az/event/square_card/9O4vrNNiN7F61y1gv3keDfa1B0ucaxWb.png?v=1786098148",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "Bakının ən möhtəşəm panoramik mənzərəsinə sahib rooftop məkanda bu yayın ən yaddaqalan gecəsinə hazır ol. Bir tərəfdə Bayraq Meydanı, digər tərəfdə Xəzər dənizi, qarşında isə Alov Qüllələrinin möhtəşəm mənzərəsi... Açıq səma altında keçiriləcək bu eksklüziv Roof Party musiqini, işıq şoularını və yüksək enerjini bir araya gətirərək sənə unudulmaz bir gecə yaşadacaq. Gecə boyunca təqdim olunacaq xüsusi işıq şouları, peşəkar rəqqasələrin möhtəşəm performansları, ritmi yüksəldən darbuka şousu və alov şouları gecənin enerjisini zirvəyə çatdıracaq. Bakının gecə işıqları ilə vəhdət təşkil edən bu vizual performanslar gecənin hər anını daha da təsirli edəcək. Line-up-da DJ Rameen və DJ Rash eksklüzi",
+      "address": "Bakı şəhəri, Səbail rayonu, Mikayıl Hüseynov küçəsi 14",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/9O4vrNNiN7F61y1gv3keDfa1B0ucaxWb.png?v=1786098148",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Golden Coast Otel",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "12-1",
+          "label": "Ekonom",
+          "price": 25,
+          "available": 180
+        },
+        {
+          "id": "12-2",
+          "label": "Standart",
+          "price": 63,
+          "available": 140
+        },
+        {
+          "id": "12-3",
+          "label": "VIP",
+          "price": 100,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "13",
+      "title": "Maykl Ceksonun xatirəsinə — doğum gününə özəl",
+      "date": "2026-08-29T16:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/wrDJwccmJUmKuqzH6StVZlE5iWxoPG7Y.png?v=1787053644",
+      "featured": false,
+      "ageLimit": "6+",
+      "about": "🎹 MICHAEL JACKSONUN XATİRƏSİNƏ — Doğum Gününə Həsr Olunmuş Xüsusi Gecə Michael Jacksonun doğum gününə həsr olunmuş xüsusi musiqi gecəsi Bir əfsanənin doğum gününü onun ölməz musiqisi ilə qeyd edirik. ✨ Michael Jacksonun dünyaya bəxş etdiyi unudulmaz hitləri bu gecə pianoda yeni nəfəs qazanacaq. Canlı piano ifaları ilə Pop kralının musiqi dünyasına fərqli və daha duyğusal rakursdan səyahət edəcəyik. 🎹 Gecə boyunca Michael Jacksonun sevilən əsərləri🎬 Xüsusi video-slayd nümayişi🎤 Finalda isə onun ən sevilən mahnılarından biri canlı ifada səsləndiriləcək və xüsusi rəqs proqramı təqdim olunacaq. Bu, sadəcə konsert deyil — bir əfsanənin xatirəsinə musiqi ilə ifadə olunan ehtiramdır. 🌟 Michael",
+      "address": "Böyük Qala küçəsi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/fYpY8zJBWriEyDsIQKoA8KJk5KvFfa14CtXRO8SB.jpg?v=1787054050",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Show Gallery",
+      "totalSeats": 66,
+      "availableSeats": 47,
+      "tickets": [
+        {
+          "id": "13-1",
+          "label": "Ekonom",
+          "price": 15,
+          "available": 21
+        },
+        {
+          "id": "13-2",
+          "label": "Standart",
+          "price": 25,
+          "available": 16
+        },
+        {
+          "id": "13-3",
+          "label": "VIP",
+          "price": 35,
+          "available": 10
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "14",
+      "title": "Şam İşığında Baylarlii Konserti",
+      "date": "2026-08-29T16:00:00.000Z",
+      "venue": "Flora Çay Garden",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/PzzVfW9fAFjHgJ1YmpkEksdOM1jfyfc7.png?v=1781527480",
+      "featured": false,
+      "ageLimit": "15+",
+      "about": "Sizi 29 avqust saat 20:00-da Florada keçiriləcək “Şam İşığında Baylarlii Konserti”nə dəvət edirik! Bu unudulmaz gecədə ruhunu canlı musiqi ilə hiss edəcəksiniz. Çıxış edənlər: Baylarlii – Tar Kajon Gitar Şam işığında baş tutacaq bu nostalji dolu axşamı bizimlə birlikdə yaşayın!",
+      "address": "Təbriz Xəlil Rza oğlu küç 23",
+      "detailedimage": "https://cdn.iticket.az/event/cover/1yMfFRwb4mOcnpjZYjq6r8ZkN46SbHMFX6ZklWm5.jpg?v=1786025211",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Flora Çay Garden",
+      "totalSeats": 227,
+      "availableSeats": 162,
+      "tickets": [
+        {
+          "id": "14-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 73
+        },
+        {
+          "id": "14-2",
+          "label": "Standart",
+          "price": 18,
+          "available": 57
+        },
+        {
+          "id": "14-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 32
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "15",
+      "title": "ILKAY SENCAN",
+      "date": "2026-08-29T19:00:00.000Z",
+      "venue": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/qKoxkXsuvNMvw4EJWMvNFlaD94zenK2K.png?v=1781000815",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "Qaydalar: Tədbir zamanı face control tətbiq olunur. Face control-dan keçməyən qonaqlar üçün ödəniş geri qaytarılır. Tədbir 18+ yaşdan yuxarı şəxslər üçün nəzərdə tutulub. Ayaqüstü backstage biletləri yalnız xanımlar üçün nəzərdə tutulub. Restoranın 10% xidmət haqqı depozit məbləğinə daxil deyil. MASA REZERVASİYASI ZAMANI XANIMLAR VƏ BƏYLƏR ARASINDA BALANSIN QORUNMASINI NƏZƏRƏ ALIN. YALNIZ BƏYLƏRDƏN İBARƏT OLAN MASA REZERVASİYALARI TƏDBİR ZAMANI LƏĞV EDİLƏCƏK. Biletlər 20 AZN-dən başlayır. VIP biletlər haqqında ətraflı məlumat: B1/B5 (5 nəfər) — 1100 AZN (800 AZN depozit + biletlər 300 AZN) B2/B6 (5 nəfər) — 900 AZN (600 AZN depozit + biletlər 300 AZN) B3/B7 (5 nəfər) — 900 AZN (600 AZN depoz",
+      "address": "\"Sea Breeze Resort\"",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/qKoxkXsuvNMvw4EJWMvNFlaD94zenK2K.png?v=1781000815",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "totalSeats": 143,
+      "availableSeats": 102,
+      "tickets": [
+        {
+          "id": "15-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 46
+        },
+        {
+          "id": "15-2",
+          "label": "Standart",
+          "price": 200,
+          "available": 36
+        },
+        {
+          "id": "15-3",
+          "label": "VIP",
+          "price": 380,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Bakı Zooloji Parkına ziyarət",
+      "date": "2026-08-24T06:00:00.000Z",
+      "venue": "Bakı Zooloji Parkı",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 2,
+      "image": "https://cdn.iticket.az/event/square_card/Tfmtn2xb0UgIxm8Yu33H0jejiuRNfWsd.png?v=1779885873",
+      "featured": false,
+      "ageLimit": "0+",
+      "about": "Qəzaların qarşısını almaq üçün heyvanlarla zooparkın ərazisinə daxil olmaq qəti qadağandır! Bakı Zooloji Parkına əldə edilmiş biletlər qaytarılmır və ya dəyişdirilmir.",
+      "address": "Bakı şəhəri, Nərimanov rayonu, Abbasqulu ağa Bakıxanov 39",
+      "detailedimage": "https://cdn.iticket.az/event/cover/f2oVBSuNqRTBvlfTd50bQNON0GV22Kn9AK97aaKh.jpg?v=1786454740",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Bakı Zooloji Parkı",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "16-1",
+          "label": "Ekonom",
+          "price": 2,
+          "available": 180
+        },
+        {
+          "id": "16-2",
+          "label": "Standart",
+          "price": 6,
+          "available": 140
+        },
+        {
+          "id": "16-3",
+          "label": "VIP",
+          "price": 10,
+          "available": 80
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Robototexnika üzrə master klass",
+      "date": "2026-08-24T07:30:00.000Z",
+      "venue": "Caspian Plaza - Bakı",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 30,
+      "image": "https://cdn.iticket.az/event/square_card/4HkPMQzys9B0W7Yb2oyGV0dHROSa5yVl.png?v=1779823267",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "4-10 yaşlı uşaqlar üçün robototexnika master-klassı təkcə əyləncə deyil, həm də maarifləndiricidir. Təcrübəli müəllimlərimiz övladlarınıza robotların necə yığılacağını və proqramlaşdırılmasını göstərəcək. Eyni zamanda, master-klassda iştirak etmək üçün uşaqlarda heç bir xüsusi biliyə ehtiyac yoxdur. Hər şeyi söyləyəcəyik və göstərəcəyik! Master-klass Azərbaycan və Rus dillərini bilən peşəkar müəllim tərəfindən xüsusi robototexnika avadanlıqlarından istifadə etməklə, rahat otaqda 8 nəfərə qədər qrup şəklində keçirilir. Qeyd: Sadəcə uşaq sayına uyğun bilet alınmalıdır valideyn üçün biletə ehtiyac yoxdur. Ünvan: Caspian Plaza 1 ci korpus 7- ci mərtəbə +994552008939 Sumqayıt Bakı Plaza 3 cü mərt",
+      "address": "Cəfər Cabbarlı küçəsi 44 , Caspian Plaza 1ci korpus, 7-ci mərtəbə",
+      "detailedimage": "https://cdn.iticket.az/event/cover/yBeIf56vrQ3It04FvgFvQVvWPw8HeyPcEMKw1UlN.jpg?v=1784546899",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Caspian Plaza - Bakı",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "17-1",
+          "label": "Standart",
+          "price": 30
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Uşaqlar üçün master-klas- Yaradıcılıq",
+      "date": "2026-08-24T10:00:00.000Z",
+      "venue": "Free Children",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/z3eyM8nEETrZxw9WMeZn0UjbWmhpMTX9.png?v=1779823587",
+      "featured": false,
+      "ageLimit": "3+",
+      "about": "Yaradıcı master klasslar: qum üzərində rəsm, su üzərində rəsm (ebru), slaymın hazırlanması. Azərbaycan və rus dili bilən peşəkar müəllim - rəssam tərəfindən keçirilir, xüsusi avadanlıqlardan istifadə olunur. 3+ uşaqlar üçün nəzərdə tutulur. Valideynlərin uşaqların yanında olmaqları vacib deyil (yaxın otaqda gözləyə bilərlər). TƏDBİRƏ GƏLMƏZDƏN ƏVVƏL QEYD OLUNAN NÖMRƏ İLƏ MƏKANLA ƏLAQƏ SAXLAMAĞINIZ XAHİŞ OLUNUR",
+      "address": "Akademik Mustafa Topçubaşov 21",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/9xVSZOTE302qsDg87LuFxQ4LQvz5Cyvj.png?v=1779823588",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Free Children",
+      "totalSeats": 510,
+      "availableSeats": 364,
+      "tickets": [
+        {
+          "id": "18-1",
+          "label": "Ekonom",
+          "price": 15,
+          "available": 164
+        },
+        {
+          "id": "18-2",
+          "label": "Standart",
+          "price": 17,
+          "available": 127
+        },
+        {
+          "id": "18-3",
+          "label": "VIP",
+          "price": 18,
+          "available": 73
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Uşaqlar üçün master-klas- Bişirmə",
+      "date": "2026-08-24T11:00:00.000Z",
+      "venue": "Free Children",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/lROZFR0hJ3eUSc03ySpAIckz0sYXEKIu.png?v=1779823536",
+      "featured": false,
+      "ageLimit": "3+",
+      "about": "Bütün master klasslar yeni ilə həsr olunub. Master klass peçenya və pizzanın hazırlanması və bəzədilməsi Azərbaycan və rus dillərini bilən usta tərəfindən keçirilir, xüsusi avadanlıqlardan istifadə olunur, rahat otaqda qrup şəklində 10 nəfərə qədər. 3+ uşaqlar üçün nəzərdə tutulur Valideynlərin uşaqların yanında olmaqları vacib deyil (yaxın otaqda gözləya bilərlər) TƏDBİRƏ GƏLMƏZDƏN ƏVVƏL QEYD OLUNAN NÖMRƏ İLƏ MƏKANLA ƏLAQƏ SAXLAMAĞINIZ XAHİŞ OLUNUR",
+      "address": "Akademik Mustafa Topçubaşov 21",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/q8L6wVAABqcjkRzMoADQtioTAu2c3COE.png?v=1779823537",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Free Children",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "19-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Azərbaycan Milli Xalça Muzeyində ustad dərsləri",
+      "date": "2026-08-25T06:00:00.000Z",
+      "venue": "Azərbaycan Milli Xalça Muzeyi",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/vhiPNdadlS55BGFJiTEmUEhTOfl1vVsJ.png?v=1779821157",
+      "featured": false,
+      "ageLimit": "",
+      "about": "Əziz uşaqlar, Azərbaycan Milli Xalça Muzeyi sizi ustad dərslərinə dəvət edir! Ölkəmizdə ilk dəfə Azərbaycan Milli Xalça Muzeyində uşaqların asudə vaxtlarını səmərəli keçirməsi və milli-mədəni irsimizə marağının artırılması məqsədilə Uşaq muzeyi şöbəsi fəaliyyətə başlayıb. Bu unikal mərkəzdə fərqli yaş qruplarından olan uşaqlar üçün müxtəlif mövzularda ustad dərsləri təşkil olunur. Balacalar həsir, palaz, kilim, şəddə, zili və sumax kimi xovsuz xalçaların toxunma texnikalarını öyrənir, eyni zamanda interaktiv oyunlar vasitəsilə xalça kompozisiyalarının quruluşu və naxışların semantikası ilə tanış olurlar. Təhsil proqramları yalnız xalçalarla məhdudlaşmır. Muzeyin digər kolleksiyaları – bədii ",
+      "address": "Bakı ş., Mikayıl Useynov pr-ti, 28",
+      "detailedimage": "https://cdn.iticket.az/event/cover/OfnhWjxk14em9Zq347Uk28ZOQFCgi0VNIZCpfxoF.jpg?v=1786947036",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Milli Xalça Muzeyi",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "20-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 180
+        },
+        {
+          "id": "20-2",
+          "label": "Standart",
+          "price": 25,
+          "available": 140
+        },
+        {
+          "id": "20-3",
+          "label": "VIP",
+          "price": 40,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "21",
+      "title": "Master klass - gildən modelləşdirmə",
+      "date": "2026-08-25T06:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/poster_square/bqtK4YbfmlIEqfxBSrdNsiXN5TxG5t2RM27dvevb.jpg?v=1781878490",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Barmaqlar işləyirsə beyin də inkişaf edir. Gildən modelləşdirmə həm sizin, həm uşaqlarınız üçün ən faydalı fəaliyyətlərdən biridir. Siz yaratdığınızı görür, ona toxunur, hiss edir və dəyişdirə bilirsiz.",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/JRmIKtzy3MjqBjinZlfYeBudrtWPVAhQ.png?v=1779822731",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "21-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "“Şəngülüm, Şüngülüm, Məngülüm” marionet kukla teatr tamaşası",
+      "date": "2026-08-25T08:00:00.000Z",
+      "venue": "Azərbaycan Milli Xalça Muzeyi",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 5,
+      "image": "https://cdn.iticket.az/event/square_card/79U1nNPAMbdcNYpilv4aZMn3fX397PDK.png?v=1780735258",
+      "featured": false,
+      "ageLimit": "3-7",
+      "about": "“Şəngülüm, Şüngülüm, Məngülüm” marionet kukla teatr tamaşası Azərbaycan xalq nağılının motivləri əsasında səhnələşdirilib. Tamaşa Azərbaycan, ingilis və rus dillərində təqdim olunur. Tamaşadakı kuklalar, onların səsləndirilməsi muzeyin Uşaq şöbəsinin əməkdaşları tərəfindən hazırlanıb.",
+      "address": "Bakı ş., Mikayıl Useynov pr-ti, 28",
+      "detailedimage": "https://cdn.iticket.az/event/cover/bTCk5o0qFek1Hb1P02Ezpn9HUm5ZTgp1PHsZp586.jpg?v=1786947084",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Milli Xalça Muzeyi",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "22-1",
+          "label": "Standart",
+          "price": 5
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "23",
+      "title": "Aida's Collection Master-Classes",
+      "date": "2026-08-25T08:00:00.000Z",
+      "venue": "Aida's Collection, Caspian Plaza",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/fCyMfJu9GYN8o0a9sjTMaAPfpIkxt2z3.png?v=1779820841",
+      "featured": false,
+      "ageLimit": "3+",
+      "about": "Masterklasslar bu sahədə ixtisaslaşmış təcrübəli və peşəkar müəllim tərəfindən keçirilir. Yüksək keyfiyyətli məhsullardan və avadanlıqlardan istifadə olunur. Masterklasslar rahat otaqda 15 nəfərə qədər tələbə ilə keçirilir. Masterklasslarımıza qoşulmaqla vaxtınızı maraqlı və səmərəli keçirə bilərsiniz. Məhsuldar vaxt keçirməklə yeni bacarıqlar əldə edə bilərsiniz EBRU SƏNƏTİ ÜZRƏ MASTER-KLASS GİL VƏ KERAMİKA ÜZRƏ MASTER-KLASS POLİMER GİL SƏNƏTİ MASTER-KLASSI ŞOKOLAD MASTER-KLASSI ŞOKOLAD BUKETLƏRİN HAZIRLANMASI MASTER-KLASSI SABUN HAZIRLANMASI ÜZRƏ MASTER-KLASS RESİN ART (EPOKSİD) MASTER-KLASSI VİTRAJ SƏNƏTİ MASTER-KLASSI HƏCMLİ RƏNGKARLIQ MASTER-KLASSI MUNCUQ NAXIŞ AKSESSUAR MASTER-KLASSI T",
+      "address": "Cefer Cabbarli kucesi 44 , Caspian Plaza 2ci korpus",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/y0LVBONXU4tO6PrPB0R7GeOA2yip5CKN.png?v=1779820842",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Aida's Collection, Caspian Plaza",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "23-1",
+          "label": "Ekonom",
+          "price": 15,
+          "available": 180
+        },
+        {
+          "id": "23-2",
+          "label": "Standart",
+          "price": 17,
+          "available": 140
+        },
+        {
+          "id": "23-3",
+          "label": "VIP",
+          "price": 18,
+          "available": 80
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "Kətan üzərində rəsm \"Bayquş balası\"",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/NEtTnV7j76maI0DcxS0CxKDx9gZFUcVG.png?v=1779821802",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Uşaqlarınızı kiçik rəssam rolunu oynamağa dəvət edirik. Həmçinin, birlikdə işləmək üçün gözəl fürsət yaradırıq. Master-klassımızda akril boyalarla əsl kətan üzərində bir şəkil çəkəcəyik. Bizə lazım olan tək şey yaxşı əhval-ruhiyyə və boyalardı!",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/rDquwYNQM2LVrduhWhWNSQEe8lUupz5B.png?v=1779821803",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "24-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "Kətan üzərində rəsm \"Pişik balası\"",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/2xjitbjucWk5RWwHCjRWk2AIX2Fa2icV.png?v=1779822480",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Uşaqlarınızı kiçik rəssam rolunu oynamağa dəvət edirik. Həmçinin, birlikdə işləmək üçün gözəl fürsət yaradırıq. Master-klassımızda akril boyalarla əsl kətan üzərində bir şəkil çəkəcəyik. Bizə lazım olan tək şey yaxşı əhval-ruhiyyə və boyalardı!",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/Z0kmxmAw55SDEhUh5kQ0tjmr6y1s83F4.png?v=1779822481",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "25-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Kətan üzərində rəsm \"İt balası\"",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/GmwaBJ8jfseeyEx9DV4hvGZpD0Hsgl5d.png?v=1779822262",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Uşaqlarınızı kiçik rəssam rolunu oynamağa dəvət edirik. Həmçinin, birlikdə işləmək üçün gözəl fürsət yaradırıq. Master-klassımızda akril boyalarla əsl kətan üzərində bir şəkil çəkəcəyik. Bizə lazım olan tək şey yaxşı əhval-ruhiyyə və boyalardı!",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/pUMsyDXUOZZA92VJdoILnVDKcxDtnPA4.png?v=1779822263",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "26-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "title": "Kətan üzərində rəsm \"Şir balası\"",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/vrzpHlf8hy2VkuXSkE51ZY1rnIRatdbi.png?v=1779822558",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Uşaqlarınızı kiçik rəssam rolunu oynamağa dəvət edirik. Həmçinin, birlikdə işləmək üçün gözəl fürsət yaradırıq. Master-klassımızda akril boyalarla əsl kətan üzərində bir şəkil çəkəcəyik. Bizə lazım olan tək şey yaxşı əhval-ruhiyyə və boyalardı!",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/2d68pOY345YzqmnPCERngnWkYhmh0U0P.png?v=1779822559",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "27-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "title": "Kətan üzərində rəsm \"Tısbağa balası\"",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/5pyTipOd2V05T7DqPJHXhF4Xd7GcMg4D.png?v=1779822662",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Uşaqlarınızı kiçik rəssam rolunu oynamağa dəvət edirik. Həmçinin, birlikdə işləmək üçün gözəl fürsət yaradırıq. Master-klassımızda akril boyalarla əsl kətan üzərində bir şəkil çəkəcəyik. Bizə lazım olan tək şey yaxşı əhval-ruhiyyə və boyalardı!",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/txFIzM0OpmSeuvdvEhJQBUkVyEj1qxij.png?v=1779822663",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "28-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "title": "Kətan üzərində rəsm \"Pələng balası\"",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/CTfWouAgDdCkWv28vOo9msAwTo8ihbE9.png?v=1779822371",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Uşaqlarınızı kiçik rəssam rolunu oynamağa dəvət edirik. Həmçinin, birlikdə işləmək üçün gözəl fürsət yaradırıq. Master-klassımızda akril boyalarla əsl kətan üzərində bir şəkil çəkəcəyik. Bizə lazım olan tək şey yaxşı əhval-ruhiyyə və boyalardı!",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/biJyRZl6G8ZFJfaTiDCyDtiIJXFjP7zW.png?v=1779822372",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "29-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Kətan üzərində rəsm \"Su ayğırı\"",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "27qm-Tarana's small gallery and cafe",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/i2UrFuEqaNV8jmHRgljXHpy90JZzuZgX.png?v=1779822609",
+      "featured": false,
+      "ageLimit": "4+",
+      "about": "Uşaqlarınızı kiçik rəssam rolunu oynamağa dəvət edirik. Həmçinin, birlikdə işləmək üçün gözəl fürsət yaradırıq. Master-klassımızda akril boyalarla əsl kətan üzərində bir şəkil çəkəcəyik. Bizə lazım olan tək şey yaxşı əhval-ruhiyyə və boyalardı!",
+      "address": "Bakı şəhəri, Neftçilər prospekti, 143A",
+      "detailedimage": "https://cdn.iticket.az/event/cover_v6/KjeyEoVcU9IAfveZkVZJ9j9bC4Bv7e72.png?v=1779822609",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "27qm-Tarana's small gallery and cafe",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "30-1",
+          "label": "Standart",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "title": "Moskva Buz Sirki",
+      "date": "2026-08-29T14:00:00.000Z",
+      "venue": "Circus Sea Breeze",
+      "city": "Bakı",
+      "category": "kids",
+      "price": 15,
+      "image": "https://cdn.iticket.az/event/square_card/e7UUAGwH6hGquVQu0F6mGxut588Tw1mf.png?v=1780927876",
+      "featured": false,
+      "ageLimit": "3+",
+      "about": "Moskva Buz Sirki Circus Sea Breeze-də 30 maydan 30 avqustadək Circus Sea Breeze arenası unikal buz səhnəsinə çevrilir. Burada dünya səviyyəli incəsənət premium kurort atmosferi ilə bir araya gəlir. Sea Breeze-də ilk dəfə olaraq Moskva buz sirkinin beynəlxalq standartlara uyğun hazırlanmış möhtəşəm şousu təqdim olunur. Proqramda yüksək səviyyəli akrobatlar, peşəkar hava gimnastları və sirk sənətinin ustaları çıxış edir. Onların nömrələri texniki mükəmməlliyi və zərif ifanı birləşdirir. Buz səhnəsi hərəkətin yeni ölçüsünü açır: mürəkkəb tryuklar, ideal sinxronluq və dəqiqliklə qurulmuş səhnə həlli. Hər bir tamaşa yüksək səviyyəli vizual spektakldır — eksklüziv kostyumlar, təsirli işıq dizaynı ",
+      "address": "\"Circus Sea Breeze\" Luna Park və Water Parkın ərazisində yerləşir.",
+      "detailedimage": "https://cdn.iticket.az/event/cover/hrquoEb7VkSGiq4LPwvaUaTv9JGLW3zbJaFy7e5m.jpg?v=1785325356",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Circus Sea Breeze",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "31-1",
+          "label": "Ekonom",
+          "price": 15,
+          "available": 180
+        },
+        {
+          "id": "31-2",
+          "label": "Standart",
+          "price": 23,
+          "available": 140
+        },
+        {
+          "id": "31-3",
+          "label": "VIP",
+          "price": 30,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "32",
+      "title": "\"3391 km\" filminin nümayişi",
+      "date": "2026-08-24T10:00:00.000Z",
+      "venue": "Cinema LandMark",
+      "city": "Bakı",
+      "category": "film",
+      "price": 8,
+      "image": "https://cdn.iticket.az/event/square_card/0EWuxUc3Zwtm1pGUCqFFNuuCg8GHm4iL.png?v=1781000930",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Böyük ekranda unudulmaz bir kinoseans. Rahat zalda, keyfiyyətli səs və təsvir müşayiəti ilə filmə baxış təcrübəsi.",
+      "address": "Nizami küç. 90A(1-ci mərtəbə)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/UIHGRIh0cvr1bv08x912YOfZWeUowaAoYBONduhr.jpg?v=1783923960",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Cinema LandMark",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "32-1",
+          "label": "Standart",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "title": "\"Ulduzlararası\" filmin nümayişi",
+      "date": "2026-08-24T12:00:00.000Z",
+      "venue": "Cinema LandMark",
+      "city": "Bakı",
+      "category": "film",
+      "price": 8,
+      "image": "https://cdn.iticket.az/event/square_card/8SyT4SUcj3KO1xtVDT6kg3vqFRxGxkKF.png?v=1781002088",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Böyük ekranda unudulmaz bir kinoseans. Rahat zalda, keyfiyyətli səs və təsvir müşayiəti ilə filmə baxış təcrübəsi.",
+      "address": "Nizami küç. 90A(1-ci mərtəbə)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/3UgEz1YI28UVXtg4p9ZHNGKZEED9l9Ll7eOJJp3n.jpg?v=1783922135",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Cinema LandMark",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "33-1",
+          "label": "Standart",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "title": "Seanema – Aşkın Yüzü",
+      "date": "2026-08-24T16:15:00.000Z",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/Z03lwfDEVbJo3vXUkALKPi91Wr4OG7fc.png?v=1781526317",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "🎬 Azərbaycanda Yeni Film Təcrübəsi! Dənizə sıfır kilometr məsafədə, açıq səma altında böyük ekranda film izləməyə hazırsınız? 🌊✨ Bu yay sevdiklərinizlə birlikdə ən sevilən filmləri tam fərqli atmosferdə izləyəcəyiniz unudulmaz Seanema təcrübəsinə sizi dəvət edirik. Dalğa səsləri, dəniz qoxusu və möhtəşəm film gecələri sizi gözləyir! 🍿🌙",
+      "address": "Şıx çimərliyi, Salyan şossesi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/Dn2IManf71pjFHuG4q0Fe89nNKcl8QK1b4A4oqz2.jpg?v=1787060484",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Mambo Beach",
+      "totalSeats": 140,
+      "availableSeats": 100,
+      "tickets": [
+        {
+          "id": "34-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 45
+        },
+        {
+          "id": "34-2",
+          "label": "Standart",
+          "price": 18,
+          "available": 35
+        },
+        {
+          "id": "34-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "title": "Terrace Cinema – Me Before You",
+      "date": "2026-08-24T16:15:00.000Z",
+      "venue": "Seanema RoofTop",
+      "city": "Bakı",
+      "category": "film",
+      "price": 12,
+      "image": "https://cdn.iticket.az/event/square_card/0JT8Lt76ftjUD8WtnwIwTd7iZCgOvR3r.png?v=1782914642",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Azərbaycanda ilk dəfə! Şəhərin tam mərkəzində, açıq hava terrasımızda, dənizin və şəhərin möhtəşəm mənzərəsi ilə “Film Gecələri” başlayır. Alov Qüllələrinin işıqları altında, şəhərin və dənizin əfsanəvi panoraması ilə sevdiklərinizlə birlikdə ən sevdiyiniz filmləri izləməyə hazır olun. Bu sadəcə kino deyil — bu Bakı gecələrinin ən xüsusi təcrübəsidir. Parking ödənişsizdir Hava şəraiti ilə əlaqədar olaraq, filmlərin tarixləri və saatlarında dəyişikliklər ola bilər. Film: Türk dilində dublaj Altyazı: Rus dili",
+      "address": "Mikayıl Hüseynov 14, Baku, Azerbaijan",
+      "detailedimage": "https://cdn.iticket.az/event/cover/TIhS2rodML3up5WQee6lk6CoH2QO4jUJIPg2eDgS.jpg?v=1787473175",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Seanema RoofTop",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "35-1",
+          "label": "Standart",
+          "price": 12
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "36",
+      "title": "Sky Cinema Dənizkənarı Avtosinema– Senden Bana Kalan",
+      "date": "2026-08-24T16:30:00.000Z",
+      "venue": "Sky Cinema",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/LE5DmprqVn2ktLGCnNbG6Lvg9gJHKc7f.png?v=1787321534",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "“Senden Bana Kalan” — qayğısız və imkanlı həyat sürməyə alışmış gənc Özgürün hekayəsindən bəhs edən təsirli türk romantik dramıdır. Babasının vəsiyyətindəki gözlənilməz şərt onu İstanbuldan ayrılaraq kiçik bir kəndə getməyə məcbur edir. Burada Özgür əvvəlki həyatından tamamilə fərqli bir mühitlə və Elif adlı gənc qızla qarşılaşır. Bu tanışlıq zamanla onun sevgiyə, həyata və həqiqi dəyərlərə baxışını dəyişməyə başlayır. Ekrandakı ulduzların səmadakı ulduzlar kimi parladığı SkyCinema-ya xoş gəlmisiniz! Buzovnada dənizkənarında yerləşən avtosinemamızda ekran ölçüsü 80 kvadrat metr təşkil edir. Dənizkənarı qum avtomobillərin dayanması üçün uyğundur.Avtomobillərə səs radiodalğalar vasitəsilə birb",
+      "address": "Sky Cinema, Buzovna (Delmar Beach)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/9tpTGQBQ3ScGE0Zwjmp7ekvsYC1ISdoyQj3ERioZ.jpg?v=1787321546",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Sky Cinema",
+      "totalSeats": 78,
+      "availableSeats": 56,
+      "tickets": [
+        {
+          "id": "36-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 25
+        },
+        {
+          "id": "36-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 20
+        },
+        {
+          "id": "36-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 11
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet Avtosinema xidmətimizdən həm şəxsi avtomobilinizlə, həm də icarəyə təqdim etdiyimiz nəqliyyat vasitələri ilə rahatlıqla istifadə edə bilərsiniz. Şəxsi avtomobili olmayan qonaqlarımızın avtomobil icarəsi ilə bağlı əvvəlcədən bizimlə əlaqə saxlamaları xahiş olunur. Qeyd edək ki, alınan bilet bir avtomobil üçün nəzərdə tutulur. Bir "
+    },
+    {
+      "id": "37",
+      "title": "Seanema – The Notebook",
+      "date": "2026-08-24T18:00:00.000Z",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/r1jPnvRFTiXs5yYlYfQmeXdGbEAeuIp3.png?v=1781857245",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "🎬 Azərbaycanda Yeni Film Təcrübəsi! Dənizə sıfır kilometr məsafədə, açıq səma altında böyük ekranda film izləməyə hazırsınız? 🌊✨ Bu yay sevdiklərinizlə birlikdə ən sevilən filmləri tam fərqli atmosferdə izləyəcəyiniz unudulmaz Seanema təcrübəsinə sizi dəvət edirik. Dalğa səsləri, dəniz qoxusu və möhtəşəm film gecələri sizi gözləyir! 🍿🌙 Film: Türk dilində dublaj Altyazı: Rus dili",
+      "address": "Şıx çimərliyi, Salyan şossesi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/do1NLLQIZUUDaZhkQpM2Ox06JprzkdqGC1k6tAxP.jpg?v=1787060934",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Mambo Beach",
+      "totalSeats": 132,
+      "availableSeats": 94,
+      "tickets": [
+        {
+          "id": "37-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 42
+        },
+        {
+          "id": "37-2",
+          "label": "Standart",
+          "price": 18,
+          "available": 33
+        },
+        {
+          "id": "37-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 19
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "title": "Terrace Cinema – Issız Adam",
+      "date": "2026-08-24T18:15:00.000Z",
+      "venue": "Seanema RoofTop",
+      "city": "Bakı",
+      "category": "film",
+      "price": 12,
+      "image": "https://cdn.iticket.az/event/square_card/08BlfsfWwr2pv92bNV4j16slXpz8u64H.png?v=1784030790",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Azərbaycanda ilk dəfə! Şəhərin tam mərkəzində, açıq hava terrasımızda, dənizin və şəhərin möhtəşəm mənzərəsi ilə “Film Gecələri” başlayır. Alov Qüllələrinin işıqları altında, şəhərin və dənizin əfsanəvi panoraması ilə sevdiklərinizlə birlikdə ən sevdiyiniz filmləri izləməyə hazır olun. Bu sadəcə kino deyil — bu Bakı gecələrinin ən xüsusi təcrübəsidir. Parking ödənişsizdir Hava şəraiti ilə əlaqədar olaraq, filmlərin tarixləri və saatlarında dəyişikliklər ola bilər.",
+      "address": "Mikayıl Hüseynov 14, Baku, Azerbaijan",
+      "detailedimage": "https://cdn.iticket.az/event/cover/q6PR8wcHYnlbHldFgNGmBDx4m8EO6xIsDXOv94s5.jpg?v=1787034832",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Seanema RoofTop",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "38-1",
+          "label": "Standart",
+          "price": 12
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "39",
+      "title": "Sky Cinema Dənizkənarı Avtosinema – Sen İhtimali",
+      "date": "2026-08-24T18:30:00.000Z",
+      "venue": "Sky Cinema",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/U694kCJ21Y5Ui882O8gq72J43pmWPGpr.png?v=1787321582",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "The Idea of You — 40 yaşlı tək ana Solèn və məşhur boy-bandın gənc solisti Heys Kempbell arasında gözlənilmədən başlayan romantik münasibətdən bəhs edən filmdir. Onların fərqli həyat tərzi, yaş fərqi və ictimai diqqət münasibətlərini sınağa çəkir. Film sevgi, şəxsi seçimlər və başqalarının fikirlərinin münasibətlərə təsiri haqqında romantik dramdır. Ekrandakı ulduzların səmadakı ulduzlar kimi parladığı SkyCinema-ya xoş gəlmisiniz! Buzovnada dənizkənarında yerləşən avtosinemamızda ekran ölçüsü 80 kvadrat metr təşkil edir. Dənizkənarı qum avtomobillərin dayanması üçün uyğundur.Avtomobillərə səs radiodalğalar vasitəsilə birbaşa ötürüldüyündən, hər bir müştəri rus, türk və ingilis dublyajları ar",
+      "address": "Sky Cinema, Buzovna (Delmar Beach)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/habuVpkRzGrkQ8kjer7cssdMdzE44PUZamOafYrP.jpg?v=1787321594",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Sky Cinema",
+      "totalSeats": 78,
+      "availableSeats": 56,
+      "tickets": [
+        {
+          "id": "39-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 25
+        },
+        {
+          "id": "39-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 20
+        },
+        {
+          "id": "39-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 11
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet Avtosinema xidmətimizdən həm şəxsi avtomobilinizlə, həm də icarəyə təqdim etdiyimiz nəqliyyat vasitələri ilə rahatlıqla istifadə edə bilərsiniz. Şəxsi avtomobili olmayan qonaqlarımızın avtomobil icarəsi ilə bağlı əvvəlcədən bizimlə əlaqə saxlamaları xahiş olunur. Qeyd edək ki, alınan bilet bir avtomobil üçün nəzərdə tutulur. Bir "
+    },
+    {
+      "id": "40",
+      "title": "Seanema – Issız Adam",
+      "date": "2026-08-25T16:15:00.000Z",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/doxxR3EyK60lPYAFvuNwBm8UbxOPhWf7.png?v=1781527692",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "🎬 Azərbaycanda Yeni Film Təcrübəsi! Dənizə sıfır kilometr məsafədə, açıq səma altında böyük ekranda film izləməyə hazırsınız? 🌊✨ Bu yay sevdiklərinizlə birlikdə ən sevilən filmləri tam fərqli atmosferdə izləyəcəyiniz unudulmaz Seanema təcrübəsinə sizi dəvət edirik. Dalğa səsləri, dəniz qoxusu və möhtəşəm film gecələri sizi gözləyir! 🍿🌙",
+      "address": "Şıx çimərliyi, Salyan şossesi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/JGH6okdCTeQMBEuvdF6m3hy9HyVDsxxuL39cOSn3.jpg?v=1787064422",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Mambo Beach",
+      "totalSeats": 137,
+      "availableSeats": 98,
+      "tickets": [
+        {
+          "id": "40-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 44
+        },
+        {
+          "id": "40-2",
+          "label": "Standart",
+          "price": 18,
+          "available": 34
+        },
+        {
+          "id": "40-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "title": "Terrace Cinema – The Notebook",
+      "date": "2026-08-25T16:15:00.000Z",
+      "venue": "Seanema RoofTop",
+      "city": "Bakı",
+      "category": "film",
+      "price": 12,
+      "image": "https://cdn.iticket.az/event/square_card/X7cXFAtWFEQRJrblBIqSPCDQUOKUJGpY.png?v=1781874829",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Azərbaycanda ilk dəfə! Şəhərin tam mərkəzində, açıq hava terrasımızda, dənizin və şəhərin möhtəşəm mənzərəsi ilə “Film Gecələri” başlayır. Alov Qüllələrinin işıqları altında, şəhərin və dənizin əfsanəvi panoraması ilə sevdiklərinizlə birlikdə ən sevdiyiniz filmləri izləməyə hazır olun. Bu sadəcə kino deyil — bu Bakı gecələrinin ən xüsusi təcrübəsidir. Parking ödənişsizdir Hava şəraiti ilə əlaqədar olaraq, filmlərin tarixləri və saatlarında dəyişikliklər ola bilər.",
+      "address": "Mikayıl Hüseynov 14, Baku, Azerbaijan",
+      "detailedimage": "https://cdn.iticket.az/event/cover/ZF2lvE1ncadWQzc0xKwCvdDEKOCakv7zmiUz0wS9.jpg?v=1787035038",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Seanema RoofTop",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "41-1",
+          "label": "Standart",
+          "price": 12
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "42",
+      "title": "Sky Cinema Dənizkənarı Avtosinema – One Day",
+      "date": "2026-08-25T16:30:00.000Z",
+      "venue": "Sky Cinema",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/2eGKBOmbm1Ae6CJ9fs7GvUuh3tXX9JYP.png?v=1781535865",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "One Day Emma və Dekster universiteti bitirdikləri gün tanış olur və birlikdə keçirdikləri cəmi bir gündən sonra bir-birlərinin həyatının vacib hissəsinə çevrilirlər. İllər keçdikcə onların yolları gah kəsişir, gah da ayrılır, dostluqları isə arzular, dəyişikliklər və sınaqlardan keçir. Sevgi, zaman və bəzən çox gec olmadan fərqinə varmalı olduğumuz hisslər haqqında təsirli bir hekayə. Ekrandakı ulduzların səmadakı ulduzlar kimi parladığı SkyCinema-ya xoş gəlmisiniz! Buzovnada dənizkənarında yerləşən avtosinemamızda ekran ölçüsü 80 kvadrat metr təşkil edir. Dənizkənarı qum avtomobillərin dayanması üçün uyğundur.Avtomobillərə səs radiodalğalar vasitəsilə birbaşa ötürüldüyündən, hər bir müştəri",
+      "address": "Sky Cinema, Buzovna (Delmar Beach)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/udUdSB8B53sdDcNOWKmJobTnMHS5ecSJec3eBxsT.jpg?v=1787317321",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Sky Cinema",
+      "totalSeats": 78,
+      "availableSeats": 56,
+      "tickets": [
+        {
+          "id": "42-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 25
+        },
+        {
+          "id": "42-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 20
+        },
+        {
+          "id": "42-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 11
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet Avtosinema xidmətimizdən həm şəxsi avtomobilinizlə, həm də icarəyə təqdim etdiyimiz nəqliyyat vasitələri ilə rahatlıqla istifadə edə bilərsiniz. Şəxsi avtomobili olmayan qonaqlarımızın avtomobil icarəsi ilə bağlı əvvəlcədən bizimlə əlaqə saxlamaları xahiş olunur. Qeyd edək ki, alınan bilet bir avtomobil üçün nəzərdə tutulur. Bir "
+    },
+    {
+      "id": "43",
+      "title": "Seanema – Pride and Prejuduce",
+      "date": "2026-08-25T18:15:00.000Z",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/ilfnV2mEpt8odYuZScywqMjPfo6BHS1e.png?v=1781857064",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "🎬 Azərbaycanda Yeni Film Təcrübəsi! Dənizə sıfır kilometr məsafədə, açıq səma altında böyük ekranda film izləməyə hazırsınız? 🌊✨ Bu yay sevdiklərinizlə birlikdə ən sevilən filmləri tam fərqli atmosferdə izləyəcəyiniz unudulmaz Seanema təcrübəsinə sizi dəvət edirik. Dalğa səsləri, dəniz qoxusu və möhtəşəm film gecələri sizi gözləyir! 🍿🌙 Film: Türk dilində dublaj Altyazı: Rus dili",
+      "address": "Şıx çimərliyi, Salyan şossesi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/QwnFBbGn4hJwr18fVV3qiYK3meAqmaNHkayZiXqL.jpg?v=1787064237",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Mambo Beach",
+      "totalSeats": 137,
+      "availableSeats": 98,
+      "tickets": [
+        {
+          "id": "43-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 44
+        },
+        {
+          "id": "43-2",
+          "label": "Standart",
+          "price": 18,
+          "available": 34
+        },
+        {
+          "id": "43-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "title": "Terrace Cinema – Delibal",
+      "date": "2026-08-25T18:15:00.000Z",
+      "venue": "Seanema RoofTop",
+      "city": "Bakı",
+      "category": "film",
+      "price": 12,
+      "image": "https://cdn.iticket.az/event/square_card/ah2nPZzxfYLbe8RfmbYRpwYNKU3YDtLP.png?v=1781536753",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Azərbaycanda ilk dəfə! Şəhərin tam mərkəzində, açıq hava terrasımızda, dənizin və şəhərin möhtəşəm mənzərəsi ilə “Film Gecələri” başlayır. Alov Qüllələrinin işıqları altında, şəhərin və dənizin əfsanəvi panoraması ilə sevdiklərinizlə birlikdə ən sevdiyiniz filmləri izləməyə hazır olun. Bu sadəcə kino deyil — bu Bakı gecələrinin ən xüsusi təcrübəsidir. Parking ödənişsizdir Hava şəraiti ilə əlaqədar olaraq, filmlərin tarixləri və saatlarında dəyişikliklər ola bilər.",
+      "address": "Mikayıl Hüseynov 14, Baku, Azerbaijan",
+      "detailedimage": "https://cdn.iticket.az/event/cover/jolYbZUj1SnBHphxMcNVGFtlGIbTr2Fy22XsRYfD.jpg?v=1787035219",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Seanema RoofTop",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "44-1",
+          "label": "Standart",
+          "price": 12
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "45",
+      "title": "Sky Cinema Dənizkənarı Avtosinema – Delibal",
+      "date": "2026-08-25T18:30:00.000Z",
+      "venue": "Sky Cinema",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/N4SK6p9Bn7Z6Uu36nIm9o3WtxJyYOz07.png?v=1781527068",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Delibal Memarlıq fakültəsinin tələbəsi və musiqiyə böyük həvəsi olan Barış ilk baxışdan məqsədyönlü Füsuna aşiq olur. Həyata baxışları və gələcəklə bağlı planları fərqli olsa da, onların arasında güclü sevgi yaranır və bu hiss onları evliliyə aparır. Lakin zaman keçdikcə münasibətləri ciddi sınaqlarla üzləşir və hər ikisi sevginin, fədakarlığın və daxili mübarizənin əsl mənasını dərk etməli olur. Delibal sevgi, ümid və insanın öz daxili qorxuları ilə mübarizəsindən bəhs edən təsirli romantik dramdır. Ekrandakı ulduzların səmadakı ulduzlar kimi parladığı SkyCinema-ya xoş gəlmisiniz! Buzovnada dənizkənarında yerləşən avtosinemamızda ekran ölçüsü 80 kvadrat metr təşkil edir. Dənizkənarı qum avt",
+      "address": "Sky Cinema, Buzovna (Delmar Beach)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/ZsMSaHbf3bcQjto7um8zlsqf0tyWKCnuBRbl0qKP.jpg?v=1787318333",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Sky Cinema",
+      "totalSeats": 78,
+      "availableSeats": 56,
+      "tickets": [
+        {
+          "id": "45-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 25
+        },
+        {
+          "id": "45-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 20
+        },
+        {
+          "id": "45-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 11
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet Avtosinema xidmətimizdən həm şəxsi avtomobilinizlə, həm də icarəyə təqdim etdiyimiz nəqliyyat vasitələri ilə rahatlıqla istifadə edə bilərsiniz. Şəxsi avtomobili olmayan qonaqlarımızın avtomobil icarəsi ilə bağlı əvvəlcədən bizimlə əlaqə saxlamaları xahiş olunur. Qeyd edək ki, alınan bilet bir avtomobil üçün nəzərdə tutulur. Bir "
+    },
+    {
+      "id": "46",
+      "title": "Seanema – Delibal",
+      "date": "2026-08-26T16:15:00.000Z",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/09an0rO6aGsn3eVpwzJAcaLTAu1HfJ5W.png?v=1781528558",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "🎬 Azərbaycanda Yeni Film Təcrübəsi! Dənizə sıfır kilometr məsafədə, açıq səma altında böyük ekranda film izləməyə hazırsınız? 🌊✨ Bu yay sevdiklərinizlə birlikdə ən sevilən filmləri tam fərqli atmosferdə izləyəcəyiniz unudulmaz Seanema təcrübəsinə sizi dəvət edirik. Dalğa səsləri, dəniz qoxusu və möhtəşəm film gecələri sizi gözləyir! 🍿🌙",
+      "address": "Şıx çimərliyi, Salyan şossesi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/uELHB7GatcGU43UO3tiMc2JziI76ER3xXNSPUvq5.jpg?v=1787214231",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Mambo Beach",
+      "totalSeats": 140,
+      "availableSeats": 100,
+      "tickets": [
+        {
+          "id": "46-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 45
+        },
+        {
+          "id": "46-2",
+          "label": "Standart",
+          "price": 18,
+          "available": 35
+        },
+        {
+          "id": "46-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "title": "BAKU HOOKAH PICNIC 2026",
+      "date": "2026-08-29T08:00:00.000Z",
+      "venue": "Elektra Events Hall",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 35,
+      "image": "https://cdn.iticket.az/event/square_card/yaviF20rjn4Kst0PRiyfCxgOTV7cc0yn.png?v=1782306327",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "BAKU HOOKAH PICNIC — Azərbaycanın ən böyük qəlyan mədəniyyəti festivalıdır və hər il qəlyan sevərləri, keyfiyyətli istirahəti və xoş atmosferi qiymətləndirən insanları bir araya gətirir. Burada insanları keyfiyyətli qəlyanlar, yeni dadlar və böyük yay festivalının unudulmaz ab-havasına olan ortaq maraq birləşdirir. Festival boyunca qonaqları zəngin əyləncə proqramı gözləyir: DJ çıxışları, müsabiqələr, hədiyyəli oyunlar, aparıcı xarici brendlərin yeni dadlarının dequstasiyası və ən gözəl anları yadda saxlamaq üçün xüsusi fotozonalar. BAKU HOOKAH PICNIC istirahət etmək, yeni təəssüratlar qazanmaq, dostlarla görüşmək və festival atmosferindən zövq almaq üçün ideal məkandır. Bu, aparıcı xarici q",
+      "address": "Dövlət Bayraq Meydanı",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/yaviF20rjn4Kst0PRiyfCxgOTV7cc0yn.png?v=1782306327",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Elektra Events Hall",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "47-1",
+          "label": "Ekonom",
+          "price": 35,
+          "available": 180
+        },
+        {
+          "id": "47-2",
+          "label": "Standart",
+          "price": 63,
+          "available": 140
+        },
+        {
+          "id": "47-3",
+          "label": "VIP",
+          "price": 90,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "48",
+      "title": "Comic Con Baku 2026",
+      "date": "2026-08-30T07:00:00.000Z",
+      "venue": "Bakı Konqres Mərkəzi",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 25,
+      "image": "https://cdn.iticket.az/event/square_card/tmLtzNx57iic6K4bsZUyrtfQxL7MYNe4.png?v=1781852021",
+      "featured": false,
+      "ageLimit": "6+",
+      "about": "Dünyanın ən böyük pop-mədəniyyət festivalı, Comic Con, Bakıya geri qayıdır! 30 avqust 2026-cı il tarixində Bakı Konqres Mərkəzi yenidən kino, oyunlar, komiks, anime, kospley və Asiya mədəniyyətinin pərəstişkarlarını bir araya gətirəcək. Comic Con Baku 2026 minlərlə qonağı, xarici iştirakçıları və yaradıcı sənaye nümayəndələrini bir araya gətirərək əsl pop-mədəniyyət bayramı atmosferi yaradacaq. Festivalın baş qonağı və xüsusi qonaqları barədə məlumat çox yaxın zamanda elan olunacaq — yenilikləri izləyin! Tədbirdə sizi nələr gözləyir: Xarici qonaq aktyorla görüşmək və avtoqraf əldə etmək, həmçinin xarici kosplyerlərlə tanış olmaq; Yerli rəssamlar, bloqerlər, müəlliflər və yaradıcı sənaye nüma",
+      "address": "Təbriz Küçəsi, Bakı, Azərbaycan",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/tmLtzNx57iic6K4bsZUyrtfQxL7MYNe4.png?v=1781852021",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Bakı Konqres Mərkəzi",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "48-1",
+          "label": "Ekonom",
+          "price": 25,
+          "available": 180
+        },
+        {
+          "id": "48-2",
+          "label": "Standart",
+          "price": 63,
+          "available": 140
+        },
+        {
+          "id": "48-3",
+          "label": "VIP",
+          "price": 100,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "49",
+      "title": "United Coffee Fest 2026",
+      "date": "2026-09-05T06:00:00.000Z",
+      "venue": "CHEVRE COMMUNITY",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/XRuHfgxKxYfOL7AKQydrfsmNGO9xW909.png?v=1785855676",
+      "featured": false,
+      "ageLimit": "0+",
+      "about": "United Coffee Fest 2026 🎉 United Coffee Fest — Qafqazın ən yaradıcı kofe festivalı 5–6 sentyabr tarixlərində yenidən qapılarını kofesevərlərin üzünə açır. Bu il ikinci dəfə keçirilən festival iki gün ərzində zəngin proqramı, unikal təcrübələri və kofe mədəniyyətini bir araya gətirərək minlərlə qonağı ətrafında birləşdirəcək. ☕️🏔️ Roastery Village zonasında yerli qovurucuların onlarla fərqli kofesini dadacaq, ustad dərsləri və cupping seanslarında dəmləmənin incəliklərini öyrənəcəksiniz. Festival çərçivəsində Azərbaycan AeroPress Çempionatı canlı keçiriləcək və qalib Dünya Finalında Meksikada ölkəmizi təmsil etmək hüququ qazanacaq. 🏅 ☕ Bundan əlavə, qonaqlar dünyanın müxtəlif regionlarında",
+      "address": "Keçmiş BTQ fabriki, Bakı. Bəşir Bünyadov küç., məhəllə 2578; döngə 903",
+      "detailedimage": "https://cdn.iticket.az/event/cover/gBrTCKnTCVc4EHcnBjS4zqyb3tKJER2KziMygceX.jpg?v=1787216233",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "CHEVRE COMMUNITY",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "49-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 180
+        },
+        {
+          "id": "49-2",
+          "label": "Standart",
+          "price": 25,
+          "available": 140
+        },
+        {
+          "id": "49-3",
+          "label": "VIP",
+          "price": 30,
+          "available": 80
+        }
+      ],
+      "rules": "6 YAŞDAN YUXARI UŞAQLAR ÜÇÜN BİLETİN ƏLDƏ EDİLMƏSİ MÜTLƏQDİR. Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet Festival biletlərinin qiymətləri: 🎟 Birinci səbət (Early Bird) Bir günlük bilet — 15 AZN Kombinə edilmiş bilet — 25 AZN 🎟 İkinci səbət Bir günlük bilet — 20 AZN Kombinə edilmiş bilet — 30 AZN 🎟 Üçüncü səbət Bir günlük bilet — 25 AZN Kombinə edilmiş bilet — 35 AZN Hə"
+    },
+    {
+      "id": "50",
+      "title": "OMNI AI SUMMIT 2026",
+      "date": "2026-09-17T06:00:00.000Z",
+      "venue": "JW Marriott Absheron Baku",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 60,
+      "image": "https://cdn.iticket.az/event/square_card/maq5BTldrqUQnFAPMenj7bjO2vAFYnZM.png?v=1779889942",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "17 sentyabr tarixində Bakıda süni intellekt, innovasiya və AI texnologiyalarının biznes, texnologiya və kreativ sənayelərdə praktiki tətbiqinə həsr olunmuş beynəlxalq OMNI AI SUMMIT keçiriləcək. Bu, gələcəyi gözləməyən, onu formalaşdıranlar üçün yaradılmış bir məkandır. İştirakçılar şirkətlərin inkişaf trayektoriyalarını dəyişən eksklüziv anlayışlara, sabahın texnologiyalarına və strateji əlaqələrə çıxış əldə edəcəklər. Tədbirin proqramına beynəlxalq Keynote çıxışları, praktiki yönümlü sessiyalar, qabaqcıl süni intellekt həllərinin təqdim olunduğu Expo & Demo Area, eləcə də sahibkarlar, mütəxəssislər və investorlarla geniş netvörkinq imkanları daxildir. OMNI Protokolunun daxilində Vizyoner ə",
+      "address": "Azadlıq meydanı 674, Bakı, Azərbaycan",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/maq5BTldrqUQnFAPMenj7bjO2vAFYnZM.png?v=1779889942",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "JW Marriott Absheron Baku",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "50-1",
+          "label": "Ekonom",
+          "price": 60,
+          "available": 180
+        },
+        {
+          "id": "50-2",
+          "label": "Standart",
+          "price": 530,
+          "available": 140
+        },
+        {
+          "id": "50-3",
+          "label": "VIP",
+          "price": 999,
+          "available": 80
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "title": "IN'terpretation x Det Gode Selskab",
+      "date": "2026-08-28T19:00:00.000Z",
+      "venue": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/CEXFDc6bZ8WNOS1m1JQzz7oDPZgAGAIs.png?v=1785507073",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "28 avqust tarixində Maize Beach Det Gode Selskab-ın ürəyində duran iki simanı qarşılayır. Tod Louie və Thomas Refvik artıq 15 illik yubileyini qeyd edən Oslo leyblı və kollektivinin ilk günlərdən sükanı arxasında olan adlardır. Ən başından bəri rezident kimi onlar Det Gode Selskab-ın inkişafının, icmasının, tədbirlərinin və səs xarakterinin bütün mərhələlərində yer alıblar. İllər ərzində Tod Louie House, Techno və bunların ötəsində rahatlıqla keçid edən enerjili, janrlararası setləri ilə Oslonun ən hörmətli selektorlarından birinə çevrilib. Thomas Refvik isə dərin və özünəməxsus seçimləri ilə kollektivin səslənməsinin böyük bir hissəsini formalaşdıran çoxillik vinil kolleksiyaçısı və kurator",
+      "address": "\"Sea Breeze Resort\"",
+      "detailedimage": "https://cdn.iticket.az/event/cover/HS0dImyErAxFCLCowHwuyQfw2TmaayC4NU2fTmxv.jpg?v=1786950227",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "51-1",
+          "label": "Standart",
+          "price": 20
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "title": "ILKAY SENCAN",
+      "date": "2026-08-29T19:00:00.000Z",
+      "venue": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/qKoxkXsuvNMvw4EJWMvNFlaD94zenK2K.png?v=1781000815",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "Qaydalar: Tədbir zamanı face control tətbiq olunur. Face control-dan keçməyən qonaqlar üçün ödəniş geri qaytarılır. Tədbir 18+ yaşdan yuxarı şəxslər üçün nəzərdə tutulub. Ayaqüstü backstage biletləri yalnız xanımlar üçün nəzərdə tutulub. Restoranın 10% xidmət haqqı depozit məbləğinə daxil deyil. MASA REZERVASİYASI ZAMANI XANIMLAR VƏ BƏYLƏR ARASINDA BALANSIN QORUNMASINI NƏZƏRƏ ALIN. YALNIZ BƏYLƏRDƏN İBARƏT OLAN MASA REZERVASİYALARI TƏDBİR ZAMANI LƏĞV EDİLƏCƏK. Biletlər 20 AZN-dən başlayır. VIP biletlər haqqında ətraflı məlumat: B1/B5 (5 nəfər) — 1100 AZN (800 AZN depozit + biletlər 300 AZN) B2/B6 (5 nəfər) — 900 AZN (600 AZN depozit + biletlər 300 AZN) B3/B7 (5 nəfər) — 900 AZN (600 AZN depoz",
+      "address": "\"Sea Breeze Resort\"",
+      "detailedimage": "https://cdn.iticket.az/event/square_card/qKoxkXsuvNMvw4EJWMvNFlaD94zenK2K.png?v=1781000815",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "MAIZE Beach / \"Sea Breeze Resort\"",
+      "totalSeats": 143,
+      "availableSeats": 102,
+      "tickets": [
+        {
+          "id": "52-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 46
+        },
+        {
+          "id": "52-2",
+          "label": "Standart",
+          "price": 200,
+          "available": 36
+        },
+        {
+          "id": "52-3",
+          "label": "VIP",
+          "price": 380,
+          "available": 20
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "title": "Azərbaycan Milli Xalça Muzeyi Zərgərlik fondu",
+      "date": "2026-08-25T06:00:00.000Z",
+      "venue": "Azərbaycan Milli Xalça Muzeyi",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 3,
+      "image": "https://cdn.iticket.az/event/square_card/KYDT1FTaUf8YkU98NE7y1b53HluS19Ip.png?v=1786691783",
+      "featured": false,
+      "ageLimit": "0+",
+      "about": "Azərbaycan Milli Xalça Muzeyində 800-ə yaxın eksponatdan ibarət zərgərlik kolleksiyası qorunub saxlanılır. Onların böyük hissəsi XIX əsrin sonu – XX əsrin əvvəllərinə, bir qismi isə Tunc dövrünə (e.ə. IV–II minilliklər) aiddir. Muzeyin Zərgərlik fondunda döymə, basmaqəlib, həkketmə üsulları ilə işlənmiş qadın bəzək əşyaları (sırğa, qolbaq, üzük, kəmər, boyunbağı, sancaq, düymə və s.) nümayiş olunur. Mingəçevir, Xocalı, Qəbələ, Xınıslı və Qaratəpədə aparılmış arxeoloji qazıntılar zamanı aşkar olunmuş bu bəzək məmulatları orijinal forma və dekor zənginliyi ilə seçilir. Məmulatların ümumi üslubu aid olduğu dövrün mədəniyyətinin xarakterinə uyğundur. Muzeydə qorunan zərgərlik nümunələrinin böyük",
+      "address": "Bakı ş., Mikayıl Useynov pr-ti, 28",
+      "detailedimage": "https://cdn.iticket.az/event/cover/V1TZoOiatqzCcWrFTK2NaH38HKEhRk45dxlATbVH.jpg?v=1786695298",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Milli Xalça Muzeyi",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "53-1",
+          "label": "Standart",
+          "price": 3
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet BU TƏDBİR ÜÇÜN ALINMIŞ BİLETLƏR GERİ QAYTARILA VƏ DƏYİŞDİRİLƏ BİLMƏZ."
+    },
+    {
+      "id": "54",
+      "title": "Azərbaycan Təsviri Sənətinin İnciləri. Qızıl Kolleksiya",
+      "date": "2026-08-25T06:00:00.000Z",
+      "venue": "Muzey Mərkəzi",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 7,
+      "image": "https://cdn.iticket.az/event/square_card/Wi2fWTU0OB7DV0hCpW1G55VFNroARtdN.png?v=1783522144",
+      "featured": false,
+      "ageLimit": "0+",
+      "about": "📢 Əziz izləyicilər! Azərbaycan Dövlət Rəsm Qalereyası 9 iyul 2026-cı il tarixindən etibarən “Azərbaycan Təsviri Sənətinin İnciləri. Qızıl Kolleksiya” sərgisini sizə təqdim edir. Ekspozisiya çərçivəsində ziyarətçilər Muzey Mərkəzinin əsaslı şəkildə yenilənmiş sərgi zalları, habelə daha innovativ və interaktiv sərgi təcrübəsi təqdim etmək məqsədilə immersiv texnologiyalar əsasında hazırlanmış xüsusi sərgi zalı ilə tanış olmaq imkanı əldə edəcəklər. Sərgidə Azərbaycan təsviri sənətinin formalaşmasında və inkişafında xüsusi xidmətləri olan görkəmli sənətkarların yaradıcılığından seçilmiş fundamental rəngkarlıq, qrafika və heykəltaraşlıq əsərləri nümayiş olunacaq. 🗓️ Tarix: 9 iyul – 15 sentyabr",
+      "address": "Bakı şəhəri, Neftçilər pr., 49 (123a)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/k0bxzPoFHGvBilVqoaJNzsjF6na04zaomU2fBTAs.jpg?v=1787551034",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Muzey Mərkəzi",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "54-1",
+          "label": "Ekonom",
+          "price": 7,
+          "available": 180
+        },
+        {
+          "id": "54-2",
+          "label": "Standart",
+          "price": 9,
+          "available": 140
+        },
+        {
+          "id": "54-3",
+          "label": "VIP",
+          "price": 10,
+          "available": 80
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "title": "\"Faiq Əhməd: 2011–2024-cü illər dövrü\" adlı sərgi",
+      "date": "2026-08-25T06:00:00.000Z",
+      "venue": "Azərbaycan Milli Xalça Muzeyi",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 3,
+      "image": "https://cdn.iticket.az/event/square_card/MXylHTMdWCuKTIxRlCbz04U7BrVMCnq1.png?v=1781001906",
+      "featured": false,
+      "ageLimit": "0+",
+      "about": "Əməkdar rəssam Faiq Əhmədin yaradıcılığını əks etdirən “Faiq Əhməd: 2011–2024-cü illər dövrü” sərgisində yer alan unikal xalçaların əksəriyyəti ölkəmizdə ilk dəfə nümayiş olunur. Ənənəvi Azərbaycan xalçaçılığına innovativ yanaşması ilə tanınan müasir rəssam Faiq Əhməd bu qədim sənət növünü müasir düşüncə, fəlsəfə və texnologiya ilə harmonik şəkildə birləşdirir. O, milli irsi qorumaqla, onu qlobal incəsənət dilində ifadə edir və beynəlxalq miqyasda rezonans doğuran gücə çevirir. Sərgidə müəllifin tekstil sənətinə yanaşmasını zaman və mədəniyyət kontekstində dəyişiklikləri əks etdirən “Sosial anatomiya” (2016) və “Sən bir sirrsən” (2024) adlı videoçarxlar da təqdim edilir. 2007-ci ildən bəri ə",
+      "address": "Bakı ş., Mikayıl Useynov pr-ti, 28",
+      "detailedimage": "https://cdn.iticket.az/event/cover/ldTRUMbf5jOXiCGxGgCYGRLugXJOdllTAdD4PM3Q.jpg?v=1786967230",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Milli Xalça Muzeyi",
+      "totalSeats": 560,
+      "availableSeats": 400,
+      "tickets": [
+        {
+          "id": "55-1",
+          "label": "Ekonom",
+          "price": 3,
+          "available": 180
+        },
+        {
+          "id": "55-2",
+          "label": "Standart",
+          "price": 7,
+          "available": 140
+        },
+        {
+          "id": "55-3",
+          "label": "VIP",
+          "price": 10,
+          "available": 80
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet BU TƏDBİR ÜÇÜN ALINMIŞ BİLETLƏR GERİ QAYTARILA VƏ DƏYİŞDİRİLƏ BİLMƏZ."
+    }
+  ],
+  "shows": [
+    {
+      "id": "201",
+      "title": "Adamlar və siçanlar",
+      "date": "2026-08-24T12:00:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/XAdxncT0MZSTj9SfuIchDwdoCYzQr5gO.png?v=1781252769",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Bu monotamaşa böyük böhran dövrünün amansız dünyasında təkliyinə sığınan və dostu Lenni üçün həm ata, həm də qoruyucu mələk olan Corcun daxili çırpıntılarını işıqlandırır. Səhnədə yalnız bir adamın səsi deyil, həm də onun çiyinlərində daşıdığı ağır məsuliyyətin və bitməyən qorxunun əks-sədası eşidilir. Corc hər an fəlakətə sürüklənən tərəfdaşını qorumağa çalışarkən, əslində öz daxilindəki çarəsizlik və sevgi arasında amansız bir döyüş aparır. Parlaq gələcək və kiçik bir ferma xəyalı, Lenninin idarəolunmaz gücü qarşısında getdikcə əlçatmaz bir ilüziyaya çevrilir. Tamaşaçı Corcun dilindən səslənən son çarəsiz qərarın ağrısını və bir dostu xilas etmək üçün onun həyatına son qoymağın yaratdığı d",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/kA35aWN1VfCtJkJr1HhlHJiBNGzM0EyjbZvYSieo.jpg?v=1787055140",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 176,
+      "availableSeats": 126,
+      "tickets": [
+        {
+          "id": "201-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 57
+        },
+        {
+          "id": "201-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 44
+        },
+        {
+          "id": "201-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 25
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "202",
+      "title": "Paris notr dam kilsəsi: Esmeralda",
+      "date": "2026-08-24T13:15:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/AscHVmLoKTczEXlCHKObAUcAc7PrqKWB.png?v=1780738914",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Parisin gözəli olan qaraçı Esmeraldanın çox dəhşətli əzablı yolları var. Onun bu heyrətamiz gözəlliyi qarşısında, Quasimoda, Frollo və Fobius aciz qalırlar. Esmeraldanı məhəbbətini qazanmağa çalışarkən bu onların sonunu gətirir. Tamaşada Esmeraldanın həyatını onun öz dilindən eşidəcəksiniz. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/r5V3EJr8yKbrHOgeSTXqsR5FiWk8ELZpD11qb87V.jpg?v=1787055123",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 174,
+      "availableSeats": 124,
+      "tickets": [
+        {
+          "id": "202-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 56
+        },
+        {
+          "id": "202-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 43
+        },
+        {
+          "id": "202-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 25
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "203",
+      "title": "Martin Eden",
+      "date": "2026-08-24T14:15:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/f0wFWh7J9nd3uk9psOpjczoMuTcV4jWi.png?v=1783436215",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Yazıçı olmaq üçün mübarizə aparan gənc işçi Martin Eden haqqında bir teatr. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/o5yH0NuUEUBmABWeEPkQrLlUOV39tkHeGO1zJ3wv.jpg?v=1787055099",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 175,
+      "availableSeats": 125,
+      "tickets": [
+        {
+          "id": "203-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 56
+        },
+        {
+          "id": "203-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 44
+        },
+        {
+          "id": "203-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 25
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "204",
+      "title": "Ceyn Eyr",
+      "date": "2026-08-24T15:30:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/rLTWunrPX4R2mT48ry6LFJuzVKHFoPAD.png?v=1780736440",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Roman yetim qız Ceyn Eyrin çətin uşaqlıq illərindən başlayaraq yetkinliyə doğru inkişaf yolunu izləyir. O, sərt şəraitlərə baxmayaraq, ləyaqətini və mənəvi prinsiplərini qoruyur. Ceyn Tornfild malikanəsində cənab Roçesterə aşiq olur. Lakin sevgi yolunda ciddi sirlər və maneələr ortaya çıxır. Əsər qadının müstəqilliyi, daxili gücü və mənəvi seçimləri mövzusunu ön plana çəkir. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/xpiZlxFwexIwJbaYacAkICPjTc47lmW7NJDMuWTJ.jpg?v=1787055084",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 176,
+      "availableSeats": 126,
+      "tickets": [
+        {
+          "id": "204-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 57
+        },
+        {
+          "id": "204-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 44
+        },
+        {
+          "id": "204-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 25
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "205",
+      "title": "Qraf Monte Kristo",
+      "date": "2026-08-24T16:30:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/QzM5USGiZ3mIYJLtAeLozvvQ73flDwK2.png?v=1780739820",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Gənc dənizçi Edmond Dantesin xəyanətlə həbs olunmasından başlayaraq Qraf Monte Kristoya çevrilən yolunu, insanın ruhundakı qaranlıqla işığın mübarizəsini izləyəcəksiniz.Tamaşa tamaşaçını həm tarixi bir səfərə aparır, həm də azadlıq və ədalət uğrunda mübarizənin dərin mənasını düşündürür Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/hixoWRQc2sA3A4O09WH89r7f7bFjmAs76uNm9zFN.jpg?v=1787055066",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 174,
+      "availableSeats": 124,
+      "tickets": [
+        {
+          "id": "205-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 56
+        },
+        {
+          "id": "205-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 43
+        },
+        {
+          "id": "205-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 25
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "206",
+      "title": "“Şəngülüm, Şüngülüm, Məngülüm” marionet kukla teatr tamaşası",
+      "date": "2026-08-25T08:00:00.000Z",
+      "venue": "Azərbaycan Milli Xalça Muzeyi",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 5,
+      "image": "https://cdn.iticket.az/event/square_card/79U1nNPAMbdcNYpilv4aZMn3fX397PDK.png?v=1780735258",
+      "featured": false,
+      "ageLimit": "3-7",
+      "about": "“Şəngülüm, Şüngülüm, Məngülüm” marionet kukla teatr tamaşası Azərbaycan xalq nağılının motivləri əsasında səhnələşdirilib. Tamaşa Azərbaycan, ingilis və rus dillərində təqdim olunur. Tamaşadakı kuklalar, onların səsləndirilməsi muzeyin Uşaq şöbəsinin əməkdaşları tərəfindən hazırlanıb.",
+      "address": "Bakı ş., Mikayıl Useynov pr-ti, 28",
+      "detailedimage": "https://cdn.iticket.az/event/cover/bTCk5o0qFek1Hb1P02Ezpn9HUm5ZTgp1PHsZp586.jpg?v=1786947084",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Milli Xalça Muzeyi",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "206-1",
+          "label": "Standart",
+          "price": 5
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet",
+      "hasSeatMap": true
+    },
+    {
+      "id": "207",
+      "title": "“Uçan xalça” marionet kukla teatr tamaşası",
+      "date": "2026-08-25T10:00:00.000Z",
+      "venue": "Azərbaycan Milli Xalça Muzeyi",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 5,
+      "image": "https://cdn.iticket.az/event/square_card/e951RZi7KVlRh6ZIBPmz9dMuYR7FpDg5.png?v=1780735303",
+      "featured": false,
+      "ageLimit": "7-12",
+      "about": "“Şuşa ili” münasibətilə muzeyin Uşaq şöbəsi tərəfindən səhnələşdirilən “Uçan xalça” marionet tamaşası uşaqlar arasında Azərbaycan xalça sənətinin təbliği və onların milli-mədəni irsimizə sevgi ruhunda tərbiyəsi məqsədi daşıyır. Tamaşada Nabat nənə nəvəsi Ömərlə sehirli xalça dünyasına səyahət edərək, vətənimizin müxtəlif bölgələrinin xalça naxışları ilə tanış olur. “Uçan xalça” nağılı və onun əsasında hazırlanan ssenari, səhnə tərtibatı, həmçinin marionet kuklalar muzey əməkdaşları və muzeyin nəzdində fəaliyyət göstərən Uşaq Birliyinin üzvləri tərəfindən ərsəyə gətirilib.",
+      "address": "Bakı ş., Mikayıl Useynov pr-ti, 28",
+      "detailedimage": "https://cdn.iticket.az/event/cover/5BBH7BUblx7OQa3pE8r2rhywQfqspZXacDCbrSr4.jpg?v=1786947123",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Milli Xalça Muzeyi",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "207-1",
+          "label": "Standart",
+          "price": 5
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet",
+      "hasSeatMap": true
+    },
+    {
+      "id": "208",
+      "title": "1984 – Böyük Həbs",
+      "date": "2026-08-25T12:00:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/pvVOJlNdMn5E5mdGsWkfiR1NQU3m761J.png?v=1780735577",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "1949-cu ildə işıq üzü görən və tez bir zamanda kult statusu qazanan ingilis yazıçısı Corc Oruellin distopik 1984-cü il romanı bugünkü lüğətə \"Böyük Qardaş\", \"Düşüncə Polisi\", \"Otaq 101\", \"2+2=5\" kimi müxtəlif termin və anlayışları daxil edib. Gizli təşkilat olan müxalif qardaşlıq və onun lideri Qoldşteyn bu cəmiyyətin düşmənləri kimi görünür. Romanın baş qəhrəmanı Uinston müxtəlif hadisələrə qarışdığından, roman oxucuların beynində bəzi suallar buraxacaq: Böyük Qardaş və Qoldşteyn həqiqətən yaşayırmı? Bu distopik əsər teatr səhnəsində yenidən canlanır və Pray Teatrı vasitəsilə tamaşaçıları ilə görüşür. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/K5Ou0EROayviZgKzEbieQWhginmCvuGhPxaXvkn8.jpg?v=1787055038",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 116,
+      "availableSeats": 83,
+      "tickets": [
+        {
+          "id": "208-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 37
+        },
+        {
+          "id": "208-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 29
+        },
+        {
+          "id": "208-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 17
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "209",
+      "title": "“Məlikməmmədin nağılı” marionet kukla teatr tamaşası",
+      "date": "2026-08-25T12:00:00.000Z",
+      "venue": "Azərbaycan Milli Xalça Muzeyi",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 5,
+      "image": "https://cdn.iticket.az/event/square_card/7bAmuJp9GME7FmNrlIsd9k5wU4RjFlCB.png?v=1780735184",
+      "featured": false,
+      "ageLimit": "7-12",
+      "about": "“Məlikməmmədin nağılı” marionet kukla teatr tamaşası Azərbaycan xalq nağılının motivləri əsasında səhnələşdirilib. Tamaşadakı kuklalar, onların səsləndirilməsi muzeyin Uşaq şöbəsinin əməkdaşları tərəfindən hazırlanıb.",
+      "address": "Bakı ş., Mikayıl Useynov pr-ti, 28",
+      "detailedimage": "https://cdn.iticket.az/event/cover/URCGLXVYefCUFdsGYVeSyac5EcMxVyGZtqTVKjjF.jpg?v=1786947154",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Azərbaycan Milli Xalça Muzeyi",
+      "totalSeats": null,
+      "availableSeats": null,
+      "tickets": [
+        {
+          "id": "209-1",
+          "label": "Standart",
+          "price": 5
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet",
+      "hasSeatMap": true
+    },
+    {
+      "id": "210",
+      "title": "Şerlok Holmsun macəraları",
+      "date": "2026-08-25T13:15:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/p0wkS5QK5ImFVwwV9pdyZ2Qm5s03PvSw.png?v=1780740259",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "“Şerlok Holmsun macəraları” əsəri, məşhur detektiv Şerlok Holms və onun dostu Doktor Vatsonun cinayətləri çözmə hekayələrini izah edir. Holmsun dəqiq müşahidə qabiliyyəti, məntiqi və analitik bacarığı sayəsində ən mürəkkəb hadisələr belə aydın olur. Bu hekayələr macəra, gərginlik və ağıllı çözüm yollarını birləşdirir. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/vdsprAMeOKxRRjcL9OZdYBvABWK4T12Ga14HTVvK.jpg?v=1787055290",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 118,
+      "availableSeats": 84,
+      "tickets": [
+        {
+          "id": "210-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 38
+        },
+        {
+          "id": "210-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 29
+        },
+        {
+          "id": "210-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 17
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "211",
+      "title": "Paris Notr-Dama - Quasimodo",
+      "date": "2026-08-25T15:30:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/5TArqp06fIjNhJHl7KPQYxxDcmkefPPt.png?v=1780738971",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Mən zənglərin səsinə doğulmuşam, amma insanlar həmişə susmağıma baxırdılar. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/xrRBS4pOET5rQykSgUscMOLkkblU8acJz3MLZoxm.jpg?v=1787055253",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 118,
+      "availableSeats": 84,
+      "tickets": [
+        {
+          "id": "211-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 38
+        },
+        {
+          "id": "211-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 29
+        },
+        {
+          "id": "211-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 17
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "212",
+      "title": "Güstav Flober – “Madam Bovari”",
+      "date": "2026-08-25T16:30:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/RB7dY57VZL1dkyZr9dXhOFXQUJCUOP3d.png?v=1780737363",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Əsər Emma Bovari adlı gənc qadının romantik xəyallarla dolu daxili dünyasını və reallıqla toqquşmasını təsvir edir. O, adi həkim olan əri Şarl Bovari ilə sakit, lakin darıxdırıcı bir həyat yaşayır. Oxuduğu romantik romanların təsiri ilə Emma ehtiraslı sevgi və zəngin həyat arzulayır. Bu arzular onu yanlış münasibətlərə və borclara sürükləyir. Nəticədə, xəyallarla gerçək həyat arasındakı uçurum Emmanın faciəsi ilə bitir. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/yXg8GDCA35gfgBTdPVgr3Xcz0krjhlBqu0aXzTz0.jpg?v=1787055226",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 118,
+      "availableSeats": 84,
+      "tickets": [
+        {
+          "id": "212-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 38
+        },
+        {
+          "id": "212-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 29
+        },
+        {
+          "id": "212-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 17
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "213",
+      "title": "Bəyaz Gecələr",
+      "date": "2026-08-26T12:00:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/YaFqGX5v8Iv2KAXrahVRC7W58KiRgQE8.png?v=1780736222",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Tənha bir gəncin Sankt-Peterburqun bəyaz gecələrində keçirdiyi qısa, amma dərin bir sevgi və ümid hekayəsi. O, rastlaşdığı qadına qarşı duyduğu hissləri, xəyallarını və tənha həyatının boşluğunu açıq etiraf edir. Tamaşa sevgi, tək qalmaq və xatirələr üzərində qurulmuş psixoloji bir səyahətdir. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/j1svl6IzJEIo38LBNtZmyqjrKM55CID9yxDJZMv8.jpg?v=1787055208",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 118,
+      "availableSeats": 84,
+      "tickets": [
+        {
+          "id": "213-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 38
+        },
+        {
+          "id": "213-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 29
+        },
+        {
+          "id": "213-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 17
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "214",
+      "title": "Anna Karenina",
+      "date": "2026-08-26T13:15:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/KH4xaKtAbi1cPtnlNl5HNEZ0yNaNGtRZ.png?v=1780737569",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "Lev Tolstoy tərəfindən yazılmış və 125 fərqli müəllif tərəfindən tarixin ən yaxşı romanı seçilən Anna Karenina Pray Teatrı ilə səhnəyə gətirilir. Aktyor : Aidə Hüseynli Direktor : Muhammet Emre Aydın Ssenari müəllifi: Lev Tolstoy Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/LhY8gv2L2TiRNfmGzPIMXLVj6nhiSVZFLWGxLmRJ.jpg?v=1787055272",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 176,
+      "availableSeats": 126,
+      "tickets": [
+        {
+          "id": "214-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 57
+        },
+        {
+          "id": "214-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 44
+        },
+        {
+          "id": "214-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 25
+        }
+      ],
+      "hasSeatMap": true
+    },
+    {
+      "id": "215",
+      "title": "Cinayət və cəza",
+      "date": "2026-08-26T14:15:00.000Z",
+      "venue": "Pray Teatrı",
+      "city": "Bakı",
+      "category": "theatre",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/1NMUJHCuG0Z0yyNYaOAfjj5o0yzfN5rH.png?v=1780736624",
+      "featured": false,
+      "ageLimit": "16+",
+      "about": "“Ruhları yüksəldən ağrı ucuz xoşbəxtlikdən daha dəyərlidir.” - Dostoyevski Bir insan necə günahkar sayılır? Ədalət Dostoyevskidə bitsə, cinayət başlarmı? Raskolnikova “Əsl cinayət yoxdur” dedikdə, özü də buna inanırmı? Kasıb tələbə Raskolnikovun fikrincə, əgər qanunun boyunduruğu cəmiyyətə faydalı olarsa, onun boyunduruğunu atmaq hüququ var; Bu inam qanunların pozula biləcəyini normallaşdırır. Bunu nəzərə alaraq, Raskolnikov cəmiyyətə zərər vurduğunu düşündüyü sələmçi qadını öldürdükdən sonra “cinayət” və “cəza” anlayışları dərindən müzakirə olunmağa başlayır. Tədbirə gecikən şəxslərin zala daxil olmasına icazə verilməyəcək!",
+      "address": "Süleyman Rəhimov küçəsi 156, Bakı 1001",
+      "detailedimage": "https://cdn.iticket.az/event/cover/FGNRA4tzKCBY042Q9NTtkA1cdMn3nQ8bPWZZksPA.jpg?v=1787055190",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Pray Teatrı",
+      "totalSeats": 115,
+      "availableSeats": 82,
+      "tickets": [
+        {
+          "id": "215-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 37
+        },
+        {
+          "id": "215-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 29
+        },
+        {
+          "id": "215-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 16
+        }
+      ],
+      "hasSeatMap": true
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Said Muradkhan",
+      "email": "saidmuradkhan14@gmail.com",
+      "phone": "+994 50 123 45 67",
+      "avatar": "https://i.pravatar.cc/150?img=12"
+    },
+    {
+      "id": "2",
+      "name": "Aygün Məmmədova",
+      "email": "aygun.m@example.com",
+      "phone": "+994 55 987 65 43",
+      "avatar": "https://i.pravatar.cc/150?img=32"
+    },
+    {
+      "id": "3",
+      "name": "Elnur Qasımov",
+      "email": "elnur.q@example.com",
+      "phone": "+994 70 543 21 09",
+      "avatar": "https://i.pravatar.cc/150?img=11"
+    },
+    {
+      "id": "4",
+      "name": "Lalə Əliyeva",
+      "email": "lala.a@example.com",
+      "phone": "+994 77 321 45 87",
+      "avatar": "https://i.pravatar.cc/150?img=47"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "type": "order_pending",
+      "title": "#6626632 sifarişin ödənişi gözlənilir",
+      "message": "#6626632 sifarişin ödənişi gözlənilir.",
+      "createdAt": "2026-07-23T11:07:39.000Z",
+      "read": true
+    },
+    {
+      "id": "2",
+      "type": "order_confirmed",
+      "title": "#6621190 sifarişiniz təsdiqləndi",
+      "message": "Biletləriniz e-poçt ünvanınıza göndərildi.",
+      "createdAt": "2026-07-23T08:08:00.000Z",
+      "read": true
+    },
+    {
+      "id": "3",
+      "type": "system",
+      "title": "Xoş gəldiniz!",
+      "message": "iTicket.az-a qeydiyyatdan keçdiyiniz üçün təşəkkür edirik.",
+      "createdAt": "2026-07-21T11:08:00.000Z",
+      "read": true
+    },
+    {
+      "id": "4",
+      "type": "order_confirmed",
+      "title": "#6635510 sifarişiniz təsdiqləndi",
+      "message": "Biletləriniz uğurla balansınıza əlavə olundu.",
+      "createdAt": "2026-07-23T14:20:00.000Z",
+      "read": true
+    },
+    {
+      "id": "5",
+      "type": "campaign",
+      "title": "Yay Festivalı Endirimləri!",
+      "message": "Seçilmiş konsertlərə 20% endirim kodunuz: SUMMER26",
+      "createdAt": "2026-07-22T10:00:00.000Z",
+      "read": true
+    },
+    {
+      "id": "6",
+      "type": "system",
+      "title": "Profil yenilənməsi",
+      "message": "Təhlükəsizlik məqsədilə şifrənizi yeniləməyiniz tövsiyə olunur.",
+      "createdAt": "2026-07-20T16:45:00.000Z",
+      "read": true
+    }
+  ],
+  "orders": [
+    {
+      "id": "6626632",
+      "pin": "7783",
+      "userId": 1,
+      "items": [
+        {
+          "eventId": 11,
+          "eventTitle": "Seanema – The Notebook",
+          "eventDate": "23.07.26 20:00 - 22:00",
+          "venue": "Mambo Beach",
+          "ticketLabel": "Comfort · AS Standart",
+          "seatInfo": {
+            "row": 2,
+            "seatNumber": 4,
+            "sectionName": "Comfort",
+            "price": 15
+          },
+          "price": 15,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 15,
+      "status": "expired",
+      "createdAt": "2026-07-23T11:08:00.000Z",
+      "expiresAt": "2026-07-23T11:23:00.000Z"
+    },
+    {
+      "id": "6621190",
+      "pin": "4210",
+      "userId": 1,
+      "items": [
+        {
+          "eventId": 2,
+          "eventTitle": "Telman Budaqovun Retro Konserti",
+          "eventDate": "31.05.26 19:00",
+          "venue": "Flora Çay Garden",
+          "ticketLabel": "VIP (Divan)",
+          "seatInfo": {
+            "row": 2,
+            "seatNumber": 1,
+            "sectionName": "VIP",
+            "price": 25
+          },
+          "price": 25,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 50,
+      "status": "confirmed",
+      "paymentMethod": "online",
+      "createdAt": "2026-07-20T09:12:00.000Z"
+    },
+    {
+      "pin": "8310",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "2",
+          "eventTitle": "Telman Budaqovun Retro Konserti",
+          "eventDate": "2026-05-31T00:00:00.000Z",
+          "venue": "Flora Çay Garden",
+          "ticketLabel": "Fan Zone (Sıra 3, Yer 7)",
+          "seatInfo": {
+            "row": 3,
+            "seatNumber": 7,
+            "sectionName": "Fan Zone",
+            "price": 8
+          },
+          "price": 8,
+          "quantity": 1
+        },
+        {
+          "eventId": "2",
+          "eventTitle": "Telman Budaqovun Retro Konserti",
+          "eventDate": "2026-05-31T00:00:00.000Z",
+          "venue": "Flora Çay Garden",
+          "ticketLabel": "Standart (Sıra 2, Yer 9)",
+          "seatInfo": {
+            "row": 2,
+            "seatNumber": 9,
+            "sectionName": "Standart",
+            "price": 15
+          },
+          "price": 15,
+          "quantity": 1
+        },
+        {
+          "eventId": "2",
+          "eventTitle": "Telman Budaqovun Retro Konserti",
+          "eventDate": "2026-05-31T00:00:00.000Z",
+          "venue": "Flora Çay Garden",
+          "ticketLabel": "VIP (Sıra 2, Yer 6)",
+          "seatInfo": {
+            "row": 2,
+            "seatNumber": 6,
+            "sectionName": "VIP",
+            "price": 25
+          },
+          "price": 25,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 48,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T12:19:45.204Z",
+      "expiresAt": "2026-07-23T12:34:45.204Z",
+      "id": "RonTnEaNNfU"
+    },
+    {
+      "pin": "5691",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "3",
+          "eventTitle": "Musiqiləri Gecəsi | Şamlar Əhatəsində",
+          "eventDate": "2026-06-01T00:00:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "VIP",
+          "seatInfo": null,
+          "price": 25,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 25,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T12:23:24.770Z",
+      "expiresAt": "2026-07-23T12:38:24.770Z",
+      "id": "kluj60UzK-c"
+    },
+    {
+      "pin": "9344",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "4",
+          "eventTitle": "“Vaqif Mustafazadə” əsərləri",
+          "eventDate": "2026-06-15T00:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "Standart",
+          "seatInfo": null,
+          "price": 45,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 45,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T12:24:09.419Z",
+      "expiresAt": "2026-07-23T12:39:09.419Z",
+      "id": "SlUyO8wQSls"
+    },
+    {
+      "pin": "9680",
+      "userId": 1784809571537,
+      "items": [
+        {
+          "eventId": "3",
+          "eventTitle": "Musiqiləri Gecəsi | Şamlar Əhatəsində",
+          "eventDate": "2026-06-01T00:00:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "VIP",
+          "seatInfo": null,
+          "price": 25,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 25,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T12:30:44.381Z",
+      "expiresAt": "2026-07-23T12:45:44.381Z",
+      "id": "H6fOm61EwWg"
+    },
+    {
+      "id": "6635510",
+      "pin": "1294",
+      "userId": 3,
+      "items": [
+        {
+          "eventId": 12,
+          "eventTitle": "Emin Agalarov – Live in Baku",
+          "eventDate": "15.08.26 20:00",
+          "venue": "Sea Breeze Resort",
+          "ticketLabel": "Fan Zone",
+          "seatInfo": null,
+          "price": 40,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 80,
+      "status": "confirmed",
+      "paymentMethod": "online",
+      "createdAt": "2026-07-23T14:15:00.000Z"
+    },
+    {
+      "id": "6640021",
+      "pin": "3045",
+      "userId": 4,
+      "items": [
+        {
+          "eventId": 14,
+          "eventTitle": "Jony – Böyük Solo Konsert",
+          "eventDate": "20.09.26 21:00",
+          "venue": "Bakı Kristal Zalı",
+          "ticketLabel": "VIP Box",
+          "seatInfo": {
+            "row": 5,
+            "seatNumber": 12,
+            "sectionName": "VIP Box",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 200,
+      "status": "confirmed",
+      "paymentMethod": "online",
+      "createdAt": "2026-07-23T15:30:00.000Z"
+    },
+    {
+      "pin": "4851",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "15",
+          "eventTitle": "Coldplay Tribute Symphony",
+          "eventDate": "2026-10-02T19:30:00.000Z",
+          "venue": "Azərbaycan Dövlət Filarmoniyası",
+          "ticketLabel": "Standart",
+          "seatInfo": null,
+          "price": 20,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 40,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T16:00:00.000Z",
+      "expiresAt": "2026-07-23T16:15:00.000Z",
+      "id": "AbK70mUxL-z"
+    },
+    {
+      "pin": "7749",
+      "userId": 3,
+      "items": [
+        {
+          "eventId": "117",
+          "eventTitle": "Şelkunçik Baleti",
+          "eventDate": "2026-12-25T19:00:00.000Z",
+          "venue": "Opera və Balet Teatrı",
+          "ticketLabel": "III Zone",
+          "seatInfo": {
+            "row": 12,
+            "seatNumber": 5,
+            "sectionName": "III Zone",
+            "price": 40
+          },
+          "price": 40,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 40,
+      "status": "pending_payment",
+      "createdAt": "2026-07-23T16:40:00.000Z",
+      "expiresAt": "2026-07-23T16:55:00.000Z",
+      "id": "XyZ10oOpM-n"
+    },
+    {
+      "pin": "1192",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "16",
+          "eventTitle": "Uşaqlar üçün Elm Festivalı",
+          "eventDate": "2026-10-10T11:00:00.000Z",
+          "venue": "Bakı İdman Sarayı",
+          "ticketLabel": "Uşaq Bileti",
+          "seatInfo": null,
+          "price": 12,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 12,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T17:00:00.000Z",
+      "expiresAt": "2026-07-23T17:15:00.000Z",
+      "id": "KjU88oPqSls"
+    },
+    {
+      "pin": "2245",
+      "userId": 4,
+      "items": [
+        {
+          "eventId": "20",
+          "eventTitle": "Stand Up Baku – Yeni Mövsüm",
+          "eventDate": "2026-11-15T20:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "VIP",
+          "seatInfo": null,
+          "price": 30,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 60,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T17:10:00.000Z",
+      "expiresAt": "2026-07-23T17:25:00.000Z",
+      "id": "SuP20wQsMnB"
+    },
+    {
+      "pin": "2377",
+      "userId": 1784809571537,
+      "items": [
+        {
+          "eventId": "20",
+          "eventTitle": "Stand Up Baku – Yeni Mövsüm",
+          "eventDate": "2026-11-15T20:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "Standart",
+          "seatInfo": null,
+          "price": 15,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 30,
+      "status": "confirmed",
+      "createdAt": "2026-07-23T13:27:08.524Z",
+      "expiresAt": "2026-07-23T13:42:08.524Z",
+      "id": "hq2DiMVDTk0"
+    },
+    {
+      "pin": "6656",
+      "userId": null,
+      "items": [
+        {
+          "eventId": "101",
+          "eventTitle": "Hamlet",
+          "eventDate": "2026-06-02T00:00:00.000Z",
+          "venue": "Pray Teatrı",
+          "ticketLabel": "I Zone (Sıra 8, Yer 9)",
+          "seatInfo": {
+            "row": 8,
+            "seatNumber": 9,
+            "sectionName": "I Zone",
+            "price": 10
+          },
+          "price": 10,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 10,
+      "status": "confirmed",
+      "createdAt": "2026-08-18T13:09:52.095Z",
+      "expiresAt": "2026-08-18T13:24:52.095Z",
+      "id": "bMv1Eni__eE"
+    },
+    {
+      "pin": "1442",
+      "userId": 1787058812882,
+      "items": [
+        {
+          "eventId": "11",
+          "eventTitle": "Seanema – The Notebook",
+          "eventDate": "2026-07-23T20:00:00.000Z",
+          "venue": "Mambo Beach",
+          "ticketLabel": "AS Standart (Sıra 3, Yer 6)",
+          "seatInfo": {
+            "row": 3,
+            "seatNumber": 6,
+            "sectionName": "AS Standart",
+            "price": 10
+          },
+          "price": 10,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 10,
+      "status": "confirmed",
+      "createdAt": "2026-08-23T16:19:35.870Z",
+      "expiresAt": "2026-08-23T16:34:35.871Z",
+      "id": "zrSxYSnsy3o",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "e7265b20-9e9b-4468-a000-d4c4b757d892",
+        "transactionId": 8952234,
+        "paymentUrl": "https://pay.payriff.com/r/e7265b20-9e9b-4468-a000-d4c4b757d892?type=direct",
+        "startedAt": "2026-08-23T16:19:38.615Z",
+        "paymentStatus": "APPROVED",
+        "amount": 10,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-23T16:20:31.617Z"
+      },
+      "paymentMethod": "online"
+    },
+    {
+      "pin": "9206",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "2",
+          "eventTitle": "Jazz Axşamı - Şamların Əhatəsində Açıq Hava Konserti",
+          "eventDate": "2026-08-26T15:15:00.000Z",
+          "venue": "Kapellhaus Yay Bağı",
+          "ticketLabel": "Ekonom (Sıra 6, Yer 7)",
+          "seatInfo": {
+            "eventId": "2",
+            "seatKey": "2-1-r6-s7",
+            "row": 6,
+            "seatNumber": 7,
+            "sectionName": "Ekonom",
+            "price": 20
+          },
+          "price": 20,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 20,
+      "status": "refunded",
+      "createdAt": "2026-08-25T08:58:06.612Z",
+      "expiresAt": "2026-08-25T09:13:06.612Z",
+      "id": "YjE7rt9M7Z8",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "78e00bbd-28e4-4999-a947-94d9ee7acf08",
+        "transactionId": 8979548,
+        "paymentUrl": "https://pay.payriff.com/r/78e00bbd-28e4-4999-a947-94d9ee7acf08?type=direct",
+        "startedAt": "2026-08-25T08:58:12.999Z",
+        "paymentStatus": "REFUNDED",
+        "amount": 20,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-25T09:01:44.378Z",
+        "refundedAt": "2026-08-26T14:19:33.698Z"
+      },
+      "paymentMethod": "online"
+    },
+    {
+      "pin": "8593",
+      "userId": 1787648551572,
+      "items": [
+        {
+          "eventId": "6",
+          "eventTitle": "İradə İbrahimova",
+          "eventDate": "2026-08-28T17:00:00.000Z",
+          "venue": "Sea Breeze Marina Yacht Club",
+          "ticketLabel": "VIP (Sıra 6, Yer 4)",
+          "seatInfo": {
+            "eventId": "6",
+            "seatKey": "6-3-r6-s4",
+            "row": 6,
+            "seatNumber": 4,
+            "sectionName": "VIP",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "eventId": "6",
+          "eventTitle": "İradə İbrahimova",
+          "eventDate": "2026-08-28T17:00:00.000Z",
+          "venue": "Sea Breeze Marina Yacht Club",
+          "ticketLabel": "VIP (Sıra 8, Yer 7)",
+          "seatInfo": {
+            "eventId": "6",
+            "seatKey": "6-3-r8-s7",
+            "row": 8,
+            "seatNumber": 7,
+            "sectionName": "VIP",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "eventId": "6",
+          "eventTitle": "İradə İbrahimova",
+          "eventDate": "2026-08-28T17:00:00.000Z",
+          "venue": "Sea Breeze Marina Yacht Club",
+          "ticketLabel": "VIP (Sıra 6, Yer 8)",
+          "seatInfo": {
+            "eventId": "6",
+            "seatKey": "6-3-r6-s8",
+            "row": 6,
+            "seatNumber": 8,
+            "sectionName": "VIP",
+            "price": 200
+          },
+          "price": 200,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 600,
+      "status": "confirmed",
+      "createdAt": "2026-08-25T09:26:50.570Z",
+      "expiresAt": "2026-08-25T09:41:50.570Z",
+      "id": "am6z1lfuyvE",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "c627b89a-80ed-4843-af6e-6217f2134508",
+        "transactionId": 8980108,
+        "paymentUrl": "https://pay.payriff.com/r/c627b89a-80ed-4843-af6e-6217f2134508?type=direct",
+        "startedAt": "2026-08-25T09:26:58.239Z",
+        "paymentStatus": "APPROVED",
+        "amount": 600,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-25T10:46:15.619Z"
+      },
+      "paymentMethod": "online"
+    },
+    {
+      "pin": "1477",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "4",
+          "eventTitle": "Şamlar Əhatəsində Retro Axşamı",
+          "eventDate": "2026-08-27T15:15:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "Ekonom (Sıra 1, Yer 1)",
+          "seatInfo": {
+            "eventId": "4",
+            "seatKey": "4-1-r1-s1",
+            "row": 1,
+            "seatNumber": 1,
+            "sectionName": "Ekonom",
+            "price": 20
+          },
+          "price": 20,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 20,
+      "status": "confirmed",
+      "createdAt": "2026-08-26T06:49:27.061Z",
+      "expiresAt": "2026-08-26T07:04:27.062Z",
+      "id": "rwy0mwNfbyk",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "19d0f780-44fa-4401-ac36-a42d0adf737c",
+        "transactionId": 8994193,
+        "paymentUrl": "https://pay.payriff.com/r/19d0f780-44fa-4401-ac36-a42d0adf737c?type=direct",
+        "startedAt": "2026-08-26T06:49:31.282Z",
+        "paymentStatus": "APPROVED",
+        "amount": 20,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-26T06:50:04.300Z"
+      },
+      "paymentMethod": "online"
+    },
+    {
+      "pin": "6116",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "3",
+          "eventTitle": "Bəstəkar və Xalq Mahnıları",
+          "eventDate": "2026-08-26T16:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "Standart (Sıra 1, Yer 8)",
+          "seatInfo": {
+            "eventId": "3",
+            "seatKey": "3-2-r1-s8",
+            "row": 1,
+            "seatNumber": 8,
+            "sectionName": "Standart",
+            "price": 25
+          },
+          "price": 25,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 25,
+      "status": "expired",
+      "createdAt": "2026-08-26T07:13:17.766Z",
+      "expiresAt": "2026-08-26T07:28:17.767Z",
+      "id": "e10VXhYQreI"
+    },
+    {
+      "pin": "8839",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "3",
+          "eventTitle": "Bəstəkar və Xalq Mahnıları",
+          "eventDate": "2026-08-26T16:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "Standart (Sıra 1, Yer 8)",
+          "seatInfo": {
+            "eventId": "3",
+            "seatKey": "3-2-r1-s8",
+            "row": 1,
+            "seatNumber": 8,
+            "sectionName": "Standart",
+            "price": 25
+          },
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "eventId": "9",
+          "eventTitle": "ILISOUND",
+          "eventDate": "2026-08-29T10:00:00.000Z",
+          "venue": "Uludağ Turizm və İstirahət Mərkəzi",
+          "ticketLabel": "Standart (Sıra 3, Yer 10)",
+          "seatInfo": {
+            "eventId": "9",
+            "seatKey": "9-1-r3-s10",
+            "row": 3,
+            "seatNumber": 10,
+            "sectionName": "Standart",
+            "price": 30
+          },
+          "price": 30,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 55,
+      "status": "pending_payment",
+      "createdAt": "2026-08-26T08:15:35.848Z",
+      "expiresAt": "2026-08-26T08:30:35.848Z",
+      "id": "cFyTfAe6aUA"
+    },
+    {
+      "pin": "6455",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "3",
+          "eventTitle": "Bəstəkar və Xalq Mahnıları",
+          "eventDate": "2026-08-26T16:00:00.000Z",
+          "venue": "Show Gallery",
+          "ticketLabel": "VIP (Sıra 1, Yer 10)",
+          "seatInfo": {
+            "eventId": "3",
+            "seatKey": "3-3-r1-s10",
+            "row": 1,
+            "seatNumber": 10,
+            "sectionName": "VIP",
+            "price": 35
+          },
+          "price": 35,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 35,
+      "status": "confirmed",
+      "createdAt": "2026-08-26T08:31:50.522Z",
+      "expiresAt": "2026-08-26T08:46:50.522Z",
+      "id": "LzRrPCnvrjM",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "0e33857f-a7fb-45ca-a3ef-d8cac51300d6",
+        "transactionId": 8996253,
+        "paymentUrl": "https://pay.payriff.com/r/0e33857f-a7fb-45ca-a3ef-d8cac51300d6?type=direct",
+        "startedAt": "2026-08-26T08:31:59.013Z",
+        "paymentStatus": "APPROVED",
+        "amount": 35,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-26T08:33:57.637Z"
+      },
+      "paymentMethod": "online"
+    },
+    {
+      "pin": "1484",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "4",
+          "eventTitle": "Şamlar Əhatəsində Retro Axşamı",
+          "eventDate": "2026-08-27T15:15:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "Ekonom (Sıra 9, Yer 7)",
+          "seatInfo": {
+            "eventId": "4",
+            "seatKey": "4-1-r9-s7",
+            "row": 9,
+            "seatNumber": 7,
+            "sectionName": "Ekonom",
+            "price": 20
+          },
+          "price": 20,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 20,
+      "status": "refunded",
+      "createdAt": "2026-08-26T08:37:01.404Z",
+      "expiresAt": "2026-08-26T08:52:01.404Z",
+      "id": "kjhZjpnFTzk",
+      "paymentMethod": "wallet",
+      "refundedAt": "2026-08-26T14:37:38.972Z"
+    },
+    {
+      "pin": "9532",
+      "userId": "1",
+      "items": [
+        {
+          "eventId": "4",
+          "eventTitle": "Şamlar Əhatəsində Retro Axşamı",
+          "eventDate": "2026-08-27T15:15:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "Ekonom (Sıra 1, Yer 1)",
+          "seatInfo": {
+            "eventId": "4",
+            "seatKey": "4-1-r1-s1",
+            "row": 1,
+            "seatNumber": 1,
+            "sectionName": "Ekonom",
+            "price": 20
+          },
+          "price": 20,
+          "quantity": 1
+        },
+        {
+          "eventId": "4",
+          "eventTitle": "Şamlar Əhatəsində Retro Axşamı",
+          "eventDate": "2026-08-27T15:15:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "Standart (Sıra 9, Yer 10)",
+          "seatInfo": {
+            "eventId": "4",
+            "seatKey": "4-2-r9-s10",
+            "row": 9,
+            "seatNumber": 10,
+            "sectionName": "Standart",
+            "price": 35
+          },
+          "price": 35,
+          "quantity": 1
+        },
+        {
+          "eventId": "4",
+          "eventTitle": "Şamlar Əhatəsində Retro Axşamı",
+          "eventDate": "2026-08-27T15:15:00.000Z",
+          "venue": "Kapellhaus",
+          "ticketLabel": "VIP (Sıra 5, Yer 1)",
+          "seatInfo": {
+            "eventId": "4",
+            "seatKey": "4-3-r5-s1",
+            "row": 5,
+            "seatNumber": 1,
+            "sectionName": "VIP",
+            "price": 50
+          },
+          "price": 50,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 105,
+      "status": "confirmed",
+      "createdAt": "2026-08-26T12:03:30.498Z",
+      "expiresAt": "2026-08-26T12:18:30.498Z",
+      "id": "-6wfxcim674",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "7f7bf220-4f09-4f93-997b-fffb07e3e408",
+        "transactionId": 9000067,
+        "paymentUrl": "https://pay.payriff.com/r/7f7bf220-4f09-4f93-997b-fffb07e3e408?type=direct",
+        "startedAt": "2026-08-26T12:03:47.830Z",
+        "paymentStatus": "APPROVED",
+        "amount": 105,
+        "currency": "AZN",
+        "verifiedAt": "2026-08-26T12:04:21.661Z"
+      },
+      "paymentMethod": "online"
+    }
+  ],
+  "topups": [
+    {
+      "ref": "tu-5a1228c6-d38f-4045-ad36-4aa61181fe55",
+      "userId": 1,
+      "amount": 5,
+      "status": "confirmed",
+      "createdAt": "2026-08-23T17:30:47.545Z",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "65f1ed90-ccc5-4b1e-b62e-2dfe5ace9dbd",
+        "transactionId": 8952923,
+        "paymentUrl": "https://pay.payriff.com/r/65f1ed90-ccc5-4b1e-b62e-2dfe5ace9dbd?type=direct",
+        "startedAt": "2026-08-23T17:30:47.545Z",
+        "paymentStatus": "APPROVED",
+        "verifiedAt": "2026-08-23T17:32:10.328Z"
+      },
+      "id": "5Zhjz-XeaAs"
+    },
+    {
+      "ref": "tu-ade6b5f8-49a4-4397-833b-b6a3f706a18f",
+      "userId": 1,
+      "amount": 100,
+      "status": "confirmed",
+      "createdAt": "2026-08-26T08:36:10.728Z",
+      "payment": {
+        "provider": "payriff",
+        "payriffOrderId": "d8273e3b-b05e-478a-b971-5d5468b23b19",
+        "transactionId": 8996353,
+        "paymentUrl": "https://pay.payriff.com/r/d8273e3b-b05e-478a-b971-5d5468b23b19?type=direct",
+        "startedAt": "2026-08-26T08:36:10.728Z",
+        "paymentStatus": "APPROVED",
+        "verifiedAt": "2026-08-26T08:36:38.367Z"
+      },
+      "id": "OBvl2XDBR2k"
+    }
+  ],
+  "walletTransactions": [
+    {
+      "userId": 1,
+      "ref": "tu-5a1228c6-d38f-4045-ad36-4aa61181fe55",
+      "type": "topup",
+      "amount": 5,
+      "createdAt": "2026-08-23T17:32:10.309Z",
+      "id": "pCK7cv5rY4A"
+    },
+    {
+      "userId": 1,
+      "ref": "tu-ade6b5f8-49a4-4397-833b-b6a3f706a18f",
+      "type": "topup",
+      "amount": 100,
+      "createdAt": "2026-08-26T08:36:38.353Z",
+      "id": "D0Eyb3x2T0w"
+    },
+    {
+      "userId": 1,
+      "ref": "order-kjhZjpnFTzk",
+      "orderId": "kjhZjpnFTzk",
+      "type": "purchase",
+      "amount": -20,
+      "createdAt": "2026-08-26T08:37:06.002Z",
+      "id": "ilK5Al7sSVw"
+    },
+    {
+      "userId": 1,
+      "ref": "order-iPJsksNe6Mg",
+      "orderId": null,
+      "type": "purchase",
+      "amount": -25,
+      "createdAt": "2026-08-26T08:46:50.983Z",
+      "id": "1Js2tFNwPXs"
+    },
+    {
+      "userId": 1,
+      "ref": "refund-order-kjhZjpnFTzk-1",
+      "orderId": "kjhZjpnFTzk",
+      "type": "refund",
+      "amount": 20,
+      "createdAt": "2026-08-26T14:37:38.953Z",
+      "id": "P2wsGp5PDCA"
+    }
+  ],
+  "seatHolds": [
+    {
+      "eventId": "2",
+      "seatKey": "2-1-r6-s7",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "YjE7rt9M7Z8",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T09:01:44.409Z",
+      "id": "fO41yFx_FqM"
+    },
+    {
+      "eventId": "6",
+      "seatKey": "6-3-r6-s4",
+      "userId": 1787648551572,
+      "status": "sold",
+      "orderId": "am6z1lfuyvE",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T10:46:15.655Z",
+      "id": "byntOkmWQtw"
+    },
+    {
+      "eventId": "6",
+      "seatKey": "6-3-r8-s7",
+      "userId": 1787648551572,
+      "status": "sold",
+      "orderId": "am6z1lfuyvE",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T10:46:15.680Z",
+      "id": "V1QJiwEmMWI"
+    },
+    {
+      "eventId": "6",
+      "seatKey": "6-3-r6-s8",
+      "userId": 1787648551572,
+      "status": "sold",
+      "orderId": "am6z1lfuyvE",
+      "expiresAt": null,
+      "createdAt": "2026-08-25T10:46:15.703Z",
+      "id": "H9UKmK6s6-g"
+    },
+    {
+      "eventId": "3",
+      "seatKey": "3-3-r1-s10",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "LzRrPCnvrjM",
+      "expiresAt": null,
+      "createdAt": "2026-08-26T08:33:57.684Z",
+      "id": "7E0nh31RwRY"
+    },
+    {
+      "eventId": "1",
+      "seatKey": "x",
+      "userId": 1,
+      "status": "sold",
+      "orderId": null,
+      "expiresAt": null,
+      "createdAt": "2026-08-26T08:35:28.555Z",
+      "id": "sdvbSoEb3vA"
+    },
+    {
+      "eventId": "4",
+      "seatKey": "4-1-r9-s7",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "kjhZjpnFTzk",
+      "expiresAt": null,
+      "createdAt": "2026-08-26T08:37:06.168Z",
+      "id": "Fni-MMXgR4s"
+    },
+    {
+      "eventId": "4",
+      "seatKey": "4-1-r1-s1",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "-6wfxcim674",
+      "expiresAt": null,
+      "createdAt": "2026-08-26T12:04:21.806Z",
+      "id": "GTk8mT458ts"
+    },
+    {
+      "eventId": "4",
+      "seatKey": "4-2-r9-s10",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "-6wfxcim674",
+      "expiresAt": null,
+      "createdAt": "2026-08-26T12:04:21.852Z",
+      "id": "dPpSmaDYNq0"
+    },
+    {
+      "eventId": "4",
+      "seatKey": "4-3-r5-s1",
+      "userId": "1",
+      "status": "sold",
+      "orderId": "-6wfxcim674",
+      "expiresAt": null,
+      "createdAt": "2026-08-26T12:04:22.005Z",
+      "id": "IYYYAnBYot0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

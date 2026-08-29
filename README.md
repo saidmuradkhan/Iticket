@@ -30,7 +30,7 @@ Kart ödənişləri [Payriff](https://docs.payriff.com) v3 API üzərindən apar
 PAYRIFF_SECRET_KEY=sizin_secret_key
 ```
 
-> Secret key yalnız `server/` qovluğunda oxunur və `VITE_` prefiksi olmadığı üçün
+> Secret key yalnız `backend/` qovluğunda oxunur və `VITE_` prefiksi olmadığı üçün
 > frontend bundle-a düşmür. Onu heç vaxt React kodunda istifadə etməyin.
 
 ### İşə salmaq (3 terminal)
@@ -51,7 +51,7 @@ npm run dev       # frontend     → :5173
 6. `PaymentResult` → `GET /api/payment/verify/:orderId`. Server statusu **Payriff API-dən**
    soruşur (brauzerdən gələn parametrlərə güvənmir) və sifarişi yeniləyir.
 
-### API endpoint-ləri (`server/index.js`)
+### API endpoint-ləri (`backend/index.js`)
 
 | Metod | Yol | Təyinat |
 | --- | --- | --- |

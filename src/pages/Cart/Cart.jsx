@@ -5,6 +5,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { createOrder } from "../../api/api";
 import { useCountdown } from "../../hooks/useCountdown";
 import { useLanguage } from "../../hooks/useLanguage";
+import { isEventPast } from "../../utils/dateHelpers";
 
 const pad = (n) => String(n).padStart(2, "0");
 
@@ -43,8 +44,10 @@ const Cart = () => {
     setPromoMsg(t("cart.promoNotFound"));
   };
 
+  const hasPastItem = cartItems.some((item) => isEventPast(item.eventDate));
+
   const handleCreateOrder = async () => {
-    if (!agreed || creating) return;
+    if (!agreed || creating || hasPastItem) return;
     setCreating(true);
     const order = {
       pin: String(Math.floor(1000 + Math.random() * 9000)),
@@ -128,6 +131,11 @@ const Cart = () => {
                       {item.venue && ` · ${item.venue}`}
                     </p>
                     <p className="checkout-ticket-seat">{item.ticketLabel}</p>
+                    {isEventPast(item.eventDate) && (
+                      <span className="ticket-past-badge">
+                        <i className="fas fa-calendar-times" /> {t("cart.pastEvent")}
+                      </span>
+                    )}
                   </div>
                   <div className="checkout-ticket-side">
                     {!item.seatInfo && (
@@ -212,10 +220,16 @@ const Cart = () => {
             </span>
           </label>
 
+          {hasPastItem && (
+            <p className="cart-past-warning">
+              <i className="fas fa-exclamation-circle" /> {t("cart.pastItemWarning")}
+            </p>
+          )}
+
           <button
             type="button"
             className="buy-btn checkout-submit"
-            disabled={!agreed || creating}
+            disabled={!agreed || creating || hasPastItem}
             onClick={handleCreateOrder}
           >
             {creating ? t("cart.creating") : t("cart.createOrder")}

@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { useLanguage } from "../../hooks/useLanguage";
 import { getEventOrShowById } from "../../api/api";
 import { useEvents } from "../../hooks/useEvents";
-import { formatEventDate } from "../../utils/dateHelpers";
+import { formatEventDate, isEventPast } from "../../utils/dateHelpers";
 import { FavoritesContext } from "../../context/FavoritesContext";
 import Loader from "../../components/Loader/Loader";
 import SeatBooking from "../../components/SeatMap/SeatBooking";
@@ -41,6 +41,8 @@ const EventDetail = () => {
   }
 
   const isSoldOut = event.status === "soldout";
+  const isPast = isEventPast(event.date);
+  const salesClosed = isSoldOut || isPast;
   const favorite = isFavorite(event.id);
 
   const heroImgError = String(heroErrorId) === String(event.id);
@@ -113,15 +115,22 @@ const EventDetail = () => {
                 </span>
               )}
               {isSoldOut && <span className="hero-tag soldout">{t("eventDetail.soldOut")}</span>}
+              {!isSoldOut && isPast && (
+                <span className="hero-tag soldout">{t("eventDetail.salesClosed")}</span>
+              )}
             </div>
 
             <button
               type="button"
               className="buy-btn hero-buy-btn"
               onClick={handleBuyClick}
-              disabled={isSoldOut}
+              disabled={salesClosed}
             >
-              {isSoldOut ? t("eventDetail.soldOut") : t("eventDetail.buyTicket")}
+              {isSoldOut
+                ? t("eventDetail.soldOut")
+                : isPast
+                ? t("eventDetail.salesClosed")
+                : t("eventDetail.buyTicket")}
             </button>
           </div>
 
@@ -154,11 +163,19 @@ const EventDetail = () => {
         </div>
       </section>
 
-      {!isSoldOut && (
+      {isPast ? (
         <section className="event-seat-section" id="seat-booking-section">
-          <h2>{t("eventDetail.seatSelection")}</h2>
-          <SeatBooking event={event} />
+          <p className="sales-closed-note">
+            <i className="fas fa-calendar-times" /> {t("eventDetail.eventEnded")}
+          </p>
         </section>
+      ) : (
+        !isSoldOut && (
+          <section className="event-seat-section" id="seat-booking-section">
+            <h2>{t("eventDetail.seatSelection")}</h2>
+            <SeatBooking event={event} />
+          </section>
+        )
       )}
 
       <section className="event-lower">
@@ -240,7 +257,7 @@ const EventDetail = () => {
         </section>
       )}
 
-      {!isSoldOut && (
+      {!salesClosed && (
         <button type="button" className="floating-buy-btn" onClick={handleBuyClick}>
           {t("eventDetail.buyTicket")}
         </button>

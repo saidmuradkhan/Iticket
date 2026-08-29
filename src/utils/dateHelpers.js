@@ -30,3 +30,8 @@ export const formatEventDate = (isoString, lang = getLang()) => {
   const d = new Date(isoString);
   return `${d.getDate()} ${getMonthNames(lang)[d.getMonth()]}`;
 };
+
+export const isEventPast = (isoString) => {
+  const time = new Date(isoString).getTime();
+  return !Number.isNaN(time) && time < Date.now();
+};
