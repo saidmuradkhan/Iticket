@@ -3996,15 +3996,6 @@
       "eventId": "50",
       "seatKey": "50-2-r10-s6",
       "userId": 1788070021591,
-      "status": "held",
-      "expiresAt": "2026-08-30T06:37:06.384Z",
-      "createdAt": "2026-08-30T06:22:06.384Z",
-      "id": "ZJY-58gcIRo"
-    },
-    {
-      "eventId": "50",
-      "seatKey": "50-2-r10-s6",
-      "userId": 1788070021591,
       "status": "sold",
       "orderId": "jSogctYOnH4",
       "expiresAt": null,
