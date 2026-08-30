@@ -1955,6 +1955,392 @@
         }
       ],
       "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet BU TƏDBİR ÜÇÜN ALINMIŞ BİLETLƏR GERİ QAYTARILA VƏ DƏYİŞDİRİLƏ BİLMƏZ."
+    },
+    {
+      "id": "56",
+      "title": "Azərbaycan cazı",
+      "date": "2026-09-01T16:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/Ht4uT9hoDV3Skf6SgqUc1wlAWb2W5AbH.png?v=1787662491",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Azərbaycan cazı Azərbaycan musiqisinin sevilən melodiyaları cazın improvizasiya və müasir səslənməsi ilə yeni nəfəs qazanır. “Azərbaycan cazı ” konsertində milli musiqi irsimizin tanınmış əsərləri xüsusi caz aranjımanında təqdim olunacaq. Zərif piano, ritmik bass və dinamik zərb alətlərinin vəhdəti Azərbaycan melodiyalarına fərqli və müasir bir rəng qatacaq. İfaçılar: 🎹 Piano — Leyla Noir 🎸 Bass gitara — Pərviz Məmmədov 🥁 Drums — Azər Şabanov Azərbaycan melodiyalarının caz ruhunda səslənəcəyi, nostalji və müasirliyin bir araya gələcəyi xüsusi musiqi axşamına dəvətlisiniz. “Azərbaycan cazı ” — tanış melodiyalar, yeni caz nəfəsi. Qeyd: Bura konsert zalıdır və burada barda içkilər əldə etmək mümkündür.",
+      "address": "Böyük Qala küçəsi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/qWfmQ4U7btoXgE2ongNIl50vDhnaYkaUH41SPOLA.jpg?v=1787662595",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Show Gallery",
+      "totalSeats": 92,
+      "availableSeats": 82,
+      "tickets": [
+        {
+          "id": "56-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 36
+        },
+        {
+          "id": "56-2",
+          "label": "Standart",
+          "price": 20,
+          "available": 27
+        },
+        {
+          "id": "56-3",
+          "label": "VIP",
+          "price": 30,
+          "available": 19
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "57",
+      "title": "Miyazaki Axşamı – Şamların Əhatəsində Açıq Hava Konserti",
+      "date": "2026-09-02T15:15:00.000Z",
+      "venue": "Kapellhaus Yay Bağı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/bZ4uFsXngnmCs8xiD8wW95TF5O6QGdkC.png?v=1785841183",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Bella Group ✨ Hayao Miyazakinin sehrli dünyasına musiqi ilə səyahət edin! Sizi Kapellhaus Garden -də, yüzlərlə şamın yaratdığı xüsusi atmosferdə, açıq havada keçiriləcək unudulmaz Miyazaki Axşamı na dəvət edirik. Gecə boyunca Studio Ghibli filmlərinin ən sevilən musiqiləri canlı ifada səslənəcək. Təbiətin sakitliyi, şamların isti işığı və klassik musiqinin harmoniyası sizi Hayao Miyazaki nin nağıl dünyasına aparacaq.",
+      "address": "28 May küç. 35, Bakı, Azərbaycan,  AZ1010",
+      "detailedimage": "https://cdn.iticket.az/event/cover/7t3xLIDs0v88AdSivU4hKnPp8rQss44JTFfLErIr.jpg?v=1787657250",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Kapellhaus Yay Bağı",
+      "totalSeats": 73,
+      "availableSeats": 65,
+      "tickets": [
+        {
+          "id": "57-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 27
+        },
+        {
+          "id": "57-2",
+          "label": "Standart",
+          "price": 35,
+          "available": 29
+        },
+        {
+          "id": "57-3",
+          "label": "VIP",
+          "price": 50,
+          "available": 9
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "58",
+      "title": "Teymur Əmrah - Yubiley konserti",
+      "date": "2026-09-03T16:00:00.000Z",
+      "venue": "Heydər Əliyev Sarayı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 25,
+      "image": "https://cdn.iticket.az/event/square_card/LdDh1TaO6lvRQPIIZjGABt6bseOFr30y.png?v=1782202751",
+      "featured": true,
+      "ageLimit": "6+",
+      "about": "Əməkdar artist Teymur Əmrah Heydər Əliyev Sarayının səhnəsində sevənləri ilə görüşəcək! Özünəməxsus ifa tərzi və sevilən mahnıları ilə Azərbaycan musiqisində xüsusi yer tutan sənətçi tamaşaçılara musiqi və nostalji dolu unudulmaz axşamlar bəxş edəcək. Teymur Əmrahın illərdir sevə-sevə dinlənilən mahnıları, canlı ifalar və xüsusi konsert proqramı bu gecələrə fərqli ab-hava qatacaq. Sevimli mahnıları sənətçinin canlı ifasında dinləmək və unudulmaz musiqi axşamının bir parçası olmaq üçün 3 və 4 sentyabrda Heydər Əliyev Sarayında görüşək!",
+      "address": "Bülbül prospekti 35, Bakı, Azərbaycan",
+      "detailedimage": "https://cdn.iticket.az/event/cover/2XZHR25T1NdP78NTz8HOPWELF286DRhRkuAgMunr.jpg?v=1785174093",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Heydər Əliyev Sarayı",
+      "totalSeats": 72,
+      "availableSeats": 64,
+      "tickets": [
+        {
+          "id": "58-1",
+          "label": "Ekonom",
+          "price": 25,
+          "available": 26
+        },
+        {
+          "id": "58-2",
+          "label": "Standart",
+          "price": 75,
+          "available": 28
+        },
+        {
+          "id": "58-3",
+          "label": "VIP",
+          "price": 125,
+          "available": 10
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "59",
+      "title": "Vivaldi - The Four Seasons Open Air - Moonlight Candle Aura Experience- Açıq Havada",
+      "date": "2026-09-04T15:15:00.000Z",
+      "venue": "Kapellhaus Yay Bağı",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 20,
+      "image": "https://cdn.iticket.az/event/square_card/pCosRLnQxjSCo7Xn5Ve2qoei8opo6jld.png?v=1787234967",
+      "featured": false,
+      "ageLimit": "6+",
+      "about": "🌙🎻 Açıq Havada – Moonlight Candle Aura Experience: Vivaldi – The Four Seasons Yayın ən unudulmaz musiqi axşamlarından birinə dəvət edirik! Tarixi Kapellhaus Garden Hall -da, ay işığı altında və yüzlərlə şamın yaratdığı ecazkar atmosferdə Antonio Vivaldinin “The Four Seasons” əsəri Kapellhaus Chamber Orchestra tərəfindən canlı ifa olunacaq. Açıq səma, ayın zərif işığı, şamların istiliyi və canlı orkestrin möhtəşəm sədaları musiqi ilə təbiətin harmoniyasını bir araya gətirərək tamaşaçılara fərqli və unudulmaz bir təcrübə bəxş edəcək. Proqram: Spring (La Primavera) Summer (L’Estate) Autumn (L’Autunno) Winter (L’Inverno) İfa edir: Kapellhaus Chamber Orchestra 🌙 Ay işığında açıq hava konserti 🕯️ Candle Aura Experience 🌿 Tarixi Kapellhaus Garden Hall 🎻 Canlı orkestr ifası ⏳ Müddət: təxminən 60 dəqiqə 🎟️ Yerlərin sayı məhduddur.",
+      "address": "28 May küç. 35, Bakı, Azərbaycan,  AZ1010",
+      "detailedimage": "https://cdn.iticket.az/event/cover/xHWFKEhkqByu2L2vQAfwiO6nUC2OnQUA6iL6EDaq.jpg?v=1787297327",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Kapellhaus Yay Bağı",
+      "totalSeats": 50,
+      "availableSeats": 49,
+      "tickets": [
+        {
+          "id": "59-1",
+          "label": "Ekonom",
+          "price": 20,
+          "available": 24
+        },
+        {
+          "id": "59-2",
+          "label": "Standart",
+          "price": 35,
+          "available": 13
+        },
+        {
+          "id": "59-3",
+          "label": "VIP",
+          "price": 50,
+          "available": 12
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "60",
+      "title": "VUGARIXX — Retro House | Rooftop Concert",
+      "date": "2026-09-04T17:00:00.000Z",
+      "venue": "Fuzzy Coffee and Wine",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 25,
+      "image": "https://cdn.iticket.az/event/square_card/L2A5vArgJ2XR0vy5LhkYfVmM4zcNkMHu.png?v=1787642291",
+      "featured": false,
+      "ageLimit": "18+",
+      "about": "ROOFTOP CONCERT Baku ikinci buraxılışını təqdim edir! 4 sentyabr, cümə axşamı şəhərin ən gözəl rooftop məkanlarından biri olan Fuzzy Coffee & Wine-da VUGARİXX ilə zamanda musiqili səyahətə çıxırıq. 🌆Rooftop Concert yerli artistləri, şəhərin unikal rooftop məkanlarını və retro house musiqisini bir araya gətirən xüsusi layihədir. 80-lər, 90-lar və 2000-lərin ən sevilən hitləri, nostalji atmosfer, şəhər mənzərəsi və gecə boyu davam edən musiqi — Friday night üçün planın hazırdır! Bir gecəlik keçmişə qayıtmağa hazırsan? ♿ Əlçatanlıq: Məkan əlil arabası istifadəçiləri üçün əlçatandır. Qapılar tədbirdən 30 dəqiqə əvvəl açılır.",
+      "address": "44 Cəfər Cabbarlı küçəsi, Caspian Plaza, 17-ci mərtəbə, Baku, Azerbaijan 1065",
+      "detailedimage": "https://cdn.iticket.az/event/cover/cYdvTE7XUnr2rs4UwoZpHtucuJVXs4ne43b8f5Ix.jpg?v=1787746056",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Fuzzy Coffee and Wine",
+      "totalSeats": 70,
+      "availableSeats": 61,
+      "tickets": [
+        {
+          "id": "60-1",
+          "label": "Ekonom",
+          "price": 25,
+          "available": 25
+        },
+        {
+          "id": "60-2",
+          "label": "Standart",
+          "price": 29,
+          "available": 26
+        },
+        {
+          "id": "60-3",
+          "label": "VIP",
+          "price": 33,
+          "available": 10
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "61",
+      "title": "Chick Corea Tribyutu",
+      "date": "2026-09-03T16:00:00.000Z",
+      "venue": "Show Gallery",
+      "city": "Bakı",
+      "category": "concert",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/Z7wunNLX0QphJj4nxbnU9NFqV6mnTam7.png?v=1787829455",
+      "featured": false,
+      "ageLimit": "6+",
+      "about": "🎹 CHICK COREA TRIBUTE Caz musiqisinin əfsanəsi Chick Coreanın yaradıcılığına həsr olunmuş xüsusi gecə. Onun unudulmaz əsərləri bu dəfə canlı Jazz Trio ifasında yeni nəfəs qazanacaq. 🎹 Piano — Nicat Quliyev 🎸 Bass — Saleh Məmmədov 🥁 Zərb alətləri — Vaqif Əliyev Virtuoz piano, canlı ritmlər və Chick Coreanın özünəməxsus musiqi dünyası… Chick Corea Tribute — əsl caz sevənlər üçün xüsusi musiqi axşamı. 🎶 Qeyd: Bura konsert zalıdır və burada barda içkilər əldə etmək mümkündür.",
+      "address": "Böyük Qala küçəsi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/XqqgoDJ71dZdOzGn3ootnsH9zynlYoKNNOfVvPUH.jpg?v=1787829487",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Show Gallery",
+      "totalSeats": 53,
+      "availableSeats": 46,
+      "tickets": [
+        {
+          "id": "61-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 17
+        },
+        {
+          "id": "61-2",
+          "label": "Standart",
+          "price": 15,
+          "available": 12
+        },
+        {
+          "id": "61-3",
+          "label": "VIP",
+          "price": 20,
+          "available": 17
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "62",
+      "title": "Gəl Dost Olaq – Çərpələng Festivalı",
+      "date": "2026-09-05T07:00:00.000Z",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/aFn4oZ7pl996rIHUeSfck3PSe8bE8KtY.png?v=1787227380",
+      "featured": false,
+      "ageLimit": "6+",
+      "about": "Yayın ən rəngarəng festivalında ailəniz və dostlarınızla birlikdə əyləncə dolu, unudulmaz bir gün keçirin! ✨ *SİZİ GÖZLƏYƏN ƏYLƏNCƏLƏR:* 🪁 Kütləvi çərpələng uçuşu 🎨 Yaradıcılıq master-klassları 🌊 Qum heykəlləri 🚗 RetroCar sərgisi 🌈 Color Fest 🫧 Sabun köpüyü şousu 🏃 Survivor yarışı 🏝️ Ford Boyard yarışı 🪢 İp çəkmə yarışı 🏅 Olimpiya yarışı 🚩 Bayraq yarışı 🪁 Çərpələng qurma yarışı ⚔️ Çərpələng Savaşları yarışı 🏴‍☠️ Xəzinə Axtarışı yarışı 🎭 Uşaqlar üçün əyləncə zonası 🎤 Canlı musiqi ✨ LED çərpələng şousu 🍔 Food Zone 🎟️ *BİLET QİYMƏTLƏRİ* 🔹 *STANDARD – 10 AZN* Standard biletə daxildir: 🎫 Festival ərazisinə giriş 🏆 Bütün oyun və yarışlarda iştirak ⭐ *VIP – 30 AZN* VIP biletə daxildir: 👕 Festival köynəyi 🌈 Color Fest tozu – 1 ədəd 🌬️ Rüzgar gülü – 1 ədəd 🪁 Çərpələng – 1 ədəd 📓 Qələm və dəftər dəsti 🪁 Böyük Çərpələng Zonasına giriş 🪁 Çərpələngin uçurdulması 🏆 Bütün yarışlarda iştirak",
+      "address": "Şıx çimərliyi, Salyan şossesi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/wN8daam0YP1lr2v71cz3gVYHsx8nBREgLKSnrq3u.jpg?v=1787228987",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Mambo Beach",
+      "totalSeats": 60,
+      "availableSeats": 57,
+      "tickets": [
+        {
+          "id": "62-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 37
+        },
+        {
+          "id": "62-2",
+          "label": "Standart",
+          "price": 20,
+          "available": 11
+        },
+        {
+          "id": "62-3",
+          "label": "VIP",
+          "price": 30,
+          "available": 9
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "63",
+      "title": "DOGFEST 3",
+      "date": "2026-09-05T13:00:00.000Z",
+      "venue": "Zagulba FM",
+      "city": "Bakı",
+      "category": "festival",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/RsgOmbxgpYfK5MHCLwzPZcGviL6gMcW5.png?v=1787645707",
+      "featured": false,
+      "ageLimit": "6+",
+      "about": "🐾 DOGFEST 3 — YAY MÖVSÜMÜNÜN BAĞLANIŞI! 📅 5 sentyabr | 17:00–22:00 📍 Zagulba FM, Buzovna Yayın ən pozitiv və sevilən pet-friendly tədbirlərindən biri — DOGFEST üçüncü dəfə dostlarını bir araya gətirir! Bu gün sadəcə festival deyil — dördayaqlı dostlarımıza həsr olunmuş əsl təşəkkür günüdür! ❤️🐕 Xəzərin sahilində sizi və sevimli dostlarınızı rəngarəng proqram gözləyir: 🐕 Cinslərin paradı 🏆 Müsabiqələr və müxtəlif nominasiyalar 🎁 Hədiyyələr və sürprizlər 🎟️ Loto 🎧 DJ set 🐾 Pet-brendlər ❤️ Sığınacaqlara dəstək 📸 Fotozonalar və bloggerlər 🤝 Pet-community nümayəndələri, kinoloqlar, baytarlıq və pet sektorunun iştirakçıları DOGFEST — it sahiblərinin, heyvansevərlərin, ailələrin və pet-community-nin bir araya gəldiyi böyük və mehriban festivaldır. Burada əsas qəhrəmanlar ONLARDIR! 🐾 Dostunuzu götürün, ailənizlə gəlin və yayın bağlanışını bizimlə birlikdə qeyd edin! 🐶❤️ 📅 5 sentyabr ⏰ 17:00–22:00 📍 Zagulba FM | Buzovna DOGFEST 3 — bir festivaldan daha çox. Dördayaqlı dostlar.",
+      "address": "\"Xəzər İnci\" Otel. Bakı, Azərbaycan, Buzovna rayonu AZ1090",
+      "detailedimage": "https://cdn.iticket.az/event/cover/0P6vyhbWcYkxLYUHI69GQk9PhcUhOHlNSF5eUOuK.jpg?v=1787658906",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Zagulba FM",
+      "totalSeats": 58,
+      "availableSeats": 54,
+      "tickets": [
+        {
+          "id": "63-1",
+          "label": "Standart",
+          "price": 10,
+          "available": 54
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "64",
+      "title": "\"Coco\" filminin nümayişi",
+      "date": "2026-09-01T10:00:00.000Z",
+      "venue": "Cinema LandMark",
+      "city": "Bakı",
+      "category": "film",
+      "price": 8,
+      "image": "https://cdn.iticket.az/event/square_card/mhLMuaTBLoDZQPzYcrAAWOv0bHSM6Uaz.png?v=1782807529",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "Açıq hava və müasir kinozalda film nümayişi. Sevdiklərinizlə birlikdə böyük ekranda unudulmaz bir seans təcrübəsi yaşayın. Biletlərinizi əvvəlcədən əldə etməyi unutmayın.",
+      "address": "Nizami küç. 90A(1-ci mərtəbə)",
+      "detailedimage": "https://cdn.iticket.az/event/cover/SCZe7GHA5RNP063A0p3XU8RE2h8S9xEk4HxfC0kv.jpg?v=1787729400",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Cinema LandMark",
+      "totalSeats": 42,
+      "availableSeats": 41,
+      "tickets": [
+        {
+          "id": "64-1",
+          "label": "Standart",
+          "price": 8,
+          "available": 41
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
+    },
+    {
+      "id": "65",
+      "title": "Seanema – Mr. & Mrs. Smith",
+      "date": "2026-08-31T18:15:00.000Z",
+      "venue": "Mambo Beach",
+      "city": "Bakı",
+      "category": "film",
+      "price": 10,
+      "image": "https://cdn.iticket.az/event/square_card/89zln05Nl5RyqNW5m8NhhVTSd0WKAm0L.png?v=1781859202",
+      "featured": false,
+      "ageLimit": "12+",
+      "about": "🎬 Azərbaycanda Yeni Film Təcrübəsi! Dənizə sıfır kilometr məsafədə, açıq səma altında böyük ekranda film izləməyə hazırsınız? 🌊✨ Bu yay sevdiklərinizlə birlikdə ən sevilən filmləri tam fərqli atmosferdə izləyəcəyiniz unudulmaz Seanema təcrübəsinə sizi dəvət edirik. Dalğa səsləri, dəniz qoxusu və möhtəşəm film gecələri sizi gözləyir! 🍿🌙 Film: Türk dilində dublaj Altyazı: Rus dili",
+      "address": "Şıx çimərliyi, Salyan şossesi",
+      "detailedimage": "https://cdn.iticket.az/event/cover/56srn42qwvUF3utOZaSEnUZDf1pxFgjrAZyIpyQb.jpg?v=1787912212",
+      "language": "Azərbaycan dilində",
+      "status": "active",
+      "organizer": "Mambo Beach",
+      "totalSeats": 42,
+      "availableSeats": 31,
+      "tickets": [
+        {
+          "id": "65-1",
+          "label": "Ekonom",
+          "price": 10,
+          "available": 16
+        },
+        {
+          "id": "65-2",
+          "label": "Standart",
+          "price": 18,
+          "available": 10
+        },
+        {
+          "id": "65-3",
+          "label": "VIP",
+          "price": 25,
+          "available": 5
+        }
+      ],
+      "rules": "Bu tədbir QR bilet formasında və ya fiziki bilet olaraq şəhərin kassalarında satılır. QR biletlər tədbir günü aktiv olacaqdır. QR biletlərinizi istifadə etmək üçün iTicket.AZ mobil tətbiqində şəxsi hesabınıza daxil olmalısınız. QR bilet haqqında daha ətraflı: QR bilet"
     }
   ],
   "shows": [
