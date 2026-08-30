@@ -41,9 +41,7 @@ const ProfileLayout = () => {
         </nav>
       </aside>
 
-      <div className="profile-content">
-        <Outlet />
-      </div>
+      <div className="profile-content"><Outlet /></div>
     </div>
   );
 };

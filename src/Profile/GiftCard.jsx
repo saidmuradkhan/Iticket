@@ -8,9 +8,7 @@ const GiftCard = () => {
       <div className="profile-page-head">
         <h1>{t("giftCard.title")}</h1>
       </div>
-      <p className="profile-subheading">
-        {t("giftCard.subheading")}
-      </p>
+      <p className="profile-subheading">{t("giftCard.subheading")}</p>
 
       <div className="gift-card-form">
         <div className="gift-card">
@@ -40,13 +38,9 @@ const GiftCard = () => {
           </div>
         </div>
 
-        <p className="gift-card-note">
-          {t("giftCard.note")}
-        </p>
+        <p className="gift-card-note">{t("giftCard.note")}</p>
 
-        <button type="button" className="primary-btn gift-card-submit">
-          {t("giftCard.submit")}
-        </button>
+        <button type="button" className="primary-btn gift-card-submit">{t("giftCard.submit")}</button>
       </div>
     </div>
   );

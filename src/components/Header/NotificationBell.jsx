@@ -11,36 +11,20 @@ const NotificationBell = () => {
 
   return (
     <div className="notification-bell">
-      <button
-        type="button"
-        className="header-btn header-btn-icon"
-        onClick={() => setIsOpen((prev) => !prev)}
-        aria-label={t("header.notifications")}
-      >
-        <span className="header-btn-icon-slot">
-          <BellIcon />
-        </span>
+      <button type="button" className="header-btn header-btn-icon" onClick={() => setIsOpen((prev) => !prev)} aria-label={t("header.notifications")}>
+        <span className="header-btn-icon-slot"><BellIcon /></span>
         {unreadCount > 0 && <span className="badge">{unreadCount}</span>}
       </button>
 
       {isOpen && (
         <>
-          <div
-            className="dropdown-backdrop"
-            onClick={() => setIsOpen(false)}
-          />
+          <div className="dropdown-backdrop" onClick={() => setIsOpen(false)} />
           <div className="notification-dropdown">
             {notifications.length === 0 ? (
               <p className="notification-empty">{t("header.noNotifications")}</p>
             ) : (
               notifications.map((n) => (
-                <div
-                  key={n.id}
-                  className={
-                    n.read ? "notification-item" : "notification-item unread"
-                  }
-                  onClick={() => markAsRead(n.id)}
-                >
+                <div key={n.id} className={n.read ? "notification-item" : "notification-item unread"} onClick={() => markAsRead(n.id)}>
                   <p className="notification-title">{n.title}</p>
                   <p className="notification-message">{n.message}</p>
                 </div>

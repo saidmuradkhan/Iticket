@@ -53,17 +53,10 @@ const TopUpDrawer = ({ userId, onClose }) => {
 
   return (
     <div className="drawer-backdrop" onClick={onClose}>
-      <aside
-        className="drawer"
-        role="dialog"
-        aria-label={t("topup.title")}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <aside className="drawer" role="dialog" aria-label={t("topup.title")} onClick={(e) => e.stopPropagation()}>
         <header className="drawer-head">
           <h2>{t("topup.title")}</h2>
-          <button type="button" onClick={onClose} aria-label={t("topup.close")}>
-            ✕
-          </button>
+          <button type="button" onClick={onClose} aria-label={t("topup.close")}>✕</button>
         </header>
 
         <form className="drawer-body" onSubmit={submit}>

@@ -99,9 +99,7 @@ const AccountInfo = () => {
               <CopyIcon />
             </button>
           </div>
-          {copied === "id" && (
-            <small className="account-form-hint">{t("account.copied")}</small>
-          )}
+          {copied === "id" && <small className="account-form-hint">{t("account.copied")}</small>}
         </div>
 
         <div className="account-form-field">
@@ -122,25 +120,19 @@ const AccountInfo = () => {
               <CopyIcon />
             </button>
           </div>
-          {copied === "email" && (
-            <small className="account-form-hint">{t("account.copied")}</small>
-          )}
+          {copied === "email" && <small className="account-form-hint">{t("account.copied")}</small>}
         </div>
 
         <div className="account-form-field">
           <span className="account-form-label">{t("account.phone")}</span>
           <div className="account-form-control readonly">
-            <span className="account-form-flag">
-              <FlagAzIcon />
-            </span>
+            <span className="account-form-flag"><FlagAzIcon /></span>
             <input type="tel" value={user.phone || ""} readOnly />
           </div>
         </div>
 
         <div className="account-form-field">
-          <label className="account-form-label" htmlFor="account-first-name">
-            {t("account.firstName")}
-          </label>
+          <label className="account-form-label" htmlFor="account-first-name">{t("account.firstName")}</label>
           <div className="account-form-control">
             <input
               id="account-first-name"
@@ -153,9 +145,7 @@ const AccountInfo = () => {
         </div>
 
         <div className="account-form-field">
-          <label className="account-form-label" htmlFor="account-last-name">
-            {t("account.lastName")}
-          </label>
+          <label className="account-form-label" htmlFor="account-last-name">{t("account.lastName")}</label>
           <div className="account-form-control">
             <input
               id="account-last-name"
@@ -168,34 +158,19 @@ const AccountInfo = () => {
         </div>
 
         <div className="account-form-field">
-          <label className="account-form-label" htmlFor="account-birth-date">
-            {t("account.birthDate")}
-          </label>
+          <label className="account-form-label" htmlFor="account-birth-date">{t("account.birthDate")}</label>
           <div className="account-form-control">
-            <input
-              id="account-birth-date"
-              type="date"
-              value={form.birthDate}
-              onChange={setField("birthDate")}
-            />
+            <input id="account-birth-date" type="date" value={form.birthDate} onChange={setField("birthDate")} />
           </div>
         </div>
 
         <div className="account-form-field">
-          <label className="account-form-label" htmlFor="account-country">
-            {t("account.country")}
-          </label>
+          <label className="account-form-label" htmlFor="account-country">{t("account.country")}</label>
           <div className="account-form-control">
-            <select
-              id="account-country"
-              value={form.country}
-              onChange={setField("country")}
-            >
+            <select id="account-country" value={form.country} onChange={setField("country")}>
               <option value="">{t("account.countryPlaceholder")}</option>
               {COUNTRIES.map((country) => (
-                <option key={country.value} value={country.value}>
-                  {t(country.labelKey)}
-                </option>
+                <option key={country.value} value={country.value}>{t(country.labelKey)}</option>
               ))}
             </select>
           </div>
@@ -221,29 +196,18 @@ const AccountInfo = () => {
         </div>
 
         <div className="account-form-actions">
-          <button type="submit" className="primary-btn">
-            {t("account.save")}
-          </button>
-          {saved && (
-            <span className="account-form-saved">{t("account.saved")}</span>
-          )}
+          <button type="submit" className="primary-btn">{t("account.save")}</button>
+          {saved && <span className="account-form-saved">{t("account.saved")}</span>}
         </div>
       </form>
 
-      <button
-        type="button"
-        className="account-delete"
-        onClick={() => setConfirmDelete(true)}
-      >
+      <button type="button" className="account-delete" onClick={() => setConfirmDelete(true)}>
         <TrashIcon />
         {t("account.deleteAccount")}
       </button>
 
       {confirmDelete && (
-        <div
-          className="auth-modal-backdrop"
-          onClick={() => setConfirmDelete(false)}
-        >
+        <div className="auth-modal-backdrop" onClick={() => setConfirmDelete(false)}>
           <div
             className="auth-modal confirm-modal"
             role="dialog"
@@ -266,14 +230,8 @@ const AccountInfo = () => {
             <div className="auth-modal-body">
               <p className="confirm-text">{t("account.deleteWarning")}</p>
               <div className="confirm-actions">
-                <button type="button" className="confirm-danger" onClick={logout}>
-                  {t("account.deleteConfirm")}
-                </button>
-                <button
-                  type="button"
-                  className="confirm-cancel"
-                  onClick={() => setConfirmDelete(false)}
-                >
+                <button type="button" className="confirm-danger" onClick={logout}>{t("account.deleteConfirm")}</button>
+                <button type="button" className="confirm-cancel" onClick={() => setConfirmDelete(false)}>
                   {t("account.cancel")}
                 </button>
               </div>

@@ -25,9 +25,7 @@ export const NotificationProvider = ({ children }) => {
   const unreadCount = notifications.filter((n) => !n.read).length;
 
   return (
-    <NotificationContext.Provider
-      value={{ notifications, markAsRead, unreadCount }}
-    >
+    <NotificationContext.Provider value={{ notifications, markAsRead, unreadCount }}>
       {children}
     </NotificationContext.Provider>
   );

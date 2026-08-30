@@ -49,15 +49,7 @@ const SeatMap = ({ tickets, selectedSeats, takenSeats, onSeatClick }) => {
 
       <div className="seat-sections">
         {tickets.map((ticket, index) => (
-          <SeatSection
-            key={ticket.id}
-            ticket={ticket}
-            color={COLORS[index % COLORS.length]}
-            seats={generateSeats(ticket)}
-            selectedSeats={selectedSeats}
-            takenSeats={taken}
-            onSeatClick={onSeatClick}
-          />
+          <SeatSection key={ticket.id} ticket={ticket} color={COLORS[index % COLORS.length]} seats={generateSeats(ticket)} selectedSeats={selectedSeats} takenSeats={taken} onSeatClick={onSeatClick} />
         ))}
       </div>
     </div>

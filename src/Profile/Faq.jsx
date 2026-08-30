@@ -31,13 +31,9 @@ const Faq = () => {
               aria-expanded={openIndex === i}
             >
               {t(item.q)}
-              <span className={openIndex === i ? "rotated" : undefined}>
-                <ChevronIcon />
-              </span>
+              <span className={openIndex === i ? "rotated" : undefined}><ChevronIcon /></span>
             </button>
-            {openIndex === i && (
-              <p className="profile-accordion-body">{t(item.a)}</p>
-            )}
+            {openIndex === i && <p className="profile-accordion-body">{t(item.a)}</p>}
           </div>
         ))}
       </div>

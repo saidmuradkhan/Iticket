@@ -75,34 +75,15 @@ const PricePanel = ({ priceMin, priceMax, onApply, close }) => {
         {t("filters.allPrices")}
       </button>
       {PRICE_PRESETS.map((preset) => (
-        <button
-          key={preset.key}
-          type="button"
-          className="list-item"
-          onClick={() => selectPreset(preset)}
-        >
-          {preset.label}
-        </button>
+        <button key={preset.key} type="button" className="list-item" onClick={() => selectPreset(preset)}>{preset.label}</button>
       ))}
       <p className="price-panel-label">{t("filters.enterPriceRange")}</p>
       <div className="price-range-inputs">
-        <input
-          type="number"
-          placeholder={t("filters.min")}
-          value={customMin}
-          onChange={(e) => setCustomMin(e.target.value)}
-        />
+        <input type="number" placeholder={t("filters.min")} value={customMin} onChange={(e) => setCustomMin(e.target.value)} />
         <span>—</span>
-        <input
-          type="number"
-          placeholder={t("filters.max")}
-          value={customMax}
-          onChange={(e) => setCustomMax(e.target.value)}
-        />
+        <input type="number" placeholder={t("filters.max")} value={customMax} onChange={(e) => setCustomMax(e.target.value)} />
       </div>
-      <button type="button" className="apply-btn" onClick={applyCustom}>
-        {t("filters.apply")}
-      </button>
+      <button type="button" className="apply-btn" onClick={applyCustom}>{t("filters.apply")}</button>
     </div>
   );
 };
@@ -175,20 +156,10 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
       <div className="cal-track">
         {monthGroups.map((group) => (
           <section className="cal-month-group" key={group.monthKey}>
-            <div className="cal-month">
-              <span>{monthNames[group.monthIndex]}</span>
-            </div>
+            <div className="cal-month"><span>{monthNames[group.monthIndex]}</span></div>
             <div className="cal-days">
               {group.days.map((day) => (
-                <button
-                  key={day.dateStr}
-                  type="button"
-                  className={
-                    dayClassName(day.dateStr) + (day.isWeekend ? " is-weekend" : "")
-                  }
-                  data-date={day.dateStr}
-                  onClick={() => handleDayClick(day.dateStr)}
-                >
+                <button key={day.dateStr} type="button" className={dayClassName(day.dateStr) + (day.isWeekend ? " is-weekend" : "")} data-date={day.dateStr} onClick={() => handleDayClick(day.dateStr)}>
                   <span className="name">{dayNames[day.dayOfWeek]}</span>
                   <span className="num">{day.dayNum}</span>
                 </button>
@@ -239,57 +210,28 @@ const EventFilters = ({ cities, venues, filters, onFiltersChange }) => {
           )}
         </FilterDropdown>
 
-        <FilterDropdown
-          label={t("filters.price")}
-          active={filters.priceMin !== null || filters.priceMax !== null}
-        >
+        <FilterDropdown label={t("filters.price")} active={filters.priceMin !== null || filters.priceMax !== null}>
           {(close) => (
-            <PricePanel
-              priceMin={filters.priceMin}
-              priceMax={filters.priceMax}
-              onApply={(min, max) => updateFilter({ priceMin: min, priceMax: max })}
-              close={close}
-            />
+            <PricePanel priceMin={filters.priceMin} priceMax={filters.priceMax} onApply={(min, max) => updateFilter({ priceMin: min, priceMax: max })} close={close} />
           )}
         </FilterDropdown>
 
         <FilterDropdown label={t("filters.venue")} active={filters.venue !== "all"}>
           {(close) => (
-            <SearchableListPanel
-              items={venues}
-              selected={filters.venue}
-              onSelect={(venue) => updateFilter({ venue })}
-              close={close}
-              placeholder={t("filters.searchVenue")}
-              allLabel={t("filters.allVenues")}
-            />
+            <SearchableListPanel items={venues} selected={filters.venue} onSelect={(venue) => updateFilter({ venue })} close={close} placeholder={t("filters.searchVenue")} allLabel={t("filters.allVenues")} />
           )}
         </FilterDropdown>
 
         <FilterDropdown label={t("filters.city")} active={filters.city !== "all"}>
           {(close) => (
-            <SearchableListPanel
-              items={cities}
-              selected={filters.city}
-              onSelect={(city) => updateFilter({ city })}
-              close={close}
-              placeholder={t("filters.searchCity")}
-              allLabel={t("filters.allCities")}
-            />
+            <SearchableListPanel items={cities} selected={filters.city} onSelect={(city) => updateFilter({ city })} close={close} placeholder={t("filters.searchCity")} allLabel={t("filters.allCities")} />
           )}
         </FilterDropdown>
       </div>
 
       {chips.length > 0 && (
         <div className="filter-chips">
-          <button
-            type="button"
-            className="chip clear-chip"
-            onClick={() => onFiltersChange(DEFAULT_FILTERS)}
-            aria-label={t("filters.clearFilters")}
-          >
-            <i className="fas fa-times" />
-          </button>
+          <button type="button" className="chip clear-chip" onClick={() => onFiltersChange(DEFAULT_FILTERS)} aria-label={t("filters.clearFilters")}><i className="fas fa-times" /></button>
           {chips.map((chip) => (
             <button type="button" key={chip.key} className="chip" onClick={chip.onRemove}>
               {chip.label} <i className="fas fa-times" />

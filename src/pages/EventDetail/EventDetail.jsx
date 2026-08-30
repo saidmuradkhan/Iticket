@@ -86,10 +86,7 @@ const EventDetail = () => {
 
   return (
     <div className="event-detail">
-      <section
-        className="event-hero"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <section className="event-hero" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="event-hero-overlay" />
 
         <div className="event-hero-body">
@@ -114,17 +111,10 @@ const EventDetail = () => {
                 </span>
               )}
               {isSoldOut && <span className="hero-tag soldout">{t("eventDetail.soldOut")}</span>}
-              {!isSoldOut && isPast && (
-                <span className="hero-tag soldout">{t("eventDetail.salesClosed")}</span>
-              )}
+              {!isSoldOut && isPast && <span className="hero-tag soldout">{t("eventDetail.salesClosed")}</span>}
             </div>
 
-            <button
-              type="button"
-              className="buy-btn hero-buy-btn"
-              onClick={handleBuyClick}
-              disabled={salesClosed}
-            >
+            <button type="button" className="buy-btn hero-buy-btn" onClick={handleBuyClick} disabled={salesClosed}>
               {isSoldOut
                 ? t("eventDetail.soldOut")
                 : isPast
@@ -134,26 +124,12 @@ const EventDetail = () => {
           </div>
 
           <div className="event-hero-image-frame">
-            <img
-              src={heroImage}
-              alt={event.title}
-              onError={() => setHeroErrorId(event.id)}
-            />
+            <img src={heroImage} alt={event.title} onError={() => setHeroErrorId(event.id)} />
             <div className="hero-icon-actions">
-              <button
-                type="button"
-                className="hero-icon-btn"
-                onClick={() => toggleFavorite(event)}
-                aria-label={t("eventDetail.addToFavorites")}
-              >
+              <button type="button" className="hero-icon-btn" onClick={() => toggleFavorite(event)} aria-label={t("eventDetail.addToFavorites")}>
                 <i className={favorite ? "fas fa-heart" : "far fa-heart"} />
               </button>
-              <button
-                type="button"
-                className="hero-icon-btn"
-                onClick={handleShare}
-                aria-label={t("eventDetail.share")}
-              >
+              <button type="button" className="hero-icon-btn" onClick={handleShare} aria-label={t("eventDetail.share")}>
                 <i className="fas fa-share-alt" />
               </button>
             </div>
@@ -180,15 +156,9 @@ const EventDetail = () => {
       <section className="event-lower">
         <div className="event-lower-main">
           <h2>{t("eventDetail.description")}</h2>
-          <p className={expanded ? "event-about expanded" : "event-about"}>
-            {event.about}
-          </p>
+          <p className={expanded ? "event-about expanded" : "event-about"}>{event.about}</p>
           {event.about && event.about.length > 80 && (
-            <button
-              type="button"
-              className="expand-btn"
-              onClick={() => setExpanded((prev) => !prev)}
-            >
+            <button type="button" className="expand-btn" onClick={() => setExpanded((prev) => !prev)}>
               {expanded ? t("eventDetail.showLess") : t("eventDetail.showMore")}{" "}
               <i className={expanded ? "fas fa-chevron-up" : "fas fa-chevron-down"} />
             </button>
@@ -206,23 +176,14 @@ const EventDetail = () => {
               <i className="fas fa-map-marker-alt" /> {event.address}
             </p>
           )}
-          <a
-            className="map-btn"
-            href={mapUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="map-btn" href={mapUrl} target="_blank" rel="noreferrer">
             <i className="fas fa-map" /> {t("eventDetail.viewOnMap")}
           </a>
         </div>
 
         <div className="event-lower-side">
           <h2>{t("eventDetail.gallery")}</h2>
-          <img
-            className="gallery-thumb"
-            src={event.image}
-            alt={event.title}
-          />
+          <img className="gallery-thumb" src={event.image} alt={event.title} />
         </div>
       </section>
 
@@ -256,11 +217,7 @@ const EventDetail = () => {
         </section>
       )}
 
-      {!salesClosed && (
-        <button type="button" className="floating-buy-btn" onClick={handleBuyClick}>
-          {t("eventDetail.buyTicket")}
-        </button>
-      )}
+      {!salesClosed && <button type="button" className="floating-buy-btn" onClick={handleBuyClick}>{t("eventDetail.buyTicket")}</button>}
     </div>
   );
 };

@@ -27,16 +27,9 @@ const HeroSection = ({ events }) => {
   return (
     <div className="hero-section">
       <div className="hero-slider">
-        <button className="hero-nav-arrow prev" onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}>
-          <i className="fas fa-chevron-left" />
-        </button>
+        <button className="hero-nav-arrow prev" onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}><i className="fas fa-chevron-left" /></button>
         
-        <Link
-          key={slide.id}
-          to={`/event/${slide.id}`}
-          className="hero-slide"
-          style={{ backgroundImage: `url(${slide.detailedimage || slide.image})` }}
-        >
+        <Link key={slide.id} to={`/event/${slide.id}`} className="hero-slide" style={{ backgroundImage: `url(${slide.detailedimage || slide.image})` }}>
           <div className="hero-slide-overlay" />
           <div className="hero-slide-content">
             <h2>{slide.title}</h2>
@@ -47,19 +40,11 @@ const HeroSection = ({ events }) => {
           </div>
         </Link>
 
-        <button className="hero-nav-arrow next" onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}>
-          <i className="fas fa-chevron-right" />
-        </button>
+        <button className="hero-nav-arrow next" onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}><i className="fas fa-chevron-right" /></button>
 
         <div className="hero-dots">
           {slides.map((s, index) => (
-            <button
-              key={s.id}
-              type="button"
-              className={index === current ? "hero-dot active" : "hero-dot"}
-              onClick={() => setCurrent(index)}
-              aria-label={t("hero.slideLabel", { number: index + 1 })}
-            />
+            <button key={s.id} type="button" className={index === current ? "hero-dot active" : "hero-dot"} onClick={() => setCurrent(index)} aria-label={t("hero.slideLabel", { number: index + 1 })} />
           ))}
         </div>
       </div>

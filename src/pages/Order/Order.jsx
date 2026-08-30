@@ -126,9 +126,7 @@ const Order = () => {
         <p className="event-detail-meta">
           {t("order.orderNumber")}: #{order.id} · PIN: {order.pin}
         </p>
-        {order.paymentMethod === "wallet" && (
-          <p className="event-detail-meta">{t("order.paymentMethodWallet")}</p>
-        )}
+        {order.paymentMethod === "wallet" && <p className="event-detail-meta">{t("order.paymentMethodWallet")}</p>}
         {order.payment?.transactionId && (
           <p className="event-detail-meta">
             {t("order.paymentCode")}: {order.payment.transactionId}
@@ -144,9 +142,7 @@ const Order = () => {
     return (
       <div className="page">
         <p>{t("order.expiredText")}</p>
-        <button type="button" className="buy-btn" onClick={() => navigate("/")}>
-          {t("order.backToHome")}
-        </button>
+        <button type="button" className="buy-btn" onClick={() => navigate("/")}>{t("order.backToHome")}</button>
       </div>
     );
   }
@@ -155,9 +151,7 @@ const Order = () => {
     <div className="checkout-page">
       <div className="checkout-topbar">
         <div className="order-breadcrumb">
-          <button type="button" className="link-muted" onClick={() => navigate("/profile/orders")}>
-            {t("order.orders")}
-          </button>
+          <button type="button" className="link-muted" onClick={() => navigate("/profile/orders")}>{t("order.orders")}</button>
           <i className="fas fa-chevron-right" />
           <span>#{order.id}</span>
         </div>
@@ -172,26 +166,15 @@ const Order = () => {
           <div className="panel">
             <h2 className="panel-title">{t("order.paymentMethod")}</h2>
 
-            {order.status === "declined" && (
-              <p className="payment-error">{t("order.prevDeclined")}</p>
-            )}
-            {order.status === "canceled" && (
-              <p className="payment-error">{t("order.prevCanceled")}</p>
-            )}
+            {order.status === "declined" && <p className="payment-error">{t("order.prevDeclined")}</p>}
+            {order.status === "canceled" && <p className="payment-error">{t("order.prevCanceled")}</p>}
 
-            <PaymentMethods
-              selected={paymentMethod}
-              onSelect={setPaymentMethod}
-              walletBalance={walletBalance}
-              walletDisabled={walletShort}
-            />
+            <PaymentMethods selected={paymentMethod} onSelect={setPaymentMethod} walletBalance={walletBalance} walletDisabled={walletShort} />
 
             {payError && <p className="payment-error">{payError}</p>}
           </div>
 
-          <button type="button" className="link-danger" onClick={handleCancel}>
-            {t("order.cancelOrder")}
-          </button>
+          <button type="button" className="link-danger" onClick={handleCancel}>{t("order.cancelOrder")}</button>
         </div>
 
         <aside className="checkout-summary panel">
@@ -243,12 +226,7 @@ const Order = () => {
             <span>{order.totalPrice} ₼</span>
           </div>
 
-          <button
-            type="button"
-            className="buy-btn checkout-submit"
-            disabled={!paymentMethod || paying}
-            onClick={handlePay}
-          >
+          <button type="button" className="buy-btn checkout-submit" disabled={!paymentMethod || paying} onClick={handlePay}>
             {paying
               ? isCardPayment
                 ? t("order.redirecting")

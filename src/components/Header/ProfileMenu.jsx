@@ -33,27 +33,15 @@ const ProfileMenu = () => {
 
   if (!isAuthenticated) {
     return (
-      <button
-        type="button"
-        className="header-btn header-link"
-        onClick={() => openAuth("login")}
-      >
-        <span className="header-btn-icon-slot">
-          <UserIcon />
-        </span>
+      <button type="button" className="header-btn header-link" onClick={() => openAuth("login")}>
+        <span className="header-btn-icon-slot"><UserIcon /></span>
         {t("header.login")}
       </button>
     );
   }
 
   const renderItem = (item) => (
-    <Link
-      key={item.path}
-      to={item.path}
-      role="menuitem"
-      className={pathname === item.path ? "active" : undefined}
-      onClick={() => setOpen(false)}
-    >
+    <Link key={item.path} to={item.path} role="menuitem" className={pathname === item.path ? "active" : undefined} onClick={() => setOpen(false)}>
       <ProfileNavIcon name={item.icon} />
       {t(item.label)}
     </Link>
@@ -61,16 +49,8 @@ const ProfileMenu = () => {
 
   return (
     <div className="profile-menu-wrapper" ref={wrapperRef}>
-      <button
-        type="button"
-        className="header-btn header-link"
-        onClick={() => setOpen((prev) => !prev)}
-        aria-expanded={open}
-        aria-haspopup="menu"
-      >
-        <span className="header-btn-icon-slot">
-          <UserIcon />
-        </span>
+      <button type="button" className="header-btn header-link" onClick={() => setOpen((prev) => !prev)} aria-expanded={open} aria-haspopup="menu">
+        <span className="header-btn-icon-slot"><UserIcon /></span>
         {t("header.profile")}
       </button>
 

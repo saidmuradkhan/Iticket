@@ -17,13 +17,7 @@ const PaymentMethods = ({ selected, onSelect, walletBalance, walletDisabled }) =
         const active = selected === method.key;
 
         return (
-          <button
-            key={method.key}
-            type="button"
-            className={active ? "payment-method active" : "payment-method"}
-            disabled={disabled}
-            onClick={() => onSelect(method.key)}
-          >
+          <button key={method.key} type="button" className={active ? "payment-method active" : "payment-method"} disabled={disabled} onClick={() => onSelect(method.key)}>
             <span className="payment-method-left">
               <i className={`payment-method-icon ${method.icon}`} />
               <span className="payment-method-label">

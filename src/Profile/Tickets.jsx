@@ -92,9 +92,7 @@ const Tickets = () => {
             <div className="ticket-card" key={`${item.orderId}-${i}`}>
               <div className="ticket-card-body">
                 <h3>{item.eventTitle}</h3>
-                <p className="event-card-meta">
-                  {item.date ? formatEventDate(item.date) : item.eventDate}
-                </p>
+                <p className="event-card-meta">{item.date ? formatEventDate(item.date) : item.eventDate}</p>
                 <p className="event-card-meta">{item.venue}</p>
                 <p className="event-card-meta">
                   {item.ticketLabel} × {item.quantity}

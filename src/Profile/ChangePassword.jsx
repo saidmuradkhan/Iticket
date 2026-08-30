@@ -40,40 +40,21 @@ const ChangePassword = () => {
       <form className="profile-form" onSubmit={submit}>
         <label>
           {t("changePassword.current")}
-          <input
-            type="password"
-            value={form.current}
-            onChange={setField("current")}
-            autoComplete="current-password"
-          />
+          <input type="password" value={form.current} onChange={setField("current")} autoComplete="current-password" />
         </label>
         <label>
           {t("changePassword.new")}
-          <input
-            type="password"
-            value={form.next}
-            onChange={setField("next")}
-            autoComplete="new-password"
-          />
+          <input type="password" value={form.next} onChange={setField("next")} autoComplete="new-password" />
         </label>
         <label>
           {t("changePassword.repeat")}
-          <input
-            type="password"
-            value={form.repeat}
-            onChange={setField("repeat")}
-            autoComplete="new-password"
-          />
+          <input type="password" value={form.repeat} onChange={setField("repeat")} autoComplete="new-password" />
         </label>
 
         {error && <p className="profile-form-error">{error}</p>}
-        {done && (
-          <p className="profile-form-success">{t("changePassword.success")}</p>
-        )}
+        {done && <p className="profile-form-success">{t("changePassword.success")}</p>}
 
-        <button type="submit" className="primary-btn">
-          {t("changePassword.save")}
-        </button>
+        <button type="submit" className="primary-btn">{t("changePassword.save")}</button>
       </form>
     </div>
   );

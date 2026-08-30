@@ -38,11 +38,7 @@ const NotificationSettings = () => {
   const renderRow = (item) => (
     <label className="switch-row" key={item.key}>
       <span>{t(item.label)}</span>
-      <input
-        type="checkbox"
-        checked={!!settings[item.key]}
-        onChange={() => toggle(item.key)}
-      />
+      <input type="checkbox" checked={!!settings[item.key]} onChange={() => toggle(item.key)} />
       <span className="switch-track" aria-hidden="true" />
     </label>
   );

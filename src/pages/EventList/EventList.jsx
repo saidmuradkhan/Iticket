@@ -66,12 +66,7 @@ const EventList = () => {
     <div className="home-page">
       <h1 className="event-list-heading">{heading}</h1>
 
-      <EventFilters
-        cities={cities}
-        venues={venues}
-        filters={filters}
-        onFiltersChange={setFilters}
-      />
+      <EventFilters cities={cities} venues={venues} filters={filters} onFiltersChange={setFilters} />
 
       <div className="event-grid">
         {filteredEvents.length > 0 ? (

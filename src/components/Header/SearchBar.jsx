@@ -20,9 +20,7 @@ const SearchBar = () => {
   return (
     <form className="search-bar" onSubmit={handleSubmit}>
       <input type="text" placeholder={t("header.searchPlaceholder")} value={value} onChange={(e) => setValue(e.target.value)} />
-      <button type="submit" className="search-submit" aria-label={t("header.searchPlaceholder")}>
-        <i className="fas fa-search" />
-      </button>
+      <button type="submit" className="search-submit" aria-label={t("header.searchPlaceholder")}><i className="fas fa-search" /></button>
     </form>
   );
 };

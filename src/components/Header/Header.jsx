@@ -25,41 +25,19 @@ const Header = () => {
       <SearchBar />
 
       <div className="header-actions">
-        <button
-          type="button"
-          className="header-btn header-btn-icon"
-          onClick={toggleTheme}
-          aria-label={t("header.themeToggle")}
-        >
-          <span className="header-btn-icon-slot">
-            {theme === "light" ? <SunIcon /> : <MoonIcon />}
-          </span>
+        <button type="button" className="header-btn header-btn-icon" onClick={toggleTheme} aria-label={t("header.themeToggle")}>
+          <span className="header-btn-icon-slot">{theme === "light" ? <SunIcon /> : <MoonIcon />}</span>
         </button>
 
-        <button
-          type="button"
-          className="header-btn header-btn-icon"
-          onClick={toggleLanguage}
-          aria-label={t("header.language", { lang: language.toUpperCase() })}
-        >
-          <span className="header-btn-icon-slot header-flag">
-            {language === "az" ? <FlagAzIcon /> : <FlagEnIcon />}
-          </span>
+        <button type="button" className="header-btn header-btn-icon" onClick={toggleLanguage} aria-label={t("header.language", { lang: language.toUpperCase() })}>
+          <span className="header-btn-icon-slot header-flag">{language === "az" ? <FlagAzIcon /> : <FlagEnIcon />}</span>
         </button>
 
         <NotificationBell />
 
-        <Link
-          to="/cart"
-          className="header-btn header-btn-icon cart-icon"
-          aria-label={t("header.cart")}
-        >
-          <span className="header-btn-icon-slot">
-            <CartIcon />
-          </span>
-          {cartItems.length > 0 && (
-            <span className="badge">{cartItems.length}</span>
-          )}
+        <Link to="/cart" className="header-btn header-btn-icon cart-icon" aria-label={t("header.cart")}>
+          <span className="header-btn-icon-slot"><CartIcon /></span>
+          {cartItems.length > 0 && <span className="badge">{cartItems.length}</span>}
         </Link>
 
         <ProfileMenu />

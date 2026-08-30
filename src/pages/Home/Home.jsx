@@ -24,12 +24,7 @@ const Home = () => {
     <div className="home-page">
       <HeroSection events={events} />
 
-      <EventFilters
-        cities={cities}
-        venues={venues}
-        filters={filters}
-        onFiltersChange={setFilters}
-      />
+      <EventFilters cities={cities} venues={venues} filters={filters} onFiltersChange={setFilters} />
 
       <div className="event-grid">
         {filteredEvents.length > 0 ? (

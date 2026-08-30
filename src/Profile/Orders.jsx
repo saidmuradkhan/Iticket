@@ -70,11 +70,7 @@ const Orders = () => {
       ) : (
         <div className="orders-list">
           {visible.map((order) => (
-            <Link
-              className="order-summary-card"
-              key={order.id}
-              to={`/profile/orders/${order.id}`}
-            >
+            <Link className="order-summary-card" key={order.id} to={`/profile/orders/${order.id}`}>
               <div className="order-summary-header">
                 <span>#{order.id}</span>
                 <span className={`status-badge ${order.status}`}>

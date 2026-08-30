@@ -18,14 +18,7 @@ const SeatSection = ({ ticket, color, seats, selectedSeats, takenSeats, onSeatCl
               const sold = seat.presold || takenSeats.has(seat.key);
               const selected = selectedSeats.some((s) => s.key === seat.key);
               return (
-                <Seat
-                  key={seat.key}
-                  seat={seat}
-                  color={color}
-                  sold={sold}
-                  selected={selected}
-                  onClick={() => onSeatClick(seat, ticket)}
-                />
+                <Seat key={seat.key} seat={seat} color={color} sold={sold} selected={selected} onClick={() => onSeatClick(seat, ticket)} />
               );
             })}
           </div>

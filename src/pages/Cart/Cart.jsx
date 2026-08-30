@@ -115,9 +115,7 @@ const Cart = () => {
               <h2>
                 {t("cart.tickets")} <span className="count-badge">{ticketCount}</span>
               </h2>
-              <button type="button" className="link-muted" onClick={clearCart}>
-                {t("cart.clearCart")}
-              </button>
+              <button type="button" className="link-muted" onClick={clearCart}>{t("cart.clearCart")}</button>
             </div>
 
             <div className="checkout-ticket-list">
@@ -139,13 +137,9 @@ const Cart = () => {
                   <div className="checkout-ticket-side">
                     {!item.seatInfo && (
                       <div className="qty-stepper">
-                        <button type="button" onClick={() => updateQuantity(item.id, -1)} disabled={item.quantity <= 1}>
-                          −
-                        </button>
+                        <button type="button" onClick={() => updateQuantity(item.id, -1)} disabled={item.quantity <= 1}>−</button>
                         <span>{item.quantity}</span>
-                        <button type="button" onClick={() => updateQuantity(item.id, 1)}>
-                          +
-                        </button>
+                        <button type="button" onClick={() => updateQuantity(item.id, 1)}>+</button>
                       </div>
                     )}
                     <span className="checkout-ticket-price">{item.price * item.quantity} ₼</span>
@@ -179,9 +173,7 @@ const Cart = () => {
                       setPromoMsg(null);
                     }}
                   />
-                  <button type="button" onClick={applyPromo}>
-                    {t("cart.apply")}
-                  </button>
+                  <button type="button" onClick={applyPromo}>{t("cart.apply")}</button>
                 </div>
                 {promoMsg && <p className="promo-msg">{promoMsg}</p>}
               </div>
@@ -225,12 +217,7 @@ const Cart = () => {
             </p>
           )}
 
-          <button
-            type="button"
-            className="buy-btn checkout-submit"
-            disabled={!agreed || creating || hasPastItem}
-            onClick={handleCreateOrder}
-          >
+          <button type="button" className="buy-btn checkout-submit" disabled={!agreed || creating || hasPastItem} onClick={handleCreateOrder}>
             {creating ? t("cart.creating") : t("cart.createOrder")}
           </button>
         </aside>

@@ -108,14 +108,10 @@ const RefundRequests = () => {
             <div className="order-summary-card" key={request.id}>
               <div className="order-summary-header">
                 <span>#{request.orderId}</span>
-                <span className={request.done ? "status-badge refunded" : "status-badge"}>
-                  {request.status}
-                </span>
+                <span className={request.done ? "status-badge refunded" : "status-badge"}>{request.status}</span>
               </div>
               <p className="event-card-meta">{request.reason}</p>
-              <p className="event-card-meta">
-                {formatDateTime(request.createdAt)}
-              </p>
+              <p className="event-card-meta">{formatDateTime(request.createdAt)}</p>
               <p className="event-card-price">{formatMoney(request.amount)}</p>
             </div>
           ))}
@@ -155,9 +151,7 @@ const RefundRequests = () => {
                 }
               >
                 {REASONS.map((reason) => (
-                  <option key={reason} value={reason}>
-                    {t(reason)}
-                  </option>
+                  <option key={reason} value={reason}>{t(reason)}</option>
                 ))}
               </select>
             </label>

@@ -16,12 +16,7 @@ const CategoryNav = () => {
   return (
     <nav className="category-nav">
       {categories.map((cat) => (
-        <NavLink
-          key={cat.key}
-          to={cat.path}
-          end={cat.path === "/"}
-          className={({ isActive }) => isActive ? "category-pill active" : "category-pill"}
-        >
+        <NavLink key={cat.key} to={cat.path} end={cat.path === "/"} className={({ isActive }) => isActive ? "category-pill active" : "category-pill"}>
           <i className={cat.icon + " cat-icon"} /> {t(cat.label)}
         </NavLink>
       ))}

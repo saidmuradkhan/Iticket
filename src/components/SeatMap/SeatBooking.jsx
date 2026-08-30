@@ -93,13 +93,7 @@ const SeatBooking = ({ event }) => {
       <div className="seat-auth-gate">
         <i className="fas fa-user-lock" />
         <p>{t("seatMap.authGate")}</p>
-        <button
-          type="button"
-          className="buy-btn"
-          onClick={() => openAuth("login", `/event/${event.id}`)}
-        >
-          {t("seatMap.login")}
-        </button>
+        <button type="button" className="buy-btn" onClick={() => openAuth("login", `/event/${event.id}`)}>{t("seatMap.login")}</button>
       </div>
     );
   }
@@ -160,22 +154,13 @@ const SeatBooking = ({ event }) => {
     <div className="seat-booking">
       {error && <p className="payment-error">{error}</p>}
 
-      <SeatMap
-        tickets={event.tickets}
-        selectedSeats={selectedSeats}
-        takenSeats={takenSeats}
-        onSeatClick={handleSeatClick}
-      />
+      <SeatMap tickets={event.tickets} selectedSeats={selectedSeats} takenSeats={takenSeats} onSeatClick={handleSeatClick} />
 
       {selectedSeats.length > 0 && (
         <div className="seat-selection-footer">
           <span>
             {t("seatMap.seatsSelected", { count: selectedSeats.length })} · {totalPrice} ₼
-            {holdDeadline && (
-              <span className="seat-hold-timer">
-                {" "}· {t("seatMap.heldFor", { time: `${minutes}:${String(seconds).padStart(2, "0")}` })}
-              </span>
-            )}
+            {holdDeadline && <span className="seat-hold-timer">{" "}· {t("seatMap.heldFor", { time: `${minutes}:${String(seconds).padStart(2, "0")}` })}</span>}
           </span>
           <button type="button" className="buy-btn" onClick={handleAddToCart} disabled={busy}>
             {t("seatMap.addToCart")}

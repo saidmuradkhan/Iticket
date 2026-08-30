@@ -114,14 +114,8 @@ const PaymentResult = () => {
         )}
 
         <div className="payment-result-actions">
-          <Link className="buy-btn" to="/profile/wallet">
-            {t("paymentResult.goToWallet")}
-          </Link>
-          {!isSuccess && (
-            <Link className="payment-result-link" to="/">
-              {t("paymentResult.home")}
-            </Link>
-          )}
+          <Link className="buy-btn" to="/profile/wallet">{t("paymentResult.goToWallet")}</Link>
+          {!isSuccess && <Link className="payment-result-link" to="/">{t("paymentResult.home")}</Link>}
         </div>
       </div>
     );
@@ -135,21 +129,13 @@ const PaymentResult = () => {
       <div className="payment-result-actions">
         {isSuccess ? (
           <>
-            <Link className="buy-btn" to={`/profile/orders/${orderId}`}>
-              {t("paymentResult.viewOrder")}
-            </Link>
-            <Link className="payment-result-link" to="/profile/tickets">
-              {t("paymentResult.myTickets")}
-            </Link>
+            <Link className="buy-btn" to={`/profile/orders/${orderId}`}>{t("paymentResult.viewOrder")}</Link>
+            <Link className="payment-result-link" to="/profile/tickets">{t("paymentResult.myTickets")}</Link>
           </>
         ) : (
           <>
-            <Link className="buy-btn" to={`/profile/orders/${orderId}`}>
-              {t("paymentResult.tryAgain")}
-            </Link>
-            <Link className="payment-result-link" to="/">
-              {t("paymentResult.home")}
-            </Link>
+            <Link className="buy-btn" to={`/profile/orders/${orderId}`}>{t("paymentResult.tryAgain")}</Link>
+            <Link className="payment-result-link" to="/">{t("paymentResult.home")}</Link>
           </>
         )}
       </div>

@@ -14,9 +14,7 @@ const Favorites = () => {
       </div>
 
       {favorites.length === 0 ? (
-        <p className="profile-empty">
-          {t("favorites.empty")}
-        </p>
+        <p className="profile-empty">{t("favorites.empty")}</p>
       ) : (
         <div className="event-grid">
           {favorites.map((event) => (

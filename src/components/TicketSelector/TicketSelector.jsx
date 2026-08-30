@@ -48,20 +48,14 @@ const TicketSelector = ({ event, onDone }) => {
             <p className="ticket-price">{ticket.price} ₼</p>
           </div>
           <div className="qty-stepper">
-            <button type="button" onClick={() => changeQty(ticket.id, -1, ticket.available)} disabled={!quantities[ticket.id]}>
-              −
-            </button>
+            <button type="button" onClick={() => changeQty(ticket.id, -1, ticket.available)} disabled={!quantities[ticket.id]}>−</button>
             <span>{quantities[ticket.id] || 0}</span>
-            <button type="button" onClick={() => changeQty(ticket.id, 1, ticket.available)} disabled={(quantities[ticket.id] || 0) >= ticket.available}>
-              +
-            </button>
+            <button type="button" onClick={() => changeQty(ticket.id, 1, ticket.available)} disabled={(quantities[ticket.id] || 0) >= ticket.available}>+</button>
           </div>
         </div>
       ))}
 
-      <button type="button" className="add-to-cart-btn" disabled={totalCount === 0} onClick={handleAddToCart}>
-        {t("ticketSelector.addToCart")}
-      </button>
+      <button type="button" className="add-to-cart-btn" disabled={totalCount === 0} onClick={handleAddToCart}>{t("ticketSelector.addToCart")}</button>
     </div>
   );
 };

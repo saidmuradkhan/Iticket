@@ -51,14 +51,8 @@ const Wallet = () => {
           <ProfileNavIcon name="wallet" />
           {t("wallet.balanceLabel")}
         </span>
-        <strong className="wallet-card-balance">
-          {balance === null ? "—" : formatMoney(balance)}
-        </strong>
-        <button
-          type="button"
-          className="primary-btn"
-          onClick={() => setDrawerOpen(true)}
-        >
+        <strong className="wallet-card-balance">{balance === null ? "—" : formatMoney(balance)}</strong>
+        <button type="button" className="primary-btn" onClick={() => setDrawerOpen(true)}>
           <PlusIcon />
           {t("wallet.topUp")}
         </button>
@@ -102,9 +96,7 @@ const Wallet = () => {
         </div>
       )}
 
-      {drawerOpen && (
-        <TopUpDrawer userId={user.id} onClose={() => setDrawerOpen(false)} />
-      )}
+      {drawerOpen && <TopUpDrawer userId={user.id} onClose={() => setDrawerOpen(false)} />}
     </div>
   );
 };

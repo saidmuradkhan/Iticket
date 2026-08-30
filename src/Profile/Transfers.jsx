@@ -46,15 +46,9 @@ const Transfers = () => {
           aria-expanded={historyOpen}
         >
           {t("transfers.historyToggle")}
-          <span className={historyOpen ? "rotated" : undefined}>
-            <ChevronIcon />
-          </span>
+          <span className={historyOpen ? "rotated" : undefined}><ChevronIcon /></span>
         </button>
-        {historyOpen && (
-          <p className="profile-accordion-body">
-            {t("transfers.historyEmpty")}
-          </p>
-        )}
+        {historyOpen && <p className="profile-accordion-body">{t("transfers.historyEmpty")}</p>}
       </div>
     </div>
   );

@@ -97,12 +97,7 @@ const GoogleButton = ({ onProfile, onError }) => {
   });
 
   return (
-    <button
-      type="button"
-      className="auth-social-btn"
-      aria-label={t("auth.continueWithGoogle")}
-      onClick={() => googleLogin()}
-    >
+    <button type="button" className="auth-social-btn" aria-label={t("auth.continueWithGoogle")} onClick={() => googleLogin()}>
       <GoogleIcon />
     </button>
   );
@@ -110,14 +105,7 @@ const GoogleButton = ({ onProfile, onError }) => {
 
 const AuthModal = () => {
   const {
-    authModal,
-    authRedirect,
-    openAuth,
-    closeAuth,
-    login,
-    register,
-    socialLogin,
-    error,
+    authModal, authRedirect, openAuth, closeAuth, login, register, socialLogin, error,
   } = useContext(AuthContext);
   const { t } = useLanguage();
   const navigate = useNavigate();
@@ -229,21 +217,10 @@ const AuthModal = () => {
 
   return (
     <div className="auth-modal-backdrop" onClick={closeAuth}>
-      <div
-        className="auth-modal"
-        role="dialog"
-        aria-modal="true"
-        aria-label={isRegister ? t("auth.registerTitle") : t("auth.loginTitle")}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className="auth-modal" role="dialog" aria-modal="true" aria-label={isRegister ? t("auth.registerTitle") : t("auth.loginTitle")} onClick={(e) => e.stopPropagation()}>
         <div className="auth-modal-head">
           <h2>{isRegister ? t("auth.registerTitle") : t("auth.loginTitle")}</h2>
-          <button
-            type="button"
-            className="auth-modal-close"
-            onClick={closeAuth}
-            aria-label={t("auth.close")}
-          >
+          <button type="button" className="auth-modal-close" onClick={closeAuth} aria-label={t("auth.close")}>
             <CloseIcon />
           </button>
         </div>
@@ -254,32 +231,14 @@ const AuthModal = () => {
             <>
               <div className={`auth-field${errors.name ? " has-error" : ""}`}>
                 <label htmlFor="auth-name">{t("auth.nameLabel")}</label>
-                <input
-                  id="auth-name"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder={t("auth.namePlaceholder")}
-                  aria-invalid={!!errors.name}
-                />
-                {errors.name && (
-                  <p className="auth-field-error">{errors.name}</p>
-                )}
+                <input id="auth-name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder={t("auth.namePlaceholder")} aria-invalid={!!errors.name} />
+                {errors.name && <p className="auth-field-error">{errors.name}</p>}
               </div>
 
               <div className={`auth-field${errors.surname ? " has-error" : ""}`}>
                 <label htmlFor="auth-surname">{t("auth.surnameLabel")}</label>
-                <input
-                  id="auth-surname"
-                  type="text"
-                  value={surname}
-                  onChange={(e) => setSurname(e.target.value)}
-                  placeholder={t("auth.surnamePlaceholder")}
-                  aria-invalid={!!errors.surname}
-                />
-                {errors.surname && (
-                  <p className="auth-field-error">{errors.surname}</p>
-                )}
+                <input id="auth-surname" type="text" value={surname} onChange={(e) => setSurname(e.target.value)} placeholder={t("auth.surnamePlaceholder")} aria-invalid={!!errors.surname} />
+                {errors.surname && <p className="auth-field-error">{errors.surname}</p>}
               </div>
 
               <div className={`auth-field${errors.phone ? " has-error" : ""}`}>
@@ -289,73 +248,37 @@ const AuthModal = () => {
                     <FlagAzIcon />
                     <span>+994</span>
                   </span>
-                  <input
-                    id="auth-phone"
-                    type="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder="50 123 45 67"
-                    aria-invalid={!!errors.phone}
-                  />
+                  <input id="auth-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="50 123 45 67" aria-invalid={!!errors.phone} />
                 </div>
-                {errors.phone && (
-                  <p className="auth-field-error">{errors.phone}</p>
-                )}
+                {errors.phone && <p className="auth-field-error">{errors.phone}</p>}
               </div>
             </>
           )}
 
           <div className={`auth-field${errors.email ? " has-error" : ""}`}>
             <label htmlFor="auth-email">{t("auth.emailLabel")}</label>
-            <input
-              id="auth-email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="name@example.com"
-              aria-invalid={!!errors.email}
-            />
+            <input id="auth-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@example.com" aria-invalid={!!errors.email} />
             {errors.email && <p className="auth-field-error">{errors.email}</p>}
           </div>
 
           <div className={`auth-field${errors.password ? " has-error" : ""}`}>
             <label htmlFor="auth-password">{t("auth.passwordLabel")}</label>
             <div className="auth-password">
-              <input
-                id="auth-password"
-                type={showPassword ? "text" : "password"}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                aria-invalid={!!errors.password}
-              />
-              <button
-                type="button"
-                className="auth-eye"
-                onClick={() => setShowPassword((v) => !v)}
-                aria-label={showPassword ? t("auth.hidePassword") : t("auth.showPassword")}
-              >
+              <input id="auth-password" type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••••" aria-invalid={!!errors.password} />
+              <button type="button" className="auth-eye" onClick={() => setShowPassword((v) => !v)} aria-label={showPassword ? t("auth.hidePassword") : t("auth.showPassword")}>
                 <EyeIcon off={!showPassword} />
               </button>
             </div>
-            {errors.password && (
-              <p className="auth-field-error">{errors.password}</p>
-            )}
+            {errors.password && <p className="auth-field-error">{errors.password}</p>}
           </div>
 
           {!isRegister && (
             <div className="auth-row">
               <label className="auth-remember">
-                <input
-                  type="checkbox"
-                  checked={remember}
-                  onChange={(e) => setRemember(e.target.checked)}
-                />
+                <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
                 <span>{t("auth.rememberMe")}</span>
               </label>
-              <button type="button" className="auth-forgot">
-                {t("auth.forgotPassword")}
-              </button>
+              <button type="button" className="auth-forgot">{t("auth.forgotPassword")}</button>
             </div>
           )}
 
@@ -378,36 +301,20 @@ const AuthModal = () => {
 
         <div className="auth-social">
           {GOOGLE_CLIENT_ID ? (
-            <GoogleButton
-              onProfile={handleGoogleProfile}
-              onError={setSocialError}
-            />
+            <GoogleButton onProfile={handleGoogleProfile} onError={setSocialError} />
           ) : (
-            <button
-              type="button"
-              className="auth-social-btn"
-              aria-label={t("auth.continueWithGoogle")}
-              onClick={handleGoogleUnconfigured}
-            >
+            <button type="button" className="auth-social-btn" aria-label={t("auth.continueWithGoogle")} onClick={handleGoogleUnconfigured}>
               <GoogleIcon />
             </button>
           )}
-          <button
-            type="button"
-            className="auth-social-btn"
-            aria-label={t("auth.continueWithApple")}
-            disabled
-            title={t("auth.appleUnavailable")}
-          >
+          <button type="button" className="auth-social-btn" aria-label={t("auth.continueWithApple")} disabled title={t("auth.appleUnavailable")}>
             <AppleIcon />
           </button>
         </div>
 
         <p className="auth-modal-switch">
           {isRegister ? t("auth.haveAccount") : t("auth.noAccount")}
-          <button type="button" onClick={switchMode}>
-            {isRegister ? t("auth.loginTitle") : t("auth.registerTitle")}
-          </button>
+          <button type="button" onClick={switchMode}>{isRegister ? t("auth.loginTitle") : t("auth.registerTitle")}</button>
         </p>
         </div>
       </div>
