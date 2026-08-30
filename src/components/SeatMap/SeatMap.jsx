@@ -4,8 +4,6 @@ import { useLanguage } from "../../hooks/useLanguage";
 const COLORS = ["#3b82f6", "#22c55e", "#a855f7", "#f59e0b", "#14b8a6"];
 const SEATS_PER_ROW = 10;
 
-// Test rejimi: heç bir yer əvvəlcədən satılmış sayılmır — hamısı seçilə bilər.
-// Real satış simulyasiyasını geri qaytarmaq üçün key əsaslı hash-dən istifadə et.
 const isPreSold = () => false;
 
 const DEFAULT_AVAILABLE = 30;

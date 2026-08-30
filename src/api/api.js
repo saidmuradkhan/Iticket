@@ -23,9 +23,6 @@ export const getNotifications = () => api.get("/notifications");
 export const markNotificationRead = (id) =>
   api.patch(`/notifications/${id}`, { read: true });
 
-// userId bəzi sifarişlərdə rəqəm (1), bəzilərində mətn ("1") kimi saxlanılıb.
-// json-server ?userId=1 sorğusunu ancaq eyni tipə uyğunlaşdırdığı üçün
-// yarısı düşür — ona görə hamısını çəkib müqayisəni String ilə edirik.
 export const getOrders = async (userId) => {
   const res = await api.get("/orders");
   const data = res.data.filter(

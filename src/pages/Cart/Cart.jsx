@@ -27,7 +27,6 @@ const Cart = () => {
   const [promoMsg, setPromoMsg] = useState(null);
   const [creating, setCreating] = useState(false);
 
-  // Səbətdəki biletlərin saxlanma vaxtı — ilk əlavədə localStorage-a yazılır, reload-da qorunur
   const [holdExpiresAt] = useState(() => {
     if (cartItems.length === 0) return null;
     const stored = localStorage.getItem("cartHoldExpiresAt");

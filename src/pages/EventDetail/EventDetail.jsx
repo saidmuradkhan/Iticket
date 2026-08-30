@@ -76,7 +76,6 @@ const EventDetail = () => {
       try {
         await navigator.share({ title: event.title, url });
       } catch {
-        // istifadəçi paylaşımı ləğv etdi — heç nə etmirik
       }
     } else if (navigator.clipboard) {
       await navigator.clipboard.writeText(url);

@@ -46,7 +46,6 @@ const AccountInfo = () => {
   const [saved, setSaved] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
 
-  // Təsdiq pəncərəsi açıq olanda Escape ilə bağla + səhifə scroll-unu kilidlə
   useEffect(() => {
     if (!confirmDelete) return;
     const onKey = (e) => {

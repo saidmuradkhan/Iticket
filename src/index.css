@@ -1497,7 +1497,6 @@ main {
   box-shadow: 0 12px 36px -8px rgba(255, 221, 0, 0.55);
 }
 
-/* Yer seçilib footer görünəndə üzən "Bilet al" düyməsi artıqdır — gizlədirik ki, üst-üstə düşməsin */
 .event-detail:has(.seat-selection-footer) .floating-buy-btn {
   display: none;
 }
@@ -1799,7 +1798,6 @@ main {
   cursor: not-allowed;
 }
 
-/* Yer seçimi üçün giriş tələbi bloku */
 .seat-auth-gate {
   display: flex;
   flex-direction: column;
@@ -1859,7 +1857,6 @@ main {
   padding: 10px 28px;
 }
 
-/* ---- Checkout (Səbət + Sifariş/Ödəniş) ---- */
 .checkout-page {
   max-width: 1080px;
   margin: 0 auto;
@@ -2024,7 +2021,6 @@ main {
   opacity: 0.75;
 }
 
-/* User card */
 .checkout-user {
   display: flex;
   align-items: flex-start;
@@ -2050,7 +2046,6 @@ main {
   color: var(--text-muted);
 }
 
-/* Ticket list */
 .checkout-ticket-list {
   display: flex;
   flex-direction: column;
@@ -2116,7 +2111,6 @@ main {
   white-space: nowrap;
 }
 
-/* Summary sidebar */
 .checkout-summary {
   position: sticky;
   top: 88px;
@@ -2253,7 +2247,6 @@ main {
   border-radius: 999px;
 }
 
-/* Promo */
 .promo-toggle {
   display: flex;
   align-items: center;
@@ -2329,7 +2322,6 @@ main {
   color: var(--danger);
 }
 
-/* Sifariş səhifəsi profil layout-un içində açılanda ikiqat en/padding olmasın */
 .profile-content .checkout-page {
   max-width: none;
   padding: 0;
@@ -2671,7 +2663,6 @@ main {
   color: var(--text);
 }
 
-/* Pill formalı input-lar (iTicket ilə eyni) */
 .auth-field input {
   width: 100%;
   height: 44px;
@@ -2695,7 +2686,6 @@ main {
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-/* Validation xətası */
 .auth-field.has-error input,
 .auth-field.has-error .auth-phone-code {
   border-color: var(--danger);
@@ -2712,7 +2702,6 @@ main {
   color: var(--danger);
 }
 
-/* Mobil nömrə (ölkə kodu + input) */
 .auth-phone {
   display: flex;
   align-items: stretch;
@@ -2738,7 +2727,6 @@ main {
   flex: 1;
 }
 
-/* Şifrə sahəsi + göz düyməsi */
 .auth-password {
   position: relative;
   display: flex;
@@ -2770,7 +2758,6 @@ main {
   color: var(--text);
 }
 
-/* Yadda saxla / Şifrəni unutmusunuz */
 .auth-row {
   display: flex;
   align-items: center;
@@ -2815,7 +2802,6 @@ main {
   margin: 0;
 }
 
-/* Əsas düymə (iTicket btn-primary: 48px, 16px/500, pill, kölgəsiz) */
 .auth-submit {
   height: 48px;
   margin-top: 4px;
@@ -2827,7 +2813,6 @@ main {
   box-shadow: none;
 }
 
-/* və ya ayırıcı */
 .auth-divider {
   display: flex;
   align-items: center;
@@ -2845,7 +2830,6 @@ main {
   background: var(--border-hover);
 }
 
-/* Sosial düymələr (iTicket btn-secondary: pill, 44px, #27272a) */
 .auth-social {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2899,7 +2883,6 @@ main {
   color: var(--accent-hover);
 }
 
-/* Təsdiq pəncərəsi (Hesabı sil) — auth-modal stilini paylaşır */
 .confirm-text {
   margin: 0;
   font-size: 14px;
@@ -3607,7 +3590,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* iGift hədiyyə kartı */
 .gift-card-form {
   display: flex;
   flex-direction: column;

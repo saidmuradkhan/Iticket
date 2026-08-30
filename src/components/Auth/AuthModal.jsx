@@ -136,7 +136,6 @@ const AuthModal = () => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
-  // Sahələri yoxla və xəta obyektini qaytar (rejimə görə)
   const validate = useCallback(() => {
     const errs = {};
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
