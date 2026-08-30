@@ -4528,10 +4528,21 @@ main {
     height: 18px;
   }
 
+  .header-link {
+    width: 34px;
+    padding: 0;
+    font-size: 0;
+    gap: 0;
+  }
+
+  .header-link .header-btn-icon-slot svg {
+    width: 19px;
+    height: 19px;
+  }
+
   .category-nav {
     padding: 8px 16px;
     gap: 6px;
-    top: 51px;
   }
 
   .category-pill {
@@ -4721,12 +4732,10 @@ main {
 
 @media (max-width: 380px) {
   .event-grid {
-    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
-  .header-link {
-    padding: 0 6px;
-    font-size: 12px;
-    gap: 6px;
+  .event-card-body {
+    padding: 8px 10px 12px;
   }
 }
