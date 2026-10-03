@@ -1,0 +1,25 @@
+services:
+  db:
+    build: .
+    command: sh deploy/start-db.sh
+    volumes:
+      - db-data:/data
+    ports:
+      - "127.0.0.1:3001:3001"
+    restart: unless-stopped
+
+  api:
+    build: .
+    command: node backend/index.js
+    env_file: .env.production
+    environment:
+      JSON_SERVER_URL: http://db:3001
+      PAYMENT_PORT: 3002
+    ports:
+      - "127.0.0.1:3002:3002"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  db-data:

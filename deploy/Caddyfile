@@ -1,0 +1,47 @@
+iticket-api.saidmuradkhan.dev {
+	handle /api/* {
+		reverse_proxy 127.0.0.1:3002
+	}
+
+	@preflight method OPTIONS
+	handle @preflight {
+		reverse_proxy 127.0.0.1:3001
+	}
+
+	@read {
+		method GET
+		path /events /events/* /shows /shows/* /notifications /orders /orders/* /walletTransactions
+	}
+	handle @read {
+		reverse_proxy 127.0.0.1:3001
+	}
+
+	@login {
+		method GET
+		path /users
+		query email=*
+	}
+	handle @login {
+		reverse_proxy 127.0.0.1:3001
+	}
+
+	@createOrder {
+		method POST
+		path /orders
+	}
+	handle @createOrder {
+		reverse_proxy 127.0.0.1:3001
+	}
+
+	@update {
+		method PATCH
+		path /orders/* /notifications/*
+	}
+	handle @update {
+		reverse_proxy 127.0.0.1:3001
+	}
+
+	handle {
+		respond "Forbidden" 403
+	}
+}

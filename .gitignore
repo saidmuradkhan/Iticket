@@ -25,3 +25,4 @@ claude
 *.njsproj
 *.sln
 *.sw?
+.env.production
