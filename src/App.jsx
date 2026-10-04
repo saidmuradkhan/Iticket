@@ -22,6 +22,7 @@ import ChangePassword from './Profile/ChangePassword'
 import NotificationSettings from './Profile/NotificationSettings'
 import RefundRequests from './Profile/RefundRequests'
 import Faq from './Profile/Faq'
+import DemoBadge from "./components/DemoBadge/DemoBadge";
 
 const OrderRedirect = () => {
   const { orderId } = useParams()
@@ -40,6 +41,7 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
+      <DemoBadge />
       <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />

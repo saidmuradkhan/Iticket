@@ -1,8 +1,11 @@
 import axios from "axios";
+import { jsonServerAdapter } from "./demo/adapters";
 
-export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3001",
-});
+export const isDemo = !import.meta.env.VITE_API_URL;
+
+export const api = axios.create(
+  isDemo ? { adapter: jsonServerAdapter } : { baseURL: import.meta.env.VITE_API_URL }
+);
 
 export const getEvents = () => api.get("/events");
 export const getShows = () => api.get("/shows");

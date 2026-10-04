@@ -1,8 +1,12 @@
 import axios from "axios";
+import { isDemo } from "./api";
+import { paymentAdapter } from "./demo/adapters";
 
-export const paymentApi = axios.create({
-  baseURL: import.meta.env.VITE_PAYMENT_API || "http://localhost:3002",
-});
+export const paymentApi = axios.create(
+  isDemo
+    ? { adapter: paymentAdapter }
+    : { baseURL: import.meta.env.VITE_PAYMENT_API || "http://localhost:3002" }
+);
 
 const extractError = (err) =>
   err.response?.data?.error || "Ödəniş serverinə qoşulmaq mümkün olmadı";
