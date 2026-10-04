@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { isDemo } from "../../api/api";
+import { payriffAvailable } from "../../api/demo/payriffGateway";
 
 const style = {
   position: "fixed",
@@ -16,11 +18,21 @@ const style = {
   pointerEvents: "none",
 };
 
-const DemoBadge = () =>
-  isDemo ? (
+const DemoBadge = () => {
+  const [payriff, setPayriff] = useState(false);
+
+  useEffect(() => {
+    if (isDemo) payriffAvailable().then(setPayriff);
+  }, []);
+
+  if (!isDemo) return null;
+
+  return (
     <div style={style} role="note">
-      Portfolio demo · rəsmi iTicket saytı deyil · ödənişlər simulyasiyadır
+      Portfolio demo · rəsmi iTicket saytı deyil ·{" "}
+      {payriff ? "Payriff test rejimi, real pul çıxılmır" : "ödənişlər simulyasiyadır"}
     </div>
-  ) : null;
+  );
+};
 
 export default DemoBadge;

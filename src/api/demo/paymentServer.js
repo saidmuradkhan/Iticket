@@ -1,4 +1,11 @@
 import { collection, find, insert, remove, update, where } from "./store";
+import {
+  createPayriffOrder,
+  getPayriffStatus,
+  mapPaymentStatus,
+  payriffAvailable,
+  refundPayriffOrder,
+} from "./payriffGateway";
 
 const SEAT_HOLD_MINUTES = 15;
 const MIN_TOPUP = 1;
@@ -91,30 +98,66 @@ const balanceOf = (userId) => {
 
 const walletPurchase = (orderId) => where("walletTransactions", { ref: `order-${orderId}` })[0] ?? null;
 
-const createPayment = ({ orderId }) => {
+const orderDescription = (order) =>
+  order.items?.length === 1
+    ? `İticket — ${order.items[0].eventTitle}`
+    : `İticket — ${order.items?.length ?? 0} bilet`;
+
+const startCheckout = async ({ amount, description, returnPath, language }) => {
+  if (await payriffAvailable()) {
+    const payload = await createPayriffOrder({ amount, description, returnPath, language });
+    return {
+      paymentUrl: payload.paymentUrl,
+      payment: {
+        provider: "payriff",
+        payriffOrderId: payload.orderId,
+        transactionId: payload.transactionId,
+        paymentUrl: payload.paymentUrl,
+        startedAt: now(),
+      },
+    };
+  }
+  return {
+    paymentUrl: returnPath,
+    payment: { provider: "demo", payriffOrderId: `demo-${Date.now()}`, paymentUrl: returnPath, startedAt: now() },
+  };
+};
+
+const checkPayment = async (payment) => {
+  if (payment.provider !== "payriff") return { status: "confirmed", paymentStatus: "APPROVED" };
+  const info = await getPayriffStatus(payment.payriffOrderId);
+  return { status: mapPaymentStatus(info.paymentStatus), paymentStatus: info.paymentStatus, amount: info.amount };
+};
+
+const createPayment = async ({ orderId, language = "AZ" }) => {
   if (!orderId) throw new HttpError(400, "orderId tələb olunur");
   const order = getOrder(orderId);
   ensurePayable(order);
-  const paymentUrl = `/payment/result?orderId=${encodeURIComponent(orderId)}`;
-  update("orders", orderId, {
-    payment: { provider: "demo", payriffOrderId: `demo-${orderId}`, paymentUrl, startedAt: now() },
+  const { paymentUrl, payment } = await startCheckout({
+    amount: round(order.totalPrice),
+    description: orderDescription(order),
+    returnPath: `/payment/result?orderId=${encodeURIComponent(orderId)}`,
+    language,
   });
-  return { paymentUrl, payriffOrderId: `demo-${orderId}` };
+  update("orders", orderId, { payment });
+  return { paymentUrl, payriffOrderId: payment.payriffOrderId };
 };
 
-const verifyPayment = (orderId) => {
+const verifyPayment = async (orderId) => {
   const order = getOrder(orderId);
   if (!order.payment?.payriffOrderId) return { orderId, status: order.status, paymentStatus: null };
   if (order.status === "confirmed" || order.status === "refunded") {
     return { orderId, status: order.status, paymentStatus: order.payment.paymentStatus ?? "APPROVED" };
   }
+  const { status, paymentStatus } = await checkPayment(order.payment);
   update("orders", orderId, {
-    status: "confirmed",
-    paymentMethod: "online",
-    payment: { ...order.payment, paymentStatus: "APPROVED", amount: order.totalPrice, currency: "AZN", verifiedAt: now() },
+    status,
+    ...(status === "confirmed" ? { paymentMethod: "online" } : {}),
+    payment: { ...order.payment, paymentStatus, amount: order.totalPrice, currency: "AZN", verifiedAt: now() },
   });
-  finalizeSeats(order);
-  return { orderId, status: "confirmed", paymentStatus: "APPROVED" };
+  if (status === "confirmed") finalizeSeats(order);
+  if (["expired", "canceled", "declined"].includes(status)) releaseSeats(order);
+  return { orderId, status, paymentStatus };
 };
 
 const refundToWallet = (order, requested) => {
@@ -140,7 +183,7 @@ const refundToWallet = (order, requested) => {
   return { ok: true, status, amount: value, refunded: round(refunded + value), balance: balanceOf(order.userId) };
 };
 
-const refundPayment = ({ orderId, amount }) => {
+const refundPayment = async ({ orderId, amount }) => {
   if (!orderId) throw new HttpError(400, "orderId tələb olunur");
   const order = getOrder(orderId);
   if (order.paymentMethod === "wallet" || walletPurchase(order.id)) return refundToWallet(order, amount);
@@ -151,6 +194,9 @@ const refundPayment = ({ orderId, amount }) => {
   if (!(value > 0) || value > round(order.totalPrice)) {
     throw new HttpError(400, `Geri qaytarıla bilən məbləğ: ${round(order.totalPrice)} ₼`);
   }
+  if (order.payment.provider === "payriff") {
+    await refundPayriffOrder({ payriffOrderId: order.payment.payriffOrderId, amount: value });
+  }
   update("orders", orderId, {
     status: "refunded",
     payment: { ...order.payment, paymentStatus: "REFUNDED", refundedAt: now() },
@@ -158,35 +204,36 @@ const refundPayment = ({ orderId, amount }) => {
   return { ok: true, status: "refunded", amount: value };
 };
 
-const createTopup = ({ userId, amount }) => {
+const createTopup = async ({ userId, amount, language = "AZ" }) => {
   if (!userId) throw new HttpError(400, "userId tələb olunur");
   const value = Number(amount);
   if (!Number.isFinite(value) || value < MIN_TOPUP || value > MAX_TOPUP) {
     throw new HttpError(400, `Məbləğ ${MIN_TOPUP}–${MAX_TOPUP} ₼ aralığında olmalıdır`);
   }
+  ensureWelcomeBalance(userId);
   const ref = `tu-${Date.now().toString(36)}`;
-  const paymentUrl = `/payment/result?topupRef=${encodeURIComponent(ref)}`;
-  insert("topups", {
-    ref,
-    userId,
+  const { paymentUrl, payment } = await startCheckout({
     amount: round(value),
-    status: "pending_payment",
-    createdAt: now(),
-    payment: { provider: "demo", payriffOrderId: `demo-${ref}`, paymentUrl, startedAt: now() },
+    description: `İticket — cüzdan balansının artırılması (${round(value)} AZN)`,
+    returnPath: `/payment/result?topupRef=${encodeURIComponent(ref)}`,
+    language,
   });
+  insert("topups", { ref, userId, amount: round(value), status: "pending_payment", createdAt: now(), payment });
   return { ref, amount: round(value), paymentUrl };
 };
 
-const verifyTopup = (ref) => {
+const verifyTopup = async (ref) => {
   const topup = where("topups", { ref })[0];
   if (!topup) throw new HttpError(404, "Balans artırma sorğusu tapılmadı");
-  if (where("walletTransactions", { ref }).length === 0) {
+  const { status, paymentStatus } =
+    topup.status === "confirmed" ? { status: "confirmed", paymentStatus: "APPROVED" } : await checkPayment(topup.payment);
+  if (status === "confirmed" && where("walletTransactions", { ref }).length === 0) {
     insert("walletTransactions", { userId: topup.userId, ref, type: "topup", amount: topup.amount, createdAt: now() });
   }
-  if (topup.status !== "confirmed") {
-    update("topups", topup.id, { status: "confirmed", payment: { ...topup.payment, paymentStatus: "APPROVED", verifiedAt: now() } });
+  if (topup.status !== status) {
+    update("topups", topup.id, { status, payment: { ...topup.payment, paymentStatus, verifiedAt: now() } });
   }
-  return { ref, status: "confirmed", amount: topup.amount, balance: balanceOf(topup.userId) };
+  return { ref, status, amount: topup.amount, balance: balanceOf(topup.userId) };
 };
 
 const payWithWallet = ({ orderId }) => {
@@ -254,7 +301,7 @@ const releaseSeat = ({ seatKey, userId }) => {
 };
 
 const routes = [
-  ["get", /^\/api\/payment\/health$/, () => ({ ok: true, credentials: false, demo: true })],
+  ["get", /^\/api\/payment\/health$/, async () => ({ ok: true, credentials: await payriffAvailable() })],
   ["post", /^\/api\/payment\/create$/, ({ body }) => createPayment(body)],
   ["get", /^\/api\/payment\/verify\/(.+)$/, (_, [orderId]) => verifyPayment(orderId)],
   ["post", /^\/api\/payment\/refund$/, ({ body }) => refundPayment(body)],
